@@ -1,0 +1,244 @@
+# Page settings
+baseurl = "https://sarathsp06.github.io/"
+languageCode = "en-us"
+title = "Sarath S Pillai"
+theme = "hugo-orbit-theme"
+googleAnalytics = "UA-XXXXXXX-Y"
+
+# Do not build files for websites. Need them? Set to false
+disableRSS = true
+disableSitemap = true
+disable404 = true
+
+[params]
+# Meta
+    description = "My Resume;akka Confession of a code-aholic"
+    author = "Sarath S Pillai"
+
+# Theme styles
+    # The original template comes with 6 colour schemes. You may choose styles below.
+    # "styles.css", "styles-2.css", "styles-3.css", "styles-4.css", "styles-5.css", "styles-6.css"
+    # are available. Also the source LESS files are included so
+    # it’s quick and easy to change the styling and colour scheme.
+    styles = "styles-6.css"
+
+# Sidebar sections
+
+    # Profile section
+    [params.profile]
+        name = "Sarath"
+        tagline = "Software Development Engineer"
+        avatar = "profile.png"
+
+    # Contact section
+    [params.contact]
+        enable = true
+
+        [[params.contact.list]]
+        class = "email"
+        icon = "fa-envelope"
+        url = "mailto:sarathsp06@gmail.com"
+        title = "sarathsp06@gmail.com"
+
+        [[params.contact.list]]
+        class = "phone"
+        icon = "fa-phone"
+        url = "tel:+919742033616"
+        title = "+919742033616"
+
+        [[params.contact.list]]
+        class = "stackoverflow"
+        icon = "fa-stack-overflow"
+        url = "//stackoverflow.com/users/1898494/sarathsp"
+        title = "stackoverflow/sarathsp"
+
+        [[params.contact.list]]
+        class = "linkedin"
+        icon = "fa-linkedin"
+        url = "//linkedin.com/in/sarathsp"
+        title = "linkedin.com/in/sarathsp"
+
+        [[params.contact.list]]
+        class = "github"
+        icon = "fa-github"
+        url = "//github.com/sarathsp06"
+        title = "github.com/sarathsp06"
+
+        [[params.contact.list]]
+        class = "twitter"
+        icon = "fa-twitter"
+        url = "//twitter.com/sarath_sp06"
+        title = "@sarath_sp06"
+
+    # Education section
+    [params.education]
+        enable = true
+        title = "Education"
+
+        [[params.education.list]]
+        degree = "B.Tech Computer Science and Engineering"
+        college = "University of Kerala"
+        dates = "2009 - 2013"
+
+    # Languages section
+    [params.languages]
+        enable = true
+        title = "Languages"
+
+        [[params.languages.list]]
+        language = "English"
+        level = "Professional"
+
+        [[params.languages.list]]
+        language = "Malayalam"
+        level = "Native"
+
+        [[params.languages.list]]
+        language = "Hindi"
+        level = "Professional"
+
+    # Interests section
+    [params.interests]
+        enable = true
+        title = "Interests"
+
+        [[params.interests.list]]
+        interest = "Travelling"
+
+        [[params.interests.list]]
+        interest = "Coding"
+
+# Main body sections
+    # Summary section
+    #[params.summary]
+    #    enable = true
+    #    icon = "fa-user"
+    #   title = "Career Profile"
+    #   summary = "I believe the World Wide Web is the greatest thing the human race has ever developed, and I'm proud to contribute towards its ongoing development by being part of it.I am a polyglot has touched most of the programming languages for the love of code.Love to face problems ,solving them is ultimate pleasure"
+
+    # Experiences section
+    [params.experiences]
+        enable = true
+        icon = "fa-briefcase"
+        title = "Experiences"
+
+        [[params.jobs.list]]
+        position = "Software Engineer / Enterprise Solutions"
+        dates = "2016 - Presemt"
+        company = "Exotel, Banglore"
+        details = "Improved php Services performance by 40% tweaking system configurations,Contributed to opensource projects like [aerospike-go-client](https://github.com/aerospike/aerospike-client-go),"
+        
+        [[params.jobs.list]]
+        position = "Software Engineer / Backend Services"
+        dates = "2015 - 2016"
+        company = "Exotel, Banglore"
+        details = "Involved Re-disigning the entire stack in [go](https://golang.org) ,this includes re-design and re-thinking of the architecture to scale for the global market with  HA,Efficiency etc"
+
+        [[params.jobs.list]]
+        position = "Software Engineer / Full Stack Developer"
+        dates = "2014 - 2015"
+        company = "Exotel, Bangalore"
+        details = "Written libraries for the Exotl API,Improved user experiance adding UI features"
+
+        [[params.jobs.list]]
+        position = "ASE"
+        dates = "2013 - 2014"
+        company = "TCS, Chennai"
+        details = "Besides the routine job,written REXX Cobol parsing tool and VBScripts for improving project rule extraction"
+
+
+    # Projects section
+    [params.projects]
+        enable = true
+        icon = "fa-archive"
+        title = "Projects"
+        intro = "List of recent projects that i am proud of "
+
+        [[params.projects.list]]
+        title = "Aerospike go client"
+        url = "https://github.com/sarathsp06/aerospike-client-go"
+        tagline = "Contributed to the official aerospike-go-client"
+        
+        [[params.projects.list]]
+        title = "JSON logger"
+        url = "https://github.com/sarathsp06/gologger"
+        tagline = "Simple logger library for golang with support for logger middleware for echo."
+
+        [[params.projects.list]]
+        title = "Go Exoml library"
+        url = "https://github.com/exotel/goexoml"
+        tagline = "Libray to generate ExoML and TwiML"
+
+        [[params.projects.list]]
+        title = "Exotel python library"
+        url = "https://github.com/sarathsp06/exotel-py"
+        tagline = "Python module for exotels call and sms api's,1.6k downloads"
+
+
+        [[params.projects.list]]
+        title = "Dialmonk"
+        url = "https://play.google.com/store/apps/details?id=com.dialmonk.quicksilver"
+        tagline = "Android application that helps one make calls with android phone with a click on desktop browser"
+        
+        [[params.projects.list]]
+        title = "Image Assisted Data Security Using Key Encrypted File"
+        url = "https://github.com/sarathsp06/steganography"
+        tagline = "Plain text ecryption algorithm inspired from steganography"
+        
+        [[params.projects.list]]
+        title = "Hand Gesture Recognition"
+        url = "https://github.com/sarathsp06/gesture_rec"
+        tagline = "Hand gesture classification usign accelerometer data and neural networks"
+    
+
+
+    # Projects section
+    [params.publications]
+        enable = true
+        icon = "fa-newspaper-o"
+        title = "Publications"
+        intro = ""
+
+        [[params.publications.list]]
+        title = "Image Assisted Data Security Using Key Encrypted File"
+        url = "http://www.ijert.org/view-pdf/13070/image-assisted-data-security-using-key-encrypted-file"
+        tagline = "In this paper a new technique for image-based data hiding with a binary file is proposed. In traditional methods the image based data hiding referred as steganography. The basic idea of Steganography is that it distributes the message uniformly throughout the image. But it will cause degradation to the image. Here concept of steganography is used to make text encryption "
+    
+    # Skills section
+    [params.skills]
+        enable = true
+        icon = "fa-rocket"
+        title = "Skills & Proficiency"
+
+        [[params.skills.list]]
+        skill = "Golang"
+        level = "98%"
+                
+        [[params.skills.list]]
+        skill = "Python"
+        level = "90%"
+
+        [[params.skills.list]]
+        skill = "PHP & Javascript"
+        level = "90%"
+
+        [[params.skills.list]]
+        skill = "MySQL,Linux"
+        level = "75%"
+
+        [[params.skills.list]]
+        skill = "Distributed Systems"
+        level = "60%"
+
+    # Footer section
+
+    # The original template is released under the Creative Commons Attribution 3.0 License.
+    # Please keep the original attribution link when using for your own project.
+    # If you'd like to use the template without the attribution,
+    # you can check out other license options via template author's website: themes.3rdwavemedia.com
+    # 
+    # As for Hugo port you may rewrite the "Ported for..." line with setting your name below.
+
+    [params.footer]
+        copyright = "Ported for Sarath"
+
