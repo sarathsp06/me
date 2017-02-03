@@ -155,6 +155,11 @@ disable404 = true
         intro = "List of recent projects that i am proud of "
 
         [[params.projects.list]]
+        title = "Sachet"
+        url = "https://github.com/messagebird/sachet"
+        tagline = "Contributed to sachet,an SMS alerting tool for the Prometheus Alertmanager."
+
+        [[params.projects.list]]
         title = "Aerospike go client"
         url = "https://github.com/sarathsp06/aerospike-client-go"
         tagline = "Contributed to the official aerospike-go-client"
