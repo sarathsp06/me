@@ -196,8 +196,7 @@
     
         \vspace{5mm}
     \renewcommand{\arraystretch}{1.6}
-    \begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
-        
+    \begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}   
           \ifthenelse{\equal{\cvlinkedin}{}}{}{
             {$
               \begin{array}{l}
@@ -241,13 +240,15 @@
 		\interests{{Distributed Systems/5.2},{Software Development/4.8},{Software Design \& Architecture /5},{Ad-Hoc Systems/3.5},{Machine Learning/4}}
         
         \interests
-        
-        \profilesection{Languages}{2.4cm} 
+      
+  
+          \profilesection{Languages}{2.4cm} 
         {$
               \begin{array}{l}
               \hspace{-2mm}{\includegraphics[scale=0.45]{img/languages_muted.png}}
               \end{array}
         $}   
+
   \end{textblock}
 }
 
