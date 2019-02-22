@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Sarath Sadasivan Pillai</title>
-    <link>https://profile.sarathsp.com/</link>
-    <description>Recent content on Sarath Sadasivan Pillai</description>
+    <title>Themes on Sarath Sadasivan Pillai</title>
+    <link>https://profile.sarathsp.com/tags/themes/</link>
+    <description>Recent content in Themes on Sarath Sadasivan Pillai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Fri, 22 Feb 2019 01:09:41 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 02 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://profile.sarathsp.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://profile.sarathsp.com/tags/themes/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Python 2factor Client</title>
-      <link>https://profile.sarathsp.com/projects/python-2factor-client/</link>
-      <pubDate>Fri, 22 Feb 2019 01:09:41 +0100</pubDate>
-      
-      <guid>https://profile.sarathsp.com/projects/python-2factor-client/</guid>
-      <description>Two-factor authentication (also known as 2FA) is a type (subset) of multi-factor authentication. It is a method of confirming a user&amp;rsquo;s claimed identity by utilizing a combination of two different factors: 1. something they know, 2. something they have, or 3. something they are.
- py2factor app
- Two Factor authentication app for desktop (Linux). The app can be used along with other two factor applications like authy ,google authenticator etc.</description>
-    </item>
     
     <item>
       <title>Hello World</title>

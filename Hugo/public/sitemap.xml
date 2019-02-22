@@ -3,12 +3,71 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://profile.sarathsp.com/projects/python-2factor-client/</loc>
+    <lastmod>2019-02-22T01:09:41+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://profile.sarathsp.com/posts/helloworld/</loc>
+    <lastmod>2019-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://profile.sarathsp.com/posts/goisforlovers/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://profile.sarathsp.com/tags/development/</loc>
+    <lastmod>2019-01-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://profile.sarathsp.com/tags/go/</loc>
+    <lastmod>2019-01-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://profile.sarathsp.com/tags/golang/</loc>
+    <lastmod>2019-01-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://profile.sarathsp.com/posts/</loc>
+    <lastmod>2019-01-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://profile.sarathsp.com/projects/</loc>
+    <lastmod>2019-02-22T01:09:41+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://profile.sarathsp.com/</loc>
+    <lastmod>2019-02-22T01:09:41+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://profile.sarathsp.com/tags/</loc>
+    <lastmod>2019-01-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://profile.sarathsp.com/tags/templates/</loc>
+    <lastmod>2019-01-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://profile.sarathsp.com/tags/themes/</loc>
+    <lastmod>2019-01-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

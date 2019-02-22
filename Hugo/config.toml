@@ -3,7 +3,7 @@ languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "Sarath Sadasivan Pillai"
 theme = "hermit"
-enableGitInfo = true
+#enableGitInfo = true
 pygmentsCodefences  = true
 pygmentsUseClasses  = true
 # hasCJKLanguage = true  # If Chinese/Japanese/Korean is your main content language, enable this to make wordCount works right.
@@ -17,9 +17,9 @@ disqusShortname = "sarathspillai" #"me-sarathsp-com"
   name = "Sarath Sadasivan Pillai"
 
 [blackfriday]
-  # hrefTargetBlank = true
-  # noreferrerLinks = true
-  # nofollowLinks = true
+  #hrefTargetBlank = true
+  #noreferrerLinks = true
+  #nofollowLinks = true
 
 [taxonomies]
   tag = "tags"
@@ -34,14 +34,14 @@ disqusShortname = "sarathspillai" #"me-sarathsp-com"
   # Metadata mostly used in document's head
   # description = ""
   # images = [""]
-  themeColor = "#494f5c"
+  themeColor =  "#0000ff" #"#494f5c"
 
   homeSubtitle = "Anything worth writing is worth writing good."
   footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   # bgImg = ""  # Homepage background-image URL
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
-  gitUrl = "https://github.com/sarathsp06/me/commit/"
+  # gitUrl = "https://github.com/sarathsp06/me/commit/"
 
   # Toggling this option needs to rebuild SCSS, requires Hugo extended version
   justifyContent = false  # Set "text-align: justify" to `.content`.
@@ -79,10 +79,15 @@ disqusShortname = "sarathspillai" #"me-sarathsp-com"
 
   [[menu.main]]
     name = "Posts"
-    url = "posts/"
+    url = "posts"
     weight = 10
 
   [[menu.main]]
     name = "About"
-    url = "about/"
+    url = "about"
     weight = 20
+  
+  [[menu.main]]
+    name = "Projects"
+    url = "projects"
+    weight = 10
