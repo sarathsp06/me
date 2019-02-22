@@ -1,12 +1,8 @@
----
-title: "Helloworld"
-date: 2019-02-21T18:52:44+01:00
-draft: true
-toc: false
-images:
-tags: 
-  - helloworld
----
++++
+title= "Hello World"
+date= 2019-02-21T18:52:44+01:00
+toc= true
++++
 
 
 A techies attempt to write his thoughts on ~~rock~~,~~paper~~,~~computer~~,web 

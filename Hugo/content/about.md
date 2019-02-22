@@ -1,7 +1,7 @@
 +++
 title="About"
 date="2019-02-22T01:09:48+01:00"
-draft= true
+draft= false
 +++
 
 A techies attempt to write his thoughts on ~~rock~~,~~paper~~,~~computer~~,web 

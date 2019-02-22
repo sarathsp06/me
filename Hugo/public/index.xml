@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Fri, 22 Feb 2019 01:09:41 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 22 Feb 2019 01:09:48 +0100</lastBuildDate>
     
 	<atom:link href="https://profile.sarathsp.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About</title>
+      <link>https://profile.sarathsp.com/about/</link>
+      <pubDate>Fri, 22 Feb 2019 01:09:48 +0100</pubDate>
+      
+      <guid>https://profile.sarathsp.com/about/</guid>
+      <description>A techies attempt to write his thoughts on rock,paper,computer,web
+import life life.init() while life.ticking(): life.eat() life.code() life.sleep() life.Close() ## run time error , you don&amp;#39;t have permission to your life anymore</description>
+    </item>
     
     <item>
       <title>Python 2factor Client</title>
@@ -26,10 +36,11 @@
     <item>
       <title>Hello World</title>
       <link>https://profile.sarathsp.com/posts/helloworld/</link>
-      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 21 Feb 2019 18:52:44 +0100</pubDate>
       
       <guid>https://profile.sarathsp.com/posts/helloworld/</guid>
-      <description> Hello world </description>
+      <description>A techies attempt to write his thoughts on rock,paper,computer,web
+import life life.init() while life.ticking(): life.eat() life.code() life.sleep() life.Close() ## run time error , you don&amp;#39;t have permission to your life anymore</description>
     </item>
     
     <item>

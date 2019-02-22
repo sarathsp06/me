@@ -7,20 +7,27 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Wed, 02 Jan 2019 00:00:00 +0000</lastBuildDate>
+		<lastBuildDate>Thu, 21 Feb 2019 18:52:44 +0100</lastBuildDate>
 		<atom:link href="https://profile.sarathsp.com/posts/index.xml" rel="self" type="application/rss+xml" />
 		
 		<item>
 			<title>Hello World</title>
 			<link>https://profile.sarathsp.com/posts/helloworld/</link>
-			<pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
+			<pubDate>Thu, 21 Feb 2019 18:52:44 +0100</pubDate>
 			
 			<guid>https://profile.sarathsp.com/posts/helloworld/</guid>
-			<description> Hello world </description>
-			<content type="html"><![CDATA[
+			<description>A techies attempt to write his thoughts on rock,paper,computer,web
+import life life.init() while life.ticking(): life.eat() life.code() life.sleep() life.Close() ## run time error , you don&amp;#39;t have permission to your life anymore</description>
+			<content type="html"><![CDATA[<p>A techies attempt to write his thoughts on <del>rock</del>,<del>paper</del>,<del>computer</del>,web</p>
+<div class="highlight"><pre class="chroma"><code class="language-py" data-lang="py"><span class="kn">import</span> <span class="nn">life</span>
 
-<h2 id="hello-world">Hello world</h2>
-]]></content>
+<span class="n">life</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+<span class="k">while</span> <span class="n">life</span><span class="o">.</span><span class="n">ticking</span><span class="p">():</span>
+  <span class="n">life</span><span class="o">.</span><span class="n">eat</span><span class="p">()</span>
+  <span class="n">life</span><span class="o">.</span><span class="n">code</span><span class="p">()</span>
+  <span class="n">life</span><span class="o">.</span><span class="n">sleep</span><span class="p">()</span> 
+
+<span class="n">life</span><span class="o">.</span><span class="n">Close</span><span class="p">()</span> <span class="c1">## run time error , you don&#39;t have permission to your life anymore</span></code></pre></div>]]></content>
 		</item>
 		
 		<item>
