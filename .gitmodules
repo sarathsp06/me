@@ -1,3 +1,9 @@
 [submodule "Hugo/themes/hermit"]
 	path = Hugo/themes/hermit
 	url = https://github.com/Track3/hermit.git
+[submodule "Hugo/public/sarathsp06.github.io"]
+	path = Hugo/public/sarathsp06.github.io
+	url = git@github.com:sarathsp06/sarathsp06.github.io.git
+[submodule "Hugo/sarathsp06.github.io"]
+	path = Hugo/sarathsp06.github.io
+	url = git@github.com:sarathsp06/sarathsp06.github.io.git

@@ -1,4 +1,4 @@
-baseURL = "https://me.sarathsp.com"
+baseURL = "https://profile.sarathsp.com"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "Sarath Sadasivan Pillai"
@@ -41,7 +41,7 @@ disqusShortname = "sarathspillai" #"me-sarathsp-com"
   # bgImg = ""  # Homepage background-image URL
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
-  gitUrl = "https://github.com/sarathsp06/py2factor/commit/"
+  gitUrl = "https://github.com/sarathsp06/me/commit/"
 
   # Toggling this option needs to rebuild SCSS, requires Hugo extended version
   justifyContent = false  # Set "text-align: justify" to `.content`.
@@ -66,6 +66,10 @@ disqusShortname = "sarathspillai" #"me-sarathsp-com"
   [[params.social]]
     name = "github"
     url = "https://github.com/sarathsp06"
+  
+  [[params.social]]
+    name = "telegram"
+    url = "https://web.telegram.org/sarathsp06"
   
   [[params.social]]
     name = "file"
