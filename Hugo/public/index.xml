@@ -23,6 +23,16 @@
     </item>
     
     <item>
+      <title>Exotel Py</title>
+      <link>https://profile.sarathsp.com/projects/exotel-py/</link>
+      <pubDate>Fri, 22 Feb 2019 01:09:41 +0100</pubDate>
+      
+      <guid>https://profile.sarathsp.com/projects/exotel-py/</guid>
+      <description>Python module for exotel&amp;rsquo;s call and sms api&amp;rsquo;s(Unofficial).
+installation pip install exotel Usage  Initialize   from exotel import Exotel client = Exotel(sid,token)   make call to connect a number to another   client.call_number(&#39;from_number&#39;,&#39;exophone&#39;,&#39;to_number&#39;)   make call to connect a number to a flow   client.call_flow(&#39;from_number&#39;,&#39;exophone&#39;,&#39;flow_id&#39;)   send an sms   client.sms(&#39;from_number&#39;,to_number&#39;,&amp;quot;sms_body&amp;quot;)   get details of an sms   client.sms_details(&#39;sms_sid&#39;)   get details of a call   client.</description>
+    </item>
+    
+    <item>
       <title>Python 2factor Client</title>
       <link>https://profile.sarathsp.com/projects/python-2factor-client/</link>
       <pubDate>Fri, 22 Feb 2019 01:09:41 +0100</pubDate>

@@ -7,7 +7,7 @@ tags = [
     "themes",
     "development",
 ]
-date = "2019-01-02"
+date = {{.Date}}
 toc = true
 +++
 
