@@ -13,7 +13,6 @@ toc = true
 
 
 
-##                Understanding Discrete time crystals
 
 
 !["round white and brown wall clock" ](https://cdn-images-1.medium.com/max/1600/0*8GUW0qYowMMZd_DI)
