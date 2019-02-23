@@ -13,36 +13,30 @@
   </url>
   
   <url>
+    <loc>https://profile.sarathsp.com/posts/understanding-descrete-time-crystals/</loc>
+    <lastmod>2019-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://profile.sarathsp.com/posts/helloworld/</loc>
     <lastmod>2019-02-21T18:52:44+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://profile.sarathsp.com/posts/goisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://profile.sarathsp.com/tags/development/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>https://profile.sarathsp.com/tags/explanation/</loc>
+    <lastmod>2019-02-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://profile.sarathsp.com/tags/go/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://profile.sarathsp.com/tags/golang/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>https://profile.sarathsp.com/tags/physics/</loc>
+    <lastmod>2019-02-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://profile.sarathsp.com/posts/</loc>
-    <lastmod>2019-02-21T18:52:44+01:00</lastmod>
+    <lastmod>2019-02-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -53,26 +47,32 @@
   </url>
   
   <url>
+    <loc>https://profile.sarathsp.com/tags/quantum-computing/</loc>
+    <lastmod>2019-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://profile.sarathsp.com/</loc>
     <lastmod>2019-02-22T01:09:48+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://profile.sarathsp.com/tags/science/</loc>
+    <lastmod>2019-02-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://profile.sarathsp.com/tags/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <lastmod>2019-02-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://profile.sarathsp.com/tags/templates/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://profile.sarathsp.com/tags/themes/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>https://profile.sarathsp.com/tags/time/</loc>
+    <lastmod>2019-02-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

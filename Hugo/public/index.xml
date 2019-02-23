@@ -18,8 +18,8 @@
       <pubDate>Fri, 22 Feb 2019 01:09:48 +0100</pubDate>
       
       <guid>https://profile.sarathsp.com/about/</guid>
-      <description>A techies attempt to write his thoughts on rock,paper,computer,web
-import life life.init() while life.ticking(): life.eat() life.code() life.sleep() life.Close() ## run time error , you don&amp;#39;t have permission to your life anymore</description>
+      <description>“Man does not simply exist but always decides what his existence will be, what he will become the next moment. By the same token, every human being has the freedom to change at any instant.” ― Viktor Emil Frankl, Man&amp;rsquo;s Search for Meaning
+   Sarath   I dislike writing about myself because I feel it’s impossible to really summarize any human being into a few paragraphs, but I’ll try to give you a tiny glimpse of who I am.</description>
     </item>
     
     <item>
@@ -34,23 +34,24 @@ import life life.init() while life.ticking(): life.eat() life.code() life.sleep(
     </item>
     
     <item>
+      <title>Understanding Descrete Time Crystals</title>
+      <link>https://profile.sarathsp.com/posts/understanding-descrete-time-crystals/</link>
+      <pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://profile.sarathsp.com/posts/understanding-descrete-time-crystals/</guid>
+      <description>Understanding Discrete time crystals Crystals are a manifestation of systems in their lowest energy states. While normal crystals have spatial symmetry, discrete time crystals are strange crystals that have an atomic structure that repeats not just in space, but in time, putting them in constant oscillation without energy.
+Is it real? It might seem pretty abstract as all we know about matter and it states is defined in terms of equilibrium, spatial symmetry etc</description>
+    </item>
+    
+    <item>
       <title>Hello World</title>
       <link>https://profile.sarathsp.com/posts/helloworld/</link>
       <pubDate>Thu, 21 Feb 2019 18:52:44 +0100</pubDate>
       
       <guid>https://profile.sarathsp.com/posts/helloworld/</guid>
-      <description>A techies attempt to write his thoughts on rock,paper,computer,web
-import life life.init() while life.ticking(): life.eat() life.code() life.sleep() life.Close() ## run time error , you don&amp;#39;t have permission to your life anymore</description>
-    </item>
-    
-    <item>
-      <title>(Hu)go Template Primer</title>
-      <link>https://profile.sarathsp.com/posts/goisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://profile.sarathsp.com/posts/goisforlovers/</guid>
-      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
-This document is a brief primer on using Go templates.</description>
+      <description>The first post has to be the ubiquitous Hello World, what about a bit of history
+“Hello, World” was created by Brian Kernighan, author of one of the most widely read programming books: C Programming Language, in 1978. He first referenced ‘Hello World’ in the C Programming Language book’s predecessor: A Tutorial Introduction to the Programming Language B published in 1973.
+main( ) { extrn a, b, c; putchar(a); putchar(b); putchar(c); putchar(’!</description>
     </item>
     
   </channel>

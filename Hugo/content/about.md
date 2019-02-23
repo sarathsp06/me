@@ -4,18 +4,21 @@ date="2019-02-22T01:09:48+01:00"
 draft= false
 +++
 
-A techies attempt to write his thoughts on ~~rock~~,~~paper~~,~~computer~~,web 
+
+> “Man does not simply exist but always decides what his existence will be, what he will become the next moment. By the same token, every human being has the freedom to change at any instant.” 
+― Viktor Emil Frankl, Man's Search for Meaning
 
 
+<figure>
+  <img src="/photo.jpg"  />
+  <figcaption>
+      <h4>Sarath</h4>
+  </figcaption>
+</figure>
 
-```py
-import life
 
-life.init()
-while life.ticking():
-  life.eat()
-  life.code()
-  life.sleep() 
+I dislike writing about myself because I feel it’s impossible to really summarize any human being into a few paragraphs, but I’ll try to give you a tiny glimpse of who I am.
 
-life.Close() ## run time error , you don't have permission to your life anymore
-```
+My name is Sarath S Pillai, a software engineer by profession. Here I am trying to write about technology, programming, maths and random things I learn. 
+
+ Now that I tried to write about me I realized I barely know me, maybe I will wait until i can copy it from ~~stackoverflow~~ Wikipedia :D
