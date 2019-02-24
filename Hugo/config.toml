@@ -71,6 +71,11 @@ disqusShortname = "profile-sarathsp-com" #"me-sarathsp-com"
     url = "https://t.me/sarathsp06"
   
   [[params.social]]
+    name = "email"
+    url = "mailto:sarathsp06+profile@gmail.com?Subject=[From Portfolio]"
+
+  
+  [[params.social]]
     name = "file"
     url = "https://raw.githubusercontent.com/sarathsp06/me/master/cv.pdf"
 
