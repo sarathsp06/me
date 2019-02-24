@@ -1,10 +1,9 @@
-baseURL = "https://profile.sarathsp.com"
+baseURL = "/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "Sarath Sadasivan Pillai"
 theme = "hermit"
-#enableGitInfo = true
-pygmentsCodefences  = true
+enaantsCodefences  = true
 pygmentsUseClasses  = true
 # hasCJKLanguage = true  # If Chinese/Japanese/Korean is your main content language, enable this to make wordCount works right.
 rssLimit = 10  # Maximum number of items in the RSS feed.
@@ -36,12 +35,12 @@ disqusShortname = "profile-sarathsp-com" #"me-sarathsp-com"
   # images = [""]
   themeColor =  "#494f5c"
 
-  homeSubtitle = "Anything worth writing is worth writing good."
+  homeSubtitle = ""
   footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   # bgImg = ""  # Homepage background-image URL
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
-  # gitUrl = "https://github.com/sarathsp06/me/commit/"
+  gitUrl = "https://github.com/sarathsp06/me/commit/"
 
   # Toggling this option needs to rebuild SCSS, requires Hugo extended version
   justifyContent = false  # Set "text-align: justify" to `.content`.
@@ -69,7 +68,7 @@ disqusShortname = "profile-sarathsp-com" #"me-sarathsp-com"
   
   [[params.social]]
     name = "telegram"
-    url = "ttps://t.me/sarathsp06"
+    url = "https://t.me/sarathsp06"
   
   [[params.social]]
     name = "file"

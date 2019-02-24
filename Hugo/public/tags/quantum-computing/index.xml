@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Quantum Computing on Sarath Sadasivan Pillai</title>
-    <link>https://profile.sarathsp.com/tags/quantum-computing/</link>
+    <link>/tags/quantum-computing/</link>
     <description>Recent content in Quantum Computing on Sarath Sadasivan Pillai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Fri, 22 Feb 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://profile.sarathsp.com/tags/quantum-computing/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/quantum-computing/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Understanding Descrete Time Crystals</title>
-      <link>https://profile.sarathsp.com/posts/understanding-descrete-time-crystals/</link>
+      <link>/posts/understanding-descrete-time-crystals/</link>
       <pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://profile.sarathsp.com/posts/understanding-descrete-time-crystals/</guid>
+      <guid>/posts/understanding-descrete-time-crystals/</guid>
       <description>Crystals are a manifestation of systems in their lowest energy states. While normal crystals have spatial symmetry, discrete time crystals are strange crystals that have an atomic structure that repeats not just in space, but in time, putting them in constant oscillation without energy.
 Is it real? It might seem pretty abstract as all we know about matter and it states is defined in terms of equilibrium, spatial symmetry etc</description>
     </item>
