@@ -13,15 +13,16 @@
     
     
     <item>
-      <title>Sublime Php Selective Format</title>
+      <title>Sublime Php Selective Format[WIP]</title>
       <link>/projects/sublime-php-selective-format/</link>
       <pubDate>Sun, 24 Feb 2019 09:07:21 +0100</pubDate>
       
       <guid>/projects/sublime-php-selective-format/</guid>
-      <description>A sublime plugin to format php files partially
-PHP Selective format uses php-cs-fixer to format selection of php code
-Steps to use 1. Install php cs fixer
-curl -L http://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -o /tmp/php-cs-fixer sudo chmod a+x /tmp/php-cs-fixer sudo mv /tmp/php-cs-fixer /usr/local/bin/php-cs-fixer   Clone the repository inside sublime package  git clone git@github.com:sarathsp06/sublime-php-selective-format.git $HOME/.config/sublime-text-3/Packages/SelectivePHP   select text and press &amp;ldquo;Ctrl+Alt+F&amp;rdquo; to format  </description>
+      <description>A sublime plugin to format php files partially.PHP Selective format uses php-cs-fixer to format selection of php code
+Steps to use
+ Install php cs fixer curl -L http://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -o /tmp/php-cs-fixer sudo chmod a+x /tmp/php-cs-fixer sudo mv /tmp/php-cs-fixer /usr/local/bin/php-cs-fixer  Clone the repository inside sublime package git clone git@github.com:sarathsp06/sublime-php-selective-format.git $HOME/.config/sublime-text-3/Packages/SelectivePHP 
+ select text and press &amp;ldquo;Ctrl+Alt+F&amp;rdquo; to format
+  </description>
     </item>
     
     <item>
@@ -62,9 +63,8 @@ installation pip install exotel  Usage  Initialize   from exotel import Exotel c
       <pubDate>Fri, 22 Feb 2019 01:09:41 +0100</pubDate>
       
       <guid>/projects/python-2factor-client/</guid>
-      <description>Two-factor authentication (also known as 2FA) is a type (subset) of multi-factor authentication. It is a method of confirming a user&amp;rsquo;s claimed identity by utilizing a combination of two different factors: 1. something they know, 2. something they have, or 3. something they are.
- py2factor app
- Two Factor authentication app for desktop (Linux). The app can be used along with other two factor applications like authy ,google authenticator etc.</description>
+      <description>Two-factor authentication (also known as 2FA) is a type (subset) of multi-factor authentication. It is a method of confirming a user&amp;rsquo;s claimed identity by utilizing a combination of two different factors:
+ something they know, something they have, or something they are.  py2factor app Two Factor authentication app for desktop (Linux). The app can be used along with other two factor applications like authy ,google authenticator etc. Unlike the mobile two factor authenticators ,this app requires the user to read the QR given for two factor using mobile and pass the data read from that as input to the application</description>
     </item>
     
     <item>

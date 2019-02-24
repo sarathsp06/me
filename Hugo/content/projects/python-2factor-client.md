@@ -9,11 +9,12 @@ date= 2019-02-22T01:09:41+01:00
 
 
 Two-factor authentication (also known as 2FA) is a type (subset) of multi-factor authentication. It is a method of confirming a user's claimed identity by utilizing a combination of two different factors: 
+
 1. something they know, 
 2. something they have, or 
 3. something they are.
 
->  py2factor app
+###   py2factor app
 
 Two Factor authentication app for desktop (Linux). The app can be used along with other two factor applications like `authy` ,`google authenticator` etc.  Unlike the mobile two factor authenticators ,this app requires the user to read the QR given for two factor using mobile and pass the   data read from that as input to the application
 
@@ -42,13 +43,14 @@ Here you should say what actually happens when you execute the code above.
 Here's a brief intro about what a developer must do in order to start developing
 the project further:
 
-> Make sure virtual environment is installed
+####  Make sure virtual environment is installed
 
-```shpell
+```shell
 sudo pip install virtualenv
 ```
 
-> Get the code from github and start hacking
+####  Get the code from github and start hacking
+
 ```
 git clone git@github.com:sarathsp06/py2factor.git
 cd py2factor
@@ -57,6 +59,7 @@ virtualenv .venv
 pip install -r requirements.txt
 python setup.py install
 ```
+
 
 ## Features
 
