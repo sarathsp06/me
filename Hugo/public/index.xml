@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sun, 24 Feb 2019 09:07:21 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 01 Mar 2019 14:10:10 +0100</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Gojson : A Simple JSON Parser:w</title>
+      <link>/projects/gojson/</link>
+      <pubDate>Fri, 01 Mar 2019 14:10:10 +0100</pubDate>
+      
+      <guid>/projects/gojson/</guid>
+      <description>GoJSON is a command line utility to handle JSON in command line.
+What it does Retrieve nested objects Pretty print JSON Validate JSON Aggregate functions on lists  Installing With go
+$ go get -u github.com/sarathsp06/gojson  Or you may download the binary here download and use the binary as such
+Tip: &amp;gt; In unix move the binary to PATH
+Key Syntax  Key is a set of . seperated nested keys Can use 0-n numbers to refer to index in arrays  Usage Examples Getting a value  Get a string:</description>
+    </item>
     
     <item>
       <title>Sublime Php Selective Format[WIP]</title>
@@ -43,8 +56,8 @@ go get github.com/sarathsp06/gologger But if one needs to get a particular versi
       <pubDate>Fri, 22 Feb 2019 01:09:48 +0100</pubDate>
       
       <guid>/about/</guid>
-      <description>“Man does not simply exist but always decides what his existence will be, what he will become the next moment. By the same token, every human being has the freedom to change at any instant.” ― Viktor Emil Frankl, Man&amp;rsquo;s Search for Meaning
-   Sarath   I dislike writing about myself because I feel it’s impossible to really summarize any human being into a few paragraphs, but I’ll try to give you a tiny glimpse of who I am.</description>
+      <description>Sarath    “Man does not simply exist but always decides what his existence will be, what he will become the next moment. By the same token, every human being has the freedom to change at any instant.” ― Viktor Emil Frankl, Man&amp;rsquo;s Search for Meaning
+  &amp;nbsp; &amp;nbsp; I dislike writing about myself because I feel it’s impossible to really summarise any human being into a few paragraphs, but I’ll try to give you a tiny glimpse of who I am.</description>
     </item>
     
     <item>
