@@ -23,15 +23,11 @@ With go
 $ go get -u github.com/sarathsp06/gojson
 ```
 
-Or you may download the binary here [download](https://github.com/sarathsp06/gojson/tree/master/release) and use the binary as such
-
-
-**Tip:**
-> In unix move the binary to PATH
+Or you may download the binary here [download](https://github.com/sarathsp06/gojson/tree/master/release) and use the binary as such.
 
 
 #### Key Syntax
-* Key is a set of `.` seperated nested keys
+* Key is a set of `.` separated nested keys
 * Can use 0-n numbers to refer to index in arrays
 
 ### Usage Examples
@@ -39,12 +35,14 @@ Or you may download the binary here [download](https://github.com/sarathsp06/goj
 ##### Getting a value
 
 * Get a string:
+
 ```sh
 $ echo '{"name":{"first":"Sarath","last":"Pillai"}}' | gojson name.last
 "Pillai"
 ```
 
 * Get a block of JSON:
+
 ```sh
 $ echo '{"name":{"first":"Sarath","last":"Pillai"}}'  | gojson name
 
@@ -55,12 +53,14 @@ $ echo '{"name":{"first":"Sarath","last":"Pillai"}}'  | gojson name
 ```
 
 * Try to get a non-existent key:
+
 ```sh
 $ echo '{"name":{"first":"Sarath","last":"Pillai"}}' | gojson names
 nil
 ```
 
-Get an array value by index:
+* Get an array value by index:
+
 ```sh
 $ echo '{"people":[{"name":"saratha"},{"name":"syam"}]}' | gojson people.1.name                                               
 "syam"

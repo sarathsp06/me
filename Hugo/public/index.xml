@@ -20,9 +20,8 @@
       <guid>/projects/gojson/</guid>
       <description>GoJSON is a command line utility to handle JSON in command line.
 What it does Retrieve nested objects Pretty print JSON Validate JSON Aggregate functions on lists  Installing With go
-$ go get -u github.com/sarathsp06/gojson  Or you may download the binary here download and use the binary as such
-Tip: &amp;gt; In unix move the binary to PATH
-Key Syntax  Key is a set of . seperated nested keys Can use 0-n numbers to refer to index in arrays  Usage Examples Getting a value  Get a string:</description>
+$ go get -u github.com/sarathsp06/gojson  Or you may download the binary here download and use the binary as such.
+Key Syntax  Key is a set of . separated nested keys Can use 0-n numbers to refer to index in arrays  Usage Examples Getting a value  Get a string:  $ echo &#39;{&amp;quot;name&amp;quot;:{&amp;quot;first&amp;quot;:&amp;quot;Sarath&amp;quot;,&amp;quot;last&amp;quot;:&amp;quot;Pillai&amp;quot;}}&#39; | gojson name.</description>
     </item>
     
     <item>
