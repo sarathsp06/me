@@ -1,5 +1,5 @@
 +++
-title = "Gojson : A Simple JSON Parser:w"
+title = "Gojson : A Simple JSON Parser"
 date = 2019-03-01T14:10:10+01:00
 toc = true
 +++
