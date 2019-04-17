@@ -1,78 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Posts on Sarath Sadasivan Pillai</title>
-		<link>/posts/</link>
-		<description>Recent content in Posts on Sarath Sadasivan Pillai</description>
-		<generator>Hugo -- gohugo.io</generator>
-		<language>en-us</language>
-		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Fri, 22 Feb 2019 00:00:00 +0000</lastBuildDate>
-		<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
-		
-		<item>
-			<title>Understanding Descrete Time Crystals</title>
-			<link>/posts/understanding-descrete-time-crystals/</link>
-			<pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate>
-			
-			<guid>/posts/understanding-descrete-time-crystals/</guid>
-			<description>Crystals are a manifestation of systems in their lowest energy states. While normal crystals have spatial symmetry, discrete time crystals are strange crystals that have an atomic structure that repeats not just in space, but in time, putting them in constant oscillation without energy.
+  <channel>
+    <title>Posts on Sarath Sadasivan Pillai</title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on Sarath Sadasivan Pillai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 22 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Understanding Descrete Time Crystals</title>
+      <link>/2019/understanding-descrete-time-crystals/</link>
+      <pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/understanding-descrete-time-crystals/</guid>
+      <description>Crystals are a manifestation of systems in their lowest energy states. While normal crystals have spatial symmetry, discrete time crystals are strange crystals that have an atomic structure that repeats not just in space, but in time, putting them in constant oscillation without energy.
 Is it real? It might seem pretty abstract as all we know about matter and it states is defined in terms of equilibrium, spatial symmetry etc</description>
-			<content type="html"><![CDATA[
-
-<p><img src="https://cdn-images-1.medium.com/max/1600/0*8GUW0qYowMMZd_DI" alt="&quot;round white and brown wall clock&quot; " /></p>
-
-<p>Crystals are a manifestation of systems in their lowest energy states. While normal crystals have spatial symmetry, discrete time crystals are strange crystals that have an atomic structure that repeats not just in space, but in time, putting them in constant oscillation without energy.</p>
-
-<h2 id="is-it-real">Is it real?</h2>
-
-<p>It might seem pretty abstract as all we know about matter and it states is defined in terms of equilibrium, spatial symmetry etc</p>
-
-<blockquote>
-<p>&ldquo;This is a new phase of matter, period, but it is also really cool because it is one of the first examples of non-equilibrium matter,&rdquo; said lead researcher Norman Yao from the University of California, Berkeley.</p>
-</blockquote>
-
-<p>Usually, when a material is in the ground state it means movement should theoretically be impossible because that would require it to expend energy and it doesn&rsquo;t have any. Normal crystals are motionless because they&rsquo;re in equilibrium in their ground state, But time crystals have a structure that repeats in time, not just in space. And it keeps oscillating in its ground state.
-A time crystal is like constantly oscillating jelly in its natural, ground state, and that&rsquo;s what makes it a whole new phase of matter&ndash;non-equilibrium matter. <strong><em>It&rsquo;s incapable of sitting still</em></strong>.</p>
-
-<h2 id="what-is-next">What is next?</h2>
-
-<p><strong>A perfect clock</strong>:If you have a quartz clock, it tells the time because when you push electricity through a quartz crystal, it vibrates. Count 32,768 vibrations and one second has gone past. The important thing is that this vibration requires energy (in this case from electricity). Time crystals oscillates just like quartz crystals without energy</p>
-
-<p><strong>Better quantum computer</strong>: One of the most promising applications for time crystals is quantum computing-they could allow physicists to create stable quantum systems at far higher temperatures than can be achieved right now, and that just might be the push we need to finally make <a href="https://www.sciencealert.com/ibm-is-rolling-out-the-world-s-first-universal-quantum-computing-service">quantum computing a reality</a></p>
-]]></content>
-		</item>
-		
-		<item>
-			<title>Hello World</title>
-			<link>/posts/helloworld/</link>
-			<pubDate>Thu, 21 Feb 2019 18:52:44 +0100</pubDate>
-			
-			<guid>/posts/helloworld/</guid>
-			<description>The first post has to be the ubiquitous Hello World, what about a bit of history
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>/2019/helloworld/</link>
+      <pubDate>Thu, 21 Feb 2019 18:52:44 +0100</pubDate>
+      
+      <guid>/2019/helloworld/</guid>
+      <description>The first post has to be the ubiquitous Hello World, what about a bit of history
 “Hello, World” was created by Brian Kernighan, author of one of the most widely read programming books: C Programming Language, in 1978. He first referenced ‘Hello World’ in the C Programming Language book’s predecessor: A Tutorial Introduction to the Programming Language B published in 1973.
 main( ) { extrn a, b, c; putchar(a); putchar(b); putchar(c); putchar(’!</description>
-			<content type="html"><![CDATA[<p>The first post has to be the ubiquitous  <strong><em>Hello World</em></strong>, what about a bit of history</p>
-
-<p>“Hello, World” was created by <a href="https://www.cs.princeton.edu/~bwk/">Brian Kernighan</a>, author of one of the most widely read programming books: C Programming Language, in 1978. He first referenced ‘Hello World’ in the C Programming Language book’s predecessor: A <a href="https://www.bell-labs.com/usr/dmr/www/btut.pdf">Tutorial Introduction to the Programming Language</a> B published in 1973.</p>
-
-<pre><code>main( )
-{
-  extrn a, b, c;
-  putchar(a); putchar(b); putchar(c); putchar(’!*n’);
- }
- a ’hell’;
- b ’o, w’;
- c ’orld’;
-</code></pre>
-
-<blockquote>
-<p>What I do remember is that I had seen a cartoon that showed an egg and a chick and the chick was saying, “Hello, World.”   - Brian Kernighan</p>
-</blockquote>
-
-<p><a href="https://commons.wikimedia.org/wiki/File:PSP-Homebrew.jpeg#/media/File:PSP-Homebrew.jpeg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/PSP-Homebrew.jpeg/1200px-PSP-Homebrew.jpeg" alt="PSP-Homebrew.jpeg"></a><br>By <a href="//commons.wikimedia.org/w/index.php?title=User:%E9%8A%80%E7%B3%B8&amp;action=edit&amp;redlink=1" class="new" title="User:銀糸 (page does not exist)">銀糸</a> - <span class="int-own-work">Self-photographed</span>, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=3133165">Link</a></p>
-]]></content>
-		</item>
-		
-	</channel>
+    </item>
+    
+  </channel>
 </rss>

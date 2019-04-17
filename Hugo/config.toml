@@ -1,97 +1,166 @@
 baseURL = "/"
-languageCode = "en-us"
+languageCode = "en"
 defaultContentLanguage = "en"
 title = "Sarath Sadasivan Pillai"
-theme = "hermit"
-enaantsCodefences  = true
-pygmentsUseClasses  = true
-# hasCJKLanguage = true  # If Chinese/Japanese/Korean is your main content language, enable this to make wordCount works right.
-rssLimit = 10  # Maximum number of items in the RSS feed.
-copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
-enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/functions/emojify/
-# googleAnalytics = "UA-123-45"
+theme = "KeepIt"
+
+paginate = 12
+enableEmoji = true
+enableRobotsTXT = true
+googleAnalytics = ""
 disqusShortname = "profile-sarathsp-com" #"me-sarathsp-com"
 
-[author]
-  name = "Sarath Sadasivan Pillai"
+[sitemap]
+  changefreq = "monthly"
+  filename = "sitemap.xml"
+  priority = 0.5
 
 [blackfriday]
-  #hrefTargetBlank = true
-  #noreferrerLinks = true
-  #nofollowLinks = true
+  hrefTargetBlank = true
+  nofollowLinks = true
+  noreferrerLinks = true
 
-[taxonomies]
-  tag = "tags"
-  # Categories are disabled by default.
-
-[params]
-  dateform        = "Jan 2, 2006"
-  dateformShort   = "Jan 2"
-  dateformNum     = "2006-01-02"
-  dateformNumTime = "2006-01-02 15:04 -0700"
-
-  # Metadata mostly used in document's head
-  # description = ""
-  # images = [""]
-  themeColor =  "#494f5c"
-
-  homeSubtitle = ""
-  footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-  # bgImg = ""  # Homepage background-image URL
-
-  # Prefix of link to the git commit detail page. GitInfo must be enabled.
-  gitUrl = "https://github.com/sarathsp06/me/commit/"
-
-  # Toggling this option needs to rebuild SCSS, requires Hugo extended version
-  justifyContent = false  # Set "text-align: justify" to `.content`.
-
-  # Add custom css
-  # customCSS = ["css/foo.css", "css/bar.css"]
-
-  # Social Icons
-  # Check https://github.com/Track3/hermit#social-icons for more info.
-  [[params.social]]
-    name = "twitter"
-    url = "http://twitter.com/sarath_sp06"
-
-  [[params.social]]
-    name = "linkedin"
-    url = "http://linkedin.com/in/sarathsp"
-
-  [[params.social]]
-    name = "stackoverflow"
-    url = "http://stackoverflow.com/users/1898494/sarathsp"
-  
-  [[params.social]]
-    name = "github"
-    url = "https://github.com/sarathsp06"
-  
-  [[params.social]]
-    name = "telegram"
-    url = "https://t.me/sarathsp06"
-  
-  [[params.social]]
-    name = "email"
-    url = "mailto:sarathsp06+profile@gmail.com?Subject=[From Portfolio]"
-
-  
-  [[params.social]]
-    name = "file"
-    url = "https://raw.githubusercontent.com/sarathsp06/me/master/cv.pdf"
+[Permalinks]
+ posts = "/:year/:filename/"
 
 [menu]
-
   [[menu.main]]
-    name = "Posts"
-    url = "posts"
-    weight = 10
+    name = "Blog"
+    url = "/posts/"
+    weight = 1
 
   [[menu.main]]
     name = "About"
-    url = "about"
-    weight = 20
+    url = "/about"
+    weight = 4
   
   [[menu.main]]
     name = "Projects"
-    url = "projects"
-    weight = 10
+    url = "/projects"
+    weight = 4
+
+[params]
+    since = 2019
+    author = "sarath"
+    subtitle = ""       # Subtitle
+    cdn_url = ""        # Base CDN URL
+    home_mode = ""      # post or other
+
+    google_verification = ""
+    bing_verification = ""
+    yandex_verification = ""
+    pinterest_verification = ""
+    baidu_verification = ""
+    
+    socialShare = true
+    
+    description = "" # site description
+    keywords = "go,tech,programming,code" # site keywords
+
+    license= 'Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+
+[params.gravatar]
+    email = "sarath.sp06@gmail.com"   #uncomment and insert your email address to use gravatar
+
+
+[params.social]
+    GitHub = "sarathsp06"
+    Linkedin = "sarathsp"
+    Twitter = "sarath_sp06"
+    #Instagram = "xxxx"
+    #Email   = "xxxx"
+    Facebook = "xxxx"
+    #Telegram = "xxxx"
+    #Medium = "xxxx"
+    #Gitlab = "xxxx"
+    #Youtubelegacy = "xxxx"
+    #Youtubecustom = "xxxx"
+    #Youtubechannel = "xxxx"
+    #Tumblr ="xxxx"
+    #Quora = "xxxx"
+    #Keybase = "xxxx"
+    #Pinterest = "xxxx"
+    #Reddit = "xxxx"
+    #Codepen = "xxxx"
+    #Bitbucket = "xxxx"
+    Stackoverflow = "1898494/sarath-sadasivan-pillai"
+    #Weibo = "xxxx"
+    #Odnoklassniki = "xxxx"
+    #VKontakte = "xxxx"
+    #Flickr = "xxxx"
+    #Xing = "xxxx"
+    #Snapchat = "xxxx"
+    #Soundcloud = "xxxx"
+    #Spotify = "xxxx"
+    #Bandcamp = "xxxx"
+    #Paypal = "xxxx"
+    #Fivehundredpx = "xxxx"
+    #Mix = "xxxx"
+    #Goodreads = "xxxx"
+    #Lastfm = "xxxx"
+    #Foursquare = "xxxx"
+    #Hackernews = "xxxx"
+    #Kickstarter = "xxxx"
+    #Patreon = "xxxx"
+    #Steam = "xxxx"
+    #Twitch = "xxxx"
+    #Strava = "xxxx"
+    #Skype = "xxxx"
+    #Whatsapp = "xxxx"
+    #Zhihu = "xxxx"
+    #Douban = "xxxx"
+    #Angellist = "xxxx"
+    #Slidershare = "xxxx"
+    #Jsfiddle = "xxxx"
+    #Deviantart = "xxxx"
+    #Behance = "xxxx"
+    #Dribble = "xxxx"
+    #Wordpress = "xxxx"
+    #Vine = "xxxx"
+    #Googlescholar = "xxxx"
+    #Researchgate = "xxxx"
+    #Mastodon = "xxxx"
+    #Thingiverse = "xxxx"
+
+[params.share]
+Twitter = true
+Facebook = true
+Reddit = true
+Linkedin = true
+#Pinterest = true
+#HackerNews = true
+#Mix = true
+#Tumblr = true
+#VKontakte = true
+#Douban = true
+#Weibo = true
+
+# Used only for Seo schema 
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+
+[author]
+  name = "sarath"
+
+  [params.publisher]
+    name = "sarath"
+
+    [params.publisher.logo]
+      url = "logo.png"
+      width = 127
+      height = 40
+
+  [params.logo]
+    url = "logo.png"
+    width = 127
+    height = 40
+
+  [params.image]
+    url = "cover.png"
+    width = 800
+    height = 600
+
+[params.gitalk]           
+owner = ""              
+repo = ""               
+clientId = ""           
+clientSecret = ""   

@@ -7,3 +7,6 @@
 [submodule "Hugo/sarathsp06.github.io"]
 	path = Hugo/sarathsp06.github.io
 	url = git@github.com:sarathsp06/sarathsp06.github.io.git
+[submodule "Hugo/themes/KeepIt"]
+	path = Hugo/themes/KeepIt
+	url = git@github.com:Fastbyte01/KeepIt.git
