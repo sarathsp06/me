@@ -54,7 +54,7 @@ disqusShortname = "profile-sarathsp-com" #"me-sarathsp-com"
     
     socialShare = true
     
-    description = "" # site description
+    description = "Anything worth writing is worth writing good." # site description
     keywords = "go,tech,programming,code" # site keywords
 
     license= 'Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
