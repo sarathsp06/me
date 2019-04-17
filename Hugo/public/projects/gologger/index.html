@@ -1,179 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-  <meta http-equiv="content-type" content="text/html;charset=utf-8">
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noodp"/>
-  
-  
-  
-  
-  
-  <link rel="prev" href="/projects/exotel-py/" />
-  <link rel="next" href="/projects/sublime-php-selective-format/" />
-  <link rel="canonical" href="/projects/gologger/" />
-  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <title>
-       
-       
-           Gologger | Sarath Sadasivan Pillai
-       
-  </title>
-  <meta name="title" content="Gologger | Sarath Sadasivan Pillai">
-    
-  
-  <link rel="stylesheet" href="/font/iconfont.css">
-  <link rel="stylesheet" href="/css/main.min.css">
-
-
-  <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Gologger"/>
-<meta name="twitter:description" content="Logger library for the gophers An opinionated logging library for golang. Gologger writes logs as json in the following format
-{ &quot;time&quot;:&quot;2016-11-10T16:11:46.59Z&quot;, &quot;process_name&quot;:&quot;sample_logger&quot;, &quot;host_name&quot;:&quot;sarath.local&quot;, &quot;process_id&quot;:29422, &quot;level&quot;:&quot;ERROR&quot;, &quot;file_name&quot;:&quot;/home/sarath/go/src/github.com/sarathsp06/gologger/sample/main.go&quot;, &quot;line_num&quot;:13, &quot;log_msg&quot;:&quot;error happened&quot; }  That much info will be how following will be written
-logger.Error(&quot;error happened&quot;)  Installing / Getting started Just like any other go library
-go get github.com/sarathsp06/gologger But if one needs to get a particular version then use"/>
-
-  <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Gologger",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "/projects/gologger/"
-  },
-  "image": {
-    "@type": "ImageObject",
-    "url": "/cover.png",
-    "width": 800,
-    "height": 600
-  },
-  "genre": "projects",
-  
-  "wordcount": 300,
-  "url": "/projects/gologger/",
-  "datePublished": "2019-02-24T08:56:53+01:00",
-  "dateModified": "2019-02-24T08:56:53+01:00",
-  
-  "publisher": {
-    "@type": "Organization",
-    "name": "sarath",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "/logo.png",
-      "width": 127,
-      "height": 40
-    }
-  },
-  "author": {
-    "@type": "Person",
-    "name": "sarath"
-  },
-  "description": ""
-}
-</script>
-</head>
-
-  
-
-
-  <body class="">
-    <div class="wrapper">
-        <nav class="navbar">
-    <div class="container">
-        <div class="navbar-header header-logo">
-        	<a href="/">Sarath Sadasivan Pillai</a>
-        </div>
-        <div class="menu navbar-right">
-                
-                
-                <a class="menu-item" href="/posts/" title="">Blog</a>
-                
-                <a class="menu-item" href="/categories/" title="">Categories</a>
-                
-                <a class="menu-item" href="/about" title="">About</a>
-                
-                <a class="menu-item" href="/projects" title="">Projects</a>
-                
-                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
-        </div>
-    </div>
-</nav>
-<nav class="navbar-mobile" id="nav-mobile" style="display: none">
-     <div class="container">
-        <div class="navbar-header">
-            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="/">Sarath Sadasivan Pillai</a></div>
-            <div class="menu-toggle">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-     
-          <div class="menu" id="mobile-menu">
-                
-                
-                <a class="menu-item" href="/posts/" title="">Blog</a>
-                
-                <a class="menu-item" href="/categories/" title="">Categories</a>
-                
-                <a class="menu-item" href="/about" title="">About</a>
-                
-                <a class="menu-item" href="/projects" title="">Projects</a>
-                
-        </div>
-    </div>
-</nav>
-    	 <main class="main">
-          <div class="container">
-      		
-<article class="post-warp">
-    <header class="post-header">
-        <h1 class="post-title">Gologger</h1>
-        <div class="post-meta">
-            Written by <a href="/" rel="author">sarath</a> with ♥ 
-                <span class="post-time">
-                    on <time datetime=2019-02-24 >24 February 2019</time>
-                </span>
-                in
-                
-                <i class="iconfont icon-timer"></i>
-                2 min
-        </div>
-    </header>
-    <div class="post-content">
-        
-
-        
-            
-        
-
-        
-        
-     
-          
-          
-          
-
-          
-          
-          
-
-          
-
-<p><figure><img src="/images/ring.svg" data-sizes="auto" data-src="http://www.davesgames.net/papercraft/png/gallery-logs-01.png" alt="Logo of the project" class="lazyload"><figcaption class="image-caption">Logo of the project</figcaption></figure></p>
-
-<h4 id="logger-library-for-the-gophers">Logger library for the gophers</h4>
-
-<p>An opinionated logging library for golang. Gologger writes logs as json in the following format</p>
-
-<pre><code class="language-json">{
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="chrome=1"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content=noodp><link rel=prev href=/projects/exotel-py/><link rel=next href=/projects/sublime-php-selective-format/><link rel=canonical href=/projects/gologger/><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><meta name=msapplication-TileColor content=#da532c><meta name=theme-color content=#ffffff><title>Gologger | Sarath Sadasivan Pillai</title><meta name=title content="Gologger | Sarath Sadasivan Pillai"><link rel=stylesheet href=/font/iconfont.css><link rel=stylesheet href=/css/main.min.css><meta name=twitter:card content=summary><meta name=twitter:title content=Gologger><meta name=twitter:description content='Logger library for the gophers An opinionated logging library for golang. Gologger writes logs as json in the following format
+{ "time":"2016-11-10T16:11:46.59Z", "process_name":"sample_logger", "host_name":"sarath.local", "process_id":29422, "level":"ERROR", "file_name":"/home/sarath/go/src/github.com/sarathsp06/gologger/sample/main.go", "line_num":13, "log_msg":"error happened" }  That much info will be how following will be written
+logger.Error("error happened")  Installing / Getting started Just like any other go library
+go get github.com/sarathsp06/gologger But if one needs to get a particular version then use'><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Gologger","mainEntityOfPage":{"@type":"WebPage","@id":"/projects/gologger/"},"image":{"@type":"ImageObject","url":"/cover.png","width":800,"height":600},"genre":"projects","wordcount":300,"url":"/projects/gologger/","datePublished":"2019-02-24T08:56:53+01:00","dateModified":"2019-02-24T08:56:53+01:00","publisher":{"@type":"Organization","name":"sarath","logo":{"@type":"ImageObject","url":"/logo.png","width":127,"height":40}},"author":{"@type":"Person","name":"sarath"},"description":""}</script></head><body><div class=wrapper><nav class=navbar><div class=container><div class="navbar-header header-logo"><a href=/>Sarath Sadasivan Pillai</a></div><div class="menu navbar-right"><a class=menu-item href=/posts/>Blog</a>
+<a class=menu-item href=/about>About</a>
+<a class=menu-item href=/projects>Projects</a>
+<a href=javascript:void(0); class=theme-switch><i class="iconfont icon-sun"></i></a>&nbsp;</div></div></nav><nav class=navbar-mobile id=nav-mobile style=display:none><div class=container><div class=navbar-header><div><a href=javascript:void(0); class=theme-switch><i class="iconfont icon-sun"></i></a>&nbsp;<a href=/>Sarath Sadasivan Pillai</a></div><div class=menu-toggle><span></span><span></span><span></span></div></div><div class=menu id=mobile-menu><a class=menu-item href=/posts/>Blog</a>
+<a class=menu-item href=/about>About</a>
+<a class=menu-item href=/projects>Projects</a></div></div></nav><main class=main><div class=container><article class=post-warp><header class=post-header><h1 class=post-title>Gologger</h1><div class=post-meta>Written by <a href=/ rel=author>sarath</a> with ♥
+<span class=post-time>on <time datetime=2019-02-24>24 February 2019</time></span>
+in
+<i class="iconfont icon-timer"></i>2 min</div></header><div class=post-content><p><figure><img src=/images/ring.svg data-sizes=auto data-src=http://www.davesgames.net/papercraft/png/gallery-logs-01.png alt="Logo of the project" class=lazyload><figcaption class=image-caption>Logo of the project</figcaption></figure></p><h4 id=logger-library-for-the-gophers>Logger library for the gophers</h4><p>An opinionated logging library for golang. Gologger writes logs as json in the following format</p><pre><code class=language-json>{
     &quot;time&quot;:&quot;2016-11-10T16:11:46.59Z&quot;,
     &quot;process_name&quot;:&quot;sample_logger&quot;,
     &quot;host_name&quot;:&quot;sarath.local&quot;,
@@ -183,261 +19,62 @@ go get github.com/sarathsp06/gologger But if one needs to get a particular versi
     &quot;line_num&quot;:13,
     &quot;log_msg&quot;:&quot;error happened&quot;
 }
-</code></pre>
-
-<p>That much info will be how following will be written</p>
-
-<pre><code class="language-golang">logger.Error(&quot;error happened&quot;)
-</code></pre>
-
-<h2 id="installing-getting-started">Installing / Getting started</h2>
-
-<p>Just like any other go library</p>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">go get github.com/sarathsp06/gologger</code></pre></div>
-
-<p>But if one needs to get a particular version then use</p>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">go get gopkg.in/sarathsp06/gologger.vx <span style="color:#75715e">#x is the version Number</span></code></pre></div>
-
-<h2 id="developing">Developing</h2>
-
-<p>Here&rsquo;s a brief intro about what a developer must do in order to start developing
-the project further:</p>
-
-<ol>
-<li>Get it using go get or clone</li>
-<li>Make changes and make a pull request with Updated README if feature addition</li>
-</ol>
-
-<h2 id="features">Features</h2>
-
-<p>What&rsquo;s all the bells and whistles this project can perform?
+</code></pre><p>That much info will be how following will be written</p><pre><code class=language-golang>logger.Error(&quot;error happened&quot;)
+</code></pre><h2 id=installing-getting-started>Installing / Getting started</h2><p>Just like any other go library</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>go get github.com/sarathsp06/gologger</code></pre></div><p>But if one needs to get a particular version then use</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>go get gopkg.in/sarathsp06/gologger.vx <span style=color:#75715e>#x is the version Number</span></code></pre></div><h2 id=developing>Developing</h2><p>Here&rsquo;s a brief intro about what a developer must do in order to start developing
+the project further:</p><ol><li>Get it using go get or clone</li><li>Make changes and make a pull request with Updated README if feature addition</li></ol><h2 id=features>Features</h2><p>What&rsquo;s all the bells and whistles this project can perform?
 * It can log - Obviously
 * Easy buffered logging
 * You can set write to logger for redirecting logs
-* log message will contain much deeper details like line number of error , process id,host_name  etc</p>
+* log message will contain much deeper details like line number of error , process id,host_name etc</p><h2 id=how-to-use>How to use</h2><p>This is how one may use the library</p><p>import the package</p><p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#f92672>import</span> <span style=color:#a6e22e>logger</span> <span style=color:#e6db74>&#34;github.com/sarathsp06/gologger&#34;</span></code></pre></div>Initialize the package</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#66d9ef>if</span> <span style=color:#a6e22e>err</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>logger</span>.<span style=color:#a6e22e>InitLogger</span>(<span style=color:#e6db74>&#34;INFO&#34;</span>, <span style=color:#e6db74>&#34;.&#34;</span>, <span style=color:#e6db74>&#34;sample_logger&#34;</span>,<span style=color:#66d9ef>true</span>); <span style=color:#a6e22e>err</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>nil</span> {
+		panic(<span style=color:#a6e22e>err</span>.<span style=color:#a6e22e>Error</span>())
+}</code></pre></div><p>Log as you wish with formated and normal message</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#a6e22e>logger</span>.<span style=color:#a6e22e>Error</span>(<span style=color:#e6db74>&#34;error happened&#34;</span>)
+<span style=color:#a6e22e>logger</span>.<span style=color:#a6e22e>Debug</span>(<span style=color:#e6db74>&#34;Debug message&#34;</span>,<span style=color:#e6db74>&#34;:Sasa&#34;</span>,<span style=color:#e6db74>&#34;sasa&#34;</span>)
+<span style=color:#a6e22e>logger</span>.<span style=color:#a6e22e>Info</span>(<span style=color:#e6db74>&#34;error happened&#34;</span>)
+<span style=color:#a6e22e>logger</span>.<span style=color:#a6e22e>Warning</span>(<span style=color:#e6db74>&#34;error happened&#34;</span>)
+<span style=color:#a6e22e>logger</span>.<span style=color:#a6e22e>Errorf</span>(<span style=color:#e6db74>&#34;error happened %s&#34;</span>, <span style=color:#e6db74>&#34;Yo&#34;</span>)
+<span style=color:#a6e22e>logger</span>.<span style=color:#a6e22e>Debugf</span>(<span style=color:#e6db74>&#34;debug message : %s&#34;</span>, <span style=color:#e6db74>&#34;YoYo&#34;</span>)</code></pre></div><p>Explore more &hellip;.</p><p>Here is a sample code</p><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style="margin-right:.4em;padding:0 .4em;color:#7c7c79"> 1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7c7c79"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7c7c79"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7c7c79"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7c7c79"> 5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7c7c79"> 6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7c7c79"> 7
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7c7c79"> 8
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7c7c79"> 9
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7c7c79">10
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7c7c79">11
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7c7c79">12
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7c7c79">13
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7c7c79">14
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7c7c79">15
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7c7c79">16
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7c7c79">17
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7c7c79">18
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7c7c79">19
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#f92672>package</span> <span style=color:#a6e22e>main</span>
 
-<h2 id="how-to-use">How to use</h2>
-
-<p>This is how one may use the library</p>
-
-<p>import the package</p>
-
-<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">import</span> <span style="color:#a6e22e">logger</span> <span style="color:#e6db74">&#34;github.com/sarathsp06/gologger&#34;</span></code></pre></div>
-Initialize the  package</p>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">InitLogger</span>(<span style="color:#e6db74">&#34;INFO&#34;</span>, <span style="color:#e6db74">&#34;.&#34;</span>, <span style="color:#e6db74">&#34;sample_logger&#34;</span>,<span style="color:#66d9ef">true</span>); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		panic(<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">Error</span>())
-}</code></pre></div>
-
-<p>Log as you wish with formated and normal message</p>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">Error</span>(<span style="color:#e6db74">&#34;error happened&#34;</span>)
-<span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">Debug</span>(<span style="color:#e6db74">&#34;Debug message&#34;</span>,<span style="color:#e6db74">&#34;:Sasa&#34;</span>,<span style="color:#e6db74">&#34;sasa&#34;</span>)
-<span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">Info</span>(<span style="color:#e6db74">&#34;error happened&#34;</span>)
-<span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">Warning</span>(<span style="color:#e6db74">&#34;error happened&#34;</span>)
-<span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;error happened %s&#34;</span>, <span style="color:#e6db74">&#34;Yo&#34;</span>)
-<span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">Debugf</span>(<span style="color:#e6db74">&#34;debug message : %s&#34;</span>, <span style="color:#e6db74">&#34;YoYo&#34;</span>)</code></pre></div>
-
-<p>Explore more &hellip;.</p>
-
-<p>Here is a sample code</p>
-
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79">19
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-
-<span style="color:#f92672">import</span> (
-	<span style="color:#e6db74">&#34;os&#34;</span>
-	<span style="color:#a6e22e">logger</span> <span style="color:#e6db74">&#34;github.com/sarathsp06/gologger&#34;</span>
+<span style=color:#f92672>import</span> (
+	<span style=color:#e6db74>&#34;os&#34;</span>
+	<span style=color:#a6e22e>logger</span> <span style=color:#e6db74>&#34;github.com/sarathsp06/gologger&#34;</span>
 )
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">InitLogger</span>(<span style="color:#e6db74">&#34;INFO&#34;</span>, <span style="color:#e6db74">&#34;.&#34;</span>, <span style="color:#e6db74">&#34;sample_logger&#34;</span>,<span style="color:#66d9ef">true</span>); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-		panic(<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">Error</span>())
+<span style=color:#66d9ef>func</span> <span style=color:#a6e22e>main</span>() {
+	<span style=color:#66d9ef>if</span> <span style=color:#a6e22e>err</span> <span style=color:#f92672>:=</span> <span style=color:#a6e22e>logger</span>.<span style=color:#a6e22e>InitLogger</span>(<span style=color:#e6db74>&#34;INFO&#34;</span>, <span style=color:#e6db74>&#34;.&#34;</span>, <span style=color:#e6db74>&#34;sample_logger&#34;</span>,<span style=color:#66d9ef>true</span>); <span style=color:#a6e22e>err</span> <span style=color:#f92672>!=</span> <span style=color:#66d9ef>nil</span> {
+		panic(<span style=color:#a6e22e>err</span>.<span style=color:#a6e22e>Error</span>())
 	}
-	<span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">SetLogWriter</span>(<span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">Stdout</span>)
-	<span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">Error</span>(<span style="color:#e6db74">&#34;error happened&#34;</span>)
-	<span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">Debug</span>(<span style="color:#e6db74">&#34;Debug message&#34;</span>)
-	<span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">Info</span>(<span style="color:#e6db74">&#34;error happened&#34;</span>)
-	<span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">Warning</span>(<span style="color:#e6db74">&#34;error happened&#34;</span>)
-	<span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;error happened %s&#34;</span>, <span style="color:#e6db74">&#34;Yo&#34;</span>)
-	<span style="color:#a6e22e">logger</span>.<span style="color:#a6e22e">Debugf</span>(<span style="color:#e6db74">&#34;debug message : %s&#34;</span>, <span style="color:#e6db74">&#34;YoYo&#34;</span>)
-}</code></pre></td></tr></table>
-</div>
-</div>
-
-<h2 id="licensing">Licensing</h2>
-
-<p>The code in this project is licensed under MIT license.</p>
-
-    </div>
-
-    <div class="post-copyright">
-             
-            <p class="copyright-item">
-                <span>Author:</span>
-                <span>sarath </span>
-                </p>
-            
-           
-            <p class="copyright-item">
-                    <span>Words:</span>
-                   <span>300</span>
-            </p>
-            
-            <p class="copyright-item">
-                
-                <span>Share:</span>
-                <span>
-
-      
-        <a href="//twitter.com/share?url=%2fprojects%2fgologger%2f&amp;text=Gologger&amp;via=sarath_sp06" target="_blank" title="Share on Twitter">
-          <i class="iconfont icon-twitter"></i>
-        </a>
-        
-      
-      
-        <a href="//www.facebook.com/sharer/sharer.php?u=%2fprojects%2fgologger%2f" target="_blank" title="Share on Facebook">
-          <i class="iconfont icon-facebook"></i>
-        </a>
-        
-      
-      
-        <a href="//reddit.com/submit?url=%2fprojects%2fgologger%2f&amp;title=Gologger" target="_blank" title="Share on Reddit">
-          <i class="iconfont icon-reddit"></i>
-        </a>
-        
-      
-      
-        <a href="//www.linkedin.com/shareArticle?url=%2fprojects%2fgologger%2f&amp;title=Gologger" target="_blank" title="Share on LinkedIn">
-          <i class="iconfont icon-linkedin"></i>
-        </a>
-        
-      
-      
-        
-      
-        
-      
-
-          
-
-          
-
-          
-
-          
-</span>
-            </p>
-                       
-
-             
-            <p class="copyright-item">
-                Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
-            </p>
-            
-    </div>
-
-  
-    <div class="post-tags">
-        
-        <section>
-                <a href="javascript:window.history.back();">Back</a></span> · 
-                <span><a href="/">Home</a></span>
-        </section>
-    </div>
-
-    <div class="post-nav">
-        
-        <a href="/projects/exotel-py/" class="prev" rel="prev" title="Exotel Py"><i class="iconfont icon-dajiantou"></i>&nbsp;Exotel Py</a>
-         
-        
-        <a href="/projects/sublime-php-selective-format/" class="next" rel="next" title="Sublime Php Selective Format[WIP]">Sublime Php Selective Format[WIP]&nbsp;<i class="iconfont icon-xiaojiantou"></i></a>
-        
-    </div>
-
-    <div class="post-comment">
-          
-          <div id="disqus_thread"></div>
-    <script type="text/javascript">
-    (function() {
-      
-      
-      if (window.location.hostname === 'localhost') return;
-
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      var disqus_shortname = 'profile-sarathsp-com';
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-          
-    </div>
-</article>
-          </div>
-		   </main>
-      <footer class="footer">
-    <div class="copyright">
-        &copy;
-        
-        <span itemprop="copyrightYear">2019 - 2019</span>
-        
-         
-            <span class="author" itemprop="copyrightHolder"><a href="/">sarath</a> | </span>
-         
-
-		  <span>Crafted with ❤️ by <a href="https://github.com/Fastbyte01/KeepIt" target="_blank" rel="external nofollow noopener noreffer">KeepIt</a> & <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a></span>
-    </div>
-</footer>
-
-
-
-
-
-
-
-
-
-
-
-
-    
-     <link href="//lib.baomitu.com/lightgallery/1.6.12/css/lightgallery.min.css" rel="stylesheet">  
-      
-     <script src="/js/vendor_gallery.min.js" async="" ></script>
-    
-  
-
-
-
-
-
-
-
-     </div>
-  </body>
-</html>
+	<span style=color:#a6e22e>logger</span>.<span style=color:#a6e22e>SetLogWriter</span>(<span style=color:#a6e22e>os</span>.<span style=color:#a6e22e>Stdout</span>)
+	<span style=color:#a6e22e>logger</span>.<span style=color:#a6e22e>Error</span>(<span style=color:#e6db74>&#34;error happened&#34;</span>)
+	<span style=color:#a6e22e>logger</span>.<span style=color:#a6e22e>Debug</span>(<span style=color:#e6db74>&#34;Debug message&#34;</span>)
+	<span style=color:#a6e22e>logger</span>.<span style=color:#a6e22e>Info</span>(<span style=color:#e6db74>&#34;error happened&#34;</span>)
+	<span style=color:#a6e22e>logger</span>.<span style=color:#a6e22e>Warning</span>(<span style=color:#e6db74>&#34;error happened&#34;</span>)
+	<span style=color:#a6e22e>logger</span>.<span style=color:#a6e22e>Errorf</span>(<span style=color:#e6db74>&#34;error happened %s&#34;</span>, <span style=color:#e6db74>&#34;Yo&#34;</span>)
+	<span style=color:#a6e22e>logger</span>.<span style=color:#a6e22e>Debugf</span>(<span style=color:#e6db74>&#34;debug message : %s&#34;</span>, <span style=color:#e6db74>&#34;YoYo&#34;</span>)
+}</code></pre></td></tr></table></div></div><h2 id=licensing>Licensing</h2><p>The code in this project is licensed under MIT license.</p></div><div class=post-copyright><p class=copyright-item><span>Author:</span>
+<span>sarath</span></p><p class=copyright-item><span>Words:</span>
+<span>300</span></p><p class=copyright-item><span>Share:</span>
+<span><a href="//twitter.com/share?url=%2fprojects%2fgologger%2f&amp;text=Gologger&amp;via=sarath_sp06" target=_blank title="Share on Twitter"><i class="iconfont icon-twitter"></i></a><a href="//www.facebook.com/sharer/sharer.php?u=%2fprojects%2fgologger%2f" target=_blank title="Share on Facebook"><i class="iconfont icon-facebook"></i></a><a href="//reddit.com/submit?url=%2fprojects%2fgologger%2f&amp;title=Gologger" target=_blank title="Share on Reddit"><i class="iconfont icon-reddit"></i></a><a href="//www.linkedin.com/shareArticle?url=%2fprojects%2fgologger%2f&amp;title=Gologger" target=_blank title="Share on LinkedIn"><i class="iconfont icon-linkedin"></i></a></span></p><p class=copyright-item>Released under <a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></p></div><div class=post-tags><section><a href=javascript:window.history.back();>Back</a></span> ·
+<span><a href=/>Home</a></span></section></div><div class=post-nav><a href=/projects/exotel-py/ class=prev rel=prev title="Exotel Py"><i class="iconfont icon-dajiantou"></i>&nbsp;Exotel Py</a>
+<a href=/projects/sublime-php-selective-format/ class=next rel=next title="Sublime Php Selective Format[WIP]">Sublime Php Selective Format[WIP]&nbsp;<i class="iconfont icon-xiaojiantou"></i></a></div><div class=post-comment><div id=disqus_thread></div><script type=text/javascript>(function(){if(window.location.hostname==='localhost')return;var dsq=document.createElement('script');dsq.type='text/javascript';dsq.async=true;var disqus_shortname='profile-sarathsp-com';dsq.src='//'+disqus_shortname+'.disqus.com/embed.js';(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(dsq);})();</script><noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></div></article></div></main><footer class=footer><div class=copyright>&copy;
+<span itemprop=copyrightYear>2019 - 2019</span>
+<span class=author itemprop=copyrightHolder><a href=/>sarath</a> |</span>
+<span>Crafted with ❤️ by <a href=https://github.com/Fastbyte01/KeepIt target=_blank rel="external nofollow noopener noreffer">KeepIt</a> & <a href=https://gohugo.io/ target=_blank rel="external nofollow noopener noreffer">Hugo</a></span></div></footer><link href=//lib.baomitu.com/lightgallery/1.6.12/css/lightgallery.min.css rel=stylesheet><script src=/js/vendor_gallery.min.js async></script></div></body></html>
