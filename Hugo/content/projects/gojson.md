@@ -1,38 +1,48 @@
 +++
-title = "Gojson : A Simple JSON Parser"
-date = 2019-03-01T14:10:10+01:00
+title = "Gojson : A Simple JSON Parser" 
+date = 2019-04-30T14:10:10+01:00
 toc = true
 +++
 
 
-GoJSON is a command line utility to handle JSON in command line.
+GoJSON is a command line utility to handle json in command line. 
 
 ### What it does
 
 - [x] Retrieve nested objects
 - [x] Pretty print JSON
 - [x] Validate JSON
-- [ ] Aggregate functions on lists
+- [x] Aggregate functions
 
 
 ## Installing
 
-With go
+**Go Dev version**
 
 ```sh
 $ go get -u github.com/sarathsp06/gojson
 ```
 
-Or you may download the binary here [download](https://github.com/sarathsp06/gojson/tree/master/release) and use the binary as such.
+
+**Binray Release**
+
+[download](https://github.com/sarathsp06/gojson/releases) and use the binary as such for your platform
+
+
+**Tip:** In unix move the binary to PATH
 
 
 #### Key Syntax
-* Key is a set of `.` separated nested keys
+
+* Key is a set of '.' seperated nested values
 * Can use 0-n numbers to refer to index in arrays
+* Can use `lower:upper` syntax to refer to a range of an array. Eg: players.1:3 
+* Can use keys of inner objects directly on arrays or range of them. Eg:  players.name where players is an array
+
 
 ### Usage Examples
 
-##### Getting a value
+##### Getting a value 
 
 * Get a string:
 
@@ -57,6 +67,7 @@ $ echo '{"name":{"first":"Sarath","last":"Pillai"}}'  | gojson name
 ```sh
 $ echo '{"name":{"first":"Sarath","last":"Pillai"}}' | gojson names
 nil
+
 ```
 
 * Get an array value by index:
@@ -65,3 +76,30 @@ nil
 $ echo '{"people":[{"name":"saratha"},{"name":"syam"}]}' | gojson people.1.name                                               
 "syam"
 ```
+
+* Projection from a slice
+
+```sh
+$ echo '{"people":[{"name":"saratha"},{"name":"syam"},{"name":"singh"},{"name":"ping"}]}' | gojson people.2:.name 
+[
+  "singh",
+  "ping"
+]
+```
+
+* Slice of array
+
+```sh
+$ echo '{"people":[{"name":"saratha"},{"name":"syam"},{"name":"singh"},{"name":"ping"}]}' | gojson people.2:5    
+[
+  {
+    "name": "singh"
+  },
+  {
+    "name": "ping"
+  }
+]
+```
+
+
+[![Build Status](https://travis-ci.org/sarathsp06/gojson.svg?branch=master)](https://travis-ci.org/sarathsp06/gojson)

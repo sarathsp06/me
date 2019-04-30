@@ -1,115 +1,125 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sarath Sadasivan Pillai on Sarath Sadasivan Pillai</title><link>/</link><description>Recent content in Sarath Sadasivan Pillai on Sarath Sadasivan Pillai</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 01 Mar 2019 14:10:10 +0100</lastBuildDate><atom:link href="/" rel="self" type="application/rss+xml"/><item><title>Gojson : A Simple JSON Parser</title><link>/projects/gojson/</link><pubDate>Fri, 01 Mar 2019 14:10:10 +0100</pubDate><guid>/projects/gojson/</guid><description>
-&lt;p&gt;GoJSON is a command line utility to handle JSON in command line.&lt;/p&gt;
-&lt;h3 id=&#34;what-it-does&#34;&gt;What it does&lt;/h3&gt;
-&lt;ul class=&#34;task-list&#34;&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Retrieve nested objects&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Pretty print JSON&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Validate JSON&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; Aggregate functions on lists&lt;/label&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;installing&#34;&gt;Installing&lt;/h2&gt;
-&lt;p&gt;With go&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ go get -u github.com/sarathsp06/gojson
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Or you may download the binary here &lt;a href=&#34;https://github.com/sarathsp06/gojson/tree/master/release&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;download&lt;/a&gt; and use the binary as such.&lt;/p&gt;
-&lt;h4 id=&#34;key-syntax&#34;&gt;Key Syntax&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Key is a set of &lt;code&gt;.&lt;/code&gt; separated nested keys&lt;/li&gt;
-&lt;li&gt;Can use 0-n numbers to refer to index in arrays&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;usage-examples&#34;&gt;Usage Examples&lt;/h3&gt;
-&lt;h5 id=&#34;getting-a-value&#34;&gt;Getting a value&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;Get a string:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ echo &#39;{&amp;quot;name&amp;quot;:{&amp;quot;first&amp;quot;:&amp;quot;Sarath&amp;quot;,&amp;quot;last&amp;quot;:&amp;quot;Pillai&amp;quot;}}&#39; | gojson name.last
-&amp;quot;Pillai&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;Get a block of JSON:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ echo &#39;{&amp;quot;name&amp;quot;:{&amp;quot;first&amp;quot;:&amp;quot;Sarath&amp;quot;,&amp;quot;last&amp;quot;:&amp;quot;Pillai&amp;quot;}}&#39; | gojson name
-{
-&amp;quot;first&amp;quot;: &amp;quot;Sarath&amp;quot;,
-&amp;quot;last&amp;quot;: &amp;quot;Pillai&amp;quot;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;Try to get a non-existent key:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ echo &#39;{&amp;quot;name&amp;quot;:{&amp;quot;first&amp;quot;:&amp;quot;Sarath&amp;quot;,&amp;quot;last&amp;quot;:&amp;quot;Pillai&amp;quot;}}&#39; | gojson names
-nil
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;Get an array value by index:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ echo &#39;{&amp;quot;people&amp;quot;:[{&amp;quot;name&amp;quot;:&amp;quot;saratha&amp;quot;},{&amp;quot;name&amp;quot;:&amp;quot;syam&amp;quot;}]}&#39; | gojson people.1.name
-&amp;quot;syam&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>Sublime Php Selective Format[WIP]</title><link>/projects/sublime-php-selective-format/</link><pubDate>Sun, 24 Feb 2019 09:07:21 +0100</pubDate><guid>/projects/sublime-php-selective-format/</guid><description>&lt;p&gt;A sublime plugin to format php files partially.PHP Selective format uses php-cs-fixer to format selection of php code&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sarath Sadasivan Pillai on Sarath Sadasivan Pillai</title>
+    <link>/</link>
+    <description>Recent content in Sarath Sadasivan Pillai on Sarath Sadasivan Pillai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 24 Feb 2019 09:07:21 +0100</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Sublime Php Selective Format[WIP]</title>
+      <link>/projects/sublime-php-selective-format/</link>
+      <pubDate>Sun, 24 Feb 2019 09:07:21 +0100</pubDate>
+      
+      <guid>/projects/sublime-php-selective-format/</guid>
+      <description>&lt;p&gt;A sublime plugin to format php files partially.PHP Selective format uses php-cs-fixer to format selection of php code&lt;/p&gt;
+
 &lt;p&gt;Steps to use&lt;/p&gt;
+
 &lt;ol&gt;
 &lt;li&gt;Install php cs fixer
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt; curl -L http://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -o /tmp/php-cs-fixer
-sudo chmod a+x /tmp/php-cs-fixer
-sudo mv /tmp/php-cs-fixer /usr/local/bin/php-cs-fixer
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;   curl -L http://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -o /tmp/php-cs-fixer
+   sudo chmod a+x /tmp/php-cs-fixer
+   sudo mv /tmp/php-cs-fixer /usr/local/bin/php-cs-fixer
+   &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+
 &lt;li&gt;&lt;p&gt;Clone the repository inside sublime package
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt; git clone git@github.com:sarathsp06/sublime-php-selective-format.git $HOME/.config/sublime-text-3/Packages/SelectivePHP
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;   git clone  git@github.com:sarathsp06/sublime-php-selective-format.git $HOME/.config/sublime-text-3/Packages/SelectivePHP
+   &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/p&gt;&lt;/li&gt;
+
 &lt;li&gt;&lt;p&gt;select text and press &amp;ldquo;Ctrl+Alt+F&amp;rdquo; to format&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;</description></item><item><title>Gologger</title><link>/projects/gologger/</link><pubDate>Sun, 24 Feb 2019 08:56:53 +0100</pubDate><guid>/projects/gologger/</guid><description>
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Gologger</title>
+      <link>/projects/gologger/</link>
+      <pubDate>Sun, 24 Feb 2019 08:56:53 +0100</pubDate>
+      
+      <guid>/projects/gologger/</guid>
+      <description>
+
 &lt;p&gt;&lt;img src=&#34;http://www.davesgames.net/papercraft/png/gallery-logs-01.png&#34; alt=&#34;Logo of the project&#34; /&gt;&lt;/p&gt;
+
 &lt;h4 id=&#34;logger-library-for-the-gophers&#34;&gt;Logger library for the gophers&lt;/h4&gt;
+
 &lt;p&gt;An opinionated logging library for golang. Gologger writes logs as json in the following format&lt;/p&gt;
+
 &lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;{
-&amp;quot;time&amp;quot;:&amp;quot;2016-11-10T16:11:46.59Z&amp;quot;,
-&amp;quot;process_name&amp;quot;:&amp;quot;sample_logger&amp;quot;,
-&amp;quot;host_name&amp;quot;:&amp;quot;sarath.local&amp;quot;,
-&amp;quot;process_id&amp;quot;:29422,
-&amp;quot;level&amp;quot;:&amp;quot;ERROR&amp;quot;,
-&amp;quot;file_name&amp;quot;:&amp;quot;/home/sarath/go/src/github.com/sarathsp06/gologger/sample/main.go&amp;quot;,
-&amp;quot;line_num&amp;quot;:13,
-&amp;quot;log_msg&amp;quot;:&amp;quot;error happened&amp;quot;
+    &amp;quot;time&amp;quot;:&amp;quot;2016-11-10T16:11:46.59Z&amp;quot;,
+    &amp;quot;process_name&amp;quot;:&amp;quot;sample_logger&amp;quot;,
+    &amp;quot;host_name&amp;quot;:&amp;quot;sarath.local&amp;quot;,
+    &amp;quot;process_id&amp;quot;:29422,
+    &amp;quot;level&amp;quot;:&amp;quot;ERROR&amp;quot;,
+    &amp;quot;file_name&amp;quot;:&amp;quot;/home/sarath/go/src/github.com/sarathsp06/gologger/sample/main.go&amp;quot;,
+    &amp;quot;line_num&amp;quot;:13,
+    &amp;quot;log_msg&amp;quot;:&amp;quot;error happened&amp;quot;
 }
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;That much info will be how following will be written&lt;/p&gt;
+
 &lt;pre&gt;&lt;code class=&#34;language-golang&#34;&gt;logger.Error(&amp;quot;error happened&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&#34;installing-getting-started&#34;&gt;Installing / Getting started&lt;/h2&gt;
+
 &lt;p&gt;Just like any other go library&lt;/p&gt;
+
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;go get github.com/sarathsp06/gologger&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;But if one needs to get a particular version then use&lt;/p&gt;
+
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;go get gopkg.in/sarathsp06/gologger.vx &lt;span style=&#34;color:#75715e&#34;&gt;#x is the version Number&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;h2 id=&#34;developing&#34;&gt;Developing&lt;/h2&gt;
+
 &lt;p&gt;Here&amp;rsquo;s a brief intro about what a developer must do in order to start developing
 the project further:&lt;/p&gt;
+
 &lt;ol&gt;
 &lt;li&gt;Get it using go get or clone&lt;/li&gt;
 &lt;li&gt;Make changes and make a pull request with Updated README if feature addition&lt;/li&gt;
 &lt;/ol&gt;
+
 &lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+
 &lt;p&gt;What&amp;rsquo;s all the bells and whistles this project can perform?
 * It can log - Obviously
 * Easy buffered logging
 * You can set write to logger for redirecting logs
-* log message will contain much deeper details like line number of error , process id,host_name etc&lt;/p&gt;
+* log message will contain much deeper details like line number of error , process id,host_name  etc&lt;/p&gt;
+
 &lt;h2 id=&#34;how-to-use&#34;&gt;How to use&lt;/h2&gt;
+
 &lt;p&gt;This is how one may use the library&lt;/p&gt;
+
 &lt;p&gt;import the package&lt;/p&gt;
+
 &lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;github.com/sarathsp06/gologger&amp;#34;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-Initialize the package&lt;/p&gt;
+Initialize the  package&lt;/p&gt;
+
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;err&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;InitLogger&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;INFO&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sample_logger&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;); &lt;span style=&#34;color:#a6e22e&#34;&gt;err&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;nil&lt;/span&gt; {
-panic(&lt;span style=&#34;color:#a6e22e&#34;&gt;err&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Error&lt;/span&gt;())
+		panic(&lt;span style=&#34;color:#a6e22e&#34;&gt;err&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Error&lt;/span&gt;())
 }&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;Log as you wish with formated and normal message&lt;/p&gt;
+
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Error&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;error happened&amp;#34;&lt;/span&gt;)
 &lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Debug&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Debug message&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;:Sasa&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sasa&amp;#34;&lt;/span&gt;)
 &lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Info&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;error happened&amp;#34;&lt;/span&gt;)
 &lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Warning&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;error happened&amp;#34;&lt;/span&gt;)
 &lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Errorf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;error happened %s&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Yo&amp;#34;&lt;/span&gt;)
 &lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Debugf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;debug message : %s&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;YoYo&amp;#34;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;Explore more &amp;hellip;.&lt;/p&gt;
+
 &lt;p&gt;Here is a sample code&lt;/p&gt;
+
 &lt;div class=&#34;highlight&#34;&gt;&lt;div style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;
 &lt;table style=&#34;border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;&#34;&gt;&lt;tr&gt;&lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
 &lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7c7c79&#34;&gt; 1
@@ -134,112 +144,190 @@ panic(&lt;span style=&#34;color:#a6e22e&#34;&gt;err&lt;/span&gt;.&lt;span style=
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td style=&#34;vertical-align:top;padding:0;margin:0;border:0;&#34;&gt;
 &lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;
+
 &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; (
-&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;os&amp;#34;&lt;/span&gt;
-&lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;github.com/sarathsp06/gologger&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;os&amp;#34;&lt;/span&gt;
+	&lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;github.com/sarathsp06/gologger&amp;#34;&lt;/span&gt;
 )
+
 &lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
-&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;err&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;InitLogger&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;INFO&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sample_logger&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;); &lt;span style=&#34;color:#a6e22e&#34;&gt;err&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;nil&lt;/span&gt; {
-panic(&lt;span style=&#34;color:#a6e22e&#34;&gt;err&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Error&lt;/span&gt;())
-}
-&lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;SetLogWriter&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;os&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Stdout&lt;/span&gt;)
-&lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Error&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;error happened&amp;#34;&lt;/span&gt;)
-&lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Debug&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Debug message&amp;#34;&lt;/span&gt;)
-&lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Info&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;error happened&amp;#34;&lt;/span&gt;)
-&lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Warning&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;error happened&amp;#34;&lt;/span&gt;)
-&lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Errorf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;error happened %s&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Yo&amp;#34;&lt;/span&gt;)
-&lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Debugf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;debug message : %s&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;YoYo&amp;#34;&lt;/span&gt;)
+	&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;err&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;InitLogger&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;INFO&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sample_logger&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;); &lt;span style=&#34;color:#a6e22e&#34;&gt;err&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;nil&lt;/span&gt; {
+		panic(&lt;span style=&#34;color:#a6e22e&#34;&gt;err&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Error&lt;/span&gt;())
+	}
+	&lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;SetLogWriter&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;os&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Stdout&lt;/span&gt;)
+	&lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Error&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;error happened&amp;#34;&lt;/span&gt;)
+	&lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Debug&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Debug message&amp;#34;&lt;/span&gt;)
+	&lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Info&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;error happened&amp;#34;&lt;/span&gt;)
+	&lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Warning&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;error happened&amp;#34;&lt;/span&gt;)
+	&lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Errorf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;error happened %s&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Yo&amp;#34;&lt;/span&gt;)
+	&lt;span style=&#34;color:#a6e22e&#34;&gt;logger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Debugf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;debug message : %s&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;YoYo&amp;#34;&lt;/span&gt;)
 }&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+
 &lt;h2 id=&#34;licensing&#34;&gt;Licensing&lt;/h2&gt;
-&lt;p&gt;The code in this project is licensed under MIT license.&lt;/p&gt;</description></item><item><title>About</title><link>/about/</link><pubDate>Fri, 22 Feb 2019 01:09:48 +0100</pubDate><guid>/about/</guid><description>&lt;figure&gt;
-&lt;img src=&#34;/photo.jpg&#34; /&gt;
-&lt;figcaption&gt;
-&lt;h4&gt;Sarath&lt;/h4&gt;
-&lt;/figcaption&gt;
+
+&lt;p&gt;The code in this project is licensed under MIT license.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Fri, 22 Feb 2019 01:09:48 +0100</pubDate>
+      
+      <guid>/about/</guid>
+      <description>&lt;figure&gt;
+  &lt;img src=&#34;/photo.jpg&#34;  /&gt;
+  &lt;figcaption&gt;
+      &lt;h4&gt;Sarath&lt;/h4&gt;
+  &lt;/figcaption&gt;
 &lt;/figure&gt;
+
 &lt;blockquote&gt;
 &lt;p&gt;“Man does not simply exist but always decides what his existence will be, what he will become the next moment. By the same token, every human being has the freedom to change at any instant.”
 ― Viktor Emil Frankl, Man&amp;rsquo;s Search for Meaning&lt;/p&gt;
 &lt;/blockquote&gt;
+
 &lt;p&gt;&lt;p&gt;
 &amp;nbsp;
 &amp;nbsp;
 &lt;/p&gt;
 I dislike writing about myself because I feel it’s impossible to really summarise any human being into a few paragraphs, but I’ll try to give you a tiny glimpse of who I am.&lt;/p&gt;
+
 &lt;p&gt;My name is Sarath S Pillai, a software engineer by profession. Here I am trying to write about technology, programming, maths and random things I learn.&lt;/p&gt;
-&lt;p&gt;Now that I tried to write about me I realised I barely know me, maybe I will wait until i can copy it from &lt;del&gt;stackoverflow&lt;/del&gt; Wikipedia :D&lt;/p&gt;</description></item><item><title>Exotel Py</title><link>/projects/exotel-py/</link><pubDate>Fri, 22 Feb 2019 01:09:41 +0100</pubDate><guid>/projects/exotel-py/</guid><description>
+
+&lt;p&gt;Now that I tried to write about me I realised I barely know me, maybe I will wait until i can copy it from &lt;del&gt;stackoverflow&lt;/del&gt; Wikipedia :D&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exotel Py</title>
+      <link>/projects/exotel-py/</link>
+      <pubDate>Fri, 22 Feb 2019 01:09:41 +0100</pubDate>
+      
+      <guid>/projects/exotel-py/</guid>
+      <description>
+
 &lt;p&gt;Python module for exotel&amp;rsquo;s call and sms api&amp;rsquo;s(Unofficial).&lt;/p&gt;
+
 &lt;h3 id=&#34;installation&#34;&gt;installation&lt;/h3&gt;
+
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;pip install exotel
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+
 &lt;ul&gt;
 &lt;li&gt;Initialize&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt; from exotel import Exotel
-client = Exotel(sid,token)
+
+&lt;pre&gt;&lt;code&gt;   from exotel import Exotel
+   client = Exotel(sid,token)
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;ul&gt;
 &lt;li&gt;make call to connect a number to another&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt; client.call_number(&#39;from_number&#39;,&#39;exophone&#39;,&#39;to_number&#39;)
+
+&lt;pre&gt;&lt;code&gt;   client.call_number(&#39;from_number&#39;,&#39;exophone&#39;,&#39;to_number&#39;)
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;ul&gt;
 &lt;li&gt;make call to connect a number to a flow&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt; client.call_flow(&#39;from_number&#39;,&#39;exophone&#39;,&#39;flow_id&#39;)
+
+&lt;pre&gt;&lt;code&gt;   client.call_flow(&#39;from_number&#39;,&#39;exophone&#39;,&#39;flow_id&#39;)
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;ul&gt;
 &lt;li&gt;send an sms&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt; client.sms(&#39;from_number&#39;,to_number&#39;,&amp;quot;sms_body&amp;quot;)
+
+&lt;pre&gt;&lt;code&gt;   client.sms(&#39;from_number&#39;,to_number&#39;,&amp;quot;sms_body&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;ul&gt;
 &lt;li&gt;get details of an sms&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt; client.sms_details(&#39;sms_sid&#39;)
+
+&lt;pre&gt;&lt;code&gt;   client.sms_details(&#39;sms_sid&#39;)
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;ul&gt;
 &lt;li&gt;get details of a call&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt; client.call_details(&#39;call_sid&#39;)
+
+&lt;pre&gt;&lt;code&gt;   client.call_details(&#39;call_sid&#39;)
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&#34;authors-and-contributors&#34;&gt;Authors and Contributors&lt;/h2&gt;
+
 &lt;p&gt;In 2015, Sarath S Pllai (&lt;a href=&#34;https://twitter.com/sarath_sp06&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;@sarath_sp06&lt;/a&gt;) started .Any bug reports would be addressed .Feel free to add more functions and send me the patch with updated README&lt;/p&gt;
+
 &lt;h2 id=&#34;stargazers-over-time&#34;&gt;Stargazers over time&lt;/h2&gt;
+
 &lt;p&gt;&lt;a href=&#34;https://starcharts.herokuapp.com/sarathsp06/exotel-py&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://starcharts.herokuapp.com/sarathsp06/exotel-py.svg&#34; alt=&#34;Stargazers over time&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&#34;support-or-contact&#34;&gt;Support or Contact&lt;/h2&gt;
-&lt;p&gt;Having trouble using the library contact me at sarath.sp06@gmail.com&lt;/p&gt;</description></item><item><title>Python 2factor Client</title><link>/projects/python-2factor-client/</link><pubDate>Fri, 22 Feb 2019 01:09:41 +0100</pubDate><guid>/projects/python-2factor-client/</guid><description>
+
+&lt;p&gt;Having trouble using the library contact me at sarath.sp06@gmail.com&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Python 2factor Client</title>
+      <link>/projects/python-2factor-client/</link>
+      <pubDate>Fri, 22 Feb 2019 01:09:41 +0100</pubDate>
+      
+      <guid>/projects/python-2factor-client/</guid>
+      <description>
+
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/sarathsp06/py2factor/master/logo.png&#34; alt=&#34;py2factor-logo&#34; /&gt;&lt;/p&gt;
+
 &lt;p&gt;Two-factor authentication (also known as 2FA) is a type (subset) of multi-factor authentication. It is a method of confirming a user&amp;rsquo;s claimed identity by utilizing a combination of two different factors:&lt;/p&gt;
+
 &lt;ol&gt;
 &lt;li&gt;something they know,&lt;/li&gt;
 &lt;li&gt;something they have, or&lt;/li&gt;
 &lt;li&gt;something they are.&lt;/li&gt;
 &lt;/ol&gt;
+
 &lt;h3 id=&#34;py2factor-app&#34;&gt;py2factor app&lt;/h3&gt;
-&lt;p&gt;Two Factor authentication app for desktop (Linux). The app can be used along with other two factor applications like &lt;code&gt;authy&lt;/code&gt; ,&lt;code&gt;google authenticator&lt;/code&gt; etc. Unlike the mobile two factor authenticators ,this app requires the user to read the QR given for two factor using mobile and pass the data read from that as input to the application&lt;/p&gt;
+
+&lt;p&gt;Two Factor authentication app for desktop (Linux). The app can be used along with other two factor applications like &lt;code&gt;authy&lt;/code&gt; ,&lt;code&gt;google authenticator&lt;/code&gt; etc.  Unlike the mobile two factor authenticators ,this app requires the user to read the QR given for two factor using mobile and pass the   data read from that as input to the application&lt;/p&gt;
+
 &lt;h2 id=&#34;installing-getting-started&#34;&gt;Installing / Getting started&lt;/h2&gt;
+
 &lt;p&gt;A quick introduction of the minimal setup you need to setup and use &lt;strong&gt;py2factor&lt;/strong&gt;&lt;/p&gt;
+
 &lt;h4 id=&#34;installation&#34;&gt;Installation&lt;/h4&gt;
+
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;pip install py2factor
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;h4 id=&#34;usage&#34;&gt;Usage&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;py2factor add [--name &amp;quot;&amp;lt;name&amp;gt;&amp;quot; --key &amp;quot;&amp;lt;key/secret&amp;gt;&amp;quot;][--url &amp;lt;&amp;quot;totpurl&amp;quot;&amp;gt;] #adds a profile given (name and key) or url
-py2factor profiles --filter &amp;quot;&amp;lt;prefix&amp;gt;&amp;quot; #list all profiles
-py2factor list --filter &amp;quot;&amp;lt;prefix&amp;gt;&amp;quot; #list all profiles name and totp
-py2factor del --name &amp;quot;&amp;lt;name&amp;gt;&amp;quot; #deletes a profile if present
+
+&lt;pre&gt;&lt;code&gt;py2factor add [--name &amp;quot;&amp;lt;name&amp;gt;&amp;quot; --key &amp;quot;&amp;lt;key/secret&amp;gt;&amp;quot;][--url &amp;lt;&amp;quot;totpurl&amp;quot;&amp;gt;]   #adds a profile given (name and key) or url
+py2factor profiles --filter &amp;quot;&amp;lt;prefix&amp;gt;&amp;quot;               #list all profiles 
+py2factor list --filter &amp;quot;&amp;lt;prefix&amp;gt;&amp;quot;                   #list all profiles name and totp
+py2factor del --name &amp;quot;&amp;lt;name&amp;gt;&amp;quot;                        #deletes a profile if present
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Here you should say what actually happens when you execute the code above.&lt;/p&gt;
+
 &lt;h2 id=&#34;developing&#34;&gt;Developing&lt;/h2&gt;
+
 &lt;p&gt;Here&amp;rsquo;s a brief intro about what a developer must do in order to start developing
 the project further:&lt;/p&gt;
+
 &lt;h4 id=&#34;make-sure-virtual-environment-is-installed&#34;&gt;Make sure virtual environment is installed&lt;/h4&gt;
+
 &lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;sudo pip install virtualenv
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;h4 id=&#34;get-the-code-from-github-and-start-hacking&#34;&gt;Get the code from github and start hacking&lt;/h4&gt;
+
 &lt;pre&gt;&lt;code&gt;git clone git@github.com:sarathsp06/py2factor.git
 cd py2factor
 virtualenv .venv
@@ -247,8 +335,11 @@ virtualenv .venv
 pip install -r requirements.txt
 python setup.py install
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+
 &lt;p&gt;What&amp;rsquo;s all the bells and whistles this project can perform?&lt;/p&gt;
+
 &lt;ul&gt;
 &lt;li&gt;Manage two factor authentication details for multiple accounts&lt;/li&gt;
 &lt;li&gt;It can generate two factor code for any account offline&lt;br /&gt;&lt;/li&gt;
@@ -257,38 +348,83 @@ python setup.py install
 &lt;li&gt;Can delete and list the account in different formats&lt;/li&gt;
 &lt;li&gt;Output can be formatted in different formats so that it can be piped to other applications&lt;/li&gt;
 &lt;/ul&gt;
+
 &lt;h2 id=&#34;contributing&#34;&gt;Contributing&lt;/h2&gt;
+
 &lt;p&gt;If you&amp;rsquo;d like to contribute, please fork the repository and use a feature
 branch. Pull requests are warmly welcome.&lt;/p&gt;
+
 &lt;h2 id=&#34;licensing&#34;&gt;Licensing&lt;/h2&gt;
-&lt;p&gt;The code in this project is licensed under MIT license.&lt;/p&gt;</description></item><item><title>Understanding Descrete Time Crystals</title><link>/2019/understanding-descrete-time-crystals/</link><pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate><guid>/2019/understanding-descrete-time-crystals/</guid><description>
+
+&lt;p&gt;The code in this project is licensed under MIT license.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Understanding Descrete Time Crystals</title>
+      <link>/2019/understanding-descrete-time-crystals/</link>
+      <pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/understanding-descrete-time-crystals/</guid>
+      <description>
+
 &lt;p&gt;&lt;img src=&#34;https://cdn-images-1.medium.com/max/1600/0*8GUW0qYowMMZd_DI&#34; alt=&#34;&amp;quot;round white and brown wall clock&amp;quot; &#34; /&gt;&lt;/p&gt;
+
 &lt;p&gt;Crystals are a manifestation of systems in their lowest energy states. While normal crystals have spatial symmetry, discrete time crystals are strange crystals that have an atomic structure that repeats not just in space, but in time, putting them in constant oscillation without energy.&lt;/p&gt;
+
 &lt;h2 id=&#34;is-it-real&#34;&gt;Is it real?&lt;/h2&gt;
+
 &lt;p&gt;It might seem pretty abstract as all we know about matter and it states is defined in terms of equilibrium, spatial symmetry etc&lt;/p&gt;
+
 &lt;blockquote&gt;
 &lt;p&gt;&amp;ldquo;This is a new phase of matter, period, but it is also really cool because it is one of the first examples of non-equilibrium matter,&amp;rdquo; said lead researcher Norman Yao from the University of California, Berkeley.&lt;/p&gt;
 &lt;/blockquote&gt;
+
 &lt;p&gt;Usually, when a material is in the ground state it means movement should theoretically be impossible because that would require it to expend energy and it doesn&amp;rsquo;t have any. Normal crystals are motionless because they&amp;rsquo;re in equilibrium in their ground state, But time crystals have a structure that repeats in time, not just in space. And it keeps oscillating in its ground state.
 A time crystal is like constantly oscillating jelly in its natural, ground state, and that&amp;rsquo;s what makes it a whole new phase of matter&amp;ndash;non-equilibrium matter. &lt;strong&gt;&lt;em&gt;It&amp;rsquo;s incapable of sitting still&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
 &lt;h2 id=&#34;what-is-next&#34;&gt;What is next?&lt;/h2&gt;
+
 &lt;p&gt;&lt;strong&gt;A perfect clock&lt;/strong&gt;:If you have a quartz clock, it tells the time because when you push electricity through a quartz crystal, it vibrates. Count 32,768 vibrations and one second has gone past. The important thing is that this vibration requires energy (in this case from electricity). Time crystals oscillates just like quartz crystals without energy&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Better quantum computer&lt;/strong&gt;: One of the most promising applications for time crystals is quantum computing-they could allow physicists to create stable quantum systems at far higher temperatures than can be achieved right now, and that just might be the push we need to finally make &lt;a href=&#34;https://www.sciencealert.com/ibm-is-rolling-out-the-world-s-first-universal-quantum-computing-service&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;quantum computing a reality&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Hello World</title><link>/2019/helloworld/</link><pubDate>Thu, 21 Feb 2019 18:52:44 +0100</pubDate><guid>/2019/helloworld/</guid><description>
-&lt;p&gt;The first post has to be the ubiquitous &lt;strong&gt;&lt;em&gt;Hello World&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Better quantum computer&lt;/strong&gt;: One of the most promising applications for time crystals is quantum computing-they could allow physicists to create stable quantum systems at far higher temperatures than can be achieved right now, and that just might be the push we need to finally make &lt;a href=&#34;https://www.sciencealert.com/ibm-is-rolling-out-the-world-s-first-universal-quantum-computing-service&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;quantum computing a reality&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>/2019/helloworld/</link>
+      <pubDate>Thu, 21 Feb 2019 18:52:44 +0100</pubDate>
+      
+      <guid>/2019/helloworld/</guid>
+      <description>
+
+&lt;p&gt;The first post has to be the ubiquitous  &lt;strong&gt;&lt;em&gt;Hello World&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
 &lt;h5 id=&#34;a-bit-of-history&#34;&gt;A bit of history&lt;/h5&gt;
+
 &lt;p&gt;“Hello, World” was created by &lt;a href=&#34;https://www.cs.princeton.edu/~bwk/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Brian Kernighan&lt;/a&gt;, author of one of the most widely read programming books: C Programming Language, in 1978. He first referenced ‘Hello World’ in the C Programming Language book’s predecessor: A &lt;a href=&#34;https://www.bell-labs.com/usr/dmr/www/btut.pdf&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Tutorial Introduction to the Programming Language&lt;/a&gt; B published in 1973.
 &lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
 &lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;main( )
 {
-extrn a, b, c;
-putchar(a); putchar(b); putchar(c); putchar(’!*n’);
-}
-a ’hell’;
-b ’o, w’;
-c ’orld’;
+  extrn a, b, c;
+  putchar(a); putchar(b); putchar(c); putchar(’!*n’);
+ }
+ a ’hell’;
+ b ’o, w’;
+ c ’orld’;
 &lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+
 &lt;blockquote&gt;
-&lt;p&gt;What I do remember is that I had seen a cartoon that showed an egg and a chick and the chick was saying, “Hello, World.” - Brian Kernighan&lt;/p&gt;
+&lt;p&gt;What I do remember is that I had seen a cartoon that showed an egg and a chick and the chick was saying, “Hello, World.”   - Brian Kernighan&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://commons.wikimedia.org/wiki/File:PSP-Homebrew.jpeg#/media/File:PSP-Homebrew.jpeg&#34;&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/PSP-Homebrew.jpeg/1200px-PSP-Homebrew.jpeg&#34; alt=&#34;PSP-Homebrew.jpeg&#34;&gt;&lt;/a&gt;&lt;br&gt;By &lt;a href=&#34;//commons.wikimedia.org/w/index.php?title=User:%E9%8A%80%E7%B3%B8&amp;amp;action=edit&amp;amp;redlink=1&#34; class=&#34;new&#34; title=&#34;User:銀糸 (page does not exist)&#34;&gt;銀糸&lt;/a&gt; - &lt;span class=&#34;int-own-work&#34;&gt;Self-photographed&lt;/span&gt;, Public Domain, &lt;a href=&#34;https://commons.wikimedia.org/w/index.php?curid=3133165&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
+
+&lt;p&gt;&lt;a href=&#34;https://commons.wikimedia.org/wiki/File:PSP-Homebrew.jpeg#/media/File:PSP-Homebrew.jpeg&#34;&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/PSP-Homebrew.jpeg/1200px-PSP-Homebrew.jpeg&#34; alt=&#34;PSP-Homebrew.jpeg&#34;&gt;&lt;/a&gt;&lt;br&gt;By &lt;a href=&#34;//commons.wikimedia.org/w/index.php?title=User:%E9%8A%80%E7%B3%B8&amp;amp;action=edit&amp;amp;redlink=1&#34; class=&#34;new&#34; title=&#34;User:銀糸 (page does not exist)&#34;&gt;銀糸&lt;/a&gt; - &lt;span class=&#34;int-own-work&#34;&gt;Self-photographed&lt;/span&gt;, Public Domain, &lt;a href=&#34;https://commons.wikimedia.org/w/index.php?curid=3133165&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
