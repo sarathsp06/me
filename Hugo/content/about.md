@@ -7,9 +7,6 @@ draft= false
 
 <figure>
   <img src="/photo.jpg"  />
-  <figcaption>
-      <h4>Sarath</h4>
-  </figcaption>
 </figure>
 
 
@@ -28,4 +25,4 @@ I dislike writing about myself because I feel it’s impossible to really summar
 
 My name is Sarath S Pillai, a software engineer by profession. Here I am trying to write about technology, programming, maths and random things I learn.
 
- Now that I tried to write about me I realised I barely know me, maybe I will wait until i can copy it from ~~stackoverflow~~ Wikipedia :D
+ Now that I tried to write about me I realised I barely know me, maybe I will wait until i can copy it from ~~[stackoverflow](https://stackoverflow.com/users/1898494/sarath-sadasivan-pillai?tab=profile)~~ [Wikipedia](https://en.wikipedia.org/wiki/Special:Search?search=sarath+sadasivan+pillai&go=Go&ns0=1) :D

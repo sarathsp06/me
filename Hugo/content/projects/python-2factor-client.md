@@ -8,10 +8,10 @@ date= 2019-02-22T01:09:41+01:00
 ![py2factor-logo](https://raw.githubusercontent.com/sarathsp06/py2factor/master/logo.png)
 
 
-Two-factor authentication (also known as 2FA) is a type (subset) of multi-factor authentication. It is a method of confirming a user's claimed identity by utilizing a combination of two different factors: 
+Two-factor authentication (also known as 2FA) is a type (subset) of multi-factor authentication. It is a method of confirming a user's claimed identity by utilizing a combination of two different factors:
 
-1. something they know, 
-2. something they have, or 
+1. something they know,
+2. something they have, or
 3. something they are.
 
 ###   py2factor app
@@ -31,7 +31,7 @@ pip install py2factor
 #### Usage
 ```
 py2factor add [--name "<name>" --key "<key/secret>"][--url <"totpurl">]   #adds a profile given (name and key) or url
-py2factor profiles --filter "<prefix>"               #list all profiles 
+py2factor profiles --filter "<prefix>"               #list all profiles
 py2factor list --filter "<prefix>"                   #list all profiles name and totp
 py2factor del --name "<name>"                        #deletes a profile if present
 ```
@@ -67,10 +67,10 @@ What's all the bells and whistles this project can perform?
 
 * Manage two factor authentication details for multiple accounts
 * It can generate two factor code for any account offline  
-* Can add a two factor account using the URL from QR code 
-* Can add a two factor account using just the key 
+* Can add a two factor account using the URL from QR code
+* Can add a two factor account using just the key
 * Can delete and list the account in different formats
-* Output can be formatted in different formats so that it can be piped to other applications 
+* Output can be formatted in different formats so that it can be piped to other applications
 
 ## Contributing
 
@@ -80,4 +80,3 @@ branch. Pull requests are warmly welcome.
 ## Licensing
 
 The code in this project is licensed under MIT license.
-

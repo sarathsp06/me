@@ -33,7 +33,7 @@ disqusShortname = "profile-sarathsp-com" #"me-sarathsp-com"
     name = "About"
     url = "/about"
     weight = 4
-  
+
   [[menu.main]]
     name = "Projects"
     url = "/projects"
@@ -41,7 +41,7 @@ disqusShortname = "profile-sarathsp-com" #"me-sarathsp-com"
 
 [params]
     since = 2019
-    author = "sarath"
+    author = "Sarath"
     subtitle = ""       # Subtitle
     cdn_url = ""        # Base CDN URL
     home_mode = ""      # post or other
@@ -51,10 +51,10 @@ disqusShortname = "profile-sarathsp-com" #"me-sarathsp-com"
     yandex_verification = ""
     pinterest_verification = ""
     baidu_verification = ""
-    
+
     socialShare = true
-    
-    description = "Anything worth writing is worth writing good." # site description
+
+    description = "I write about technology,science and everything else that I find worthy of sharing" # site description
     keywords = "go,tech,programming,code" # site keywords
 
     license= 'Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
@@ -136,7 +136,7 @@ Keybase = true
 #Douban = true
 #Weibo = true
 
-# Used only for Seo schema 
+# Used only for Seo schema
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
 
 [author]
@@ -146,7 +146,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     name = "sarath"
 
     [params.publisher.logo]
-      url = "logo.png"
+      url = "photo.jpg"
       width = 127
       height = 40
 
@@ -156,12 +156,12 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     height = 40
 
   [params.image]
-    url = "cover.png"
+    url = "photo.png"
     width = 800
     height = 600
 
-[params.gitalk]           
-owner = ""              
-repo = ""               
-clientId = ""           
-clientSecret = ""   
+[params.gitalk]
+owner = ""
+repo = ""
+clientId = ""
+clientSecret = ""

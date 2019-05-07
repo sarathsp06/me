@@ -1,16 +1,16 @@
 +++
-title = "Gojson : A Simple JSON Parser" 
+title = "Gojson : A Simple JSON Parser"
 date = 2019-04-30T14:10:10+01:00
 toc = true
 +++
 
 
-GoJSON is a command line utility to handle json in command line. 
+GoJSON is a command line utility to handle JSON serialised data. You can find the code [here](https://github.com/sarathsp06/gojson)
 
 ### What it does
 
-- [x] Retrieve nested objects
 - [x] Pretty print JSON
+- [x] Retrieve nested objects
 - [x] Validate JSON
 - [x] Aggregate functions
 
@@ -34,15 +34,15 @@ $ go get -u github.com/sarathsp06/gojson
 
 #### Key Syntax
 
-* Key is a set of '.' seperated nested values
+* Key is a set of **_._** separated nested values
 * Can use 0-n numbers to refer to index in arrays
-* Can use `lower:upper` syntax to refer to a range of an array. Eg: players.1:3 
+* Can use **lower:upper** syntax to refer to a range of an array
 * Can use keys of inner objects directly on arrays or range of them. Eg:  players.name where players is an array
 
 
 ### Usage Examples
 
-##### Getting a value 
+##### Getting a value
 
 * Get a string:
 
@@ -80,7 +80,7 @@ $ echo '{"people":[{"name":"saratha"},{"name":"syam"}]}' | gojson people.1.name
 * Projection from a slice
 
 ```sh
-$ echo '{"people":[{"name":"saratha"},{"name":"syam"},{"name":"singh"},{"name":"ping"}]}' | gojson people.2:.name 
+$ echo '{"people":[{"name":"saratha"},{"name":"syam"},{"name":"singh"},{"name":"ping"}]}' | gojson people.2:.name
 [
   "singh",
   "ping"

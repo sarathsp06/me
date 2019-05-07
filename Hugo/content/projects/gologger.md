@@ -40,7 +40,7 @@ Just like any other go library
 go get github.com/sarathsp06/gologger
 {{< / highlight >}}
 
-But if one needs to get a particular version then use 
+But if one needs to get a particular version then use
 
 {{< highlight sh>}}
 go get gopkg.in/sarathsp06/gologger.vx #x is the version Number
@@ -53,14 +53,14 @@ Here's a brief intro about what a developer must do in order to start developing
 the project further:
 
 1. Get it using go get or clone
-2. Make changes and make a pull request with Updated README if feature addition 
+2. Make changes and make a pull request with Updated README if feature addition
 
 
 ## Features
 
 What's all the bells and whistles this project can perform?
 * It can log - Obviously
-* Easy buffered logging 
+* Easy buffered logging
 * You can set write to logger for redirecting logs
 * log message will contain much deeper details like line number of error , process id,host_name  etc
 
@@ -68,12 +68,12 @@ What's all the bells and whistles this project can perform?
 ## How to use
 This is how one may use the library
 
-import the package 
+import the package
 
 {{< highlight go>}}
 import logger "github.com/sarathsp06/gologger"
-{{< / highlight >}} 
-Initialize the  package 
+{{< / highlight >}}
+Initialize the  package
 
 {{< highlight go>}}
 if err := logger.InitLogger("INFO", ".", "sample_logger",true); err != nil {
