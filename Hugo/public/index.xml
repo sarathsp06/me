@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sarath Sadasivan Pillai on Sarath Sadasivan Pillai</title><link>/</link><description>Recent content in Sarath Sadasivan Pillai on Sarath Sadasivan Pillai</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 30 Apr 2019 14:10:10 +0100</lastBuildDate><atom:link href="/" rel="self" type="application/rss+xml"/><item><title>Gojson : A Simple JSON Parser</title><link>/projects/gojson/</link><pubDate>Tue, 30 Apr 2019 14:10:10 +0100</pubDate><guid>/projects/gojson/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sarath Sadasivan Pillai on Sarath Sadasivan Pillai</title><link>/</link><description>Recent content in Sarath Sadasivan Pillai on Sarath Sadasivan Pillai</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 08 May 2019 12:11:33 +0200</lastBuildDate><atom:link href="/" rel="self" type="application/rss+xml"/><item><title>JSON formatting in VIM</title><link>/2019/gjsonvim/</link><pubDate>Wed, 08 May 2019 12:11:33 +0200</pubDate><guid>/2019/gjsonvim/</guid><description>
+&lt;h3 id=&#34;quick-read&#34;&gt;Quick read&lt;/h3&gt;
+&lt;p&gt;To format JSON in vim follow the following steps&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Install &lt;a href=&#34;https://github.com/sarathsp06/gojson&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;gojson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;In vim open JSON file and after clicking &lt;strong&gt;esc&lt;/strong&gt; type &lt;strong&gt;:%!gojson&lt;/strong&gt; to format the current buffer.&lt;/li&gt;
+&lt;li&gt;To save the buffer type &lt;strong&gt;:w&lt;/strong&gt; as usual&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;how-it-works&#34;&gt;How it works&lt;/h3&gt;
+&lt;p&gt;A little Introduction&lt;/p&gt;
+&lt;p&gt;Everybody knows how pipes work at the command prompt. Text originates from some source, is processed via one or more tools that accepts input through standard input each pass its output through pipes
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;For example,The following command can be used to list top 10 files in the current directory sorted in descending order of the file size&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;
+$ find . -type f -exec du -ah {} + | sort -n -r | head
+940K ./.git/modules/Hugo/sarathsp06.github.io/objects/pack/pack-2d1b2e11f747e4e44aa7c0fbfa39633380c044d8.pack
+924K ./.git/modules/Hugo/public/sarathsp06.github.io/objects/pack/pack-2d1b2e11f747e4e44aa7c0fbfa39633380c044d8.pack
+880K ./LaTeX/fonts/segoeuib.ttf
+836K ./LaTeX/img/languages_muted.pdf
+408K ./.git/modules/Hugo/themes/hermit/objects/pack/pack-f2158a521b5130023db80ce574d7e402caf1817f.pack
+320K ./Hugo/themes/KeepIt/images/home_post_mode.jpg
+268K ./Hugo/static/logo.png
+268K ./Hugo/static/gopher.png
+268K ./Hugo/public/logo.png
+268K ./Hugo/public/gopher.png
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;
+VI takes this same paradigm of pipes and filters and wraps it in a editor user interface in which the pipe is applied to editing buffer both as a source and as a destination. A VI pipe is thus can alter the buffer using standard Unix filters that instantly become a part of editor toolbox. This is an extremely elegant idea. The ability to pass nearly arbitrary chunks of text through any UNIX filter adds incredible flexibility at no &amp;ldquo;additional cost&amp;rdquo; in size or performance of the editor.
+&lt;br/&gt;&lt;br/&gt;
+That was a stoke in genius in design on vi. And still remains one of the most advanced features vi(and by extension VIM) has. Which, unfortunately, few people understand and use to the full extent.
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;In &lt;strong&gt;VI/VIM&lt;/strong&gt; following can be used to pipe the buffer to &lt;strong&gt;command&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt; :%!command
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br/&gt;&lt;br/&gt;
+&lt;a href=&#34;https://github.com/sarathsp06/gojson&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;GOJSON&lt;/a&gt; is a command line tool to handle JSON data. It accepts input as standard input and writes formatted json to standard out so in VIM&lt;/p&gt;
+&lt;p&gt;following can be used to format JSON&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt; :$!gojson
+&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>Gojson : A Simple JSON Parser</title><link>/projects/gojson/</link><pubDate>Tue, 30 Apr 2019 14:10:10 +0100</pubDate><guid>/projects/gojson/</guid><description>
 &lt;p&gt;GoJSON is a command line utility to handle JSON serialised data. You can find the code &lt;a href=&#34;https://github.com/sarathsp06/gojson&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;what-it-does&#34;&gt;What it does&lt;/h3&gt;
 &lt;ul class=&#34;task-list&#34;&gt;
