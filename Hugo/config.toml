@@ -1,4 +1,4 @@
-baseURL = "https://sarathsp.com"
+baseURL = "https://sarathsp.com/"
 languageCode = "en"
 defaultContentLanguage = "en"
 title = "Sarath Sadasivan Pillai"
@@ -129,13 +129,13 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     #Thingiverse = "xxxx"
 
 [params.share]
-    #Twitter = true
+    Twitter = true
     #Facebook = true
-    #Reddit = true
-    #Linkedin = true
+    Reddit = true
+    Linkedin = true
     #Keybase = true
     #Pinterest = true
-    #HackerNews = true
+    HackerNews = true
     #Mix = true
     #Tumblr = true
     #VKontakte = true
