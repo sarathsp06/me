@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sarath Sadasivan Pillai on Sarath Sadasivan Pillai</title><link>/</link><description>Recent content in Sarath Sadasivan Pillai on Sarath Sadasivan Pillai</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 08 May 2019 12:11:33 +0200</lastBuildDate><atom:link href="/" rel="self" type="application/rss+xml"/><item><title>JSON formatting in VIM</title><link>/2019/gjsonvim/</link><pubDate>Wed, 08 May 2019 12:11:33 +0200</pubDate><guid>/2019/gjsonvim/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sarath Sadasivan Pillai on Sarath Sadasivan Pillai</title><link>https://sarathsp.com/</link><description>Recent content in Sarath Sadasivan Pillai on Sarath Sadasivan Pillai</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 08 May 2019 12:11:33 +0200</lastBuildDate><atom:link href="/" rel="self" type="application/rss+xml"/><item><title>JSON formatting in VIM</title><link>https://sarathsp.com/2019/gjsonvim/</link><pubDate>Wed, 08 May 2019 12:11:33 +0200</pubDate><guid>https://sarathsp.com/2019/gjsonvim/</guid><description>
 &lt;h3 id=&#34;quick-read&#34;&gt;Quick read&lt;/h3&gt;
 &lt;p&gt;To format JSON in vim follow the following steps&lt;/p&gt;
 &lt;ol&gt;
@@ -36,7 +36,7 @@ That was a stoke in genius in design on vi. And still remains one of the most ad
 &lt;a href=&#34;https://github.com/sarathsp06/gojson&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;GOJSON&lt;/a&gt; is a command line tool to handle JSON data. It accepts input as standard input and writes formatted json to standard out so in VIM&lt;/p&gt;
 &lt;p&gt;following can be used to format JSON&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt; :$!gojson
-&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>Gojson : A Simple JSON Parser</title><link>/projects/gojson/</link><pubDate>Tue, 30 Apr 2019 14:10:10 +0100</pubDate><guid>/projects/gojson/</guid><description>
+&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>Gojson : A Simple JSON Parser</title><link>https://sarathsp.com/projects/gojson/</link><pubDate>Tue, 30 Apr 2019 14:10:10 +0100</pubDate><guid>https://sarathsp.com/projects/gojson/</guid><description>
 &lt;p&gt;GoJSON is a command line utility to handle JSON serialised data. You can find the code &lt;a href=&#34;https://github.com/sarathsp06/gojson&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;what-it-does&#34;&gt;What it does&lt;/h3&gt;
 &lt;ul class=&#34;task-list&#34;&gt;
@@ -110,7 +110,7 @@ nil
 }
 ]
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/sarathsp06/gojson&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://travis-ci.org/sarathsp06/gojson.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Sublime Php Selective Format</title><link>/projects/sublime-php-selective-format/</link><pubDate>Sun, 24 Feb 2019 09:07:21 +0100</pubDate><guid>/projects/sublime-php-selective-format/</guid><description>
+&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/sarathsp06/gojson&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://travis-ci.org/sarathsp06/gojson.svg?branch=master&#34; alt=&#34;Build Status&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Sublime Php Selective Format</title><link>https://sarathsp.com/projects/sublime-php-selective-format/</link><pubDate>Sun, 24 Feb 2019 09:07:21 +0100</pubDate><guid>https://sarathsp.com/projects/sublime-php-selective-format/</guid><description>
 &lt;p&gt;&lt;strong&gt;A sublime plugin to format php code snippets without disturbing the other parts of the file&lt;/strong&gt;
 &lt;br/&gt;&lt;br/&gt;
 There are a lot of legacy PHP programs that people maintain actively, some of them does not follow proper coding standards and thus it limits the developer from adhering to standards for newer code also. The tooling available for PHP code fixing are all to fix the entire file and since doing that would make the diff much bigger people can&amp;rsquo;t use it&lt;/p&gt;
@@ -127,7 +127,7 @@ sudo mv /tmp/php-cs-fixer /usr/local/bin/php-cs-fixer&lt;/code&gt;&lt;/pre&gt;&l
 &lt;li&gt;&lt;p&gt;select text and press &amp;ldquo;Ctrl+Alt+F&amp;rdquo; to format&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;support&#34;&gt;Support&lt;/h3&gt;
-&lt;p&gt;If any issue using the tool contact sarathsp06@gmail.com or create an issue &lt;a href=&#34;https://github.com/sarathsp06/sublime-php-selective-format/issues/new&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Gologger</title><link>/projects/gologger/</link><pubDate>Sun, 24 Feb 2019 08:56:53 +0100</pubDate><guid>/projects/gologger/</guid><description>
+&lt;p&gt;If any issue using the tool contact sarathsp06@gmail.com or create an issue &lt;a href=&#34;https://github.com/sarathsp06/sublime-php-selective-format/issues/new&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Gologger</title><link>https://sarathsp.com/projects/gologger/</link><pubDate>Sun, 24 Feb 2019 08:56:53 +0100</pubDate><guid>https://sarathsp.com/projects/gologger/</guid><description>
 &lt;p&gt;&lt;img src=&#34;http://www.davesgames.net/papercraft/png/gallery-logs-01.png&#34; alt=&#34;Logo of the project&#34; /&gt;&lt;/p&gt;
 &lt;h4 id=&#34;logger-library-for-the-gophers&#34;&gt;Logger library for the gophers&lt;/h4&gt;
 &lt;p&gt;An opinionated logging library for golang. Gologger writes logs as json in the following format&lt;/p&gt;
@@ -223,8 +223,8 @@ panic(&lt;span style=&#34;color:#a6e22e&#34;&gt;err&lt;/span&gt;.&lt;span style=
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id=&#34;licensing&#34;&gt;Licensing&lt;/h2&gt;
-&lt;p&gt;The code in this project is licensed under MIT license.&lt;/p&gt;</description></item><item><title>About</title><link>/about/</link><pubDate>Fri, 22 Feb 2019 01:09:48 +0100</pubDate><guid>/about/</guid><description>&lt;figure&gt;
-&lt;img src=&#34;/photo.jpg&#34; /&gt;
+&lt;p&gt;The code in this project is licensed under MIT license.&lt;/p&gt;</description></item><item><title>About</title><link>https://sarathsp.com/about/</link><pubDate>Fri, 22 Feb 2019 01:09:48 +0100</pubDate><guid>https://sarathsp.com/about/</guid><description>&lt;figure&gt;
+&lt;img src=&#34;https://sarathsp.com/photo.jpg&#34; /&gt;
 &lt;/figure&gt;
 &lt;blockquote&gt;
 &lt;p&gt;“Man does not simply exist but always decides what his existence will be, what he will become the next moment. By the same token, every human being has the freedom to change at any instant.”
@@ -236,7 +236,7 @@ panic(&lt;span style=&#34;color:#a6e22e&#34;&gt;err&lt;/span&gt;.&lt;span style=
 &lt;/p&gt;
 I dislike writing about myself because I feel it’s impossible to really summarise any human being into a few paragraphs, but I’ll try to give you a tiny glimpse of who I am.&lt;/p&gt;
 &lt;p&gt;My name is Sarath S Pillai, a software engineer by profession. Here I am trying to write about technology, programming, maths and random things I learn.&lt;/p&gt;
-&lt;p&gt;Now that I tried to write about me I realised I barely know me, maybe I will wait until i can copy it from &lt;del&gt;&lt;a href=&#34;https://stackoverflow.com/users/1898494/sarath-sadasivan-pillai?tab=profile&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;stackoverflow&lt;/a&gt;&lt;/del&gt; &lt;a href=&#34;https://en.wikipedia.org/wiki/Special:Search?search=sarath+sadasivan+pillai&amp;amp;go=Go&amp;amp;ns0=1&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Wikipedia&lt;/a&gt; :D&lt;/p&gt;</description></item><item><title>Exotel Py</title><link>/projects/exotel-py/</link><pubDate>Fri, 22 Feb 2019 01:09:41 +0100</pubDate><guid>/projects/exotel-py/</guid><description>
+&lt;p&gt;Now that I tried to write about me I realised I barely know me, maybe I will wait until i can copy it from &lt;del&gt;&lt;a href=&#34;https://stackoverflow.com/users/1898494/sarath-sadasivan-pillai?tab=profile&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;stackoverflow&lt;/a&gt;&lt;/del&gt; &lt;a href=&#34;https://en.wikipedia.org/wiki/Special:Search?search=sarath+sadasivan+pillai&amp;amp;go=Go&amp;amp;ns0=1&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Wikipedia&lt;/a&gt; :D&lt;/p&gt;</description></item><item><title>Exotel Py</title><link>https://sarathsp.com/projects/exotel-py/</link><pubDate>Fri, 22 Feb 2019 01:09:41 +0100</pubDate><guid>https://sarathsp.com/projects/exotel-py/</guid><description>
 &lt;p&gt;Python module for Exotel&amp;rsquo;s call and sms APIs. &lt;a href=&#34;https://github.com/sarathsp06/exotel-py&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;exotel-py&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;installation&#34;&gt;Installation&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;pip install exotel
@@ -278,7 +278,7 @@ client = Exotel(sid,token)
 &lt;h3 id=&#34;stargazers-over-time&#34;&gt;Stargazers over time&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://starcharts.herokuapp.com/sarathsp06/exotel-py&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://starcharts.herokuapp.com/sarathsp06/exotel-py.svg&#34; alt=&#34;Stargazers over time&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;support-or-contact&#34;&gt;Support or Contact&lt;/h3&gt;
-&lt;p&gt;Having trouble using the library contact me at sarath.sp06@gmail.com or open a new issue &lt;a href=&#34;https://github.com/sarathsp06/exotel-py/issues/new&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Python 2factor Client</title><link>/projects/python-2factor-client/</link><pubDate>Fri, 22 Feb 2019 01:09:41 +0100</pubDate><guid>/projects/python-2factor-client/</guid><description>
+&lt;p&gt;Having trouble using the library contact me at sarath.sp06@gmail.com or open a new issue &lt;a href=&#34;https://github.com/sarathsp06/exotel-py/issues/new&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Python 2factor Client</title><link>https://sarathsp.com/projects/python-2factor-client/</link><pubDate>Fri, 22 Feb 2019 01:09:41 +0100</pubDate><guid>https://sarathsp.com/projects/python-2factor-client/</guid><description>
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/sarathsp06/py2factor/master/logo.png&#34; alt=&#34;py2factor-logo&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Two-factor authentication (also known as 2FA) is a type (subset) of multi-factor authentication. It is a method of confirming a user&amp;rsquo;s claimed identity by utilizing a combination of two different factors:&lt;/p&gt;
 &lt;ol&gt;
@@ -328,7 +328,7 @@ python setup.py install
 &lt;p&gt;If you&amp;rsquo;d like to contribute, please fork the repository and use a feature
 branch. Pull requests are warmly welcome.&lt;/p&gt;
 &lt;h2 id=&#34;licensing&#34;&gt;Licensing&lt;/h2&gt;
-&lt;p&gt;The code in this project is licensed under MIT license.&lt;/p&gt;</description></item><item><title>Understanding Descrete Time Crystals</title><link>/2019/understanding-descrete-time-crystals/</link><pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate><guid>/2019/understanding-descrete-time-crystals/</guid><description>
+&lt;p&gt;The code in this project is licensed under MIT license.&lt;/p&gt;</description></item><item><title>Understanding Descrete Time Crystals</title><link>https://sarathsp.com/2019/understanding-descrete-time-crystals/</link><pubDate>Fri, 22 Feb 2019 00:00:00 +0000</pubDate><guid>https://sarathsp.com/2019/understanding-descrete-time-crystals/</guid><description>
 &lt;figure&gt;
 &lt;img src=&#34;https://cdn-images-1.medium.com/max/1600/0*8GUW0qYowMMZd_DI&#34;/&gt; &lt;figcaption&gt;
 &lt;h4&gt;round white and brown wall clock&lt;/h4&gt;
@@ -346,7 +346,7 @@ A time crystal is like constantly oscillating jelly in its natural, ground state
 &lt;p&gt;&lt;br/&gt;
 &lt;strong&gt;A perfect clock&lt;/strong&gt;: If you have a quartz clock, it tells the time because when you push electricity through a quartz crystal, it vibrates. Count 32,768 vibrations and one second has gone past. The important thing is that this vibration requires energy (in this case from electricity). Time crystals oscillates just like quartz crystals without energy
 &lt;br/&gt;&lt;br/&gt;
-&lt;strong&gt;Better quantum computer&lt;/strong&gt;: One of the most promising applications for time crystals is quantum computing-they could allow physicists to create stable quantum systems at far higher temperatures than can be achieved right now, and that just might be the push we need to finally make &lt;a href=&#34;https://www.sciencealert.com/ibm-is-rolling-out-the-world-s-first-universal-quantum-computing-service&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;quantum computing a reality&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Hello World</title><link>/2019/helloworld/</link><pubDate>Thu, 21 Feb 2019 18:52:44 +0100</pubDate><guid>/2019/helloworld/</guid><description>
+&lt;strong&gt;Better quantum computer&lt;/strong&gt;: One of the most promising applications for time crystals is quantum computing-they could allow physicists to create stable quantum systems at far higher temperatures than can be achieved right now, and that just might be the push we need to finally make &lt;a href=&#34;https://www.sciencealert.com/ibm-is-rolling-out-the-world-s-first-universal-quantum-computing-service&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;quantum computing a reality&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Hello World</title><link>https://sarathsp.com/2019/helloworld/</link><pubDate>Thu, 21 Feb 2019 18:52:44 +0100</pubDate><guid>https://sarathsp.com/2019/helloworld/</guid><description>
 &lt;p&gt;The first post has to be the ubiquitous &lt;strong&gt;&lt;em&gt;Hello World&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
 &lt;h5 id=&#34;a-bit-of-history&#34;&gt;A bit of history&lt;/h5&gt;
 &lt;p&gt;“Hello, World” was created by &lt;a href=&#34;https://www.cs.princeton.edu/~bwk/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Brian Kernighan&lt;/a&gt;, author of one of the most widely read programming books: C Programming Language, in 1978. He first referenced ‘Hello World’ in the C Programming Language book’s predecessor: A &lt;a href=&#34;https://www.bell-labs.com/usr/dmr/www/btut.pdf&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;Tutorial Introduction to the Programming Language&lt;/a&gt; B published in 1973.

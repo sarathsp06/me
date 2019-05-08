@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://sarathsp.com"
 languageCode = "en"
 defaultContentLanguage = "en"
 title = "Sarath Sadasivan Pillai"
@@ -9,6 +9,7 @@ enableEmoji = true
 enableRobotsTXT = true
 googleAnalytics = ""
 disqusShortname = "profile-sarathsp-com" #"me-sarathsp-com"
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
 
 [sitemap]
   changefreq = "monthly"
@@ -128,21 +129,20 @@ disqusShortname = "profile-sarathsp-com" #"me-sarathsp-com"
     #Thingiverse = "xxxx"
 
 [params.share]
-Twitter = true
-Facebook = true
-Reddit = true
-Linkedin = true
-Keybase = true
-#Pinterest = true
-#HackerNews = true
-#Mix = true
-#Tumblr = true
-#VKontakte = true
-#Douban = true
-#Weibo = true
+    #Twitter = true
+    #Facebook = true
+    #Reddit = true
+    #Linkedin = true
+    #Keybase = true
+    #Pinterest = true
+    #HackerNews = true
+    #Mix = true
+    #Tumblr = true
+    #VKontakte = true
+    #Douban = true
+    #Weibo = true
 
 # Used only for Seo schema
-copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
 
 [author]
   name = "sarath"
