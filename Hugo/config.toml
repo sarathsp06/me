@@ -7,7 +7,7 @@ theme = "KeepIt"
 paginate = 12
 enableEmoji = true
 enableRobotsTXT = true
-googleAnalytics = ""
+googleAnalytics = "UA-139940004-1"
 disqusShortname = "profile-sarathsp-com" #"me-sarathsp-com"
 copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
 
@@ -28,17 +28,17 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
   [[menu.main]]
     name = "Blog"
     url = "/posts/"
-    weight = 3
+    weight = 1
 
   [[menu.main]]
     name = "About"
     url = "/about"
-    weight = 3
+    weight = 2
 
   [[menu.main]]
     name = "Projects"
     url = "/projects"
-    weight = 1
+    weight = 2
 
   [[menu.main]]
     name = "Tags"
@@ -60,7 +60,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
 
     socialShare = true
 
-    description = "I write about technology,science and everything else that I find worthy of sharing" # site description
+    description = "I write about technology,science and everything new I learn" # site description
     keywords = "go,tech,programming,code" # site keywords
 
     license= 'Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
@@ -74,9 +74,8 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     Linkedin = "sarathsp"
     Twitter = "sarath_sp06"
     #Instagram = "xxxx"
-    #Email   = "xxxx"
-    Facebook = "Sarath.sp06"
-    #Telegram = "xxxx"
+    #Facebook = "Sarath.sp06"
+    Telegram = "sarathsp06"
     #Medium = "xxxx"
     #Gitlab = "xxxx"
     #Youtubelegacy = "xxxx"
@@ -90,6 +89,7 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     #Codepen = "xxxx"
     #Bitbucket = "xxxx"
     Stackoverflow = "1898494/sarath-sadasivan-pillai"
+    Email   = "sarathsp06@gmail.com"
     #Weibo = "xxxx"
     #Odnoklassniki = "xxxx"
     #VKontakte = "xxxx"
@@ -143,7 +143,6 @@ copyright = "This work is licensed under a Creative Commons Attribution-NonComme
     #Weibo = true
 
 # Used only for Seo schema
-
 [author]
   name = "sarath"
 

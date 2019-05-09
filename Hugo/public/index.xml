@@ -1,4 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sarath Sadasivan Pillai on Sarath Sadasivan Pillai</title><link>https://sarathsp.com/</link><description>Recent content in Sarath Sadasivan Pillai on Sarath Sadasivan Pillai</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 08 May 2019 12:11:33 +0200</lastBuildDate><atom:link href="https://sarathsp.com/" rel="self" type="application/rss+xml"/><item><title>JSON formatting in VIM</title><link>https://sarathsp.com/2019/gjsonvim/</link><pubDate>Wed, 08 May 2019 12:11:33 +0200</pubDate><guid>https://sarathsp.com/2019/gjsonvim/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sarath Sadasivan Pillai on Sarath Sadasivan Pillai</title><link>https://sarathsp.com/</link><description>Recent content in Sarath Sadasivan Pillai on Sarath Sadasivan Pillai</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 09 May 2019 16:08:41 +0200</lastBuildDate><atom:link href="https://sarathsp.com/" rel="self" type="application/rss+xml"/><item><title>Export StackOverflow</title><link>https://sarathsp.com/2019/export-so/</link><pubDate>Thu, 09 May 2019 16:08:41 +0200</pubDate><guid>https://sarathsp.com/2019/export-so/</guid><description>
+&lt;h3 id=&#34;how-to-export-stackoverflow-data&#34;&gt;How to export StackOverflow data?&lt;/h3&gt;
+&lt;p&gt;I wanted to show my StackOverflow posts on my personal website with links to the original question. There are multiple options to get the data.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://api.stackexchange.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;stackexchange api&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://data.stackexchange.com/&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;stackexchange dataexplorer&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;StackExchange data explorer exposes the data using SQL syntax. The home page has a set of already created queries.
+For me, all I wanted was a way to get my answers in descending order of score and some details about the question. Here is how one can get that&lt;/p&gt;
+&lt;p&gt;Go to &lt;a href=&#34;https://data.stackexchange.com/stackoverflow/query/new&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;compose query&lt;/a&gt; in &lt;a href=&#34;https://data.stackexchange.com&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;https://data.stackexchange.com&lt;/a&gt; and use the following query in the query page&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;DECLARE @UserId int = ##UserId##
+SELECT
+answ.Id &amp;quot;AnswerID&amp;quot;,
+q.Id &amp;quot;QuestionID&amp;quot;,
+answ.Body &amp;quot;AnswerBody&amp;quot;,
+q.Body &amp;quot;QuestionBody&amp;quot;,
+answ.Score &amp;quot;AnswerScore&amp;quot;,
+q.Score &amp;quot;QuestionScore&amp;quot;,
+answ.CreationDate &amp;quot;AnswerDate&amp;quot;,
+q.CreationDate &amp;quot;QuestionDate&amp;quot;
+FROM
+Posts answ JOIN Posts q on q.Id = answ.ParentId
+WHERE
+answ.PostTypeID = 2 AND answ.OwnerUserId = @UserID
+ORDER BY answ.Score DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The user id can be passed as a parameter.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;OR&lt;/strong&gt; you can check out the same &lt;a href=&#34;https://data.stackexchange.com/stackoverflow/query/1044629/top-20-answers-in-decending-order-of-score&#34; rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;</description></item><item><title>JSON formatting in VIM</title><link>https://sarathsp.com/2019/gjsonvim/</link><pubDate>Wed, 08 May 2019 12:11:33 +0200</pubDate><guid>https://sarathsp.com/2019/gjsonvim/</guid><description>
 &lt;h3 id=&#34;quick-read&#34;&gt;Quick read&lt;/h3&gt;
 &lt;p&gt;To format JSON in vim follow the following steps&lt;/p&gt;
 &lt;ol&gt;
