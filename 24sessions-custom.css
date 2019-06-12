@@ -1,0 +1,29 @@
+.layout-chat, .room-menu, .layout-buttons a, .layout-menu span.video-small__btn, #meetingInfoBox, .room-box--allow-media {
+	display: none;
+}
+.layout-main {
+	width: 100% !important;
+}
+.layout-menu {
+	border-left: 0 !important;
+	background-color: transparent !important;
+	width: 100%;
+}
+
+
+#js-own-video-container {
+	position: absolute;
+	display:flex;
+	justify-content: center;
+	align-items:center;
+	height:100%;
+}
+
+
+.layout-video video {
+	padding-right: 0;
+	height: 100% !important;
+    width: auto !important;
+    margin-left: -50%;
+	   min-width: 100% !important;
+}
