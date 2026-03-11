@@ -1,0 +1,494 @@
+---
+title: "Building Reliable Event-Driven Systems"
+description: "Event-driven architecture sounds great in theory. In practice, it introduces a whole new class of problems. Here's what I've learned about making it work -- with real patterns, real trade-offs, and the mistakes I've seen teams repeat."
+pubDate: 2024-11-15
+tags: ["Architecture", "Backend"]
+readingTime: "14 min read"
+---
+
+import Callout from '../../components/blog/Callout.svelte';
+import TldrBox from '../../components/blog/TldrBox.svelte';
+import SectionHeading from '../../components/blog/SectionHeading.svelte';
+import FormulaBox from '../../components/blog/FormulaBox.svelte';
+import ExampleCard from '../../components/blog/ExampleCard.svelte';
+import ProjectCard from '../../components/blog/ProjectCard.svelte';
+import PitfallCard from '../../components/blog/PitfallCard.svelte';
+import StepList from '../../components/blog/StepList.svelte';
+import StepItem from '../../components/blog/StepItem.svelte';
+import DataTable from '../../components/blog/DataTable.svelte';
+import MetricBar from '../../components/blog/MetricBar.svelte';
+import ChartContainer from '../../components/blog/ChartContainer.svelte';
+import LinkCard from '../../components/blog/LinkCard.svelte';
+
+<TldrBox items={[
+  "<strong>Event-driven architecture</strong> decouples producers from consumers -- but trades application complexity for infrastructure complexity.",
+  "The hard problems are <strong>ordering, idempotency, observability, and schema evolution</strong>. Solve them before you ship.",
+  "Three patterns you will need: <strong>Outbox, Dead Letter Queue, and Correlation IDs</strong>.",
+  "Not every system needs events. <strong>Simple CRUD apps, strong-consistency requirements, and small teams</strong> are often better off without them."
+]} />
+
+<SectionHeading icon="fa-bolt" color="amber">Why Event-Driven?</SectionHeading>
+
+<div class="prose-content">
+
+Most applications start simple: a request comes in, you process it, you return a response. Synchronous, predictable, easy to debug. But as systems grow, this model starts to creak.
+
+You add a notification service. Now your API handler sends an email after processing an order. Then you add analytics tracking. Then inventory updates. Then partner webhooks. Suddenly, your "simple" order endpoint is doing six things, and if any one of them fails, the whole request fails.
+
+</div>
+
+<div class="bg-gray-900 rounded-xl p-5 my-6 text-center">
+  <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">The synchronous trap</p>
+  <p class="font-mono text-sm text-gray-200">
+    <span class="text-red-400">POST /orders</span> → <span class="text-blue-300">save order</span> → <span class="text-amber-300">send email</span> → <span class="text-emerald-300">update inventory</span> → <span class="text-purple-300">notify partner</span> → <span class="text-pink-300">track analytics</span>
+  </p>
+  <p class="text-xs text-gray-500 mt-3">If any step fails, the entire request fails. Latency compounds with each addition.</p>
+</div>
+
+<div class="prose-content">
+
+Event-driven architecture is the answer to this problem. Instead of doing everything in one request, you publish an event ("order.created") and let other services react to it independently. The producer does not know -- or care -- who is listening.
+
+</div>
+
+<Callout type="insight">
+  <p class="font-semibold text-gray-800 text-sm mb-1">Key Insight</p>
+  <p class="text-sm text-gray-600">Event-driven is not about events. It is about <em>decoupling the decision to do something from the decision of what to do about it</em>. The order service decides an order was created. What happens next is someone else's problem.</p>
+</Callout>
+
+<SectionHeading icon="fa-check-double" color="emerald">The Promise</SectionHeading>
+
+<div class="prose-content">
+
+The appeal is real and measurable. Here is what you actually gain when event-driven architecture is done well:
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+  <div style="background: linear-gradient(135deg, #eff6ff, #f8faff); border: 1px solid #bfdbfe; border-radius: 10px; padding: 1.5rem;">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold"><i class="fas fa-plug"></i></span>
+      <h3 class="text-lg font-semibold text-gray-900">Loose Coupling</h3>
+    </div>
+    <div class="prose-content">
+      <p class="mb-0">Services don't need to know about each other. The order service publishes an event; it doesn't care who consumes it. Adding a new consumer means deploying a new service, not modifying existing code.</p>
+    </div>
+  </div>
+
+  <div style="background: linear-gradient(135deg, #f0fdf4, #f7fef9); border: 1px solid #bbf7d0; border-radius: 10px; padding: 1.5rem;">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold"><i class="fas fa-expand-arrows-alt"></i></span>
+      <h3 class="text-lg font-semibold text-gray-900">Independent Scalability</h3>
+    </div>
+    <div class="prose-content">
+      <p class="mb-0">Each consumer scales based on its own load. Your email service can handle 100 messages/sec while your analytics pipeline processes 10,000/sec. They don't contend for the same resources.</p>
+    </div>
+  </div>
+
+  <div style="background: linear-gradient(135deg, #fffbeb, #fffef5); border: 1px solid #fde68a; border-radius: 10px; padding: 1.5rem;">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="w-7 h-7 rounded-full bg-amber-500 text-white flex items-center justify-center text-xs font-bold"><i class="fas fa-shield-alt"></i></span>
+      <h3 class="text-lg font-semibold text-gray-900">Resilience</h3>
+    </div>
+    <div class="prose-content">
+      <p class="mb-0">If the notification service is down, orders still get processed. Notifications catch up when the service recovers. The message broker acts as a buffer between producers and consumers.</p>
+    </div>
+  </div>
+
+  <div style="background: linear-gradient(135deg, #faf5ff, #fdf8ff); border: 1px solid #e9d5ff; border-radius: 10px; padding: 1.5rem;">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="w-7 h-7 rounded-full bg-purple-600 text-white flex items-center justify-center text-xs font-bold"><i class="fas fa-puzzle-piece"></i></span>
+      <h3 class="text-lg font-semibold text-gray-900">Extensibility</h3>
+    </div>
+    <div class="prose-content">
+      <p class="mb-0">Adding a new reaction to an event means adding a new consumer, not modifying existing code. Your order service does not change when you decide to also send SMS confirmations or update a data warehouse.</p>
+    </div>
+  </div>
+</div>
+
+<SectionHeading icon="fa-exclamation-triangle" color="red">The Reality: Four Hard Problems</SectionHeading>
+
+<div class="prose-content">
+
+In practice, event-driven systems introduce problems that are genuinely hard. I have seen all four of these bite teams who adopted events without preparing for them. They are not edge cases; they are the default experience.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+  <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+    <p class="text-sm font-semibold text-gray-700 text-center mb-3">Complexity distribution</p>
+    <ChartContainer client:load id="complexityRadar" chartConfig={{
+      type: 'radar',
+      data: {
+        labels: ['Ordering', 'Idempotency', 'Debugging', 'Schema Evolution', 'Monitoring', 'Testing'],
+        datasets: [
+          {
+            label: 'Synchronous',
+            data: [1, 1, 2, 1, 2, 2],
+            borderColor: '#6b7280',
+            backgroundColor: 'rgba(107, 114, 128, 0.1)',
+            pointBackgroundColor: '#6b7280'
+          },
+          {
+            label: 'Event-Driven',
+            data: [8, 7, 9, 6, 7, 8],
+            borderColor: '#ef4444',
+            backgroundColor: 'rgba(239, 68, 68, 0.1)',
+            pointBackgroundColor: '#ef4444'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          r: {
+            beginAtZero: true,
+            max: 10,
+            ticks: { font: { size: 10 }, stepSize: 2 },
+            pointLabels: { font: { size: 10 } }
+          }
+        },
+        plugins: {
+          legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 12, padding: 15, usePointStyle: true, pointStyle: 'rectRounded' } }
+        }
+      }
+    }} />
+  </div>
+  <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+    <p class="text-sm font-semibold text-gray-700 text-center mb-3">Where teams spend debugging time</p>
+    <ChartContainer client:load id="debugTimeChart" tooltipFormat="{l}: {v}%" chartConfig={{
+      type: 'doughnut',
+      data: {
+        labels: ['Message ordering issues', 'Duplicate processing', 'Lost/stuck messages', 'Schema mismatches', 'Other'],
+        datasets: [{
+          data: [28, 25, 22, 15, 10],
+          backgroundColor: ['#3b82f6', '#f97316', '#ef4444', '#8b5cf6', '#d1d5db'],
+          borderWidth: 2,
+          borderColor: '#ffffff'
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom', labels: { font: { size: 10 }, boxWidth: 10, padding: 10, usePointStyle: true, pointStyle: 'rectRounded' } }
+        }
+      }
+    }} />
+  </div>
+</div>
+
+<ExampleCard accent="blue" icon="fa-sort" title="Problem 1: Ordering Guarantees">
+  <div class="prose-content">
+    <p>Events can arrive out of order. If you publish "order.created" followed by "order.updated", there is no guarantee the consumer sees them in that sequence. This matters more than you think.</p>
+    <p>At an e-commerce company I worked with, a race condition between "order.paid" and "order.shipped" events caused the fulfillment system to occasionally attempt shipping before payment was confirmed. The bug only appeared under load -- about once per 2,000 orders -- and took three weeks to diagnose.</p>
+  </div>
+  <Callout type="tip" title="What Works" icon="fa-check">
+    <p class="text-sm text-gray-600">Use <strong>partition keys</strong> in your message broker. Kafka does this well: all events for the same entity go to the same partition, preserving order within that entity. The key is usually the entity ID (order ID, user ID, etc.).</p>
+  </Callout>
+</ExampleCard>
+
+<ExampleCard accent="amber" icon="fa-clone" title="Problem 2: Exactly-Once Processing">
+  <div class="prose-content">
+    <p>Messages can be delivered more than once. Network hiccups, consumer restarts, broker retries -- all of these can cause a message to be delivered again. Your consumer needs to handle this gracefully.</p>
+    <p>The industry term is <strong>idempotency</strong>, and it is harder than it sounds. A payment service that processes the same "charge customer" event twice will charge them twice. An inventory service that processes "decrement stock" twice will show the wrong count.</p>
+  </div>
+  <Callout type="tip" title="What Works" icon="fa-check">
+    <p class="text-sm text-gray-600">Use an <strong>idempotency key</strong> (usually the event ID) and store processed event IDs in your database. Check before processing. This adds a database lookup to every event, but it is the only reliable approach I have found.</p>
+  </Callout>
+</ExampleCard>
+
+<ExampleCard accent="emerald" icon="fa-bug" title="Problem 3: Debugging and Observability">
+  <div class="prose-content">
+    <p>When something goes wrong in a synchronous system, you get a stack trace. In an event-driven system, you get... nothing obvious. The event was published, but was it consumed? By which service? Did it fail silently? Is it sitting in a retry queue?</p>
+    <p>I once spent two days tracking down a bug where events were being consumed but silently dropped because a schema change in the producer did not match the consumer's expectations. There was no error log because the consumer's deserialization caught the exception and logged it at DEBUG level.</p>
+  </div>
+  <Callout type="tip" title="What Works" icon="fa-check">
+    <p class="text-sm text-gray-600"><strong>Correlation IDs.</strong> Generate a unique ID at the entry point (the API request) and propagate it through every event. Log it everywhere. When something goes wrong, you can trace the entire flow across services.</p>
+  </Callout>
+</ExampleCard>
+
+<ExampleCard accent="blue" icon="fa-file-code" title="Problem 4: Schema Evolution">
+  <div class="prose-content">
+    <p>Events are contracts. Once you publish an event with a certain shape, consumers depend on that shape. Changing it is like changing a public API -- you need versioning, backward compatibility, and a migration plan.</p>
+    <p>The real danger is that unlike API changes (where you get immediate errors), schema mismatches in events can fail silently. A consumer might ignore unknown fields, or worse, silently use a default value instead of the new field you just added.</p>
+  </div>
+  <Callout type="tip" title="What Works" icon="fa-check">
+    <p class="text-sm text-gray-600">Use a <strong>schema registry</strong> (Confluent Schema Registry for Kafka, or roll your own). Enforce backward compatibility at the schema level. Never remove fields; deprecate them. Version your event types.</p>
+  </Callout>
+</ExampleCard>
+
+<SectionHeading icon="fa-wrench" color="blue">Patterns That Work</SectionHeading>
+
+<div class="prose-content mb-6">
+
+After building several event-driven systems, here are the three patterns I keep coming back to. Each one addresses a specific failure mode, and together they form a reliable foundation.
+
+</div>
+
+<StepList>
+  <StepItem number={1} title="The Outbox Pattern">
+    <div class="prose-content">
+      <p class="text-sm text-gray-600 leading-relaxed">Instead of publishing events directly from your application code, write them to an "outbox" table in your database as part of the same transaction that writes your business data. A separate process (the "relay") reads the outbox and publishes to the message broker.</p>
+      <p class="text-sm text-gray-600 leading-relaxed mb-3">This guarantees that your data and your events are consistent. If the transaction rolls back, the event is never published. If the broker is down, events accumulate in the outbox and get published when it recovers.</p>
+    </div>
+    <div class="bg-gray-900 rounded-lg p-4 my-3 text-center">
+      <p class="font-mono text-xs text-gray-200">
+        <span class="text-emerald-400">BEGIN TX</span> → <span class="text-blue-300">INSERT order</span> + <span class="text-amber-300">INSERT outbox_event</span> → <span class="text-emerald-400">COMMIT</span>
+      </p>
+      <p class="font-mono text-xs text-gray-400 mt-2">
+        <span class="text-purple-400">Relay process</span>: poll outbox → publish to broker → mark as sent
+      </p>
+    </div>
+  </StepItem>
+
+  <StepItem number={2} title="Dead Letter Queues">
+    <p class="text-sm text-gray-600 leading-relaxed">When a consumer fails to process a message after N retries, move it to a dead letter queue (DLQ) instead of dropping it. This gives you a place to inspect failures, fix bugs, and replay messages. Without a DLQ, failed messages vanish silently -- and you discover the data loss days or weeks later.</p>
+    <Callout type="warning" title="DLQ Alert Fatigue" icon="fa-bell">
+      <p class="text-sm text-gray-600">Set up alerts on DLQ depth, but set sensible thresholds. A few messages per day might be normal (transient errors, bad data). Hundreds per hour means something is broken. If you alert on every single DLQ message, your team will start ignoring the alerts within a week.</p>
+    </Callout>
+  </StepItem>
+
+  <StepItem number={3} title="Correlation IDs and Distributed Tracing">
+    <p class="text-sm text-gray-600 leading-relaxed mb-3">Generate a unique correlation ID at the system entry point (usually the API gateway or the first service in the chain). Propagate it through every event and every downstream call. Log it everywhere. This is your lifeline when debugging production issues.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+      <div class="bg-white border border-gray-200 rounded-lg p-3">
+        <p class="font-semibold text-sm text-gray-800 mb-1"><i class="fas fa-search text-blue-500 mr-1"></i> Without correlation IDs</p>
+        <p class="text-xs text-gray-500">"Order 12345 was not fulfilled." → check 8 services, 40 log streams, find nothing conclusive. Resolution: 2 days.</p>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-lg p-3">
+        <p class="font-semibold text-sm text-gray-800 mb-1"><i class="fas fa-bullseye text-emerald-500 mr-1"></i> With correlation IDs</p>
+        <p class="text-xs text-gray-500">"Order 12345, correlation abc-789." → one query shows the full event chain, the exact failure point, and the error message. Resolution: 15 minutes.</p>
+      </div>
+    </div>
+  </StepItem>
+</StepList>
+
+<SectionHeading icon="fa-flask" color="indigo">Worked Comparison: Three Messaging Approaches</SectionHeading>
+
+<div class="prose-content">
+
+Not all event-driven architectures are built the same. Here is a practical comparison of three common approaches I have evaluated and deployed. The scores reflect maintainability, reliability, and operational overhead for a mid-sized engineering team (15-30 engineers).
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+  <ProjectCard
+    letter="A"
+    title="Direct publish (fire-and-forget)"
+    description="Publish events inline in application code. Simplest to implement. No delivery guarantees if the broker is down."
+    metrics={[
+      {label: "Reliability", value: "Low", percentage: 25, color: "red"},
+      {label: "Simplicity", value: "High", percentage: 90, color: "emerald"},
+      {label: "Ops Cost", value: "Low", percentage: 20, color: "blue"}
+    ]}
+    jobSize="1-2 days"
+    wsjfScore={3.2}
+  />
+  <ProjectCard
+    letter="B"
+    title="Outbox + relay"
+    description="Write events to a DB outbox table in the same transaction. A relay process publishes them. Strong consistency."
+    metrics={[
+      {label: "Reliability", value: "High", percentage: 95, color: "emerald"},
+      {label: "Simplicity", value: "Med", percentage: 50, color: "amber"},
+      {label: "Ops Cost", value: "Med", percentage: 55, color: "blue"}
+    ]}
+    jobSize="1-2 weeks"
+    wsjfScore={8.7}
+    winner={true}
+  />
+  <ProjectCard
+    letter="C"
+    title="CDC (Change Data Capture)"
+    description="Stream database changes (e.g., Debezium on Postgres WAL). Zero application code changes. High infra complexity."
+    metrics={[
+      {label: "Reliability", value: "High", percentage: 90, color: "emerald"},
+      {label: "Simplicity", value: "Low", percentage: 30, color: "red"},
+      {label: "Ops Cost", value: "High", percentage: 85, color: "red"}
+    ]}
+    jobSize="2-4 weeks"
+    wsjfScore={6.1}
+  />
+</div>
+
+<DataTable
+  headers={["Approach", "Reliability", "Setup Time", "Ops Overhead", "Best For"]}
+  rows={[
+    ["A: Direct publish", "Low", "1-2 days", "Minimal", "Prototypes, non-critical events"],
+    ["B: Outbox + relay", "High", "1-2 weeks", "Moderate", "Most production systems"],
+    ["C: CDC (Debezium)", "High", "2-4 weeks", "Significant", "Legacy systems, zero-code-change needs"]
+  ]}
+  highlightRow={1}
+/>
+
+<div class="prose-content">
+
+The Outbox pattern wins for most teams because it balances reliability with operational simplicity. You get strong consistency guarantees (the event is part of the same database transaction as the business data) without the infrastructure complexity of CDC. Direct publish is fine for prototypes and non-critical events like analytics, but it will lose messages when the broker is unavailable. CDC is powerful for legacy systems where you cannot modify application code, but running Debezium in production requires dedicated infrastructure expertise.
+
+</div>
+
+<SectionHeading icon="fa-building" color="purple">Real-World Case Studies</SectionHeading>
+
+<div class="prose-content mb-8">
+
+The patterns above are theoretical until you see them succeed and fail in practice. Here are three situations I have been part of, with the specific decisions that made or broke the implementation.
+
+</div>
+
+<ExampleCard accent="blue" icon="fa-shopping-cart" title="The e-commerce checkout that stopped losing orders">
+  <div class="prose-content">
+    <p>An e-commerce platform was using direct publish for order events. Under normal load, it worked fine. During Black Friday, the message broker hit capacity limits and started rejecting messages. The team estimated they lost about 340 orders worth approximately $47,000 in a four-hour window.</p>
+    <p>The fix was the Outbox pattern. Orders were written to the database (which they were already doing) along with an outbox row in the same transaction. A relay process published events at a controlled rate. During the next sale event, the broker went down for 20 minutes. Zero orders were lost -- they queued in the outbox and published when the broker recovered.</p>
+  </div>
+  <Callout type="insight">
+    <p class="text-sm text-gray-700"><strong>Lesson:</strong> The Outbox pattern's value is not measured during normal operations. It is measured during the worst 0.1% of uptime, when everything else is breaking.</p>
+  </Callout>
+</ExampleCard>
+
+<ExampleCard accent="amber" icon="fa-credit-card" title="The payment service that charged customers twice">
+  <div class="prose-content">
+    <p>A fintech company's payment consumer did not implement idempotency. When the message broker retried a batch of messages after a network partition, 23 customers were charged twice -- totaling about $3,200 in overcharges. The incident required manual refunds, customer apology emails, and a post-mortem that consumed a week of the team's time.</p>
+    <p>The fix was straightforward but required discipline: an idempotency table keyed on event ID. Before processing any payment event, the consumer checks if the event ID has already been processed. If yes, it acknowledges the message without acting on it. The table added about 2ms of latency per event -- a negligible cost compared to the alternative.</p>
+  </div>
+  <Callout type="insight">
+    <p class="text-sm text-gray-700"><strong>Lesson:</strong> Idempotency is not optional. Every consumer that has side effects (payments, emails, inventory changes) must be idempotent. It is cheaper to add it upfront than to deal with the fallout of duplicate processing.</p>
+  </Callout>
+</ExampleCard>
+
+<ExampleCard accent="emerald" icon="fa-network-wired" title="The microservices migration that was traced back to sanity">
+  <div class="prose-content">
+    <p>A team migrating from a monolith to microservices initially had no distributed tracing. When a user reported that their profile update was not reflected in search results, diagnosing the issue required checking logs across 6 services manually. The median time to resolve these issues was about 4 hours.</p>
+    <p>After implementing correlation IDs and integrating with Jaeger for distributed tracing, the same class of issue took 15-20 minutes to diagnose. The correlation ID, generated at the API gateway and propagated through every event, made it possible to see the entire lifecycle of a request in a single trace view.</p>
+  </div>
+  <Callout type="insight">
+    <p class="text-sm text-gray-700"><strong>Lesson:</strong> Correlation IDs are not a "nice to have." They are as essential as logging itself. The cost of implementing them is hours; the cost of not having them is days of debugging per incident.</p>
+  </Callout>
+</ExampleCard>
+
+<SectionHeading icon="fa-list-check" color="emerald">Implementation Checklist</SectionHeading>
+
+<div class="prose-content mb-6">
+
+If you are adopting event-driven architecture, here is the order I recommend tackling the implementation. Each step builds on the previous one.
+
+</div>
+
+<StepList>
+  <StepItem number={1} title="Define your event contracts">
+    <p class="text-sm text-gray-600 leading-relaxed">Before writing any code, document the events your system will produce and consume. Include the event name, payload schema, and who the producer is. Use a schema registry from day one, even if you only have two services. Retrofitting one later is painful.</p>
+  </StepItem>
+
+  <StepItem number={2} title="Implement the Outbox pattern for critical events">
+    <p class="text-sm text-gray-600 leading-relaxed">Start with the events that have business consequences if lost (orders, payments, user actions). Less critical events (analytics, activity feeds) can use direct publish initially and migrate later.</p>
+  </StepItem>
+
+  <StepItem number={3} title="Make every consumer idempotent">
+    <p class="text-sm text-gray-600 leading-relaxed">Add an idempotency check to every consumer. An event_id column in a processed_events table is the simplest approach. Test it by deliberately publishing duplicate messages and verifying that side effects only happen once.</p>
+  </StepItem>
+
+  <StepItem number={4} title="Add correlation IDs from the start">
+    <p class="text-sm text-gray-600 leading-relaxed">Generate a correlation ID at the API gateway. Include it in every event payload. Log it in every service. Integrate with a tracing tool (Jaeger, Zipkin, or Datadog APM). This investment pays for itself on the first production incident.</p>
+  </StepItem>
+
+  <StepItem number={5} title="Set up Dead Letter Queues and alerts">
+    <p class="text-sm text-gray-600 leading-relaxed">Configure a DLQ for every consumer. Set up monitoring on DLQ depth with sensible thresholds. Build a simple admin tool to inspect and replay DLQ messages. You will need this sooner than you think.</p>
+  </StepItem>
+
+  <StepItem number={6} title="Add consumer lag monitoring">
+    <p class="text-sm text-gray-600 leading-relaxed">Track the gap between the latest published event and the latest consumed event for each consumer group. Alert if the lag exceeds a threshold (e.g., 5 minutes for real-time consumers, 1 hour for batch consumers). Consumer lag is the single best early warning signal for event-driven systems.</p>
+  </StepItem>
+</StepList>
+
+<SectionHeading icon="fa-triangle-exclamation" color="red">Where It Goes Wrong</SectionHeading>
+
+<div class="prose-content mb-6">
+
+Event-driven architecture is not complicated in theory, but I have seen these recurring mistakes undermine real implementations.
+
+</div>
+
+<div class="space-y-3">
+  <PitfallCard title="Eventing everything">
+    <p class="text-sm text-gray-600">Not every interaction needs to be asynchronous. If Service A needs an immediate response from Service B (e.g., "is this user authorized?"), a synchronous call is simpler and more reliable. Forcing everything through events creates unnecessary complexity and latency. Use events for things that can happen eventually, not things that need to happen right now.</p>
+  </PitfallCard>
+
+  <PitfallCard title="Ignoring consumer lag">
+    <p class="text-sm text-gray-600">A consumer that falls behind is not just slow -- it is a ticking time bomb. If your order consumer is 30 minutes behind, you have 30 minutes of orders that have not been fulfilled. If you are not monitoring consumer lag, you do not know you have a problem until customers complain. By then, you have a backlog that will take hours to clear.</p>
+  </PitfallCard>
+
+  <PitfallCard title="Fat events with too much data">
+    <p class="text-sm text-gray-600">Putting the entire entity in every event (the "fat event" anti-pattern) creates tight coupling through the back door. When you change the order schema, every consumer that deserializes the full order object breaks. Instead, publish thin events with just the entity ID and event type, and let consumers fetch the data they need. Or use a hybrid: include only the fields that changed.</p>
+  </PitfallCard>
+
+  <PitfallCard title="No schema versioning">
+    <p class="text-sm text-gray-600">Events evolve. If you do not version your event schemas from the start, you will eventually deploy a producer change that breaks every consumer simultaneously. Add a version field to every event. Maintain backward compatibility for at least two versions. Use a schema registry to enforce this automatically.</p>
+  </PitfallCard>
+
+  <PitfallCard title="Testing only the happy path">
+    <p class="text-sm text-gray-600">Most teams test that events are published and consumed correctly. Few test what happens when the broker is down, when messages arrive out of order, when a consumer crashes mid-processing, or when a message is delivered twice. These failure modes are not edge cases in event-driven systems -- they are the normal operating conditions. Test them explicitly.</p>
+  </PitfallCard>
+
+  <PitfallCard title="Treating the broker as infinitely reliable">
+    <p class="text-sm text-gray-600">Kafka, RabbitMQ, and SQS are all highly reliable -- but none of them are infallible. Broker restarts, network partitions, disk failures, and configuration mistakes all happen. Your system needs to handle broker unavailability gracefully. The Outbox pattern is one answer. Circuit breakers on the publish path are another. Assuming the broker will always be up is how you lose data.</p>
+  </PitfallCard>
+</div>
+
+<SectionHeading icon="fa-ban" color="gray">When Not to Use Events</SectionHeading>
+
+<div class="prose-content">
+
+Event-driven architecture is a tool, not a religion. Here are three situations where I would recommend against it:
+
+</div>
+
+<DataTable
+  headers={["Scenario", "Why Events Are Overkill", "Better Alternative"]}
+  rows={[
+    ["Simple CRUD app", "Minimal side effects, no downstream consumers", "Direct database calls"],
+    ["Strong consistency required", "Need immediate confirmation across services", "Synchronous API calls + saga pattern"],
+    ["Small team (< 5 engineers)", "Operational overhead exceeds the benefit", "Monolith with in-process events"]
+  ]}
+/>
+
+<div class="prose-content">
+
+The third point deserves emphasis. Running a message broker, monitoring consumers, debugging distributed flows, managing schema evolution, and handling DLQ replays is a significant operational burden. If your team is five people, that overhead might consume 20-30% of your engineering capacity. A well-structured monolith with in-process event dispatching (like Rails' ActiveSupport::Notifications or Spring's ApplicationEventPublisher) gives you most of the architectural benefits without the infrastructure cost.
+
+</div>
+
+<Callout type="warning" title="The Distributed Monolith Trap" icon="fa-exclamation">
+  <p class="text-sm text-gray-600">If your event-driven services cannot be deployed independently, or if changing one event schema requires coordinated deployments across multiple services, you have not built a distributed system. You have built a distributed monolith -- which has all the complexity of microservices with none of the benefits.</p>
+</Callout>
+
+<SectionHeading icon="fa-flag-checkered" color="gray">Closing Thoughts</SectionHeading>
+
+<div class="prose-content">
+
+Event-driven architecture is a powerful tool, but it is not a free lunch. The complexity does not disappear -- it shifts from your application code to your infrastructure and operational practices. Make sure you are trading up, not just trading sideways.
+
+The question is never "should we use events?" It is "which interactions benefit from being asynchronous, and are we prepared to handle the operational complexity that comes with them?"
+
+If you can answer that honestly, you will make the right call for your system.
+
+</div>
+
+<Callout type="tip" title="Start Small" icon="fa-seedling">
+  <p class="text-sm text-gray-600">Pick one interaction in your system that is currently synchronous and causing problems (slow response times, cascading failures, tight coupling). Move that one interaction to events using the Outbox pattern. Live with it for a month. If the operational overhead is manageable and the benefits are real, expand from there. If not, you have learned something valuable at low cost.</p>
+</Callout>
+
+<div class="mt-10 pt-6 border-t border-gray-200">
+  <p class="text-xs text-gray-400 uppercase tracking-wider font-semibold mb-3">Further reading</p>
+  <div class="flex flex-col sm:flex-row gap-3">
+    <LinkCard href="https://microservices.io/patterns/data/transactional-outbox.html" icon="fa-external-link-alt">
+      Transactional Outbox Pattern
+    </LinkCard>
+    <LinkCard href="https://www.confluent.io/blog/event-driven-architecture-patterns/" icon="fa-external-link-alt">
+      Event-Driven Architecture Patterns
+    </LinkCard>
+    <LinkCard href="https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321" icon="fa-book">
+      Kleppmann: Designing Data-Intensive Applications
+    </LinkCard>
+  </div>
+</div>

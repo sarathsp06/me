@@ -1,0 +1,234 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Sparrow - Modern Event-Driven Webhook Delivery System" description="High-performance, production-ready webhook delivery system with guaranteed delivery, intelligent retries, and complete observability.">
+  <div class="min-h-screen text-gray-200" style="background-color: hsl(220, 25%, 6%); font-family: 'Inter', system-ui, sans-serif;">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-xl" style="border-color: hsl(220, 20%, 15%); background: hsla(220, 25%, 6%, 0.8);">
+      <div class="max-w-[1400px] mx-auto px-6 flex items-center justify-between h-16">
+        <a href="/sparrow" class="flex items-center gap-3">
+          <img src="https://raw.githubusercontent.com/sarathsp06/sparrow/refs/heads/main/web/src/lib/assets/favicon.svg" alt="Sparrow" class="w-8 h-8" />
+          <span class="text-xl font-bold font-mono">Sparrow</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#features" class="text-sm hover:text-teal-400 transition-colors" style="color: hsl(220, 10%, 55%);">Features</a>
+          <a href="#how-it-works" class="text-sm hover:text-teal-400 transition-colors" style="color: hsl(220, 10%, 55%);">How It Works</a>
+          <a href="#architecture" class="text-sm hover:text-teal-400 transition-colors" style="color: hsl(220, 10%, 55%);">Architecture</a>
+          <a href="https://github.com/sarathsp06/sparrow" target="_blank" class="text-sm hover:text-teal-400 transition-colors" style="color: hsl(220, 10%, 55%);">Documentation</a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <a href="/" class="hidden md:inline-flex items-center gap-2 px-4 py-2 text-sm rounded-lg border transition-all hover:bg-white/5" style="border-color: hsl(220, 20%, 15%);">
+            <i class="fas fa-arrow-left text-xs"></i> Home
+          </a>
+          <a href="https://github.com/sarathsp06/sparrow" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 text-sm rounded-lg border transition-all hover:bg-white/5" style="border-color: hsl(220, 20%, 15%);">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
+      <div class="absolute inset-0" style="background: linear-gradient(135deg, hsla(172, 66%, 50%, 0.08), hsla(200, 70%, 50%, 0.05));"></div>
+      <div class="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-[48px] animate-pulse" style="background: hsla(172, 66%, 50%, 0.1);"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full blur-[32px] animate-pulse" style="background: hsla(172, 66%, 50%, 0.05); animation-delay: 1.5s;"></div>
+
+      <div class="max-w-[1400px] mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="flex flex-col gap-8">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full w-fit text-sm" style="background: hsla(172, 66%, 50%, 0.1); border: 1px solid hsla(172, 66%, 50%, 0.2);">
+              <i class="fas fa-bolt text-teal-400"></i>
+              <span class="text-teal-400 font-medium">High-Performance Webhook Delivery</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-mono">
+              Modern <span class="bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent">Event-Driven</span><br />
+              Webhook System
+            </h1>
+            <p class="text-lg leading-relaxed max-w-xl" style="color: hsl(220, 10%, 55%);">
+              Production-ready webhook delivery with guaranteed delivery, intelligent retries, and complete observability. Enterprise-grade infrastructure out of the box.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="https://github.com/sarathsp06/sparrow#-quick-start" class="inline-flex items-center justify-center gap-2 px-7 py-3 text-base font-medium rounded-xl transition-all bg-teal-400 text-gray-900 hover:opacity-90">
+                Get Started <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="https://github.com/sarathsp06/sparrow" target="_blank" class="inline-flex items-center justify-center gap-2 px-7 py-3 text-base font-medium rounded-xl border transition-all hover:bg-white/5" style="border-color: hsl(220, 20%, 15%);">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+            <div class="pt-8 border-t" style="border-color: hsl(220, 20%, 15%);">
+              <p class="text-xs uppercase tracking-widest mb-3" style="color: hsl(220, 10%, 55%);">Built with</p>
+              <div class="flex flex-wrap gap-3">
+                {['Go', 'PostgreSQL', 'gRPC', 'SvelteKit', 'OpenTelemetry'].map(tech => (
+                  <span class="px-3 py-1 text-xs font-mono rounded-md" style={`background: hsl(220, 20%, 15%); color: hsl(220, 10%, 55%);`}>{tech}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center lg:justify-end">
+            <div class="relative">
+              <div class="absolute inset-0 rounded-full blur-[48px]" style="background: linear-gradient(to bottom right, hsla(172, 66%, 50%, 0.3), hsla(172, 66%, 50%, 0.2), transparent); transform: scale(1.1);"></div>
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full blur-[32px]" style="background: hsla(172, 66%, 50%, 0.25);"></div>
+              <div class="relative p-8 rounded-3xl backdrop-blur-sm" style="background: linear-gradient(to bottom right, hsla(172, 66%, 50%, 0.1), hsla(220, 25%, 9%, 0.5), transparent); border: 1px solid hsla(172, 66%, 50%, 0.2);">
+                <img src="https://raw.githubusercontent.com/sarathsp06/sparrow/refs/heads/main/web/src/lib/assets/favicon.svg" alt="Sparrow" class="relative w-72 h-72 md:w-80 md:h-80 drop-shadow-2xl" style="animation: float 6s ease-in-out infinite;" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24">
+      <div class="max-w-[1400px] mx-auto px-6">
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm mb-6" style="background: hsla(172, 66%, 50%, 0.1); border: 1px solid hsla(172, 66%, 50%, 0.2);">
+            <span class="text-teal-400 font-medium">Core Features</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold font-mono mb-4">Enterprise-Grade <span class="bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent">Webhook Infrastructure</span></h2>
+          <p class="text-lg max-w-3xl mx-auto" style="color: hsl(220, 10%, 55%);">Everything you need to build reliable event-driven systems at scale</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { icon: 'fa-shield-halved', title: 'Guaranteed Delivery', desc: 'Persistent storage ensures no webhook is ever lost. Events are stored in PostgreSQL with full transactional guarantees.' },
+            { icon: 'fa-rotate', title: 'Intelligent Retries', desc: 'Exponential backoff with jitter, configurable retry policies, and automatic failure handling for robust delivery.' },
+            { icon: 'fa-users', title: 'Multi-Tenancy', desc: 'Built-in organization and project isolation. Perfect for SaaS platforms with multiple customers.' },
+            { icon: 'fa-cube', title: 'High Performance gRPC', desc: 'Native gRPC API for maximum throughput. Efficient binary protocol for high-volume webhook processing.' },
+            { icon: 'fa-gear', title: 'Complete Observability', desc: 'OpenTelemetry integration, structured logging, and Prometheus metrics for full visibility into your webhook pipeline.' },
+            { icon: 'fa-lock', title: 'Secure by Design', desc: 'HMAC signature verification, TLS encryption, and secure secret management for enterprise security requirements.' },
+          ].map(feature => (
+            <div class="feature-card p-8 rounded-xl border transition-all duration-300" style={`background: hsl(220, 25%, 9%); border-color: hsl(220, 20%, 15%);`}>
+              <div class="w-12 h-12 flex items-center justify-center rounded-xl mb-6" style="background: hsla(172, 66%, 50%, 0.1);">
+                <i class={`fas ${feature.icon} text-teal-400 text-lg`}></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3 font-mono">{feature.title}</h3>
+              <p class="leading-relaxed" style="color: hsl(220, 10%, 55%); font-size: 0.9375rem;">{feature.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-24" style="background: hsl(220, 25%, 8%);">
+      <div class="max-w-[1400px] mx-auto px-6">
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm mb-6" style="background: hsla(172, 66%, 50%, 0.1); border: 1px solid hsla(172, 66%, 50%, 0.2);">
+            <span class="text-teal-400 font-medium">How It Works</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold font-mono mb-4">Simple Integration, <span class="bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent">Powerful Results</span></h2>
+          <p class="text-lg max-w-3xl mx-auto" style="color: hsl(220, 10%, 55%);">Get started in minutes with our intuitive API</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {[
+            { num: '01', title: 'Register Event Type', desc: 'Define the events your system will emit', code: `curl -X POST /api/events \\
+  -d '{"name": "order.created"}'` },
+            { num: '02', title: 'Create Subscription', desc: 'Configure where webhooks should be delivered', code: `curl -X POST /api/subscriptions \\
+  -d '{"url": "https://...",
+  "events": ["order.*"]}'` },
+            { num: '03', title: 'Trigger Events', desc: 'Emit events from your application', code: `curl -X POST /api/trigger \\
+  -d '{"event": "order.created",
+  "payload": {...}}'` },
+            { num: '04', title: 'Automatic Delivery', desc: 'Sparrow handles delivery, retries, and monitoring', code: `POST https://your-endpoint.com
+X-Webhook-Signature: sha256=...
+Content-Type: application/json` },
+          ].map(step => (
+            <div class="relative p-8 rounded-xl border" style={`background: hsl(220, 25%, 9%); border-color: hsl(220, 20%, 15%);`}>
+              <span class="absolute top-6 right-6 text-5xl font-bold font-mono" style="color: hsla(172, 66%, 50%, 0.2);">{step.num}</span>
+              <h3 class="text-xl font-semibold mb-3 text-teal-400 font-mono">{step.title}</h3>
+              <p class="mb-6" style="color: hsl(220, 10%, 55%); font-size: 0.9375rem;">{step.desc}</p>
+              <div class="rounded-lg p-4 overflow-x-auto" style="background: hsl(220, 25%, 12%);">
+                <code class="text-sm text-teal-400 whitespace-pre font-mono">{step.code}</code>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="py-24">
+      <div class="max-w-[1400px] mx-auto px-6">
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm mb-6" style="background: hsla(172, 66%, 50%, 0.1); border: 1px solid hsla(172, 66%, 50%, 0.2);">
+            <span class="text-teal-400 font-medium">Architecture</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold font-mono mb-4">Built for <span class="bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent">Scale & Reliability</span></h2>
+          <p class="text-lg max-w-3xl mx-auto" style="color: hsl(220, 10%, 55%);">A modern, layered architecture designed for high-throughput webhook delivery</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {[
+            { icon: 'fa-layer-group', title: 'API Layer', desc: 'High-performance gRPC server with REST gateway for maximum flexibility and throughput.', tags: ['gRPC', 'REST', 'Gateway'] },
+            { icon: 'fa-gear', title: 'Service Layer', desc: 'Core business logic handling event routing, subscription matching, and delivery orchestration.', tags: ['Events', 'Subscriptions', 'Routing'] },
+            { icon: 'fa-inbox', title: 'Queue System', desc: 'Reliable message queuing with worker pools for scalable, concurrent webhook processing.', tags: ['Workers', 'Queues', 'Concurrency'] },
+            { icon: 'fa-database', title: 'Storage Layer', desc: 'PostgreSQL-backed persistence with full ACID guarantees for events, subscriptions, and delivery logs.', tags: ['PostgreSQL', 'ACID', 'Logs'] },
+          ].map(arch => (
+            <div class="p-8 rounded-xl border transition-all duration-300 hover:border-teal-400/30" style={`background: hsl(220, 25%, 9%); border-color: hsl(220, 20%, 15%);`}>
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-10 h-10 flex items-center justify-center rounded-lg" style="background: hsla(172, 66%, 50%, 0.1);">
+                  <i class={`fas ${arch.icon} text-teal-400`}></i>
+                </div>
+                <h3 class="text-lg font-semibold font-mono">{arch.title}</h3>
+              </div>
+              <p class="mb-4" style="color: hsl(220, 10%, 55%); font-size: 0.9375rem;">{arch.desc}</p>
+              <div class="flex flex-wrap gap-2">
+                {arch.tags.map(tag => (
+                  <span class="px-2.5 py-1 text-xs font-mono rounded" style={`background: hsl(220, 20%, 15%); color: hsl(220, 10%, 55%);`}>{tag}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24" style="background: linear-gradient(to bottom, transparent, hsla(172, 66%, 50%, 0.05));">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold font-mono mb-6">Ready to Build <span class="bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent">Reliable Webhooks</span>?</h2>
+        <p class="text-lg mb-8" style="color: hsl(220, 10%, 55%);">Join the developers using Sparrow to power their event-driven architectures. Open source and free to use.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://github.com/sarathsp06/sparrow#-quick-start" class="inline-flex items-center gap-2 px-7 py-3 text-base font-medium rounded-xl bg-teal-400 text-gray-900 hover:opacity-90 transition-all">
+            Get Started Now <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="https://github.com/sarathsp06/sparrow" target="_blank" class="inline-flex items-center gap-2 px-7 py-3 text-base font-medium rounded-xl border transition-all hover:bg-white/5" style="border-color: hsl(220, 20%, 15%);">
+            <i class="fas fa-star"></i> Star on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t" style="border-color: hsl(220, 20%, 15%);">
+      <div class="max-w-[1400px] mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-2">
+            <img src="https://raw.githubusercontent.com/sarathsp06/sparrow/refs/heads/main/web/src/lib/assets/favicon.svg" alt="Sparrow" class="w-6 h-6" />
+            <span class="font-mono font-semibold">Sparrow</span>
+          </div>
+          <p class="text-sm" style="color: hsl(220, 10%, 55%);">Open source webhook delivery system</p>
+          <div class="flex items-center gap-6">
+            <a href="https://github.com/sarathsp06/sparrow" target="_blank" class="text-sm hover:text-teal-400 transition-colors" style="color: hsl(220, 10%, 55%);">GitHub</a>
+            <a href="https://github.com/sarathsp06/sparrow#-documentation" target="_blank" class="text-sm hover:text-teal-400 transition-colors" style="color: hsl(220, 10%, 55%);">Docs</a>
+            <a href="https://github.com/sarathsp06/sparrow/blob/main/LICENSE" target="_blank" class="text-sm hover:text-teal-400 transition-colors" style="color: hsl(220, 10%, 55%);">MIT License</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    .feature-card:hover {
+      border-color: hsla(172, 66%, 50%, 0.5) !important;
+      box-shadow: 0 0 80px -20px hsla(172, 66%, 50%, 0.5);
+      transform: translateY(-4px);
+    }
+  </style>
+</Layout>

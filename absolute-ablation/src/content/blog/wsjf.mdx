@@ -1,0 +1,400 @@
+---
+title: "How to Decide What to Build Next: A Practical Guide to WSJF"
+description: "Most teams have more ideas than capacity. WSJF is a simple way to figure out which ones to do first -- and why. This post explains how it works, with real examples."
+pubDate: 2025-01-15
+tags: ["Prioritization", "Product Management"]
+readingTime: "12 min read"
+---
+
+import Callout from '../../components/blog/Callout.svelte';
+import TldrBox from '../../components/blog/TldrBox.svelte';
+import SectionHeading from '../../components/blog/SectionHeading.svelte';
+import FormulaBox from '../../components/blog/FormulaBox.svelte';
+import ExampleCard from '../../components/blog/ExampleCard.svelte';
+import ProjectCard from '../../components/blog/ProjectCard.svelte';
+import PitfallCard from '../../components/blog/PitfallCard.svelte';
+import StepList from '../../components/blog/StepList.svelte';
+import StepItem from '../../components/blog/StepItem.svelte';
+import DataTable from '../../components/blog/DataTable.svelte';
+import MetricBar from '../../components/blog/MetricBar.svelte';
+import ChartContainer from '../../components/blog/ChartContainer.svelte';
+import LinkCard from '../../components/blog/LinkCard.svelte';
+
+<TldrBox items={[
+  "<strong>WSJF = Cost of Delay / Job Size.</strong> Highest score gets built first.",
+  "<strong>Cost of Delay</strong> has three parts: business value, time sensitivity, and risk reduction.",
+  "The real value is the <strong>conversation it forces</strong>, not the formula itself.",
+  "Unsexy work (compliance, infra) often scores highest -- and that is the point."
+]} />
+
+<SectionHeading icon="fa-exclamation" color="red">The Prioritization Problem</SectionHeading>
+
+<div class="prose-content">
+
+I have sat in too many planning meetings where the outcome was decided before anyone opened a spreadsheet. The VP of Sales wants the CRM integration because a whale prospect asked for it. The head of engineering wants to pay down tech debt because the build pipeline is slow. The CEO read a LinkedIn post about AI and wants "something with AI" on the roadmap.
+
+Everyone has valid reasons. No one has a shared way to compare them. So the most senior person in the room picks, or the most persistent person wears everyone else down, or worse -- the team tries to do everything at once and finishes nothing well.
+
+</div>
+
+<Callout type="insight">
+  <p class="font-semibold text-gray-800 text-sm mb-1">Key Insight</p>
+  <p class="text-sm text-gray-600">This is not a process failure. It is the absence of a shared language for talking about trade-offs. WSJF gives you that language.</p>
+</Callout>
+
+<SectionHeading icon="fa-calculator" color="blue">What is WSJF?</SectionHeading>
+
+<div class="prose-content">
+
+**Weighted Shortest Job First** is a prioritization method from the [Scaled Agile Framework](https://www.scaledagileframework.com/wsjf/). The name is a mouthful, but the idea is straightforward. For each project competing for your team's time, you ask two things:
+
+1. **How much does it cost us to wait?** (this is called the "Cost of Delay")
+2. **How big is the work?** (the effort to get it done)
+
+Then you divide the first by the second:
+
+</div>
+
+<FormulaBox>
+  <p class="text-3xl font-mono text-white">
+    WSJF = <span class="inline-block align-middle text-center mx-2"><span class="block border-b-2 border-blue-400 px-4 pb-1 text-blue-300">Cost of Delay</span><span class="block px-4 pt-1 text-gray-400">Job Size</span></span>
+  </p>
+  <p class="text-xs text-gray-500 mt-4">Highest score = build it first</p>
+</FormulaBox>
+
+<div class="prose-content">
+
+The project with the highest score gets done first. That is the entire method.
+
+</div>
+
+<Callout type="tip" title="The ER Analogy" icon="fa-stethoscope">
+  <p class="text-sm text-gray-600">Think of it like an emergency room. A patient who is critically ill <em>and</em> can be treated quickly goes ahead of a patient with a minor issue requiring a full day of tests. WSJF applies the same logic to your backlog: high urgency plus small effort means "do this now."</p>
+</Callout>
+
+<div class="prose-content">
+
+You do not need to adopt SAFe or any particular methodology to use WSJF. It works with Scrum, Kanban, or no formal process at all. It is just arithmetic and honest conversation.
+
+</div>
+
+<SectionHeading icon="fa-coins" color="amber">Cost of Delay: The Hard Part</SectionHeading>
+
+<div class="prose-content">
+
+The formula is simple, but the numerator -- Cost of Delay -- is where the real thinking happens. It is the answer to: *"For every month we don't do this, what are we losing?"*
+
+In SAFe, Cost of Delay is broken into three components. I find this breakdown genuinely useful because it forces you to think about value from different angles, not just the obvious ones.
+
+</div>
+
+<div class="cod-component cod-component-1 mt-6" style="background: linear-gradient(135deg, #eff6ff, #f8faff); border: 1px solid #bfdbfe; border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem;">
+  <div class="flex items-center gap-3 mb-3">
+    <span class="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold">1</span>
+    <h3 class="text-lg font-semibold text-gray-900">Business Value</h3>
+  </div>
+  <div class="prose-content">
+    <p class="mb-2">This is the most intuitive piece. If we shipped this tomorrow, how much new revenue would it bring in, or how much cost would it eliminate, per month?</p>
+    <p class="mb-0">For a new feature, it might be projected new subscriptions. For an internal tool, it might be the salary cost of the manual work it replaces. Not every project has a clean dollar figure here, and that is fine -- a relative estimate (say, on a 1-to-10 scale) works too, as long as you score everything the same way.</p>
+  </div>
+</div>
+
+<div style="background: linear-gradient(135deg, #fffbeb, #fffef5); border: 1px solid #fde68a; border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem;">
+  <div class="flex items-center gap-3 mb-3">
+    <span class="w-7 h-7 rounded-full bg-amber-500 text-white flex items-center justify-center text-xs font-bold">2</span>
+    <h3 class="text-lg font-semibold text-gray-900">Time Sensitivity</h3>
+  </div>
+  <div class="prose-content">
+    <p class="mb-2">Some projects have a window. Miss it and the value drops sharply or disappears entirely. A regulatory deadline, a competitor about to launch something similar, a seasonal sales event, a contract renewal date -- these all create time pressure that makes delay disproportionately expensive.</p>
+    <p class="mb-0">Projects with no particular deadline score low here. Projects tied to a hard date score high. This component is what separates "important" from "urgent."</p>
+  </div>
+</div>
+
+<div style="background: linear-gradient(135deg, #f0fdf4, #f7fef9); border: 1px solid #bbf7d0; border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem;">
+  <div class="flex items-center gap-3 mb-3">
+    <span class="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold">3</span>
+    <h3 class="text-lg font-semibold text-gray-900">Risk Reduction / Opportunity Enablement</h3>
+  </div>
+  <div class="prose-content">
+    <p class="mb-2">This one gets overlooked most often, but it is arguably the most strategic. Does this project reduce a meaningful risk? Does it unlock future work that is even more valuable?</p>
+    <p class="mb-0">A security audit might not generate revenue directly, but it might be the prerequisite for landing enterprise contracts. A database migration might not be exciting, but it might be the only thing standing between you and a catastrophic outage. These projects rarely win popularity contests, but they often have the highest real cost of delay.</p>
+  </div>
+</div>
+
+<div class="bg-gray-900 rounded-xl p-5 my-6 text-center">
+  <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Putting it together</p>
+  <p class="font-mono text-sm text-gray-200">
+    <span class="text-blue-400">Cost of Delay</span> = <span class="text-blue-300">Business Value</span> + <span class="text-amber-300">Time Sensitivity</span> + <span class="text-emerald-300">Risk / OE</span>
+  </p>
+  <p class="text-xs text-gray-500 mt-3">Score each component, then add them up. The sum is the total monthly "pain" of not doing this project.</p>
+</div>
+
+<SectionHeading icon="fa-building" color="purple">Real-World Examples</SectionHeading>
+
+<div class="prose-content mb-8">
+
+The framework makes more sense with concrete situations. Here are a few I have seen (or variations of them) at real companies.
+
+</div>
+
+<ExampleCard accent="blue" icon="fa-gavel" title="The compliance deadline that nobody wanted to prioritize">
+  <div class="prose-content">
+    <p>A fintech startup I worked with had a GDPR-like regulation coming into effect in 8 months. The penalty for non-compliance was roughly EUR 100,000. The engineering team estimated it would take about 6 weeks of focused work.</p>
+    <p>Nobody wanted to do it. It was not a "feature." It did not show up in customer requests. The product team kept pushing it to the next quarter.</p>
+    <p>When we ran the numbers through WSJF, the picture changed. The time sensitivity alone was about EUR 12,500/month (the penalty spread over the remaining runway). Add in the risk of reputational damage and the inability to sign contracts with regulated clients, and the Cost of Delay was over EUR 20,000/month. The job was small. It shot to the top of the list.</p>
+  </div>
+  <Callout type="insight">
+    <p class="text-sm text-gray-700"><strong>Lesson:</strong> Unsexy work often has the highest cost of delay. WSJF makes that visible.</p>
+  </Callout>
+</ExampleCard>
+
+<ExampleCard accent="amber" icon="fa-robot" title="The big bet that could wait">
+  <div class="prose-content">
+    <p>At a B2B SaaS company, the CEO was pushing hard for an AI-powered analytics feature. The market was buzzing about AI, investors were asking about it, and competitors had started showing demos.</p>
+    <p>It was genuinely valuable -- projected to add $15K-20K/month in upsell revenue. But the estimated effort was massive: 4-5 months of a full squad. And when we honestly evaluated the time sensitivity, it was low. The competitor demos were vaporware. There was no hard deadline. The market window was measured in years, not months.</p>
+    <p>Meanwhile, a much smaller project -- building an integration with a popular CRM -- had a concrete opportunity: three signed LOIs worth $8K/month each, contingent on the integration being live by Q2. Two weeks of work.</p>
+  </div>
+  <Callout type="insight">
+    <p class="text-sm text-gray-700"><strong>Lesson:</strong> The AI feature was more valuable in absolute terms, but the CRM integration was a far better use of the next two weeks. WSJF made the choice obvious.</p>
+  </Callout>
+</ExampleCard>
+
+<ExampleCard accent="emerald" icon="fa-database" title="The infrastructure project that kept getting deferred">
+  <div class="prose-content">
+    <p>An e-commerce platform was running on a database that had been "fine" for three years. The engineering team had been asking to migrate to a newer system for over a year. Leadership kept saying "next quarter" because there was always a revenue-generating feature to build instead.</p>
+    <p>Then they did an honest risk assessment. The old database had a non-trivial probability (the team estimated 15-20%) of a major failure in the next 12 months. A failure during peak season could mean $500K+ in lost orders and recovery costs.</p>
+    <p>Expected risk cost: ($500K x 15%) / 12 = roughly $6,250/month. Add the opportunity enablement -- the new database would cut query times in half, directly improving conversion rates -- and the total Cost of Delay was around $12,000/month. The migration was estimated at 8 weeks.</p>
+    <p>It was not the highest-scored item on their list, but it was no longer "something we will get to eventually." It had a concrete, defensible position in the queue.</p>
+  </div>
+</ExampleCard>
+
+<SectionHeading icon="fa-flask" color="indigo">Worked Case Study: Three Projects, One Team</SectionHeading>
+
+<div class="prose-content">
+
+Let me walk through a complete example. Imagine you are running product at a project management SaaS company called SyncUp. Your team has capacity for one major initiative at a time. Three projects are on the table:
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+  <ProjectCard
+    letter="A"
+    title="AI-powered task summaries"
+    description="Auto-summarize tasks using LLMs. High customer demand, good for marketing. No specific deadline."
+    metrics={[
+      {label: "BV", value: "$15K/mo", percentage: 60, color: "blue"},
+      {label: "TS", value: "$0", percentage: 0, color: "amber"},
+      {label: "RR", value: "$2K/mo", percentage: 8, color: "emerald"}
+    ]}
+    jobSize="1,200 hrs"
+    wsjfScore={14.2}
+  />
+  <ProjectCard
+    letter="B"
+    title="SOC 2 compliance"
+    description="Two enterprise deals ($25K/mo combined ARR) blocked until certified. One prospect decides in 4 months."
+    metrics={[
+      {label: "BV", value: "$0", percentage: 0, color: "blue"},
+      {label: "TS", value: "$5K/mo", percentage: 20, color: "amber"},
+      {label: "RR", value: "$25K/mo", percentage: 100, color: "emerald"}
+    ]}
+    jobSize="800 hrs"
+    wsjfScore={37.5}
+    winner={true}
+  />
+  <ProjectCard
+    letter="C"
+    title="Dashboard UI refresh"
+    description="Dashboard looks dated. Some churn mentions it. No hard deadline, no strategic unlock."
+    metrics={[
+      {label: "BV", value: "$4K/mo", percentage: 16, color: "blue"},
+      {label: "TS", value: "$0", percentage: 0, color: "amber"},
+      {label: "RR", value: "$0", percentage: 0, color: "emerald"}
+    ]}
+    jobSize="400 hrs"
+    wsjfScore={10.0}
+  />
+</div>
+
+<DataTable
+  headers={["Project", "Cost of Delay", "Job Size", "WSJF"]}
+  rows={[
+    ["A: AI summaries", "$17,000/mo", "1,200 hrs", "14.2"],
+    ["B: SOC 2 compliance", "$30,000/mo", "800 hrs", "37.5"],
+    ["C: Dashboard refresh", "$4,000/mo", "400 hrs", "10.0"]
+  ]}
+  highlightRow={1}
+/>
+
+<div class="prose-content">
+
+SOC 2 wins by a wide margin, even though it generates zero direct revenue and nobody on the team is excited about it. The reason is clear once you see the numbers: every month without SOC 2, SyncUp is leaving $30K/month in enterprise revenue on the table -- and the work is smaller than both alternatives.
+
+The AI feature ranks second. It is the most "exciting" project, but it is also the largest effort with no time pressure. It can wait a quarter without any loss in value.
+
+The dashboard refresh ranks last. It has real value (reducing churn), but with no urgency and no strategic unlock, it can wait until the higher-impact work is done.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+  <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+    <p class="text-sm font-semibold text-gray-700 text-center mb-3">Cost of Delay breakdown</p>
+    <ChartContainer client:load id="codCompositionChart" yTickFormat="${v}K" yDivide={1000} tooltipFormat="{l}: ${v}/mo" tooltipLocale chartConfig={{
+      type: 'bar',
+      data: {
+        labels: ['AI Summaries', 'SOC 2', 'Dashboard'],
+        datasets: [
+          { label: 'Business Value', data: [15000, 0, 4000], backgroundColor: '#3b82f6', borderRadius: 4 },
+          { label: 'Time Sensitivity', data: [0, 5000, 0], backgroundColor: '#f97316', borderRadius: 4 },
+          { label: 'Risk / Opportunity', data: [2000, 25000, 0], backgroundColor: '#10b981', borderRadius: 4 }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: { stacked: true, grid: { display: false } },
+          y: { stacked: true }
+        },
+        plugins: {
+          legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 12, padding: 15, usePointStyle: true, pointStyle: 'rectRounded' } }
+        }
+      }
+    }} />
+  </div>
+  <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+    <p class="text-sm font-semibold text-gray-700 text-center mb-3">WSJF scores</p>
+    <ChartContainer client:load id="wsjfBarChart" tooltipFormat="Score: {v}" tooltipFixed={1} chartConfig={{
+      type: 'bar',
+      data: {
+        labels: ['SOC 2', 'AI Summaries', 'Dashboard'],
+        datasets: [{
+          data: [37.50, 14.17, 10.00],
+          backgroundColor: ['#2563eb', '#6b7280', '#d1d5db'],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          x: { beginAtZero: true, title: { display: true, text: 'WSJF Score', font: { size: 11 } } },
+          y: { grid: { display: false } }
+        }
+      }
+    }} />
+  </div>
+</div>
+
+<SectionHeading icon="fa-play" color="emerald">Running a WSJF Session</SectionHeading>
+
+<div class="prose-content mb-8">
+
+If you want to try this with your own team, here is how I have seen it work best.
+
+</div>
+
+<StepList>
+  <StepItem number={1} title="Get the right people in the room">
+    <p class="text-sm text-gray-600 leading-relaxed">You need someone who understands the business impact (product, sales, or a business lead), someone who can estimate effort honestly (engineering lead), and ideally someone who can speak to risk (security, ops, or a technical architect). Three to five people is ideal. More than that and the meeting becomes a debate club.</p>
+  </StepItem>
+
+  <StepItem number={2} title="List 3-7 initiatives">
+    <p class="text-sm text-gray-600 leading-relaxed">More than that and the exercise becomes unwieldy. These should be genuinely competing for the same team's capacity. Do not mix a backend infrastructure project with a marketing campaign unless the same people would work on both.</p>
+  </StepItem>
+
+  <StepItem number={3} title="Score each Cost of Delay component">
+    <p class="text-sm text-gray-600 leading-relaxed mb-3">You have two options here:</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+      <div class="bg-white border border-gray-200 rounded-lg p-3">
+        <p class="font-semibold text-sm text-gray-800 mb-1"><i class="fas fa-dollar-sign text-emerald-500 mr-1"></i> Dollar values</p>
+        <p class="text-xs text-gray-500">If you have reasonable estimates for revenue impact, cost savings, or risk exposure, use them. They make the conversation concrete.</p>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-lg p-3">
+        <p class="font-semibold text-sm text-gray-800 mb-1"><i class="fas fa-balance-scale text-blue-500 mr-1"></i> Relative scales</p>
+        <p class="text-xs text-gray-500">Use a Fibonacci-like scale (1, 2, 3, 5, 8, 13). Score each component relative to the other initiatives. Works surprisingly well because WSJF only needs <em>relative</em> ranking.</p>
+      </div>
+    </div>
+    <p class="text-sm text-gray-600 leading-relaxed">Either way, score the three components separately, then add them up for total Cost of Delay. Scoring them separately forces you to think about <em>why</em> something is costly to delay, not just <em>whether</em> it is.</p>
+  </StepItem>
+
+  <StepItem number={4} title="Estimate job size">
+    <p class="text-sm text-gray-600 leading-relaxed">Use whatever unit your team already uses -- story points, person-weeks, t-shirt sizes mapped to numbers. The only rule is consistency: every project on the list must use the same scale. If you are unsure, err on the side of "bigger than you think."</p>
+  </StepItem>
+
+  <StepItem number={5} title="Divide and rank">
+    <p class="text-sm text-gray-600 leading-relaxed">Cost of Delay / Job Size for each project. Sort by score, highest first. That is your priority order.</p>
+  </StepItem>
+
+  <StepItem number={6} title="Discuss the results">
+    <p class="text-sm text-gray-600 leading-relaxed">This is the most important step. The numbers are a starting point, not a verdict. If the ranking surprises anyone, that is a feature, not a bug -- it means you are surfacing assumptions that were previously hidden. Talk through the surprises. Adjust scores if the conversation reveals information that was missing. Then commit to the sequence.</p>
+  </StepItem>
+</StepList>
+
+<Callout type="tip" title="Time Estimate" icon="fa-clock">
+  <p class="text-sm text-gray-600">A well-run WSJF session takes 30-60 minutes. If it is going longer, you probably have too many initiatives on the table or the wrong people in the room.</p>
+</Callout>
+
+<SectionHeading icon="fa-triangle-exclamation" color="red">Where It Goes Wrong</SectionHeading>
+
+<div class="prose-content mb-6">
+
+WSJF is not complicated, but I have seen a few recurring mistakes that undermine it.
+
+</div>
+
+<div class="space-y-3">
+  <PitfallCard title="Treating the score as gospel">
+    <p class="text-sm text-gray-600">WSJF is a decision-support tool, not a decision-making tool. If the CEO decides to override the ranking for a strategic bet that does not score well -- say, entering a new market -- that is a legitimate leadership call. The value of WSJF is that it makes the override visible and deliberate rather than accidental.</p>
+  </PitfallCard>
+
+  <PitfallCard title="Agonizing over exact numbers">
+    <p class="text-sm text-gray-600">I have seen teams spend 45 minutes debating whether a project's business value is $12,000/month or $14,000/month. It does not matter. WSJF is about relative order, not decimal precision. If two projects score within 20% of each other, they are effectively tied -- pick either one and move on.</p>
+  </PitfallCard>
+
+  <PitfallCard title="Scoring once and never revisiting">
+    <p class="text-sm text-gray-600">A WSJF score is a snapshot. A competitor launch, a change in regulation, a key employee leaving, a shift in company strategy -- any of these can change the Cost of Delay. Re-run the exercise every quarter, or whenever something significant changes.</p>
+  </PitfallCard>
+
+  <PitfallCard title="Underestimating job size">
+    <p class="text-sm text-gray-600">Teams are systematically optimistic about how long things take. If you consistently find that your actual delivery takes 1.5-2x what you estimated, apply that multiplier <em>before</em> you calculate WSJF, not after. Otherwise you are biasing toward large projects that seem smaller than they are.</p>
+  </PitfallCard>
+
+  <PitfallCard title="Comparing across different teams or domains">
+    <p class="text-sm text-gray-600">WSJF works best when you are comparing projects that compete for the <em>same</em> resources. Comparing a mobile app feature against a data pipeline migration does not make sense unless the same people would build both. Use separate WSJF exercises for separate teams.</p>
+  </PitfallCard>
+
+  <PitfallCard title="Ignoring the 'Risk Reduction' component">
+    <p class="text-sm text-gray-600">This is the one that most teams skip or score as zero across the board. It is also the one that, when taken seriously, most often changes the outcome. Infrastructure work, security improvements, compliance, and platform investments all live here. If you zero them out, you are systematically deprioritizing work that prevents future crises.</p>
+  </PitfallCard>
+</div>
+
+<SectionHeading icon="fa-flag-checkered" color="gray">Closing Thoughts</SectionHeading>
+
+<div class="prose-content">
+
+WSJF is not a silver bullet. It will not resolve genuine strategic disagreements, and it will not fix a team that cannot estimate effort. What it does is provide a structured way to ask the right question: *"Given our limited capacity, what is the most economically responsible thing to work on next?"*
+
+The real value is not the formula. It is the conversation the formula forces. When a room full of people with different priorities has to assign actual numbers to business value, time sensitivity, and risk, they end up building a shared understanding of what matters and why. That shared understanding is worth more than the ranking it produces.
+
+</div>
+
+<Callout type="tip" title="Try It Now" icon="fa-rocket">
+  <p class="text-sm text-gray-600">Pick three projects your team is currently debating. Spend 30 minutes scoring them. See if the result matches your intuition -- and if it does not, figure out why. That gap between your gut and the numbers is where the most useful conversations happen.</p>
+</Callout>
+
+<div class="mt-10 pt-6 border-t border-gray-200">
+  <p class="text-xs text-gray-400 uppercase tracking-wider font-semibold mb-3">Further reading</p>
+  <div class="flex flex-col sm:flex-row gap-3">
+    <LinkCard href="https://www.scaledagileframework.com/wsjf/" icon="fa-external-link-alt">
+      SAFe WSJF Reference
+    </LinkCard>
+    <LinkCard href="https://www.amazon.com/Principles-Product-Development-Flow-Generation/dp/1935401009" icon="fa-book">
+      Don Reinertsen: Product Development Flow
+    </LinkCard>
+  </div>
+</div>

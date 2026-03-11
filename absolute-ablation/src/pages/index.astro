@@ -1,0 +1,280 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="sarath@unix:~" description="Sarath Sadasivan Pillai - Technical Lead / Senior Software Engineer">
+  <div class="font-mono bg-[#0a0a0c] text-gray-300 leading-relaxed min-h-screen">
+    <!-- Scanline effect -->
+    <div class="fixed w-full h-[100px] z-50 pointer-events-none opacity-10"
+      style="background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.02) 50%, rgba(0,0,0,0) 100%); animation: scanline 10s linear infinite;">
+    </div>
+
+    <main class="max-w-4xl mx-auto p-4 md:p-8">
+      <div class="bg-black/40 border border-white/10 rounded-lg overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+        <!-- Window Title Bar -->
+        <div class="bg-[#1a1a1e] px-4 py-2 flex items-center gap-2 border-b border-white/5">
+          <div class="flex gap-1.5">
+            <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+          </div>
+          <div class="text-[10px] text-slate-500 mx-auto uppercase tracking-widest text-center">bash &mdash; sarath &mdash; 80x24</div>
+        </div>
+
+        <!-- Terminal Content -->
+        <div class="p-6 md:p-10">
+          <!-- Main Bio Section -->
+          <div id="view-bio">
+            <header class="mb-12">
+              <div class="prompt text-sm md:text-base">whoami</div>
+              <h1 class="text-3xl md:text-5xl font-bold text-white mt-2 mb-4">
+                Sarath Sadasivan Pillai<span class="cursor"></span>
+              </h1>
+              <div class="text-slate-400 max-w-2xl text-sm md:text-base leading-relaxed">
+                [Role]: Technical Lead / Senior Software Engineer<br />
+                [Location]: Rotterdam, NL<br />
+                [Specialization]: <span class="text-green-400 font-semibold">Go, Distributed Systems, Linux, PostgreSQL</span>
+              </div>
+            </header>
+
+            <nav class="mb-12 flex flex-wrap gap-4 text-xs md:text-sm">
+              <span class="text-slate-500 underline">Navigation:</span>
+              <a href="#tools-section" class="text-green-400 hover:text-green-300 font-bold transition-colors">cd ./bin/</a>
+              <a href="#blog-section" class="text-yellow-400 hover:text-yellow-300 font-bold transition-colors">cd ./blogs/</a>
+              <a href="https://www.linkedin.com/in/sarathsp/" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors">./linkedin.sh</a>
+              <a href="https://github.com/sarathsp06" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors">./github.sh</a>
+            </nav>
+
+            <!-- Experience Section -->
+            <section class="mb-12">
+              <div class="prompt text-sm md:text-base mb-4">ls -la ~/experience/</div>
+              <div class="space-y-10">
+                <!-- Message+ -->
+                <div>
+                  <div class="flex flex-col md:flex-row justify-between mb-1">
+                    <span class="text-green-400 font-bold underline">Message+::Co-Founder_&amp;_CTO</span>
+                    <span class="text-slate-500 text-xs">Dec 2022 - Present</span>
+                  </div>
+                  <div class="cmd-output text-sm leading-relaxed">
+                    &bull; Revolutionizing customer support by leveraging AI and messaging channels like WhatsApp and Instagram.<br />
+                    &bull; Helping businesses personalize and streamline support interactions while tracking key metrics.<br />
+                    &bull; Designing scalable infrastructure to meet the evolving needs of modern enterprises and startups.
+                  </div>
+                </div>
+                <!-- Wellsync -->
+                <div>
+                  <div class="flex flex-col md:flex-row justify-between mb-1">
+                    <span class="text-green-400 font-bold underline">Wellsync::Technical_Lead</span>
+                    <span class="text-slate-500 text-xs">Aug 2024 - Present</span>
+                  </div>
+                  <div class="cmd-output text-sm leading-relaxed">
+                    &bull; Led the development of new services that unlocked additional revenue streams.<br />
+                    &bull; Enhanced observability across all systems and trained the team to leverage it for efficient technical support.<br />
+                    &bull; Mentored junior engineers and contributed to overall system and infrastructure improvements.
+                  </div>
+                </div>
+                <!-- Shell -->
+                <div>
+                  <div class="flex flex-col md:flex-row justify-between mb-1">
+                    <span class="text-green-400 font-bold underline">Shell::Senior_Software_Engineer</span>
+                    <span class="text-slate-500 text-xs">Nov 2020 - Aug 2024</span>
+                  </div>
+                  <div class="cmd-output text-sm leading-relaxed">
+                    &bull; Developed scalable, data-driven systems to support Shell's sustainability goals.<br />
+                    &bull; Collaborated closely with business stakeholders to define product direction and priorities.
+                  </div>
+                </div>
+                <!-- MessageBird -->
+                <div>
+                  <div class="flex flex-col md:flex-row justify-between mb-1">
+                    <span class="text-green-400 font-bold underline">MessageBird::Senior_Software_Engineer</span>
+                    <span class="text-slate-500 text-xs">Jun 2019 - Nov 2020</span>
+                  </div>
+                  <div class="cmd-output text-sm leading-relaxed">
+                    &bull; Maintained and enhanced services handling core call execution logic within the real-time communications team.<br />
+                    &bull; Established coding and code review standards, improving code quality and team alignment.<br />
+                    &bull; Monitored and improved API availability through observability and performance tuning.
+                  </div>
+                </div>
+                <!-- Exotel -->
+                <div>
+                  <div class="flex flex-col md:flex-row justify-between mb-1">
+                    <span class="text-green-400 font-bold underline">Exotel::Technical_Lead</span>
+                    <span class="text-slate-500 text-xs">May 2014 - Dec 2018</span>
+                  </div>
+                  <div class="cmd-output text-sm leading-relaxed">
+                    &bull; Played a key role in shaping the engineering culture as an early employee.<br />
+                    &bull; Defined team goals, mentored engineers and interns, and led project delivery.<br />
+                    &bull; Released the company's first mobile app within 3 months of joining.<br />
+                    &bull; Scaled core systems, standardized APIs, and built public SDKs.
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="mb-24">
+              <div class="prompt text-sm md:text-base mb-4">cat /proc/skills</div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div class="bg-white/5 p-4 rounded border border-white/5">
+                  <h3 class="text-slate-500 font-bold mb-2 uppercase text-xs tracking-wider">Languages</h3>
+                  <div class="text-green-400 font-medium">Go, Python, JavaScript, PHP, MySQL</div>
+                </div>
+                <div class="bg-white/5 p-4 rounded border border-white/5">
+                  <h3 class="text-slate-500 font-bold mb-2 uppercase text-xs tracking-wider">Engineering</h3>
+                  <div class="text-green-400 font-medium">REST APIs, Distributed Systems, Linux, Technical Leadership, PostgreSQL</div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Tools Section -->
+          <div id="tools-section" class="pt-12 border-t border-white/10 mb-24">
+            <header class="mb-8">
+              <div class="prompt text-sm">ls -F ~/bin/</div>
+              <h2 class="text-2xl font-bold text-white mt-2">Tools & Projects</h2>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <a href="/sparrow" class="tool-card block border border-white/10 p-5 rounded transition-all">
+                <div class="flex items-center gap-3 mb-3">
+                  <i class="fa-brands fa-golang text-2xl text-blue-400"></i>
+                  <span class="text-white font-bold text-lg">sparrow*</span>
+                </div>
+                <p class="text-slate-400 text-sm mb-4">A high-performance monitoring and testing tool built in Go. Lightweight and developer-friendly.</p>
+                <div class="flex gap-3">
+                  <span class="text-[10px] px-2 py-0.5 bg-green-500/10 text-green-400 rounded">Go</span>
+                  <span class="text-[10px] px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded">Monitoring</span>
+                </div>
+              </a>
+
+              <a href="https://tools.sarathsadasivan.com/" target="_blank" class="tool-card block border border-white/10 p-5 rounded transition-all">
+                <div class="flex items-center gap-3 mb-3">
+                  <i class="fa-solid fa-screwdriver-wrench text-xl text-yellow-400"></i>
+                  <span class="text-white font-bold text-lg">saraths_tools*</span>
+                </div>
+                <p class="text-slate-400 text-sm mb-4">A collection of useful web utilities and developer tools for daily productivity.</p>
+                <div class="flex gap-3">
+                  <span class="text-[10px] px-2 py-0.5 bg-purple-500/10 text-purple-400 rounded">Web</span>
+                  <span class="text-[10px] px-2 py-0.5 bg-slate-500/10 text-slate-300 rounded">Utilities</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Blogs Section -->
+          <div id="blog-section" class="pt-12 border-t border-white/10">
+            <header class="mb-8">
+              <div class="prompt text-sm">ls -1 ~/blogs/</div>
+              <h2 class="text-2xl font-bold text-white mt-2">Technical Journal</h2>
+            </header>
+
+            <div class="space-y-6">
+              <a href="https://sarathsp06.medium.com/the-power-of-simplicity-measuring-code-complexity-with-cyclomatic-and-cognitive-complexity-29414b9fc0a0" target="_blank" class="block border border-white/10 p-4 rounded hover:bg-white/5 transition-colors">
+                <div class="flex justify-between items-start mb-2">
+                  <span class="text-yellow-400 font-bold">measuring_code_complexity.md</span>
+                  <span class="text-slate-500 text-xs">Medium</span>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed">The power of simplicity: measuring code complexity with cyclomatic and cognitive complexity...</p>
+              </a>
+
+              <a href="https://sarathsp06.medium.com/the-art-of-naming-lessons-learned-as-a-programmer-a3beed290438" target="_blank" class="block border border-white/10 p-4 rounded hover:bg-white/5 transition-colors">
+                <div class="flex justify-between items-start mb-2">
+                  <span class="text-yellow-400 font-bold">art_of_naming.md</span>
+                  <span class="text-slate-500 text-xs">Medium</span>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed">The art of naming: Lessons learned as a programmer on one of the hardest problems in CS...</p>
+              </a>
+
+              <a href="https://sarathsp06.medium.com/understanding-discrete-time-crystals-d3a22307a18c" target="_blank" class="block border border-white/10 p-4 rounded hover:bg-white/5 transition-colors">
+                <div class="flex justify-between items-start mb-2">
+                  <span class="text-yellow-400 font-bold">discrete_time_crystals.md</span>
+                  <span class="text-slate-500 text-xs">Medium</span>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed">Understanding discrete time crystals and the fascinating intersection of physics and computation...</p>
+              </a>
+
+              <a href="/blog/wsjf" class="block border border-white/10 p-4 rounded hover:bg-white/5 transition-colors">
+                <div class="flex justify-between items-start mb-2">
+                  <span class="text-yellow-400 font-bold">wsjf.md</span>
+                  <span class="text-slate-500 text-xs">Local</span>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed">A Framework for Economic Backlog Governance and Strategic Alignment</p>
+              </a>
+
+              <a href="/blog/event-driven-systems" class="block border border-white/10 p-4 rounded hover:bg-white/5 transition-colors">
+                <div class="flex justify-between items-start mb-2">
+                  <span class="text-yellow-400 font-bold">event_driven_systems.md</span>
+                  <span class="text-slate-500 text-xs">Local</span>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed">Real patterns, real trade-offs, and the mistakes teams repeat when building event-driven architecture</p>
+              </a>
+
+              <a href="/blog/error-budget-sprints" class="block border border-white/10 p-4 rounded hover:bg-white/5 transition-colors">
+                <div class="flex justify-between items-start mb-2">
+                  <span class="text-yellow-400 font-bold">error_budget_sprints.md</span>
+                  <span class="text-slate-500 text-xs">Local</span>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed">Applying SRE error budgets to sprint planning -- measuring developer effort on bugs instead of downtime</p>
+              </a>
+            </div>
+
+            <div class="mt-8 flex gap-6">
+              <a href="/blog" class="text-green-400 hover:underline text-sm font-bold transition-colors">cd ~/blogs/ (All Posts)</a>
+              <a href="/travel" class="text-blue-400 hover:underline text-sm font-bold transition-colors">cd ~/travel/ (Travel Logs)</a>
+            </div>
+
+            <div class="mt-12 text-center">
+              <a href="#" class="text-green-400 hover:underline text-sm font-bold transition-colors">cd ~ (Return to Top)</a>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <footer class="mt-20 opacity-40 text-[10px]">
+            <p>Last login: <span id="current-time"></span> on ttys001</p>
+            <p>&copy; 2026 SARATH PILLAI - KERNEL v5.15.0-generic</p>
+          </footer>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const el = document.getElementById('current-time');
+    if (el) el.textContent = new Date().toUTCString();
+  </script>
+
+  <style>
+    .prompt::before {
+      content: "sarath@dev:~$ ";
+      color: #4ade80;
+      font-weight: bold;
+    }
+    .cmd-output {
+      border-left: 2px solid #334155;
+      padding-left: 1.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      height: 20px;
+      background-color: #4ade80;
+      animation: blink 1s step-end infinite;
+      vertical-align: middle;
+      margin-left: 4px;
+    }
+    .tool-card:hover {
+      border-color: #4ade80;
+      background: rgba(74, 222, 128, 0.05);
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    @keyframes scanline {
+      0% { bottom: 100%; }
+      100% { bottom: -100%; }
+    }
+  </style>
+</Layout>

@@ -1,0 +1,77 @@
+---
+import Layout from './Layout.astro';
+import '../styles/blog-components.css';
+import ReadingProgress from '../components/ReadingProgress.svelte';
+import TableOfContents from '../components/TableOfContents.svelte';
+import ArticleHeader from '../components/ArticleHeader.svelte';
+import ShareButtons from '../components/ShareButtons.svelte';
+import BlogFooter from '../components/BlogFooter.svelte';
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  tags?: string[];
+  readingTime?: string;
+}
+
+const { title, description, pubDate, tags = [], readingTime = '5 min read' } = Astro.props;
+const formattedDate = pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+
+<Layout title={`${title} | Sarath Sadasivan`} description={description}>
+  <div class="min-h-screen bg-[#fafafa] text-gray-700 font-sans">
+    <!-- Svelte Reading Progress Bar -->
+    <ReadingProgress client:load />
+
+    <div class="flex">
+      <!-- Sidebar Navigation with Svelte TOC -->
+      <div class="fixed left-0 top-0 h-full w-60 border-r border-gray-200 p-6 hidden lg:flex flex-col bg-white/80 backdrop-blur-sm z-50">
+        <TableOfContents client:load readingTime={readingTime} />
+      </div>
+
+      <!-- Main Content -->
+      <main class="ml-0 lg:ml-60 w-full">
+        <article class="max-w-3xl mx-auto px-6 md:px-10 py-12 md:py-20">
+          <!-- Svelte Article Header -->
+          <ArticleHeader
+            client:load
+            title={title}
+            description={description}
+            pubDate={formattedDate}
+            tags={tags}
+            readingTime={readingTime}
+          />
+
+          <!-- Content -->
+          <div class="prose prose-lg max-w-none font-serif leading-relaxed text-gray-700
+            prose-headings:font-sans prose-headings:text-gray-900 prose-headings:font-bold
+            prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
+            prose-blockquote:border-l-blue-600 prose-blockquote:bg-gray-50 prose-blockquote:rounded-r-lg
+            prose-code:bg-gray-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
+            prose-pre:bg-gray-900 prose-pre:text-gray-200 prose-pre:rounded-xl
+            prose-img:rounded-xl prose-img:shadow-lg">
+            <slot />
+          </div>
+
+          <!-- Share section -->
+          <div class="mt-12 pt-8 border-t border-gray-200">
+            <ShareButtons client:load title={title} />
+          </div>
+
+          <!-- Related posts hint -->
+          <div class="mt-8 pt-6 border-t border-gray-100">
+            <a href="/blog" class="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-blue-600 transition-colors group">
+              <svg class="w-4 h-4 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+              </svg>
+              Back to all posts
+            </a>
+          </div>
+        </article>
+
+        <BlogFooter client:idle />
+      </main>
+    </div>
+  </div>
+</Layout>
