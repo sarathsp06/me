@@ -1,10 +1,14 @@
-# Blog Authoring Guide
+# Content Authoring Guide
 
-Comprehensive guide for adding new blog posts to this Astro 6 + Svelte 5 + MDX site.
+Comprehensive guide for writing blog posts and travel articles on this Astro 6 + Svelte 5 + MDX site.
+
+All content components live in `src/components/content/` and work in **both** blog and travel posts.
 
 ---
 
 ## 1. Quick Start
+
+### Blog post
 
 Create a new `.mdx` file in `src/content/blog/`:
 
@@ -12,9 +16,9 @@ Create a new `.mdx` file in `src/content/blog/`:
 src/content/blog/my-new-post.mdx
 ```
 
-Every post **must** start with YAML frontmatter:
+Frontmatter:
 
-```mdx
+```yaml
 ---
 title: "Your Post Title"
 description: "A one- or two-sentence summary for SEO and card previews."
@@ -22,8 +26,42 @@ pubDate: 2026-03-11
 tags: ["Topic A", "Topic B"]
 readingTime: "8 min read"
 ---
+```
 
-import Callout from '../../components/blog/Callout.svelte';
+### Travel post
+
+Create a new `.mdx` file in `src/content/travel/`:
+
+```
+src/content/travel/my-trip.mdx
+```
+
+Frontmatter:
+
+```yaml
+---
+title: "Our Trip to Somewhere"
+description: "A family road trip through..."
+pubDate: 2025-04-24
+location: "Netherlands → Switzerland"
+tags: ["Road Trip", "Family Travel"]
+coverImage: "/images/trip-cover.jpg"
+readingTime: "25 min read"
+---
+```
+
+### Minimal working example
+
+```mdx
+---
+title: "Your Post Title"
+description: "A one- or two-sentence summary."
+pubDate: 2026-03-11
+tags: ["Topic"]
+readingTime: "8 min read"
+---
+
+import Callout from '../../components/content/Callout.svelte';
 
 <div class="prose-content">
 
@@ -41,17 +79,55 @@ That is a valid, publishable post. Everything below adds richness.
 
 ---
 
-## 2. Available Components Reference
+## 2. Frontmatter Schemas
 
-All 13 blog components live in `src/components/blog/`. Import them at the top of your MDX file, **after** the frontmatter closing `---`.
+Defined in `src/content.config.ts`. Validated by Zod at build time — invalid frontmatter causes a build error.
 
-```mdx
-import ComponentName from '../../components/blog/ComponentName.svelte';
-```
+### Blog schema
+
+| Field | Type | Required | Default | Notes |
+|-------|------|----------|---------|-------|
+| `title` | `string` | Yes | — | Post title, used in `<title>` and cards |
+| `description` | `string` | Yes | — | SEO meta description and card preview text |
+| `pubDate` | `date` | Yes | — | Publication date. Accepts `YYYY-MM-DD` (coerced to `Date`) |
+| `updatedDate` | `date` | No | — | Last-modified date, shown if present |
+| `tags` | `string[]` | No | `[]` | Category/topic tags for filtering |
+| `readingTime` | `string` | No | — | Displayed on the post, e.g. `"8 min read"` |
+| `external` | `string` | No | — | URL if hosted elsewhere (card becomes outbound link) |
+
+### Travel schema
+
+| Field | Type | Required | Default | Notes |
+|-------|------|----------|---------|-------|
+| `title` | `string` | Yes | — | Trip title |
+| `description` | `string` | Yes | — | SEO meta description |
+| `pubDate` | `date` | Yes | — | Publication date |
+| `updatedDate` | `date` | No | — | Last-modified date |
+| `location` | `string` | No | — | Route/destination label |
+| `tags` | `string[]` | No | `[]` | Tags for filtering |
+| `coverImage` | `string` | No | — | Cover image path |
+| `readingTime` | `string` | No | — | Reading time estimate |
 
 ---
 
-### 2.1 Callout
+## 3. Component Reference
+
+All 15 components live in `src/components/content/`. Import them at the top of your MDX file, **after** the frontmatter closing `---`.
+
+```mdx
+import ComponentName from '../../components/content/ComponentName.svelte';
+```
+
+### Component categories
+
+| Category | Components | `client:load` needed? |
+|----------|-----------|----------------------|
+| **Static** (build-time render, zero JS shipped) | Callout, TldrBox, SectionHeading, FormulaBox, ExampleCard, ProjectCard, PitfallCard, StepList, StepItem, DataTable, MetricBar, LinkCard | No |
+| **Interactive** (browser JS required) | ChartContainer, TravelTips, PackingChecklist | **Yes** |
+
+---
+
+### 3.1 Callout
 
 A highlighted aside for insights, tips, or warnings.
 
@@ -63,7 +139,7 @@ A highlighted aside for insights, tips, or warnings.
 | children | Snippet | — | Yes |
 
 ```mdx
-import Callout from '../../components/blog/Callout.svelte';
+import Callout from '../../components/content/Callout.svelte';
 
 <Callout type="warning" title="Heads Up" icon="fa-fire">
   <p>This is a custom warning with a fire icon.</p>
@@ -77,7 +153,7 @@ import Callout from '../../components/blog/Callout.svelte';
 
 ---
 
-### 2.2 TldrBox
+### 3.2 TldrBox
 
 A summary box at the top of a post. Items are rendered as HTML so you can use `<strong>`, `<em>`, etc.
 
@@ -86,7 +162,7 @@ A summary box at the top of a post. Items are rendered as HTML so you can use `<
 | `items` | `string[]` | — | Yes |
 
 ```mdx
-import TldrBox from '../../components/blog/TldrBox.svelte';
+import TldrBox from '../../components/content/TldrBox.svelte';
 
 <TldrBox items={[
   "<strong>First key point.</strong> Supporting detail.",
@@ -97,7 +173,7 @@ import TldrBox from '../../components/blog/TldrBox.svelte';
 
 ---
 
-### 2.3 SectionHeading
+### 3.3 SectionHeading
 
 A styled `<h2>` with a colored icon badge. Use it to break a post into major sections.
 
@@ -112,15 +188,15 @@ Available colors: `red`, `blue`, `amber`, `purple`, `indigo`, `emerald`, `gray`.
 Icons use [Font Awesome](https://fontawesome.com/icons) class names (without the `fas` prefix — it is added automatically).
 
 ```mdx
-import SectionHeading from '../../components/blog/SectionHeading.svelte';
+import SectionHeading from '../../components/content/SectionHeading.svelte';
 
 <SectionHeading icon="fa-calculator" color="blue">What is WSJF?</SectionHeading>
-<SectionHeading icon="fa-triangle-exclamation" color="red">Where It Goes Wrong</SectionHeading>
+<SectionHeading icon="fa-mountain" color="emerald">Day 6: Mount Rigi</SectionHeading>
 ```
 
 ---
 
-### 2.4 FormulaBox
+### 3.4 FormulaBox
 
 A dark-background centered box for formulas or key equations. Accepts an optional caption.
 
@@ -130,7 +206,7 @@ A dark-background centered box for formulas or key equations. Accepts an optiona
 | children | Snippet | — | Yes |
 
 ```mdx
-import FormulaBox from '../../components/blog/FormulaBox.svelte';
+import FormulaBox from '../../components/content/FormulaBox.svelte';
 
 <FormulaBox caption="Highest score = build it first">
   <p class="text-2xl font-mono text-white">
@@ -143,7 +219,7 @@ The content area uses a monospace font (`JetBrains Mono` / `Fira Code`) on a dar
 
 ---
 
-### 2.5 ExampleCard
+### 3.5 ExampleCard
 
 A card with a colored left border for real-world examples or case studies.
 
@@ -155,7 +231,7 @@ A card with a colored left border for real-world examples or case studies.
 | children | Snippet | — | Yes |
 
 ```mdx
-import ExampleCard from '../../components/blog/ExampleCard.svelte';
+import ExampleCard from '../../components/content/ExampleCard.svelte';
 
 <ExampleCard accent="blue" icon="fa-gavel" title="The compliance deadline">
   <div class="prose-content">
@@ -179,7 +255,7 @@ You can nest other components (like `Callout`) inside:
 
 ---
 
-### 2.6 ProjectCard
+### 3.6 ProjectCard
 
 A rich card for comparing projects/options. Shows a letter badge, description, metric bars, job size, and a WSJF score. Optionally marks a winner.
 
@@ -201,7 +277,7 @@ Where `Metric` is:
 Metric `color` accepts named colors: `blue`, `amber`, `emerald`, `red`, `purple`, `indigo` (or any CSS color string).
 
 ```mdx
-import ProjectCard from '../../components/blog/ProjectCard.svelte';
+import ProjectCard from '../../components/content/ProjectCard.svelte';
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
   <ProjectCard
@@ -234,7 +310,7 @@ import ProjectCard from '../../components/blog/ProjectCard.svelte';
 
 ---
 
-### 2.7 PitfallCard
+### 3.7 PitfallCard
 
 A red-tinted warning card for common mistakes or anti-patterns.
 
@@ -244,7 +320,7 @@ A red-tinted warning card for common mistakes or anti-patterns.
 | children | Snippet | — | Yes |
 
 ```mdx
-import PitfallCard from '../../components/blog/PitfallCard.svelte';
+import PitfallCard from '../../components/content/PitfallCard.svelte';
 
 <PitfallCard title="Treating the score as gospel">
   <p class="text-sm text-gray-600">
@@ -255,7 +331,7 @@ import PitfallCard from '../../components/blog/PitfallCard.svelte';
 
 ---
 
-### 2.8 StepList
+### 3.8 StepList
 
 A wrapper that provides the vertical timeline layout for `StepItem` children.
 
@@ -267,7 +343,7 @@ No props of its own — it only provides layout context. Always use with `StepIt
 
 ---
 
-### 2.9 StepItem
+### 3.9 StepItem
 
 A numbered step within a `StepList`. Renders a blue numbered circle on a vertical timeline.
 
@@ -278,8 +354,8 @@ A numbered step within a `StepList`. Renders a blue numbered circle on a vertica
 | children | Snippet | — | Yes |
 
 ```mdx
-import StepList from '../../components/blog/StepList.svelte';
-import StepItem from '../../components/blog/StepItem.svelte';
+import StepList from '../../components/content/StepList.svelte';
+import StepItem from '../../components/content/StepItem.svelte';
 
 <StepList>
   <StepItem number={1} title="Get the right people in the room">
@@ -296,7 +372,7 @@ import StepItem from '../../components/blog/StepItem.svelte';
 
 ---
 
-### 2.10 DataTable
+### 3.10 DataTable
 
 A responsive table with a dark header, optional row highlighting, and the last cell of the highlighted row bolded.
 
@@ -309,7 +385,7 @@ A responsive table with a dark header, optional row highlighting, and the last c
 `highlightRow` is a **zero-based** index.
 
 ```mdx
-import DataTable from '../../components/blog/DataTable.svelte';
+import DataTable from '../../components/content/DataTable.svelte';
 
 <DataTable
   headers={["Project", "Cost of Delay", "Job Size", "WSJF"]}
@@ -324,7 +400,7 @@ import DataTable from '../../components/blog/DataTable.svelte';
 
 ---
 
-### 2.11 MetricBar
+### 3.11 MetricBar
 
 A standalone horizontal bar for showing a single metric. Useful outside of `ProjectCard`.
 
@@ -338,7 +414,7 @@ A standalone horizontal bar for showing a single metric. Useful outside of `Proj
 Named colors: `blue`, `amber`, `emerald`, `red`, `purple`, `indigo` (or any CSS color string).
 
 ```mdx
-import MetricBar from '../../components/blog/MetricBar.svelte';
+import MetricBar from '../../components/content/MetricBar.svelte';
 
 <MetricBar label="BV" value="$15K/mo" percentage={60} color="blue" />
 <MetricBar label="TS" value="$5K/mo" percentage={20} color="amber" />
@@ -346,9 +422,39 @@ import MetricBar from '../../components/blog/MetricBar.svelte';
 
 ---
 
-### 2.12 ChartContainer
+### 3.12 LinkCard
 
-An interactive Chart.js chart. **This is the only component that requires `client:load`** because it runs JavaScript in the browser to render a `<canvas>`.
+A clickable card that links to an external resource. Opens in a new tab.
+
+| Prop | Type | Default | Required |
+|------|------|---------|----------|
+| `href` | `string` | — | Yes |
+| `icon` | `string` | `'fa-arrow-right'` | No |
+| children | Snippet | — | Yes |
+
+```mdx
+import LinkCard from '../../components/content/LinkCard.svelte';
+
+<LinkCard href="https://example.com/article" icon="fa-external-link-alt">
+  Related Article Title
+</LinkCard>
+
+<!-- Group multiple links -->
+<div class="flex flex-col sm:flex-row gap-3">
+  <LinkCard href="https://example.com/docs" icon="fa-book">
+    Official Documentation
+  </LinkCard>
+  <LinkCard href="https://example.com/repo" icon="fa-code">
+    Source Code
+  </LinkCard>
+</div>
+```
+
+---
+
+### 3.13 ChartContainer (interactive)
+
+An interactive Chart.js chart. **Requires `client:load`** because it runs JavaScript in the browser to render a `<canvas>`.
 
 | Prop | Type | Default | Required |
 |------|------|---------|----------|
@@ -358,7 +464,7 @@ An interactive Chart.js chart. **This is the only component that requires `clien
 `chartConfig` is a standard [Chart.js configuration object](https://www.chartjs.org/docs/latest/configuration/) (`{ type, data, options }`). Chart.js is loaded from CDN automatically on first use.
 
 ```mdx
-import ChartContainer from '../../components/blog/ChartContainer.svelte';
+import ChartContainer from '../../components/content/ChartContainer.svelte';
 
 <ChartContainer client:load id="myBarChart" chartConfig={{
   type: 'bar',
@@ -379,78 +485,148 @@ import ChartContainer from '../../components/blog/ChartContainer.svelte';
 }} />
 ```
 
-> **Important:** Always include `client:load` on the `<ChartContainer>` tag. Without it, the component renders server-side only and the chart canvas will be blank.
+> **Important:** Always include `client:load` on the `<ChartContainer>` tag. Without it, the canvas will be blank.
 
 ---
 
-### 2.13 LinkCard
+### 3.14 TravelTips (interactive)
 
-A clickable card that links to an external resource. Opens in a new tab.
+A personal travel notes/tips pad. Users can add, filter, export, and delete tips. All data persists in `localStorage` — private to the reader's browser. **Requires `client:load`.**
+
+**Theme:** Indigo/purple gradient.
 
 | Prop | Type | Default | Required |
 |------|------|---------|----------|
-| `href` | `string` | — | Yes |
-| `icon` | `string` | `'fa-arrow-right'` | No |
-| children | Snippet | — | Yes |
+| `storageKey` | `string` | `'travel-tips-ch-2025'` | No |
+| `destinations` | `string[]` | `[]` | No |
+
+#### How it works
+
+- **Add tips** with a destination, category, and free-text note.
+- **8 built-in categories:** General, Food & Drink, Transport, Accommodation, Activity, Kids, Accessibility, Budget.
+- **Filter** by destination (tab buttons appear once tips exist).
+- **Export** all tips as a `.txt` file.
+- **Clear all** with confirmation dialog.
+- **Keyboard shortcut:** `Cmd+Enter` in the textarea to save.
+
+#### Props explained
+
+- `storageKey`: A unique localStorage key. Use a different key per trip/post to keep data separate. e.g. `'travel-tips-japan-2026'`.
+- `destinations`: Array of destination names that appear in the "Destination" dropdown. The component also adds a "General" option automatically.
 
 ```mdx
-import LinkCard from '../../components/blog/LinkCard.svelte';
+import TravelTips from '../../components/content/TravelTips.svelte';
 
-<LinkCard href="https://example.com/article" icon="fa-external-link-alt">
-  Related Article Title
-</LinkCard>
-
-<!-- Group multiple links -->
-<div class="flex flex-col sm:flex-row gap-3">
-  <LinkCard href="https://example.com/docs" icon="fa-book">
-    Official Documentation
-  </LinkCard>
-  <LinkCard href="https://example.com/repo" icon="fa-code">
-    Source Code
-  </LinkCard>
-</div>
+<TravelTips
+  client:load
+  storageKey="travel-tips-rotterdam-switzerland-2025"
+  destinations={[
+    "Rotterdam",
+    "Cologne",
+    "Koblenz",
+    "Lucerne",
+    "Weggis",
+    "Vitznau",
+    "Mount Rigi",
+    "Mount Pilatus",
+    "Kaiserstuhl",
+    "Königswinter"
+  ]}
+/>
 ```
 
+#### Use cases
+
+- **Travel posts:** Let readers save their own tips while reading your itinerary.
+- **Blog posts:** Could be repurposed as a general note-taking widget for any topic (e.g. "Your Reading Notes") by customising `destinations` to be topic categories.
+
 ---
 
-## 3. Frontmatter Schema
+### 3.15 PackingChecklist (interactive)
 
-Defined in `src/content.config.ts`. Validated by Zod at build time — invalid frontmatter will cause a build error.
+An interactive packing checklist with per-category grouping, progress tracking, and localStorage persistence. Users tick items off as they pack. **Requires `client:load`.**
 
-| Field | Type | Required | Default | Notes |
-|-------|------|----------|---------|-------|
-| `title` | `string` | Yes | — | Post title, used in `<title>` and cards |
-| `description` | `string` | Yes | — | SEO meta description and card preview text |
-| `pubDate` | `date` | Yes | — | Publication date. Accepts `YYYY-MM-DD` (coerced to `Date`) |
-| `updatedDate` | `date` | No | — | Last-modified date, shown if present |
-| `tags` | `string[]` | No | `[]` | Category/topic tags for filtering |
-| `readingTime` | `string` | No | — | Displayed on the post, e.g. `"8 min read"` |
-| `external` | `string` | No | — | URL if the post is hosted elsewhere (turns the card into an outbound link) |
+**Theme:** Green gradient.
 
-Full example:
+| Prop | Type | Default | Required |
+|------|------|---------|----------|
+| `storageKey` | `string` | `'packing-checklist'` | No |
+| `categories` | `CategoryDef[]` | `[]` | No |
 
-```yaml
----
-title: "How to Decide What to Build Next: A Practical Guide to WSJF"
-description: "Most teams have more ideas than capacity. WSJF is a simple way to figure out which ones to do first."
-pubDate: 2025-01-15
-updatedDate: 2025-03-10
-tags: ["Prioritization", "Product Management"]
-readingTime: "12 min read"
----
+Where `CategoryDef` is:
+
+```ts
+interface CategoryDef {
+  name: string;   // Category heading, e.g. "Clothing"
+  icon: string;   // Font Awesome icon class, e.g. "fa-tshirt"
+  items: string[]; // Pre-populated item names
+}
 ```
 
-External post (link-only, no local content):
+#### How it works
 
-```yaml
----
-title: "My Guest Post on Another Blog"
-description: "A post I wrote for SomePublication."
-pubDate: 2025-06-01
-tags: ["Writing"]
-external: "https://somepublication.com/my-guest-post"
----
+- **Pre-populated items** from the `categories` prop. Each item gets a checkbox.
+- **Progress bar** shows overall % packed, plus per-category counts (e.g. `3/11`).
+- **Collapsible categories** — click the header to expand/collapse.
+- **Add custom items** — pick a category, type an item name, hit Enter or click Add. Custom items show a red "x" remove button.
+- **Export** the full list as a `.txt` file with `[x]`/`[ ]` markers.
+- **Reset** clears all checkmarks and removes custom items (with confirmation).
+- **Auto-save** to `localStorage` on every change.
+- Categories turn green when all items within them are checked.
+
+#### Props explained
+
+- `storageKey`: Unique localStorage key per checklist. Use a different key per trip. e.g. `'packing-japan-2026'`.
+- `categories`: Array of category definitions. Each category has a `name`, Font Awesome `icon`, and array of `items` (strings). Items are rendered as checkboxes in the given order.
+
+```mdx
+import PackingChecklist from '../../components/content/PackingChecklist.svelte';
+
+<PackingChecklist
+  client:load
+  storageKey="packing-checklist-rotterdam-switzerland-2025"
+  categories={[
+    {
+      name: "Clothing",
+      icon: "fa-tshirt",
+      items: [
+        "Rain jackets (all sizes)",
+        "Warm fleece layers",
+        "Comfortable walking shoes",
+        "Sun hats",
+        "Swimwear"
+      ]
+    },
+    {
+      name: "Baby Essentials",
+      icon: "fa-baby",
+      items: [
+        "Nappies (enough for 2 days, buy more en route)",
+        "Baby food pouches",
+        "Portable highchair / booster seat",
+        "Stroller + rain cover",
+        "Calpol / Nurofen"
+      ]
+    },
+    {
+      name: "Documents",
+      icon: "fa-passport",
+      items: [
+        "Passports (all 5)",
+        "EHIC / GHIC cards",
+        "Travel insurance printout",
+        "Hotel confirmations",
+        "Vignette for Swiss motorways"
+      ]
+    }
+  ]}
+/>
 ```
+
+#### Use cases
+
+- **Travel posts:** Pre-populate with trip-specific packing items. Readers tick them off as they pack.
+- **Blog posts:** Could be repurposed as any task checklist (e.g. "Setup Checklist" for a tutorial) by renaming categories to steps.
 
 ---
 
@@ -458,7 +634,7 @@ external: "https://somepublication.com/my-guest-post"
 
 ### Wrapping prose in `<div class="prose-content">`
 
-The `.prose-content` class (from `src/styles/blog-components.css`) applies:
+The `.prose-content` class applies:
 - Serif font (Merriweather)
 - Comfortable `1.85` line height and `1.05rem` font size
 - Proper paragraph spacing
@@ -480,11 +656,13 @@ Bare text outside `.prose-content` uses the site's default sans-serif font (Inte
 
 ### Using `client:load` only on interactive components
 
-Only `ChartContainer` needs `client:load`. All other components are static Svelte that renders at build time — no JavaScript ships to the browser for them. Do **not** add `client:load` to static components; it would add unnecessary JS to the page bundle.
+Only `ChartContainer`, `TravelTips`, and `PackingChecklist` need `client:load`. All other components are static Svelte that renders at build time — no JavaScript ships to the browser for them. Do **not** add `client:load` to static components; it would add unnecessary JS to the page bundle.
 
 ```mdx
-<!-- Correct: client:load on ChartContainer only -->
+<!-- Correct: client:load on interactive components -->
 <ChartContainer client:load id="chart1" chartConfig={{...}} />
+<TravelTips client:load storageKey="my-trip" destinations={[...]} />
+<PackingChecklist client:load storageKey="my-trip" categories={[...]} />
 
 <!-- Correct: no directive on static components -->
 <Callout type="tip">
@@ -530,18 +708,34 @@ Use a responsive grid of `ProjectCard` components for visual comparison, then fo
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
   <ProjectCard letter="A" title="..." description="..." metrics={[...]} jobSize="..." wsjfScore={14.2} />
   <ProjectCard letter="B" title="..." description="..." metrics={[...]} jobSize="..." wsjfScore={37.5} winner={true} />
-  <ProjectCard letter="C" title="..." description="..." metrics={[...]} jobSize="..." wsjfScore={10.0} />
 </div>
 
 <DataTable
   headers={["Project", "Cost of Delay", "Job Size", "WSJF"]}
   rows={[
     ["A: ...", "$17,000/mo", "1,200 hrs", "14.2"],
-    ["B: ...", "$30,000/mo", "800 hrs", "37.5"],
-    ["C: ...", "$4,000/mo", "400 hrs", "10.0"]
+    ["B: ...", "$30,000/mo", "800 hrs", "37.5"]
   ]}
   highlightRow={1}
 />
+```
+
+### Using interactive components together in a travel post
+
+A travel post typically combines static components for the narrative with interactive ones at the bottom:
+
+```mdx
+<!-- Static content: itinerary, callouts, data tables -->
+<SectionHeading icon="fa-road" color="blue">The Route</SectionHeading>
+<div class="prose-content">
+  <p>Our drive takes us through three countries...</p>
+</div>
+
+<DataTable headers={["Day", "From", "To", "Drive"]} rows={[...]} />
+
+<!-- Interactive: let readers save notes and track packing -->
+<TravelTips client:load storageKey="trip-2025" destinations={["City A", "City B"]} />
+<PackingChecklist client:load storageKey="packing-2025" categories={[...]} />
 ```
 
 ---
@@ -550,7 +744,7 @@ Use a responsive grid of `ProjectCard` components for visual comparison, then fo
 
 ### Location
 
-Place new blog components in `src/components/blog/`. The naming convention is `PascalCase.svelte`.
+Place new content components in `src/components/content/`. The naming convention is `PascalCase.svelte`.
 
 ### Svelte 5 Runes
 
@@ -563,6 +757,8 @@ This project uses Svelte 5. All components **must** use the runes API. Do not us
 | Derived values | `let doubled = $derived(count * 2);` |
 | Side effects | `$effect(() => { /* runs when deps change */ });` |
 | Slotted content | `children: import('svelte').Snippet` prop + `{@render children()}` |
+| Event handlers | `onclick={(e) => { ... }}` (not `on:click`) |
+| Event modifiers | Inline: `onclick={(e) => { e.stopPropagation(); ... }}` (not `onclick\|stopPropagation`) |
 
 ### Component Template
 
@@ -597,12 +793,44 @@ This project uses Svelte 5. All components **must** use the runes API. Do not us
 </style>
 ```
 
+### Interactive component template (with localStorage)
+
+```svelte
+<script lang="ts">
+  interface Props {
+    storageKey?: string;
+  }
+
+  let { storageKey = 'my-widget' }: Props = $props();
+  let data = $state<string[]>([]);
+
+  function load() {
+    try {
+      const stored = localStorage.getItem(storageKey);
+      if (stored) data = JSON.parse(stored);
+    } catch { /* ignore */ }
+  }
+
+  function save() {
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(data));
+    } catch { /* ignore */ }
+  }
+
+  $effect(() => { load(); });
+</script>
+
+<!-- Template here -->
+<!-- Use in MDX with client:load -->
+```
+
 ### Guidelines
 
 - Use `<script lang="ts">` for TypeScript in script blocks.
 - Prefer **scoped styles** (the `<style>` block at the bottom of the `.svelte` file). They are automatically scoped to the component.
 - If a component is purely presentational (no browser interactivity), it does not need `client:load` in MDX — Astro renders it at build time.
-- If a component needs browser APIs (`window`, `document`, `$effect` with DOM access), it needs `client:load` when used in MDX.
+- If a component needs browser APIs (`window`, `document`, `localStorage`, `$effect` with DOM access), it **must** have `client:load` when used in MDX.
+- **localStorage keys must be unique** across interactive components on the same page. Use descriptive, post-specific keys like `'packing-japan-2026'` or `'travel-tips-iceland-2025'`.
 
 ---
 
@@ -625,7 +853,7 @@ This stylesheet is imported by the blog layout — you do not need to import it 
 
 Tailwind CSS v4 utility classes are available everywhere — in MDX content, in Svelte component templates, and in stylesheets. The configuration is in `src/styles/global.css` using `@import "tailwindcss"`.
 
-Common patterns used in blog posts:
+Common patterns used in posts:
 
 ```html
 <!-- Responsive grid -->
@@ -661,6 +889,16 @@ Font families available via Tailwind:
 | `font-serif` | Merriweather, Georgia |
 | `font-mono` | Fira Code, monospace |
 
+### Interactive component color themes
+
+| Component | Theme | Primary color |
+|-----------|-------|--------------|
+| TravelTips | Indigo/purple | `#4f46e5` (indigo-600) |
+| PackingChecklist | Green | `#16a34a` (green-600) |
+| ChartContainer | Neutral | Inherits from chart config |
+
+When building new interactive components, pick a distinct color theme to make them visually distinguishable on the same page.
+
 ---
 
 ## Quick Reference: All Imports
@@ -668,17 +906,22 @@ Font families available via Tailwind:
 Copy this block into a new MDX file and delete the components you do not need:
 
 ```mdx
-import Callout from '../../components/blog/Callout.svelte';
-import TldrBox from '../../components/blog/TldrBox.svelte';
-import SectionHeading from '../../components/blog/SectionHeading.svelte';
-import FormulaBox from '../../components/blog/FormulaBox.svelte';
-import ExampleCard from '../../components/blog/ExampleCard.svelte';
-import ProjectCard from '../../components/blog/ProjectCard.svelte';
-import PitfallCard from '../../components/blog/PitfallCard.svelte';
-import StepList from '../../components/blog/StepList.svelte';
-import StepItem from '../../components/blog/StepItem.svelte';
-import DataTable from '../../components/blog/DataTable.svelte';
-import MetricBar from '../../components/blog/MetricBar.svelte';
-import ChartContainer from '../../components/blog/ChartContainer.svelte';
-import LinkCard from '../../components/blog/LinkCard.svelte';
+<!-- Static components (no client:load needed) -->
+import Callout from '../../components/content/Callout.svelte';
+import TldrBox from '../../components/content/TldrBox.svelte';
+import SectionHeading from '../../components/content/SectionHeading.svelte';
+import FormulaBox from '../../components/content/FormulaBox.svelte';
+import ExampleCard from '../../components/content/ExampleCard.svelte';
+import ProjectCard from '../../components/content/ProjectCard.svelte';
+import PitfallCard from '../../components/content/PitfallCard.svelte';
+import StepList from '../../components/content/StepList.svelte';
+import StepItem from '../../components/content/StepItem.svelte';
+import DataTable from '../../components/content/DataTable.svelte';
+import MetricBar from '../../components/content/MetricBar.svelte';
+import LinkCard from '../../components/content/LinkCard.svelte';
+
+<!-- Interactive components (MUST use client:load) -->
+import ChartContainer from '../../components/content/ChartContainer.svelte';
+import TravelTips from '../../components/content/TravelTips.svelte';
+import PackingChecklist from '../../components/content/PackingChecklist.svelte';
 ```

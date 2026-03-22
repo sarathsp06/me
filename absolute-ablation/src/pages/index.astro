@@ -135,7 +135,7 @@ import Layout from '../layouts/Layout.astro';
               <h2 class="text-2xl font-bold text-white mt-2">Tools & Projects</h2>
             </header>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
               <a href="/sparrow" class="tool-card block border border-white/10 p-5 rounded transition-all">
                 <div class="flex items-center gap-3 mb-3">
                   <i class="fa-brands fa-golang text-2xl text-blue-400"></i>
@@ -157,6 +157,19 @@ import Layout from '../layouts/Layout.astro';
                 <div class="flex gap-3">
                   <span class="text-[10px] px-2 py-0.5 bg-purple-500/10 text-purple-400 rounded">Web</span>
                   <span class="text-[10px] px-2 py-0.5 bg-slate-500/10 text-slate-300 rounded">Utilities</span>
+                </div>
+              </a>
+
+              <a href="https://testhooks.sarathsadasivan.com/" target="_blank" class="tool-card block border border-white/10 p-5 rounded transition-all">
+                <div class="flex items-center gap-3 mb-3">
+                  <i class="fa-solid fa-satellite-dish text-xl text-emerald-400"></i>
+                  <span class="text-white font-bold text-lg">testhooks*</span>
+                </div>
+                <p class="text-slate-400 text-sm mb-4">A self-hostable webhook.site replacement. Capture, inspect, transform and forward webhooks in real time.</p>
+                <div class="flex gap-3">
+                  <span class="text-[10px] px-2 py-0.5 bg-green-500/10 text-green-400 rounded">Go</span>
+                  <span class="text-[10px] px-2 py-0.5 bg-purple-500/10 text-purple-400 rounded">Svelte</span>
+                  <span class="text-[10px] px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded">Webhooks</span>
                 </div>
               </a>
             </div>
@@ -216,6 +229,14 @@ import Layout from '../layouts/Layout.astro';
                   <span class="text-slate-500 text-xs">Local</span>
                 </div>
                 <p class="text-slate-400 text-sm leading-relaxed">Applying SRE error budgets to sprint planning -- measuring developer effort on bugs instead of downtime</p>
+              </a>
+
+              <a href="/blog/testhooks" class="block border border-white/10 p-4 rounded hover:bg-white/5 transition-colors">
+                <div class="flex justify-between items-start mb-2">
+                  <span class="text-yellow-400 font-bold">testhooks.md</span>
+                  <span class="text-slate-500 text-xs">Local</span>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed">A self-hostable webhook.site replacement -- capture, inspect, transform and forward webhooks in real time</p>
               </a>
             </div>
 

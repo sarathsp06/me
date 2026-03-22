@@ -1,0 +1,250 @@
+---
+title: "Testhooks: A Self-Hosted Webhook Testing Tool"
+description: "Why I built a lightweight, self-hostable alternative to webhook.site -- and how it works. Capture, inspect, transform, and forward webhooks in real time with a single binary."
+pubDate: 2026-03-20
+tags: ["Go", "Open Source", "Developer Tools"]
+readingTime: "8 min read"
+---
+
+import Callout from '../../components/content/Callout.svelte';
+import TldrBox from '../../components/content/TldrBox.svelte';
+import SectionHeading from '../../components/content/SectionHeading.svelte';
+import ExampleCard from '../../components/content/ExampleCard.svelte';
+import ProjectCard from '../../components/content/ProjectCard.svelte';
+import StepList from '../../components/content/StepList.svelte';
+import StepItem from '../../components/content/StepItem.svelte';
+import DataTable from '../../components/content/DataTable.svelte';
+import LinkCard from '../../components/content/LinkCard.svelte';
+import PitfallCard from '../../components/content/PitfallCard.svelte';
+
+<TldrBox items={[
+  "<strong>Testhooks</strong> is a self-hostable replacement for webhook.site -- capture, inspect, transform, and forward webhooks in real time.",
+  "Ships as a <strong>single Go binary</strong> with the SPA embedded. Point it at a PostgreSQL database and go.",
+  "Two modes: <strong>Server mode</strong> (persistent, always-on) and <strong>Browser mode</strong> (zero storage, privacy-first).",
+  "Supports <strong>WASM transforms</strong> (JavaScript, Lua, Jsonnet), browser-side forwarding to localhost, and custom response scripting."
+]} />
+
+<SectionHeading icon="fa-lightbulb" color="amber">The Problem</SectionHeading>
+
+<div class="prose-content">
+
+If you have ever integrated a third-party service that sends webhooks -- payment providers, CI/CD pipelines, messaging platforms -- you know the pain. You need a publicly accessible URL to receive the callback, a way to inspect the payload, and some mechanism to forward it to your local development server.
+
+The typical options are:
+
+- **webhook.site** -- great, but it is a SaaS. Your payloads go through someone else's infrastructure. For many teams, that is a non-starter.
+- **ngrok** -- exposes your local port to the internet, but requires a CLI daemon, often has rate limits, and still does not give you a persistent capture UI.
+- **RequestBin** -- the original was shut down. Alternatives exist but are often unmaintained or over-engineered.
+
+I wanted something simpler: a tool I could self-host, run on my own infrastructure, and trust with sensitive webhook payloads. That is why I built **Testhooks**.
+
+</div>
+
+<SectionHeading icon="fa-rocket" color="blue">What Testhooks Does</SectionHeading>
+
+<div class="prose-content">
+
+Testhooks gives you unique webhook URLs. Any HTTP request sent to those URLs is captured and streamed to your browser in real time via WebSocket. From there, you can inspect headers, body, query parameters -- everything.
+
+</div>
+
+```
+webhook sender --> https://hooks.example.com/h/a1b2c3d4 --> your browser (live)
+```
+
+<div class="prose-content">
+
+But capture is just the beginning. Here is the full feature set:
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+  <div style="background: linear-gradient(135deg, #eff6ff, #f8faff); border: 1px solid #bfdbfe; border-radius: 10px; padding: 1.5rem;">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold"><i class="fas fa-link"></i></span>
+      <h3 class="text-lg font-semibold text-gray-900">Unique Webhook URLs</h3>
+    </div>
+    <div class="prose-content">
+      <p class="mb-0">Each endpoint gets a short URL (<code>/h/a1b2c3d4</code>). Create as many as you need, each isolated with its own configuration.</p>
+    </div>
+  </div>
+
+  <div style="background: linear-gradient(135deg, #f0fdf4, #f7fef9); border: 1px solid #bbf7d0; border-radius: 10px; padding: 1.5rem;">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold"><i class="fas fa-bolt"></i></span>
+      <h3 class="text-lg font-semibold text-gray-900">Real-Time Streaming</h3>
+    </div>
+    <div class="prose-content">
+      <p class="mb-0">Requests are pushed to your browser instantly via WebSocket. No polling, no refresh -- you see webhooks the moment they arrive.</p>
+    </div>
+  </div>
+
+  <div style="background: linear-gradient(135deg, #faf5ff, #fdf8ff); border: 1px solid #e9d5ff; border-radius: 10px; padding: 1.5rem;">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="w-7 h-7 rounded-full bg-purple-600 text-white flex items-center justify-center text-xs font-bold"><i class="fas fa-code"></i></span>
+      <h3 class="text-lg font-semibold text-gray-900">WASM Transforms</h3>
+    </div>
+    <div class="prose-content">
+      <p class="mb-0">Transform payloads using JavaScript (QuickJS on server), or JavaScript + Lua + Jsonnet in the browser. Built-in CodeMirror editor for writing scripts.</p>
+    </div>
+  </div>
+
+  <div style="background: linear-gradient(135deg, #fffbeb, #fffef5); border: 1px solid #fde68a; border-radius: 10px; padding: 1.5rem;">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="w-7 h-7 rounded-full bg-amber-500 text-white flex items-center justify-center text-xs font-bold"><i class="fas fa-share-alt"></i></span>
+      <h3 class="text-lg font-semibold text-gray-900">Forwarding</h3>
+    </div>
+    <div class="prose-content">
+      <p class="mb-0">Forward webhooks to <code>localhost</code> via browser-side <code>fetch()</code> (no ngrok needed) or to public URLs from the server -- reliable, headless forwarding.</p>
+    </div>
+  </div>
+</div>
+
+<SectionHeading icon="fa-toggle-on" color="emerald">Two Modes: Server vs. Browser</SectionHeading>
+
+<div class="prose-content">
+
+Testhooks has two fundamentally different endpoint modes, and choosing the right one depends on your use case.
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+  <div style="background: linear-gradient(135deg, #f0fdf4, #f7fef9); border: 1px solid #bbf7d0; border-radius: 10px; padding: 1.5rem;">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold"><i class="fas fa-server"></i></span>
+      <h3 class="text-lg font-semibold text-gray-900">Server Mode</h3>
+    </div>
+    <div class="prose-content">
+      <p class="mb-0">Requests are stored in PostgreSQL. Transforms and forwards run headlessly on the Go server -- even when no browser is open. Ideal for <strong>always-on integrations</strong> and CI pipelines.</p>
+    </div>
+  </div>
+
+  <div style="background: linear-gradient(135deg, #eff6ff, #f8faff); border: 1px solid #bfdbfe; border-radius: 10px; padding: 1.5rem;">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold"><i class="fas fa-globe"></i></span>
+      <h3 class="text-lg font-semibold text-gray-900">Browser Mode</h3>
+    </div>
+    <div class="prose-content">
+      <p class="mb-0">Zero storage. Payloads never touch the server's disk -- all processing happens client-side in the browser. Perfect for <strong>sensitive payloads</strong> and quick debugging sessions.</p>
+    </div>
+  </div>
+</div>
+
+<Callout type="insight">
+  <p class="font-semibold text-gray-800 text-sm mb-1">Why Browser Mode Matters</p>
+  <p class="text-sm text-gray-600">Browser mode is what sets Testhooks apart from most alternatives. When you are debugging a payment webhook that contains PII or financial data, you do not want that payload stored on a server -- not yours, and definitely not a third party's. Browser mode streams the raw request over WebSocket and processes everything in the browser. When you close the tab, the data is gone.</p>
+</Callout>
+
+<SectionHeading icon="fa-play-circle" color="indigo">Getting Started</SectionHeading>
+
+<div class="prose-content mb-6">
+
+The fastest way to get Testhooks running is Docker Compose. It starts the application and a PostgreSQL instance together.
+
+</div>
+
+<StepList>
+  <StepItem number={1} title="Clone and start">
+    <div class="prose-content">
+      <p class="text-sm text-gray-600 leading-relaxed">Clone the repository and start everything with a single command:</p>
+    </div>
+    ```bash
+    git clone https://github.com/sarathsp06/testhooks.git
+    cd testhooks
+    docker compose up --build
+    ```
+  </StepItem>
+
+  <StepItem number={2} title="Create an endpoint">
+    <div class="prose-content">
+      <p class="text-sm text-gray-600 leading-relaxed">Open <code>http://localhost:8080</code> in your browser. Create a new endpoint -- you will get a unique URL like <code>/h/a1b2c3d4</code>. Choose Server mode or Browser mode depending on your needs.</p>
+    </div>
+  </StepItem>
+
+  <StepItem number={3} title="Send a webhook">
+    <div class="prose-content">
+      <p class="text-sm text-gray-600 leading-relaxed">Point your webhook sender at the generated URL. The request will appear in your browser instantly.</p>
+    </div>
+    ```bash
+    curl -X POST http://localhost:8080/h/a1b2c3d4 \
+      -H "Content-Type: application/json" \
+      -d '{"event": "payment.completed", "amount": 42.00}'
+    ```
+  </StepItem>
+
+  <StepItem number={4} title="Inspect, transform, forward">
+    <div class="prose-content">
+      <p class="text-sm text-gray-600 leading-relaxed">View full request details (headers, body, query params). Optionally write a transform script to reshape the payload, or set up forwarding to relay it to your local dev server.</p>
+    </div>
+  </StepItem>
+</StepList>
+
+<SectionHeading icon="fa-cogs" color="purple">Architecture</SectionHeading>
+
+<div class="prose-content">
+
+Testhooks is designed to be minimal in dependencies and simple to deploy.
+
+</div>
+
+<DataTable
+  headers={["Layer", "Technology", "Notes"]}
+  rows={[
+    ["Backend", "Go (stdlib net/http)", "Single binary, SPA embedded via go:embed"],
+    ["Frontend", "Svelte 5 (SvelteKit SPA)", "Static adapter, no SSR"],
+    ["Database", "PostgreSQL", "JSONB for request payloads, auto-migrations"],
+    ["Real-time", "WebSockets (nhooyr.io/websocket)", "Per-endpoint streaming"],
+    ["WASM (server)", "QuickJS (fastschema/qjs)", "Pooled JS execution for transforms"],
+    ["WASM (browser)", "QuickJS + Lua + Jsonnet", "Client-side transform engines"]
+  ]}
+  highlightRow={0}
+/>
+
+<div class="prose-content">
+
+The single-binary design is intentional. There are no static files to serve separately, no separate frontend deployment, no CDN configuration. Build the binary, point it at PostgreSQL, and it works. This makes it trivial to deploy on any PaaS (Heroku, Railway, Render) or just run it on a VPS behind a reverse proxy.
+
+</div>
+
+<SectionHeading icon="fa-shield-alt" color="red">Replacing ngrok for Webhook Development</SectionHeading>
+
+<div class="prose-content">
+
+One of the most common use cases for ngrok is webhook development: you need a public URL that tunnels to your local machine so third-party services can reach your development server. Testhooks replaces this workflow without requiring a CLI or daemon.
+
+Here is how it works:
+
+1. Deploy Testhooks to a public server (or use the hosted instance at [testhooks.sarathsadasivan.com](https://testhooks.sarathsadasivan.com/)).
+2. Create an endpoint and point your webhook sender at it.
+3. In the Testhooks UI, set up **browser-side forwarding** to `http://localhost:3000` (or wherever your dev server runs).
+4. When a webhook arrives, your browser receives it via WebSocket and immediately `fetch()`es it to your local server.
+
+No tunnel, no port exposure, no CLI running in the background. The browser acts as the bridge between the public internet and your local machine.
+
+</div>
+
+<Callout type="tip" title="When to Use Server-Side Forwarding" icon="fa-server">
+  <p class="text-sm text-gray-600">Browser-side forwarding only works when your browser tab is open. For production-like scenarios or CI pipelines, use server-side forwarding instead -- it runs headlessly on the Go server and reliably forwards to any public URL, even when no browser is connected.</p>
+</Callout>
+
+<SectionHeading icon="fa-flag-checkered" color="gray">Closing Thoughts</SectionHeading>
+
+<div class="prose-content">
+
+Testhooks started as a weekend project born out of frustration with existing tools. I wanted something that was self-hostable, privacy-respecting, and dead simple to deploy. The single-binary approach with an embedded SPA turned out to be the right call -- it eliminates an entire class of deployment complexity.
+
+The project is open source under the Apache 2.0 license. If you work with webhooks regularly -- and most backend engineers do -- give it a try. Contributions and feedback are welcome.
+
+</div>
+
+<div class="mt-10 pt-6 border-t border-gray-200">
+  <p class="text-xs text-gray-400 uppercase tracking-wider font-semibold mb-3">Links</p>
+  <div class="flex flex-col sm:flex-row gap-3">
+    <LinkCard href="https://testhooks.sarathsadasivan.com/" icon="fa-external-link-alt">
+      Live Instance
+    </LinkCard>
+    <LinkCard href="https://github.com/sarathsp06/testhooks" icon="fa-brands fa-github">
+      GitHub Repository
+    </LinkCard>
+  </div>
+</div>

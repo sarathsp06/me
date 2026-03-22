@@ -1,0 +1,14 @@
+{
+  "name": "absolute-ablation",
+  // Update to the day you deploy
+  "compatibility_date": "2026-03-11",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "assets": {
+    "directory": "./dist"
+  },
+  "observability": {
+    "enabled": true
+  }
+}
