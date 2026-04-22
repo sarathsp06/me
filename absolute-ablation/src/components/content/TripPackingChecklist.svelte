@@ -74,6 +74,8 @@
         'Phone + car chargers',
         'Offline Google Maps downloaded',
         'Travel insurance documents',
+        'Green card / car insurance proof (cross-border)',
+        'Emergency contacts (embassy, insurance hotline)',
       ],
     },
     {

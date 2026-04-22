@@ -36,6 +36,10 @@
 
 Drive south via A61 with 1 kid-friendly stop.
 
+**Anchor:** Deutsches Eck + Ehrenbreitstein cable car.
+**Skippable:** Ehrenbreitstein if arrival is late — just do the Rhine promenade walk instead.
+**Low-energy fallback:** Rhine promenade walk + early dinner only.
+
 **Rest stop:** Choose an Autobahn rest area ~2–2.5h from Rotterdam with playground and baby-change (Raststätte Mosel on the A61 near Koblenz works well).
 
 **In Koblenz:**
@@ -51,7 +55,13 @@ Keep walking distances short from parking. Low-effort afternoon — this is a wa
 
 Drive via A3/A7. 1 optional rest stop around halfway with playground and baby-change.
 
+> **⚠️ Supply stop:** Sunday — German shops are closed. **Stock up at DM/Rossmann on Saturday (Day 1) before leaving Rotterdam or at a stop near Koblenz.** Don't rely on Day 3 — that's Whit Monday (also closed). Petrol station shops are the exception but have limited baby supplies.
+
 Arrive by early afternoon. One main activity block: **walls + old town**. Rothenburg empties out by evening when day-trippers leave — the best time to enjoy it.
+
+**Anchor:** Town walls walk + old town.
+**Skippable:** Night Watchman tour (20:00 — may be too late with kids), Käthe Wohlfahrt.
+**Low-energy fallback:** Skip the walls, just wander the market square and Plönlein for photos + early dinner.
 
 **Must-do sights:**
 - **Town walls walk** — walk along the top of the medieval walls. Short sections, stroller only where safe; otherwise use carrier.
@@ -66,14 +76,17 @@ Find central parking close to the old town.
 
 ### Day 3 — Mon 25 May: Rothenburg → St. Wolfgang (4–4.5h)
 
+> **⚠️ Whit Monday (Pfingstmontag)** — public holiday in Germany AND Austria. All shops (including DM/Rossmann) are closed. Ensure supplies were bought on Saturday (Day 1). Petrol station shops remain open for essentials.
+
 The longest southbound leg, via A6/A9/A1. Plan two stops:
 
-1. **DM/Rossmann stop near Nuremberg** (~1.5h in) — stock up before Austria:
-   - Nappies, wipes, baby food, kids' snacks, baby paracetamol, sunscreen
-   - German prices are 20–30% cheaper than Austria for these items
-   - Combine with playground and food stop
+1. **Rest stop near Nuremberg** (~1.5h in) — playground, baby-change, food. ~~DM/Rossmann~~ closed (Whit Monday). Use a petrol station shop if anything urgent is needed.
 
 2. **Short stop nearer Austria if needed** (~3h in)
+
+**Anchor:** Arrive at St. Wolfgang, settle in. Lakefront walk.
+**Skippable:** Everything — this is a travel day. No structured sightseeing needed.
+**Low-energy fallback:** Drive straight through with rest stops only, collapse at accommodation.
 
 **Austrian motorway vignette:** Required for Austrian motorways. Buy the 10-day digital vignette online at [asfinag.at](https://www.asfinag.at/) before departure, or at a border petrol station. ~€9.90 (check 2026 price closer to the trip). Much cheaper than Switzerland's CHF 40.
 
@@ -86,6 +99,10 @@ The longest southbound leg, via A6/A9/A1. Plan two stops:
 **No long drive. No tickets. No time pressure.** Recover from three days of driving.
 
 **Core theme:** Lakes.
+
+**Anchor:** Wolfgangsee boat ride + lakeside promenade.
+**Skippable:** Swimming (weather-dependent), specific cafés.
+**Low-energy fallback:** Stay at accommodation all morning, short promenade walk in the afternoon only.
 
 - **Wolfgangsee boat ride** — boats connect St. Wolfgang, St. Gilgen, and Strobl. Flat docks, stroller-friendly. Beautiful lake views.
 - **St. Wolfgang village** — lakeside promenade, White Horse Inn (Weisses Rössl), pilgrimage church.
@@ -101,6 +118,11 @@ This is a "low cognitive load" day — no tickets, no schedules. Just lake, vill
 
 **Core theme:** Mountains + lake panorama. The Austrian Mount Rigi.
 
+**Anchor:** Schafberg cog railway + summit terrace.
+**Skippable:** Extended time at summit — one train up and one back down is the core experience.
+**Low-energy fallback:** Skip Schafberg entirely, do a second lake day (boat to St. Gilgen, explore village). Reschedule Schafberg to another clear day.
+**Weather swap:** If low clouds or rain, swap with Hallstatt or Salzburg. Schafberg needs clear skies.
+
 A historic steam cogwheel railway climbs from St. Wolfgang to the Schafberg summit (1,783m). Departs from the village — walk from accommodation.
 
 **Details:**
@@ -113,8 +135,6 @@ A historic steam cogwheel railway climbs from St. Wolfgang to the Schafberg summ
 
 **Cost:** Adults ~€42 return, children 6–14 ~€25. Under 6 free. Book at [schafbergbahn.at](https://www.schafbergbahn.at/).
 
-**Weather swap:** If low clouds or rain, swap this day with Hallstatt or Salzburg. Schafberg needs clear skies to be worth it.
-
 ---
 
 ### Day 6 — Thu 28 May: Hallstatt Day Trip (~45min each way)
@@ -122,6 +142,10 @@ A historic steam cogwheel railway climbs from St. Wolfgang to the Schafberg summ
 **Core theme:** Lake + iconic village + underground attraction.
 
 Austria's #1 tourist attraction. UNESCO World Heritage village wedged between mountains and lake.
+
+**Anchor:** Hallstatt village walk + salt mine (for those who can enter).
+**Skippable:** Salt mine (if the split-plan feels too stressful with two groups). The village + lake + Skywalk are enough for a full day.
+**Low-energy fallback:** Drive to Hallstatt, walk the lakeside and take photos, have lunch, drive back. Skip mine and funicular entirely.
 
 **Plan:**
 - **Arrive early** (before 10am) — Hallstatt gets very crowded by midday. Morning light on the lake is best for photos.
@@ -145,6 +169,10 @@ Don't over-schedule. Allow for slow walking and waiting (crowds). Keep it to fun
 ### Day 7 — Fri 29 May: Dachstein Krippenstein — FLAGSHIP DAY
 
 **Core theme:** Caves + mountain + viewpoint. This is the #1 priority day of the trip.
+
+**Anchor:** Giant Ice Cave. This is non-negotiable — caves are the top priority.
+**Skippable:** Five Fingers (skip if zero visibility), Mammut Cave (only if time/energy).
+**Low-energy fallback:** Ice cave only. Skip Five Fingers and Mammut Cave. Cable car down, drive back to St. Wolfgang by early afternoon.
 
 Drive ~60min from St. Wolfgang to Obertraun (Dachstein Krippenstein cable car station).
 
@@ -184,6 +212,10 @@ Drive ~60min from St. Wolfgang to Obertraun (Dachstein Krippenstein cable car st
 
 **This day is flexible.** Can be swapped for a nearby gorge or cave excursion if the family wants more nature over city. Confirm with the group before swapping Salzburg out.
 
+**Anchor:** Hohensalzburg Fortress (funicular up, flat ramparts, views).
+**Skippable:** Getreidegasse shopping, Mozart's birthplace museum.
+**Low-energy fallback:** Skip Salzburg entirely. Stay at St. Wolfgang for a second lake day — boat ride, promenade, swimming. This is the "pressure release valve" day.
+
 **Default Salzburg plan (~45min each way):**
 
 - **Park:** P+R Salzburg Süd (~€4/day, shuttle to centre) or central Altstadt garage.
@@ -200,7 +232,13 @@ Salzburg is an easy half-day. Fortress + old town + Mirabell takes ~4–5 hours.
 
 ### Day 9 — Sun 31 May: St. Wolfgang → Regensburg (~3h)
 
+> **Sunday** — Austrian and German shops closed. Ensure you have enough supplies for the return journey. Petrol station shops are the exception.
+
 Drive north via A1/A8/A93. Late-morning departure after easy breakfast and checkout.
+
+**Anchor:** Stone Bridge + Historic Sausage Kitchen lunch.
+**Skippable:** Cathedral, extended old town walking.
+**Low-energy fallback:** Sausage Kitchen lunch + Stone Bridge photo, then rest at accommodation.
 
 **In Regensburg (afternoon/evening):**
 - **Stone Bridge (Steinerne Brücke)** — 850-year-old bridge over the Danube. Flat, walkable. Iconic views.
@@ -216,6 +254,10 @@ Regensburg is less touristy than Rothenburg but equally beautiful. Keep walking 
 
 Drive via A3. 1 proper break around halfway (playground + baby-change).
 
+**Anchor:** Drachenfelsbahn cog railway.
+**Skippable:** The cog railway itself if the family is exhausted — Rhine promenade walk is enough.
+**Low-energy fallback:** Rhine promenade flat walk + early dinner only.
+
 **Afternoon in Königswinter:**
 - **Drachenfelsbahn** — Germany's oldest cog railway. Short ride to castle ruin with Rhine valley views. A "mini mountain + river" finale that fits the trip theme.
 - **Rhine promenade** — flat riverside walk. Good for strollers and seniors.
@@ -225,6 +267,10 @@ Drive via A3. 1 proper break around halfway (playground + baby-change).
 ### Day 11 — Tue 2 Jun: Königswinter → Rotterdam (2.5–3h)
 
 Early departure, home before or just after lunch. Light breakfast, minimal sightseeing — travel day only.
+
+**Anchor:** Get home.
+**Skippable:** Everything else.
+**Low-energy fallback:** Drive straight through with one rest stop.
 
 **Rest stop:** Raststätte Köln-Eifeltor or Frechen (A1/A4 area, ~45min in) — playground, baby-change.
 
@@ -338,6 +384,53 @@ These rules apply to any future AI agent working on this trip:
 
 ---
 
+## Regional Notes
+
+- **Whit Monday (Mon 25 May 2026):** Public holiday in both Germany and Austria. All shops closed including DM/Rossmann. Stock up on Saturday (Day 1) before departure or en route to Koblenz.
+- **Sunday shopping:** Shops closed in Germany and Austria on Sundays. Petrol station shops are the exception. Day 9 (Sun 31 May) is a travel day — ensure supplies are sorted before then.
+- **Low Emission Zones (LEZ):** No LEZs on this route. Austria has none. German cities on this route (Koblenz, Rothenburg, Regensburg, Königswinter) have none. No Umweltplakette sticker needed.
+- **Car seat laws (Austria):** Children under 14 AND under 150cm must use an appropriate child restraint. Both kids need car seats (already packed).
+- **Car seat laws (Germany):** Children under 12 AND under 150cm must use a child restraint. Same requirement.
+- **IDP (International Driving Permit):** Not required for NL licence holders driving in Germany/Austria. EU licences are accepted.
+- **Tipping (Austria):** 5–10% at restaurants is customary. Round up at cafés. Not expected at fast food or self-service.
+- **Tipping (Germany):** Similar — 5–10% at restaurants, round up at cafés.
+- **Currency:** EUR throughout (Netherlands, Germany, Austria). Cards widely accepted. Some parking meters and small mountain huts are cash-only.
+- **Emergency number:** 112 across all three countries (EU-wide). Austria also has 144 (ambulance), 133 (police).
+
+---
+
+## Documents & Driving Checklist
+
+Verify before departure:
+
+- [ ] Passports/IDs for all 5 travellers — check validity
+- [ ] Health insurance cards / EHIC for all
+- [ ] Travel insurance — medical + trip cancellation
+- [ ] Green card / car insurance proof for cross-border driving
+- [ ] Car seats — compliant for both Germany and Austria (under-14/under-150cm rule in Austria)
+- [ ] Austrian motorway vignette — buy 10-day digital vignette at [asfinag.at](https://www.asfinag.at/) before departure (~€9.90, verify 2026 price)
+- [ ] Booking confirmations — all accommodation, Schafberg, Dachstein combo tickets
+- [ ] Offline Google Maps — download Germany + Austria regions
+- [ ] Cash — EUR (some parking, mountain huts, toll machines are cash-only)
+- [ ] Emergency contacts list — embassy, insurance hotline, 112/144/133
+- [ ] Car check — tyres (including spare), oil, coolant, washer fluid, warning triangle, first aid kit (legally required in Austria), hi-vis vest (legally required in Austria)
+
+---
+
+## Pre-Trip Timeline
+
+| When | What |
+|------|------|
+| **Now (6+ months out)** | Book accommodation at St. Wolfgang (best selection). Book German overnight stops |
+| **4 months out (Jan 2026)** | Book Schafberg cog railway (limited capacity, popular in late May). Book Dachstein combo tickets |
+| **3 months out (Feb 2026)** | Buy Austrian motorway vignette online. Research Hallstatt salt mine tickets |
+| **2 months out (Mar 2026)** | Check passport validity for all 5 travellers. Buy travel insurance. Get green card from car insurer |
+| **1 month out (Apr 2026)** | Stock up on baby supplies at DM/Rossmann (**must be before departure — Whit Monday closes shops on Day 3**). Download offline maps. Check weather forecasts for late May |
+| **1 week out** | Print/download all confirmations. Pack. Charge devices. Car check (tyres, oil, coolant, first aid kit, hi-vis vest, warning triangle) |
+| **Day before** | Load car. Prep snack bag + baby bag for cabin access. Download kids' shows/games for offline use. Set GPS routes for Day 1 |
+
+---
+
 ## Open Questions
 
 - [ ] **Dates confirmed?** Sat 23 May – Tue 2 Jun 2026 (11 days, 10 nights)
@@ -346,3 +439,4 @@ These rules apply to any future AI agent working on this trip:
 - [ ] **Book Schafberg cog railway early** — popular in late May, limited daily capacity
 - [ ] **Book Dachstein combo tickets early** — cable car + ice cave
 - [ ] **Day 8 (Salzburg):** Keep as default, or swap for a nature excursion? Decide closer to the date based on energy and weather.
+- [ ] **DM supply run timing:** Stock up on Saturday Day 1 (before departure or en route to Koblenz) — Day 2 is Sunday (closed) and Day 3 is Whit Monday (closed). This is critical.
