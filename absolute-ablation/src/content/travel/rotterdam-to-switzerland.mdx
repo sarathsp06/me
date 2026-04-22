@@ -1,7 +1,7 @@
 ---
 title: "Rotterdam to Switzerland: Planning Our 9-Day Family Road Trip"
-description: "Planning our family loop through Germany and Switzerland -- 3 adults (including my mum), Ishani (5), and baby Saanvi (1). Koblenz, Black Forest, Lake Lucerne, and back. May 2025."
-pubDate: 2025-04-20
+description: "Planning our family loop through Germany and Switzerland -- 3 adults (including my mum), Ishani (5), and baby Saanvi (1). Koblenz, Black Forest, Lake Lucerne, and back. May 2026."
+pubDate: 2026-04-20
 location: "Netherlands, Germany, Switzerland"
 tags: ["Europe", "Road Trip", "Family", "Switzerland", "Germany"]
 readingTime: "15 min read"
@@ -16,9 +16,9 @@ import StepItem from '../../components/content/StepItem.svelte';
 import DataTable from '../../components/content/DataTable.svelte';
 import ChartContainer from '../../components/content/ChartContainer.svelte';
 import TravelTips from '../../components/content/TravelTips.svelte';
-import PackingChecklist from '../../components/content/PackingChecklist.svelte';
+import TripPackingChecklist from '../../components/content/TripPackingChecklist.svelte';
 
-We're taking our family — three adults, a five-year-old, and a one-year-old — on a road trip from Rotterdam to Switzerland this May. Nine days, five stops, one loop through the Rhine Valley, the Black Forest, and Lake Lucerne. I've spent weeks planning this route to keep every driving leg under four hours, avoid steep hikes, and build in enough rest days that nobody melts down (adults included). This post is the full plan — day-by-day itinerary, costs, packing lists, and everything I wish someone had written down before I started researching.
+We're taking our family — three adults, a five-year-old, and a one-year-old — on a road trip from Rotterdam to Switzerland in May 2026. Nine days, five stops, one loop through the Rhine Valley, the Black Forest, and Lake Lucerne. I've spent weeks planning this route to keep every driving leg under four hours, avoid steep hikes, and build in enough rest days that nobody melts down (adults included). This post is the full plan — day-by-day itinerary, costs, packing lists, and everything I wish someone had written down before I started researching.
 
 <TldrBox items={[
   "<strong>9 days, 5 stops.</strong> A family road trip loop from Rotterdam through Germany into Switzerland and back.",
@@ -357,90 +357,27 @@ Late May is warm and pleasant across the route. Longer days, more sunshine, and 
   </div>
 </div>
 
-<PackingChecklist
+<TripPackingChecklist
   client:load
-  storageKey="packing-checklist-rotterdam-switzerland-2025"
-  categories={[
-    {
-      name: "Clothing",
-      icon: "fa-tshirt",
-      items: [
-        "Warm fleece/sweater — everyone",
-        "Rain jackets — adults",
-        "Rain jackets — kids",
-        "Comfortable walking shoes",
-        "Warm hats for Rigi/Pilatus",
-        "Gloves for Rigi/Pilatus",
-        "Extra socks",
-        "Warm onesie/snowsuit for baby (mountains)"
-      ]
-    },
-    {
-      name: "Baby / Toddler",
-      icon: "fa-baby",
-      items: [
-        "Car seat",
-        "Compact folding stroller",
-        "Nappies (buy at DM in Germany on Day 3)",
-        "Baby food / pouches",
-        "Milk / formula + bottles",
-        "Baby monitor",
-        "Baby paracetamol (buy at DM before Switzerland)",
-        "Bibs, muslins, wipes",
-        "Changes of clothes (x3 minimum)"
-      ]
-    },
-    {
-      name: "Older Kids",
-      icon: "fa-child",
-      items: [
-        "Car seat",
-        "Tablet + charger (download shows offline)",
-        "Books and small toys for the car",
-        "Snacks + water bottle",
-        "Rain boots",
-        "Colouring book + pencils"
-      ]
-    },
-    {
-      name: "Travel & Documents",
-      icon: "fa-passport",
-      items: [
-        "Passports / IDs — everyone",
-        "Health insurance cards / EHIC",
-        "Booking confirmations (printed + phone)",
-        "Swiss motorway vignette",
-        "Cash — CHF",
-        "Cash — EUR",
-        "Phone + car chargers",
-        "Offline Google Maps downloaded",
-        "Travel insurance documents"
-      ]
-    },
-    {
-      name: "Comfort & Misc",
-      icon: "fa-first-aid",
-      items: [
-        "First aid kit",
-        "Sunscreen — high SPF for kids",
-        "Reusable water bottles",
-        "Picnic blanket",
-        "Camera / phone",
-        "Umbrella",
-        "Portable phone charger / power bank",
-        "Plastic bags (wet clothes, nappies)",
-        "Car snack bag",
-        "Hand sanitiser"
-      ]
-    }
-  ]}
+  storageKey="packing-checklist-switzerland-2026"
+  extraItems={{
+    "Clothing": [
+      "Warm hats for Rigi/Pilatus summits",
+      "Gloves for Rigi/Pilatus summits",
+      "Warm onesie/snowsuit for baby (mountains)"
+    ],
+    "Travel & Documents": [
+      "Swiss motorway vignette",
+      "Cash — CHF"
+    ]
+  }}
 />
 
 <SectionHeading icon="fa-wallet" color="emerald">Estimated Budget (Family of 5)</SectionHeading>
 
 <div class="prose-content mb-4">
 
-Ballpark costs for a family of 2 adults + 1 senior + 2 young children. Prices are approximate and based on 2025 rates. Your actual spend will vary depending on accommodation choices and how often you eat out.
+Ballpark costs for a family of 2 adults + 1 senior + 2 young children. Prices are approximate and based on 2026 rates. Your actual spend will vary depending on accommodation choices and how often you eat out.
 
 </div>
 
@@ -563,6 +500,6 @@ Jot down tips, reminders, and notes as you plan. Stored locally in your browser 
 
 <TravelTips
   client:load
-  storageKey="travel-tips-rotterdam-switzerland-2025"
+  storageKey="travel-tips-switzerland-2026"
   destinations={["Koblenz", "Black Forest", "Lake Lucerne", "Weggis", "Vitznau", "Mount Rigi", "Mount Pilatus", "Lucerne City", "Königswinter", "Rotterdam"]}
 />
