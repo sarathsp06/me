@@ -12,17 +12,17 @@
 
 | Day | Date (2026) | Route | Drive | Overnight |
 |-----|-------------|-------|-------|-----------|
-| 1 | Sat 23 May | Rotterdam → Koblenz | 3.5–4h | Koblenz |
-| 2 | Sun 24 May | Koblenz → Rothenburg ob der Tauber | 2.5–3h | Rothenburg |
-| 3 | Mon 25 May | Rothenburg → St. Wolfgang (Wolfgangsee) | 4–4.5h | St. Wolfgang |
-| 4 | Tue 26 May | Wolfgangsee — lake / settling day | Local only | St. Wolfgang |
-| 5 | Wed 27 May | Schafberg cog railway (mountain + lake views) | Local only | St. Wolfgang |
-| 6 | Thu 28 May | Hallstatt + salt mine + lake | ~45min each way | St. Wolfgang |
-| 7 | Fri 29 May | **Dachstein Krippenstein (caves + mountain)** | ~60min each way | St. Wolfgang |
-| 8 | Sat 30 May | Salzburg light city day *(or nature swap — see below)* | ~45min each way | St. Wolfgang |
-| 9 | Sun 31 May | St. Wolfgang → Regensburg | ~3h | Regensburg |
-| 10 | Mon 1 Jun | Regensburg → Königswinter (Rhine) | ~4h | Königswinter |
-| 11 | Tue 2 Jun | Königswinter → Rotterdam | 2.5–3h | Home |
+| 1 | Fri 22 May | Rotterdam → Koblenz | 3.5–4h | Koblenz |
+| 2 | Sat 23 May | Koblenz → Rothenburg ob der Tauber | 2.5–3h | Rothenburg |
+| 3 | Sun 24 May | Rothenburg → St. Wolfgang (Wolfgangsee) | 4–4.5h | St. Wolfgang |
+| 4 | Mon 25 May | Wolfgangsee — lake / settling day *(Whit Monday)* | Local only | St. Wolfgang |
+| 5 | Tue 26 May | Schafberg cog railway (mountain + lake views) | Local only | St. Wolfgang |
+| 6 | Wed 27 May | Hallstatt + salt mine + lake | ~45min each way | St. Wolfgang |
+| 7 | Thu 28 May | **Dachstein Krippenstein (caves + mountain)** | ~60min each way | St. Wolfgang |
+| 8 | Fri 29 May | Salzburg light city day *(or nature swap — see below)* | ~45min each way | St. Wolfgang |
+| 9 | Sat 30 May | St. Wolfgang → Regensburg | ~3h | Regensburg |
+| 10 | Sun 31 May | Regensburg → Königswinter (Rhine) | ~4h | Königswinter |
+| 11 | Mon 1 Jun | Königswinter → Rotterdam | 2.5–3h | Home |
 
 **Weather-based day swapping:** Days 5–8 (Schafberg, Hallstatt, Dachstein, Salzburg) can be reordered to chase the best weather. Clear days → Schafberg and Dachstein Five Fingers. Grey/rainy days → caves, Hallstatt village, Salzburg.
 
@@ -32,7 +32,7 @@
 
 ## Day by Day
 
-### Day 1 — Sat 23 May: Rotterdam → Koblenz (3.5–4h)
+### Day 1 — Fri 22 May: Rotterdam → Koblenz (3.5–4h)
 
 Drive south via A61 with 1 kid-friendly stop.
 
@@ -51,11 +51,11 @@ Keep walking distances short from parking. Low-effort afternoon — this is a wa
 
 ---
 
-### Day 2 — Sun 24 May: Koblenz → Rothenburg ob der Tauber (2.5–3h)
+### Day 2 — Sat 23 May: Koblenz → Rothenburg ob der Tauber (2.5–3h)
 
 Drive via A3/A7. 1 optional rest stop around halfway with playground and baby-change.
 
-> **⚠️ Supply stop:** Sunday — German shops are closed. **Stock up at DM/Rossmann on Saturday (Day 1) before leaving Rotterdam or at a stop near Koblenz.** Don't rely on Day 3 — that's Whit Monday (also closed). Petrol station shops are the exception but have limited baby supplies.
+> **🛒 Supply stop:** Saturday — shops are open. **Stock up at DM/Rossmann en route or near Rothenburg.** Day 3 is Sunday (closed) and Day 4 is Whit Monday (also closed). This is your last chance for a full supply run until Tuesday.
 
 Arrive by early afternoon. One main activity block: **walls + old town**. Rothenburg empties out by evening when day-trippers leave — the best time to enjoy it.
 
@@ -74,13 +74,13 @@ Find central parking close to the old town.
 
 ---
 
-### Day 3 — Mon 25 May: Rothenburg → St. Wolfgang (4–4.5h)
+### Day 3 — Sun 24 May: Rothenburg → St. Wolfgang (4–4.5h)
 
-> **⚠️ Whit Monday (Pfingstmontag)** — public holiday in Germany AND Austria. All shops (including DM/Rossmann) are closed. Ensure supplies were bought on Saturday (Day 1). Petrol station shops remain open for essentials.
+> **⚠️ Sunday** — shops closed in Germany and Austria. Ensure supplies were bought on Saturday (Day 2). Petrol station shops remain open for essentials.
 
 The longest southbound leg, via A6/A9/A1. Plan two stops:
 
-1. **Rest stop near Nuremberg** (~1.5h in) — playground, baby-change, food. ~~DM/Rossmann~~ closed (Whit Monday). Use a petrol station shop if anything urgent is needed.
+1. **Rest stop near Nuremberg** (~1.5h in) — playground, baby-change, food. Shops closed (Sunday). Use a petrol station shop if anything urgent is needed.
 
 2. **Short stop nearer Austria if needed** (~3h in)
 
@@ -94,7 +94,9 @@ The longest southbound leg, via A6/A9/A1. Plan two stops:
 
 ---
 
-### Day 4 — Tue 26 May: Wolfgangsee — Lake / Settling Day
+### Day 4 — Mon 25 May: Wolfgangsee — Lake / Settling Day *(Whit Monday)*
+
+> **⚠️ Whit Monday (Pfingstmontag)** — public holiday in Germany AND Austria. All shops closed. No impact on today's plan — this is a lake/settling day with no shopping needed. Tourist attractions (boats, cable cars) typically operate on public holidays.
 
 **No long drive. No tickets. No time pressure.** Recover from three days of driving.
 
@@ -114,7 +116,7 @@ This is a "low cognitive load" day — no tickets, no schedules. Just lake, vill
 
 ---
 
-### Day 5 — Wed 27 May: Schafberg Cog Railway
+### Day 5 — Tue 26 May: Schafberg Cog Railway
 
 **Core theme:** Mountains + lake panorama. The Austrian Mount Rigi.
 
@@ -137,7 +139,7 @@ A historic steam cogwheel railway climbs from St. Wolfgang to the Schafberg summ
 
 ---
 
-### Day 6 — Thu 28 May: Hallstatt Day Trip (~45min each way)
+### Day 6 — Wed 27 May: Hallstatt Day Trip (~45min each way)
 
 **Core theme:** Lake + iconic village + underground attraction.
 
@@ -166,7 +168,7 @@ Don't over-schedule. Allow for slow walking and waiting (crowds). Keep it to fun
 
 ---
 
-### Day 7 — Fri 29 May: Dachstein Krippenstein — FLAGSHIP DAY
+### Day 7 — Thu 28 May: Dachstein Krippenstein — FLAGSHIP DAY
 
 **Core theme:** Caves + mountain + viewpoint. This is the #1 priority day of the trip.
 
@@ -206,7 +208,7 @@ Drive ~60min from St. Wolfgang to Obertraun (Dachstein Krippenstein cable car st
 
 ---
 
-### Day 8 — Sat 30 May: Salzburg — Flex Day
+### Day 8 — Fri 29 May: Salzburg — Flex Day
 
 **Default:** Light city day after three heavier excursion days.
 
@@ -230,9 +232,9 @@ Salzburg is an easy half-day. Fortress + old town + Mirabell takes ~4–5 hours.
 
 ---
 
-### Day 9 — Sun 31 May: St. Wolfgang → Regensburg (~3h)
+### Day 9 — Sat 30 May: St. Wolfgang → Regensburg (~3h)
 
-> **Sunday** — Austrian and German shops closed. Ensure you have enough supplies for the return journey. Petrol station shops are the exception.
+Saturday — shops are open if you need to stock up on the return leg.
 
 Drive north via A1/A8/A93. Late-morning departure after easy breakfast and checkout.
 
@@ -250,7 +252,9 @@ Regensburg is less touristy than Rothenburg but equally beautiful. Keep walking 
 
 ---
 
-### Day 10 — Mon 1 Jun: Regensburg → Königswinter (~4h)
+### Day 10 — Sun 31 May: Regensburg → Königswinter (~4h)
+
+> **Sunday** — shops closed in Germany. Petrol station shops are the exception. Ensure you have enough supplies from Saturday.
 
 Drive via A3. 1 proper break around halfway (playground + baby-change).
 
@@ -264,7 +268,7 @@ Drive via A3. 1 proper break around halfway (playground + baby-change).
 
 ---
 
-### Day 11 — Tue 2 Jun: Königswinter → Rotterdam (2.5–3h)
+### Day 11 — Mon 1 Jun: Königswinter → Rotterdam (2.5–3h)
 
 Early departure, home before or just after lunch. Light breakfast, minimal sightseeing — travel day only.
 
@@ -372,7 +376,7 @@ These rules apply to any future AI agent working on this trip:
 4. **Budget awareness:**
    - Austria is significantly cheaper than Switzerland for lifts, food, and accommodation
    - Prioritize self-catering options around Wolfgangsee when searching lodging
-   - Stock up on baby supplies at DM/Rossmann in Germany (Day 3) — 20–30% cheaper than Austria
+   - Stock up on baby supplies at DM/Rossmann in Germany (Day 2) — 20–30% cheaper than Austria
 
 5. **Don't change the base unless asked:**
    - Use **St. Wolfgang** as the primary base
@@ -386,8 +390,8 @@ These rules apply to any future AI agent working on this trip:
 
 ## Regional Notes
 
-- **Whit Monday (Mon 25 May 2026):** Public holiday in both Germany and Austria. All shops closed including DM/Rossmann. Stock up on Saturday (Day 1) before departure or en route to Koblenz.
-- **Sunday shopping:** Shops closed in Germany and Austria on Sundays. Petrol station shops are the exception. Day 9 (Sun 31 May) is a travel day — ensure supplies are sorted before then.
+- **Whit Monday (Mon 25 May 2026):** Public holiday in both Germany and Austria. All shops closed including DM/Rossmann. Falls on Day 4 (lake/settling day at Wolfgangsee) — no impact on sightseeing. Stock up on Saturday (Day 2) en route to Rothenburg.
+- **Sunday shopping:** Shops closed in Germany and Austria on Sundays. Petrol station shops are the exception. Day 3 (Sun 24 May) and Day 10 (Sun 31 May) are affected — ensure supplies are sorted on Saturdays.
 - **Low Emission Zones (LEZ):** No LEZs on this route. Austria has none. German cities on this route (Koblenz, Rothenburg, Regensburg, Königswinter) have none. No Umweltplakette sticker needed.
 - **Car seat laws (Austria):** Children under 14 AND under 150cm must use an appropriate child restraint. Both kids need car seats (already packed).
 - **Car seat laws (Germany):** Children under 12 AND under 150cm must use a child restraint. Same requirement.
@@ -425,7 +429,7 @@ Verify before departure:
 | **4 months out (Jan 2026)** | Book Schafberg cog railway (limited capacity, popular in late May). Book Dachstein combo tickets |
 | **3 months out (Feb 2026)** | Buy Austrian motorway vignette online. Research Hallstatt salt mine tickets |
 | **2 months out (Mar 2026)** | Check passport validity for all 5 travellers. Buy travel insurance. Get green card from car insurer |
-| **1 month out (Apr 2026)** | Stock up on baby supplies at DM/Rossmann (**must be before departure — Whit Monday closes shops on Day 3**). Download offline maps. Check weather forecasts for late May |
+| **1 month out (Apr 2026)** | Stock up on baby supplies at DM/Rossmann (**must stock up on Saturday Day 2 — Day 3 is Sunday and Day 4 is Whit Monday**). Download offline maps. Check weather forecasts for late May |
 | **1 week out** | Print/download all confirmations. Pack. Charge devices. Car check (tyres, oil, coolant, first aid kit, hi-vis vest, warning triangle) |
 | **Day before** | Load car. Prep snack bag + baby bag for cabin access. Download kids' shows/games for offline use. Set GPS routes for Day 1 |
 
@@ -433,10 +437,10 @@ Verify before departure:
 
 ## Open Questions
 
-- [ ] **Dates confirmed?** Sat 23 May – Tue 2 Jun 2026 (11 days, 10 nights)
+- [ ] **Dates confirmed?** Fri 22 May – Mon 1 Jun 2026 (11 days, 10 nights)
 - [ ] **Dachstein ice cave with baby?** Many stairs, no stroller. Plan: baby carrier, or one adult stays outside with baby?
 - [ ] **Hallstatt salt mine split:** One adult + 5yo do the mine, one adult stays at terrace with baby. Confirm.
 - [ ] **Book Schafberg cog railway early** — popular in late May, limited daily capacity
 - [ ] **Book Dachstein combo tickets early** — cable car + ice cave
 - [ ] **Day 8 (Salzburg):** Keep as default, or swap for a nature excursion? Decide closer to the date based on energy and weather.
-- [ ] **DM supply run timing:** Stock up on Saturday Day 1 (before departure or en route to Koblenz) — Day 2 is Sunday (closed) and Day 3 is Whit Monday (closed). This is critical.
+- [ ] **DM supply run timing:** Stock up on Saturday Day 2 (en route to Rothenburg or in Rothenburg) — Day 3 is Sunday (closed) and Day 4 is Whit Monday (closed). This is critical.
