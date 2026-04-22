@@ -4,6 +4,10 @@ dist/
 # generated types
 .astro/
 
+# generated build artifacts
+src/generated/
+public/images/blog/
+
 # dependencies
 node_modules/
 

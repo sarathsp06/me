@@ -30,37 +30,29 @@ import Layout from '../layouts/Layout.astro';
               <h1 class="text-3xl md:text-5xl font-bold text-white mt-2 mb-4">
                 Sarath Sadasivan Pillai<span class="cursor"></span>
               </h1>
-              <div class="text-slate-400 max-w-2xl text-sm md:text-base leading-relaxed">
-                [Role]: Technical Lead / Senior Software Engineer<br />
-                [Location]: Rotterdam, NL<br />
-                [Specialization]: <span class="text-green-400 font-semibold">Go, Distributed Systems, Linux, PostgreSQL</span>
+              <div class="text-slate-400 max-w-2xl text-sm md:text-base leading-relaxed mb-4">
+                Technical Lead & Senior Software Engineer based in Rotterdam, NL.<br />
+                Specializing in <span class="text-green-400 font-semibold">Go, Distributed Systems, Linux, PostgreSQL</span>.
               </div>
+              <p class="text-slate-500 text-sm max-w-2xl leading-relaxed">
+                I build reliable, scalable backend systems. Co-founding a product company while working as a technical lead -- I enjoy the overlap of engineering depth and product thinking.
+              </p>
             </header>
 
             <nav class="mb-12 flex flex-wrap gap-4 text-xs md:text-sm">
-              <span class="text-slate-500 underline">Navigation:</span>
+              <a href="/travel" class="text-yellow-400 hover:text-yellow-300 font-bold transition-colors">cd ./travel/</a>
+              <a href="/blog" class="text-yellow-400 hover:text-yellow-300 font-bold transition-colors">cd ./blogs/</a>
               <a href="#tools-section" class="text-green-400 hover:text-green-300 font-bold transition-colors">cd ./bin/</a>
-              <a href="#blog-section" class="text-yellow-400 hover:text-yellow-300 font-bold transition-colors">cd ./blogs/</a>
-              <a href="https://www.linkedin.com/in/sarathsp/" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors">./linkedin.sh</a>
-              <a href="https://github.com/sarathsp06" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors">./github.sh</a>
+              <a href="#experience-section" class="text-slate-400 hover:text-slate-300 font-bold transition-colors">cd ./experience/</a>
+              <a href="https://www.linkedin.com/in/sarathsp/" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors">linkedin</a>
+              <a href="https://github.com/sarathsp06" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors">github</a>
+              <a href="mailto:sarath.sp06@gmail.com" class="text-blue-400 hover:text-blue-300 transition-colors">email</a>
             </nav>
 
             <!-- Experience Section -->
-            <section class="mb-12">
+            <section id="experience-section" class="mb-12">
               <div class="prompt text-sm md:text-base mb-4">ls -la ~/experience/</div>
               <div class="space-y-10">
-                <!-- Message+ -->
-                <div>
-                  <div class="flex flex-col md:flex-row justify-between mb-1">
-                    <span class="text-green-400 font-bold underline">Message+::Co-Founder_&amp;_CTO</span>
-                    <span class="text-slate-500 text-xs">Dec 2022 - Present</span>
-                  </div>
-                  <div class="cmd-output text-sm leading-relaxed">
-                    &bull; Revolutionizing customer support by leveraging AI and messaging channels like WhatsApp and Instagram.<br />
-                    &bull; Helping businesses personalize and streamline support interactions while tracking key metrics.<br />
-                    &bull; Designing scalable infrastructure to meet the evolving needs of modern enterprises and startups.
-                  </div>
-                </div>
                 <!-- Wellsync -->
                 <div>
                   <div class="flex flex-col md:flex-row justify-between mb-1">
@@ -71,6 +63,18 @@ import Layout from '../layouts/Layout.astro';
                     &bull; Led the development of new services that unlocked additional revenue streams.<br />
                     &bull; Enhanced observability across all systems and trained the team to leverage it for efficient technical support.<br />
                     &bull; Mentored junior engineers and contributed to overall system and infrastructure improvements.
+                  </div>
+                </div>
+                <!-- Message+ -->
+                <div>
+                  <div class="flex flex-col md:flex-row justify-between mb-1">
+                    <span class="text-green-400 font-bold underline">Message+::Co-Founder_&amp;_CTO</span>
+                    <span class="text-slate-500 text-xs">Dec 2022 - Present</span>
+                  </div>
+                  <div class="cmd-output text-sm leading-relaxed">
+                    &bull; Revolutionizing customer support by leveraging AI and messaging channels like WhatsApp and Instagram.<br />
+                    &bull; Helping businesses personalize and streamline support interactions while tracking key metrics.<br />
+                    &bull; Designing scalable infrastructure to meet the evolving needs of modern enterprises and startups.
                   </div>
                 </div>
                 <!-- Shell -->
@@ -118,7 +122,7 @@ import Layout from '../layouts/Layout.astro';
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                 <div class="bg-white/5 p-4 rounded border border-white/5">
                   <h3 class="text-slate-500 font-bold mb-2 uppercase text-xs tracking-wider">Languages</h3>
-                  <div class="text-green-400 font-medium">Go, Python, JavaScript, PHP, MySQL</div>
+                  <div class="text-green-400 font-medium">Go, Python, JavaScript, PHP, SQL</div>
                 </div>
                 <div class="bg-white/5 p-4 rounded border border-white/5">
                   <h3 class="text-slate-500 font-bold mb-2 uppercase text-xs tracking-wider">Engineering</h3>
@@ -136,7 +140,7 @@ import Layout from '../layouts/Layout.astro';
             </header>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <a href="/sparrow" class="tool-card block border border-white/10 p-5 rounded transition-all">
+              <a href="https://github.com/sarathsp06/sparrow" target="_blank" class="tool-card block border border-white/10 p-5 rounded transition-all">
                 <div class="flex items-center gap-3 mb-3">
                   <i class="fa-brands fa-golang text-2xl text-blue-400"></i>
                   <span class="text-white font-bold text-lg">sparrow*</span>
@@ -175,85 +179,12 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
 
-          <!-- Blogs Section -->
-          <div id="blog-section" class="pt-12 border-t border-white/10">
-            <header class="mb-8">
-              <div class="prompt text-sm">ls -1 ~/blogs/</div>
-              <h2 class="text-2xl font-bold text-white mt-2">Technical Journal</h2>
-            </header>
-
-            <div class="space-y-6">
-              <a href="https://sarathsp06.medium.com/the-power-of-simplicity-measuring-code-complexity-with-cyclomatic-and-cognitive-complexity-29414b9fc0a0" target="_blank" class="block border border-white/10 p-4 rounded hover:bg-white/5 transition-colors">
-                <div class="flex justify-between items-start mb-2">
-                  <span class="text-yellow-400 font-bold">measuring_code_complexity.md</span>
-                  <span class="text-slate-500 text-xs">Medium</span>
-                </div>
-                <p class="text-slate-400 text-sm leading-relaxed">The power of simplicity: measuring code complexity with cyclomatic and cognitive complexity...</p>
-              </a>
-
-              <a href="https://sarathsp06.medium.com/the-art-of-naming-lessons-learned-as-a-programmer-a3beed290438" target="_blank" class="block border border-white/10 p-4 rounded hover:bg-white/5 transition-colors">
-                <div class="flex justify-between items-start mb-2">
-                  <span class="text-yellow-400 font-bold">art_of_naming.md</span>
-                  <span class="text-slate-500 text-xs">Medium</span>
-                </div>
-                <p class="text-slate-400 text-sm leading-relaxed">The art of naming: Lessons learned as a programmer on one of the hardest problems in CS...</p>
-              </a>
-
-              <a href="https://sarathsp06.medium.com/understanding-discrete-time-crystals-d3a22307a18c" target="_blank" class="block border border-white/10 p-4 rounded hover:bg-white/5 transition-colors">
-                <div class="flex justify-between items-start mb-2">
-                  <span class="text-yellow-400 font-bold">discrete_time_crystals.md</span>
-                  <span class="text-slate-500 text-xs">Medium</span>
-                </div>
-                <p class="text-slate-400 text-sm leading-relaxed">Understanding discrete time crystals and the fascinating intersection of physics and computation...</p>
-              </a>
-
-              <a href="/blog/wsjf" class="block border border-white/10 p-4 rounded hover:bg-white/5 transition-colors">
-                <div class="flex justify-between items-start mb-2">
-                  <span class="text-yellow-400 font-bold">wsjf.md</span>
-                  <span class="text-slate-500 text-xs">Local</span>
-                </div>
-                <p class="text-slate-400 text-sm leading-relaxed">A Framework for Economic Backlog Governance and Strategic Alignment</p>
-              </a>
-
-              <a href="/blog/event-driven-systems" class="block border border-white/10 p-4 rounded hover:bg-white/5 transition-colors">
-                <div class="flex justify-between items-start mb-2">
-                  <span class="text-yellow-400 font-bold">event_driven_systems.md</span>
-                  <span class="text-slate-500 text-xs">Local</span>
-                </div>
-                <p class="text-slate-400 text-sm leading-relaxed">Real patterns, real trade-offs, and the mistakes teams repeat when building event-driven architecture</p>
-              </a>
-
-              <a href="/blog/error-budget-sprints" class="block border border-white/10 p-4 rounded hover:bg-white/5 transition-colors">
-                <div class="flex justify-between items-start mb-2">
-                  <span class="text-yellow-400 font-bold">error_budget_sprints.md</span>
-                  <span class="text-slate-500 text-xs">Local</span>
-                </div>
-                <p class="text-slate-400 text-sm leading-relaxed">Applying SRE error budgets to sprint planning -- measuring developer effort on bugs instead of downtime</p>
-              </a>
-
-              <a href="/blog/testhooks" class="block border border-white/10 p-4 rounded hover:bg-white/5 transition-colors">
-                <div class="flex justify-between items-start mb-2">
-                  <span class="text-yellow-400 font-bold">testhooks.md</span>
-                  <span class="text-slate-500 text-xs">Local</span>
-                </div>
-                <p class="text-slate-400 text-sm leading-relaxed">A self-hostable webhook.site replacement -- capture, inspect, transform and forward webhooks in real time</p>
-              </a>
-            </div>
-
-            <div class="mt-8 flex gap-6">
-              <a href="/blog" class="text-green-400 hover:underline text-sm font-bold transition-colors">cd ~/blogs/ (All Posts)</a>
-              <a href="/travel" class="text-blue-400 hover:underline text-sm font-bold transition-colors">cd ~/travel/ (Travel Logs)</a>
-            </div>
-
-            <div class="mt-12 text-center">
-              <a href="#" class="text-green-400 hover:underline text-sm font-bold transition-colors">cd ~ (Return to Top)</a>
-            </div>
-          </div>
-
           <!-- Footer -->
           <footer class="mt-20 opacity-40 text-[10px]">
             <p>Last login: <span id="current-time"></span> on ttys001</p>
-            <p>&copy; 2026 SARATH PILLAI - KERNEL v5.15.0-generic</p>
+            <p class="mt-8 text-center">
+              <a href="#" class="text-green-400 hover:underline text-sm font-bold transition-colors">cd ~ (Return to Top)</a>
+            </p>
           </footer>
         </div>
       </div>

@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import { resolveImage } from '../../lib/images';
 
 const posts = await getCollection('travel');
 const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
@@ -34,7 +35,7 @@ const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDa
               <article class="border border-gray-200 rounded-xl overflow-hidden bg-white hover:border-emerald-300 hover:shadow-lg transition-all duration-200 group-hover:-translate-y-0.5">
                 {post.data.coverImage && (
                   <div class="h-48 bg-gray-100 overflow-hidden">
-                    <img src={post.data.coverImage} alt={post.data.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <img src={resolveImage(post.data.coverImage)} alt={post.data.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   </div>
                 )}
                 <div class="p-5">
