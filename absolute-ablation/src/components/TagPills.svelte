@@ -39,32 +39,31 @@
     display: inline-flex;
     align-items: center;
     padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    font-size: 0.65rem;
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    background: linear-gradient(135deg, #eff6ff, #e0e7ff);
-    color: #3b82f6;
-    border: 1px solid #bfdbfe;
+    background: var(--color-paper-surface);
+    color: var(--color-paper-accent);
+    border: 1px solid var(--color-paper-border);
     cursor: pointer;
     transition: all 0.2s ease;
   }
   .tag-pill:hover {
-    background: linear-gradient(135deg, #dbeafe, #c7d2fe);
+    border-color: var(--color-paper-accent);
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
   }
   .tag-pill.active {
-    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    background: var(--color-paper-accent);
     color: white;
-    border-color: #3b82f6;
-    box-shadow: 0 2px 12px rgba(59, 130, 246, 0.3);
+    border-color: var(--color-paper-accent);
   }
   .reading-time {
     display: inline-flex;
     align-items: center;
-    font-size: 0.75rem;
-    color: #9ca3af;
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 0.8rem;
+    color: var(--color-paper-muted);
   }
 </style>

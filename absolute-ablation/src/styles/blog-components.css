@@ -1,18 +1,17 @@
 /*
  * Shared Blog Component Styles
  *
- * Styles used by MDX-rendered blog posts that don't belong
- * in individual Svelte components. Import this stylesheet
- * in blog post layouts to get consistent prose formatting,
- * chart containers, scroll animations, and blockquotes.
+ * Paper theme: warm off-white, serif typography, scholarly feel.
+ * Import this stylesheet in blog post layouts.
  */
 
 /* --- Prose reading content --- */
 
 .prose-content {
-  font-family: 'Merriweather', Georgia, serif;
-  font-size: 1.05rem;
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.1rem;
   line-height: 1.85;
+  color: var(--color-paper-ink);
 }
 
 .prose-content p {
@@ -20,9 +19,9 @@
 }
 
 .prose-content a {
-  color: #2563eb;
+  color: var(--color-paper-link);
   text-decoration: none;
-  background-image: linear-gradient(#2563eb, #2563eb);
+  background-image: linear-gradient(var(--color-paper-accent), var(--color-paper-accent));
   background-size: 0% 1px;
   background-position: left bottom;
   background-repeat: no-repeat;
@@ -60,10 +59,10 @@
 /* --- Blockquote styling --- */
 
 blockquote {
-  border-left: 3px solid #2563eb;
+  border-left: 3px solid var(--color-paper-accent);
   padding: 1rem 1.25rem;
-  color: #6b7280;
+  color: var(--color-paper-muted);
   font-style: italic;
-  background: #f8fafc;
-  border-radius: 0 8px 8px 0;
+  background: var(--color-paper-surface);
+  border-radius: 0 4px 4px 0;
 }

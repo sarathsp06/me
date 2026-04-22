@@ -20,10 +20,7 @@
 <footer class="blog-footer" class:visible={isVisible}>
   <div class="footer-inner">
     <div class="footer-content">
-      <div class="footer-brand">
-        <span class="brand-text">sarath@unix:~$</span>
-        <span class="brand-cursor"></span>
-      </div>
+      <p class="footer-brand">Sarath Sadasivan Pillai</p>
       <p class="footer-desc">Writing about software engineering, distributed systems, and building things that work.</p>
     </div>
 
@@ -50,8 +47,8 @@
 
 <style>
   .blog-footer {
-    border-top: 1px solid #e5e7eb;
-    background: white;
+    border-top: 1px solid var(--color-paper-border);
+    background: var(--color-paper-bg);
     opacity: 0;
     transform: translateY(12px);
     transition: all 0.5s ease;
@@ -61,7 +58,7 @@
     transform: translateY(0);
   }
   .footer-inner {
-    max-width: 56rem;
+    max-width: 48rem;
     margin: 0 auto;
     padding: 3rem 1.5rem 2rem;
   }
@@ -69,30 +66,16 @@
     margin-bottom: 2rem;
   }
   .footer-brand {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    margin-bottom: 0.75rem;
-  }
-  .brand-text {
-    font-family: 'Fira Code', monospace;
-    font-size: 0.875rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1rem;
     font-weight: 600;
-    color: #111827;
-  }
-  .brand-cursor {
-    display: inline-block;
-    width: 8px;
-    height: 16px;
-    background: #4ade80;
-    animation: blink 1s step-end infinite;
-  }
-  @keyframes blink {
-    50% { opacity: 0; }
+    color: var(--color-paper-ink);
+    margin-bottom: 0.5rem;
   }
   .footer-desc {
-    font-size: 0.875rem;
-    color: #9ca3af;
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 0.9rem;
+    color: var(--color-paper-muted);
     max-width: 28rem;
     line-height: 1.6;
   }
@@ -102,17 +85,18 @@
     gap: 1.5rem;
     margin-bottom: 2rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid #f3f4f6;
+    border-bottom: 1px solid var(--color-paper-border);
   }
   .footer-link {
-    font-size: 0.8rem;
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 0.85rem;
     font-weight: 500;
-    color: #6b7280;
+    color: var(--color-paper-muted);
     text-decoration: none;
     transition: color 0.2s ease;
   }
   .footer-link:hover {
-    color: #111827;
+    color: var(--color-paper-accent);
   }
   .footer-bottom {
     display: flex;
@@ -120,8 +104,11 @@
     justify-content: space-between;
   }
   .copyright {
-    font-size: 0.75rem;
-    color: #d1d5db;
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 0.8rem;
+    color: var(--color-paper-border);
+    font-variant: small-caps;
+    letter-spacing: 0.03em;
   }
 
   .back-to-top {
@@ -131,23 +118,23 @@
     width: 2.75rem;
     height: 2.75rem;
     border-radius: 50%;
-    border: 1px solid #e5e7eb;
-    background: white;
-    color: #6b7280;
+    border: 1px solid var(--color-paper-border);
+    background: var(--color-paper-bg);
+    color: var(--color-paper-muted);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease;
     z-index: 30;
     animation: fadeIn 0.3s ease;
   }
   .back-to-top:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-    color: #3b82f6;
-    border-color: #93c5fd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: var(--color-paper-accent);
+    border-color: var(--color-paper-accent);
   }
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(8px); }

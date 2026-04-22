@@ -31,7 +31,7 @@
           <span class="tag">{tag}</span>
         {/each}
         {#if readingTime}
-          <span class="meta-separator">·</span>
+          <span class="meta-separator">&middot;</span>
           <span class="reading-time">{readingTime}</span>
         {/if}
       </div>
@@ -81,27 +81,24 @@
   }
   .blog-card {
     position: relative;
-    border: 1px solid #e5e7eb;
-    border-radius: 16px;
+    border: 1px solid var(--color-paper-border);
     padding: 1.75rem 2rem;
-    background: white;
+    background: var(--color-paper-bg);
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .blog-card.hovered {
-    border-color: #93c5fd;
-    box-shadow:
-      0 4px 6px -1px rgba(59, 130, 246, 0.06),
-      0 10px 20px -5px rgba(59, 130, 246, 0.1);
-    transform: translateY(-2px);
+    border-color: var(--color-paper-accent);
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.06);
+    transform: translateY(-1px);
   }
   .card-accent {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+    height: 2px;
+    background: var(--color-paper-accent);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -119,36 +116,40 @@
   .tag {
     display: inline-flex;
     padding: 0.2rem 0.625rem;
-    border-radius: 9999px;
-    font-size: 0.65rem;
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    background: linear-gradient(135deg, #eff6ff, #e0e7ff);
-    color: #3b82f6;
+    background: var(--color-paper-surface);
+    color: var(--color-paper-accent);
+    border: 1px solid var(--color-paper-border);
   }
   .meta-separator {
-    color: #d1d5db;
+    color: var(--color-paper-border);
     font-size: 0.75rem;
   }
   .reading-time {
-    font-size: 0.75rem;
-    color: #9ca3af;
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 0.8rem;
+    color: var(--color-paper-muted);
   }
   .card-title {
+    font-family: 'Playfair Display', Georgia, serif;
     font-size: 1.25rem;
     font-weight: 700;
-    color: #111827;
+    color: var(--color-paper-ink);
     margin-bottom: 0.625rem;
     line-height: 1.4;
     transition: color 0.2s ease;
   }
   .blog-card.hovered .card-title {
-    color: #2563eb;
+    color: var(--color-paper-accent);
   }
   .card-description {
-    font-size: 0.9rem;
-    color: #6b7280;
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 0.95rem;
+    color: var(--color-paper-muted);
     line-height: 1.7;
     margin-bottom: 1rem;
   }
@@ -158,16 +159,18 @@
     justify-content: space-between;
   }
   .card-date {
-    font-size: 0.8rem;
-    color: #9ca3af;
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 0.85rem;
+    color: var(--color-paper-muted);
   }
   .read-more {
     display: flex;
     align-items: center;
     gap: 0.375rem;
-    font-size: 0.8rem;
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 0.85rem;
     font-weight: 600;
-    color: #3b82f6;
+    color: var(--color-paper-accent);
     opacity: 0;
     transform: translateX(-8px);
     transition: all 0.3s ease;

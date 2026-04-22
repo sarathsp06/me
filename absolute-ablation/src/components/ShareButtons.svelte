@@ -100,11 +100,12 @@
     position: relative;
   }
   .share-label {
-    font-size: 0.75rem;
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: #9ca3af;
+    color: var(--color-paper-muted);
   }
   .share-buttons {
     display: flex;
@@ -116,18 +117,18 @@
     justify-content: center;
     width: 2.25rem;
     height: 2.25rem;
-    border-radius: 8px;
-    border: 1px solid #e5e7eb;
-    background: white;
-    color: #6b7280;
+    border-radius: 4px;
+    border: 1px solid var(--color-paper-border);
+    background: var(--color-paper-bg);
+    color: var(--color-paper-muted);
     cursor: pointer;
     transition: all 0.2s ease;
   }
   .share-btn:hover {
-    background: #f3f4f6;
-    color: #111827;
+    background: var(--color-paper-surface);
+    color: var(--color-paper-accent);
+    border-color: var(--color-paper-accent);
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
   .share-btn.copy.copied {
     color: #16a34a;
@@ -138,11 +139,12 @@
     position: absolute;
     right: 0;
     top: -2rem;
-    background: #111827;
-    color: white;
+    background: var(--color-paper-ink);
+    color: var(--color-paper-bg);
     padding: 0.25rem 0.75rem;
-    border-radius: 6px;
-    font-size: 0.7rem;
+    border-radius: 4px;
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 0.75rem;
     font-weight: 500;
     white-space: nowrap;
     animation: fadeInUp 0.2s ease;

@@ -95,20 +95,22 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.875rem;
-    color: #9ca3af;
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 0.9rem;
+    color: var(--color-paper-muted);
     margin-bottom: 1.5rem;
     transition: color 0.2s ease;
     text-decoration: none;
   }
   .back-link:hover {
-    color: #4b5563;
+    color: var(--color-paper-accent);
   }
   .toc-heading {
-    font-size: 0.65rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #9ca3af;
+    color: var(--color-paper-muted);
     font-weight: 700;
     margin-bottom: 0.75rem;
   }
@@ -125,46 +127,48 @@
     gap: 0.5rem;
     width: 100%;
     padding: 0.5rem 0.75rem;
-    font-size: 0.8rem;
-    color: #6b7280;
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 0.85rem;
+    color: var(--color-paper-muted);
     border: none;
     background: none;
     cursor: pointer;
-    border-radius: 0 6px 6px 0;
+    border-radius: 0 4px 4px 0;
     transition: all 0.2s ease;
     text-align: left;
     line-height: 1.4;
   }
   .toc-link:hover {
-    color: #111827;
-    background: #f3f4f6;
+    color: var(--color-paper-ink);
+    background: var(--color-paper-surface);
   }
   .toc-link.indent {
     padding-left: 1.5rem;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
   .toc-indicator {
-    width: 3px;
+    width: 2px;
     height: 16px;
-    border-radius: 2px;
+    border-radius: 1px;
     background: transparent;
     flex-shrink: 0;
     transition: all 0.2s ease;
   }
   .toc-link.active {
-    color: #2563eb;
+    color: var(--color-paper-accent);
     font-weight: 600;
-    background: #eff6ff;
+    background: var(--color-paper-surface);
   }
   .toc-link.active .toc-indicator {
-    background: linear-gradient(180deg, #3b82f6, #8b5cf6);
+    background: var(--color-paper-accent);
   }
   .toc-footer {
     margin-top: auto;
     padding-top: 1rem;
-    border-top: 1px solid #f3f4f6;
-    font-size: 0.75rem;
-    color: #9ca3af;
+    border-top: 1px solid var(--color-paper-border);
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 0.8rem;
+    color: var(--color-paper-muted);
     display: flex;
     align-items: center;
   }

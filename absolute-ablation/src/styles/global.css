@@ -44,4 +44,36 @@
     background: #334155;
     border-radius: 4px;
   }
+
+  @media print {
+    /* Hide non-content elements when printing blog posts */
+    .progress-container,
+    .back-to-top {
+      display: none !important;
+    }
+  }
+}
+
+@media print {
+  /* Hide sidebar TOC, share buttons, back link, footer */
+  .fixed {
+    display: none !important;
+  }
+
+  /* Remove sidebar margin so content fills the page */
+  main {
+    margin-left: 0 !important;
+  }
+
+  /* Hide interactive/nav elements */
+  .share-container,
+  .blog-header,
+  .blog-footer {
+    display: none !important;
+  }
+
+  /* Clean background for printing */
+  body, html {
+    background: white !important;
+  }
 }
