@@ -114,30 +114,30 @@
   });
 </script>
 
-<div class="tips-container">
-  <div class="tips-header">
-    <div class="tips-title-row">
-      <div class="tips-title">
-        <span class="tips-icon"><i class="fas fa-bookmark"></i></span>
-        <h3>Your Travel Notes</h3>
+<div class="bg-gradient-to-br from-[#f8faff] to-indigo-50 border border-indigo-200 rounded-2xl p-6 my-8">
+  <div class="mb-4">
+    <div class="flex items-center justify-between gap-3 flex-wrap">
+      <div class="flex items-center gap-2.5">
+        <span class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center text-[0.8rem]"><i class="fas fa-bookmark"></i></span>
+        <h3 class="m-0 text-[1.1rem] font-bold text-slate-800">Your Travel Notes</h3>
       </div>
-      <span class="tips-badge">{tipCount} {tipCount === 1 ? 'tip' : 'tips'} saved</span>
+      <span class="text-xs font-semibold text-indigo-500 bg-white border border-indigo-100 py-0.5 px-2.5 rounded-full">{tipCount} {tipCount === 1 ? 'tip' : 'tips'} saved</span>
     </div>
-    <p class="tips-subtitle">Save personal tips and notes for this trip. Stored locally in your browser -- private to you.</p>
+    <p class="text-[0.8rem] text-slate-500 mt-1.5 mb-0 leading-snug">Save personal tips and notes for this trip. Stored locally in your browser -- private to you.</p>
   </div>
 
-  <div class="tips-actions-bar">
-    <button class="btn btn-primary" onclick={() => showForm = !showForm}>
+  <div class="flex items-center justify-between gap-2 mb-3 max-[480px]:flex-wrap">
+    <button class="text-[0.8rem] font-semibold py-1.5 px-3.5 rounded-lg border-none cursor-pointer inline-flex items-center gap-1.5 transition-all duration-150 bg-indigo-600 text-white hover:bg-indigo-700" onclick={() => showForm = !showForm}>
       <i class="fas {showForm ? 'fa-times' : 'fa-plus'}"></i>
       {showForm ? 'Cancel' : 'Add a tip'}
     </button>
     {#if tips.length > 0}
-      <div class="tips-right-actions">
-        <button class="btn btn-ghost" onclick={exportTips} title="Export tips as text">
+      <div class="flex gap-1">
+        <button class="text-[0.8rem] font-semibold py-1.5 px-3.5 rounded-lg cursor-pointer inline-flex items-center gap-1.5 transition-all duration-150 bg-transparent text-indigo-500 border border-indigo-100 hover:bg-white" onclick={exportTips} title="Export tips as text">
           <i class="fas fa-download"></i>
           Export
         </button>
-        <button class="btn btn-ghost btn-danger" onclick={clearAll} title="Delete all tips">
+        <button class="text-[0.8rem] font-semibold py-1.5 px-3.5 rounded-lg cursor-pointer inline-flex items-center gap-1.5 transition-all duration-150 bg-transparent text-indigo-500 border border-indigo-100 hover:text-red-600 hover:border-red-200 hover:bg-red-50" onclick={clearAll} title="Delete all tips">
           <i class="fas fa-trash"></i>
         </button>
       </div>
@@ -145,415 +145,85 @@
   </div>
 
   {#if showForm}
-    <div class="tip-form" role="form">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="tip-dest">Destination</label>
-          <select id="tip-dest" bind:value={newTipDestination}>
+    <div class="bg-white border border-indigo-100 rounded-xl p-5 mb-4" role="form">
+      <div class="grid grid-cols-2 gap-3 mb-3 max-[480px]:grid-cols-1">
+        <div class="flex flex-col gap-1">
+          <label for="tip-dest" class="text-xs font-semibold text-slate-600 uppercase tracking-wide">Destination</label>
+          <select id="tip-dest" bind:value={newTipDestination} class="text-[0.85rem] py-2 px-2.5 border border-gray-300 rounded bg-[#fafbff] text-slate-700 font-[inherit] transition-colors duration-150 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/10">
             {#each destinations as dest}
               <option value={dest}>{dest}</option>
             {/each}
             <option value="General">General</option>
           </select>
         </div>
-        <div class="form-group">
-          <label for="tip-cat">Category</label>
-          <select id="tip-cat" bind:value={newTipCategory}>
+        <div class="flex flex-col gap-1">
+          <label for="tip-cat" class="text-xs font-semibold text-slate-600 uppercase tracking-wide">Category</label>
+          <select id="tip-cat" bind:value={newTipCategory} class="text-[0.85rem] py-2 px-2.5 border border-gray-300 rounded bg-[#fafbff] text-slate-700 font-[inherit] transition-colors duration-150 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/10">
             {#each categories as cat}
               <option value={cat.value}>{cat.label}</option>
             {/each}
           </select>
         </div>
       </div>
-      <div class="form-group">
-        <label for="tip-text">Your tip or note</label>
+      <div class="flex flex-col gap-1">
+        <label for="tip-text" class="text-xs font-semibold text-slate-600 uppercase tracking-wide">Your tip or note</label>
         <textarea
           id="tip-text"
           bind:value={newTipText}
           placeholder="e.g. Book Rigi tickets online in advance -- saves queueing with kids..."
           rows="3"
           onkeydown={(e) => { if (e.key === 'Enter' && e.metaKey) addTip(); }}
+          class="text-[0.85rem] py-2 px-2.5 border border-gray-300 rounded bg-[#fafbff] text-slate-700 font-[inherit] transition-colors duration-150 resize-y min-h-14 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/10"
         ></textarea>
       </div>
-      <div class="form-submit-row">
-        <button class="btn btn-primary" onclick={addTip} disabled={!newTipText.trim()}>
+      <div class="flex items-center gap-3 mt-3">
+        <button class="text-[0.8rem] font-semibold py-1.5 px-3.5 rounded-lg border-none cursor-pointer inline-flex items-center gap-1.5 transition-all duration-150 bg-indigo-600 text-white hover:bg-indigo-700 disabled:bg-indigo-300 disabled:cursor-not-allowed" onclick={addTip} disabled={!newTipText.trim()}>
           <i class="fas fa-check"></i>
           Save tip
         </button>
         {#if justSaved}
-          <span class="saved-indicator"><i class="fas fa-check-circle"></i> Saved!</span>
+          <span class="text-[0.8rem] text-green-600 font-semibold animate-[fadeIn_0.2s_ease]"><i class="fas fa-check-circle"></i> Saved!</span>
         {/if}
       </div>
     </div>
   {/if}
 
   {#if tips.length > 0}
-    <div class="filter-bar">
-      <button class="filter-btn" class:active={filterDestination === 'all'} onclick={() => filterDestination = 'all'}>All</button>
+    <div class="flex gap-1 flex-wrap mb-3 pb-2.5 border-b border-indigo-100">
+      <button class="text-[0.72rem] font-semibold py-1 px-2.5 rounded-full border border-indigo-100 cursor-pointer transition-all duration-150 hover:border-indigo-300 hover:text-indigo-600" class:bg-indigo-600={filterDestination === 'all'} class:text-white={filterDestination === 'all'} class:border-indigo-600={filterDestination === 'all'} class:bg-white={filterDestination !== 'all'} class:text-slate-500={filterDestination !== 'all'} onclick={() => filterDestination = 'all'}>All</button>
       {#each destinations as dest}
         {#if tips.some(t => t.destination === dest)}
-          <button class="filter-btn" class:active={filterDestination === dest} onclick={() => filterDestination = dest}>
+          <button class="text-[0.72rem] font-semibold py-1 px-2.5 rounded-full border border-indigo-100 cursor-pointer transition-all duration-150 hover:border-indigo-300 hover:text-indigo-600" class:bg-indigo-600={filterDestination === dest} class:text-white={filterDestination === dest} class:border-indigo-600={filterDestination === dest} class:bg-white={filterDestination !== dest} class:text-slate-500={filterDestination !== dest} onclick={() => filterDestination = dest}>
             {dest}
           </button>
         {/if}
       {/each}
     </div>
 
-    <div class="tips-list">
+    <div class="flex flex-col gap-2">
       {#each filteredTips as tip (tip.id)}
-        <div class="tip-item">
-          <div class="tip-item-header">
-            <span class="tip-category-badge">
+        <div class="bg-white border border-gray-200 rounded-[0.6rem] py-3.5 px-4 relative transition-shadow duration-150 hover:shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+          <div class="flex items-center justify-between gap-2 mb-1.5 flex-wrap">
+            <span class="text-[0.7rem] font-semibold text-indigo-500 bg-indigo-50 py-0.5 px-2 rounded-full inline-flex items-center gap-1">
               <i class="fas {categoryMap[tip.category]?.icon ?? 'fa-lightbulb'}"></i>
               {categoryMap[tip.category]?.label ?? tip.category}
             </span>
-            <span class="tip-meta">
-              <span class="tip-dest">{tip.destination}</span>
-              <span class="tip-date">{formatDate(tip.timestamp)}</span>
+            <span class="flex items-center gap-2 text-[0.7rem] text-slate-400">
+              <span class="font-semibold text-slate-500">{tip.destination}</span>
+              <span>{formatDate(tip.timestamp)}</span>
             </span>
           </div>
-          <p class="tip-text">{tip.text}</p>
-          <button class="tip-delete" onclick={() => deleteTip(tip.id)} title="Delete this tip">
+          <p class="text-[0.85rem] text-slate-700 leading-normal m-0 pr-6">{tip.text}</p>
+          <button class="absolute top-2.5 right-2.5 bg-none border-none text-slate-300 cursor-pointer text-[0.7rem] p-1 rounded transition-all duration-150 hover:text-red-500 hover:bg-red-50" onclick={() => deleteTip(tip.id)} title="Delete this tip">
             <i class="fas fa-times"></i>
           </button>
         </div>
       {/each}
     </div>
   {:else if !showForm}
-    <div class="tips-empty">
-      <i class="fas fa-sticky-note"></i>
-      <p>No tips yet. Add your first one to start building your personal travel notes.</p>
+    <div class="text-center py-8 px-4 text-slate-400">
+      <i class="fas fa-sticky-note text-2xl mb-2 block"></i>
+      <p class="text-[0.8rem] m-0 leading-normal">No tips yet. Add your first one to start building your personal travel notes.</p>
     </div>
   {/if}
 </div>
-
-<style>
-  .tips-container {
-    background: linear-gradient(135deg, #f8faff, #f0f4ff);
-    border: 1px solid #c7d2fe;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    margin: 2rem 0;
-  }
-
-  .tips-header {
-    margin-bottom: 1rem;
-  }
-
-  .tips-title-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
-
-  .tips-title {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-  }
-
-  .tips-title h3 {
-    margin: 0;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #1e293b;
-  }
-
-  .tips-icon {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 0.5rem;
-    background: #4f46e5;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-  }
-
-  .tips-badge {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #6366f1;
-    background: white;
-    border: 1px solid #e0e7ff;
-    padding: 0.2rem 0.6rem;
-    border-radius: 999px;
-  }
-
-  .tips-subtitle {
-    font-size: 0.8rem;
-    color: #64748b;
-    margin: 0.4rem 0 0;
-    line-height: 1.4;
-  }
-
-  .tips-actions-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .tips-right-actions {
-    display: flex;
-    gap: 0.35rem;
-  }
-
-  .btn {
-    font-size: 0.8rem;
-    font-weight: 600;
-    padding: 0.45rem 0.85rem;
-    border-radius: 0.5rem;
-    border: none;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    transition: all 0.15s ease;
-  }
-
-  .btn-primary {
-    background: #4f46e5;
-    color: white;
-  }
-
-  .btn-primary:hover {
-    background: #4338ca;
-  }
-
-  .btn-primary:disabled {
-    background: #a5b4fc;
-    cursor: not-allowed;
-  }
-
-  .btn-ghost {
-    background: transparent;
-    color: #6366f1;
-    border: 1px solid #e0e7ff;
-  }
-
-  .btn-ghost:hover {
-    background: white;
-  }
-
-  .btn-danger:hover {
-    color: #dc2626;
-    border-color: #fecaca;
-    background: #fff5f5;
-  }
-
-  .tip-form {
-    background: white;
-    border: 1px solid #e0e7ff;
-    border-radius: 0.75rem;
-    padding: 1.25rem;
-    margin-bottom: 1rem;
-  }
-
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-  }
-
-  .form-group label {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #475569;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-  }
-
-  .form-group select,
-  .form-group textarea {
-    font-size: 0.85rem;
-    padding: 0.5rem 0.65rem;
-    border: 1px solid #d1d5db;
-    border-radius: 0.4rem;
-    background: #fafbff;
-    color: #334155;
-    font-family: inherit;
-    transition: border-color 0.15s;
-  }
-
-  .form-group select:focus,
-  .form-group textarea:focus {
-    outline: none;
-    border-color: #6366f1;
-    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
-  }
-
-  .form-group textarea {
-    resize: vertical;
-    min-height: 3.5rem;
-  }
-
-  .form-submit-row {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-top: 0.75rem;
-  }
-
-  .saved-indicator {
-    font-size: 0.8rem;
-    color: #16a34a;
-    font-weight: 600;
-    animation: fadeIn 0.2s ease;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(4px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .filter-bar {
-    display: flex;
-    gap: 0.35rem;
-    flex-wrap: wrap;
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.6rem;
-    border-bottom: 1px solid #e0e7ff;
-  }
-
-  .filter-btn {
-    font-size: 0.72rem;
-    font-weight: 600;
-    padding: 0.3rem 0.6rem;
-    border-radius: 999px;
-    border: 1px solid #e0e7ff;
-    background: white;
-    color: #64748b;
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-
-  .filter-btn:hover {
-    border-color: #a5b4fc;
-    color: #4f46e5;
-  }
-
-  .filter-btn.active {
-    background: #4f46e5;
-    color: white;
-    border-color: #4f46e5;
-  }
-
-  .tips-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .tip-item {
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.6rem;
-    padding: 0.85rem 1rem;
-    position: relative;
-    transition: box-shadow 0.15s;
-  }
-
-  .tip-item:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  }
-
-  .tip-item-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-    margin-bottom: 0.4rem;
-    flex-wrap: wrap;
-  }
-
-  .tip-category-badge {
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: #6366f1;
-    background: #eef2ff;
-    padding: 0.15rem 0.5rem;
-    border-radius: 999px;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3rem;
-  }
-
-  .tip-meta {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.7rem;
-    color: #94a3b8;
-  }
-
-  .tip-dest {
-    font-weight: 600;
-    color: #64748b;
-  }
-
-  .tip-text {
-    font-size: 0.85rem;
-    color: #334155;
-    line-height: 1.5;
-    margin: 0;
-    padding-right: 1.5rem;
-  }
-
-  .tip-delete {
-    position: absolute;
-    top: 0.6rem;
-    right: 0.6rem;
-    background: none;
-    border: none;
-    color: #cbd5e1;
-    cursor: pointer;
-    font-size: 0.7rem;
-    padding: 0.25rem;
-    border-radius: 0.25rem;
-    transition: all 0.15s;
-  }
-
-  .tip-delete:hover {
-    color: #ef4444;
-    background: #fef2f2;
-  }
-
-  .tips-empty {
-    text-align: center;
-    padding: 2rem 1rem;
-    color: #94a3b8;
-  }
-
-  .tips-empty i {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    display: block;
-  }
-
-  .tips-empty p {
-    font-size: 0.8rem;
-    margin: 0;
-    line-height: 1.5;
-  }
-
-  @media (max-width: 480px) {
-    .form-row {
-      grid-template-columns: 1fr;
-    }
-    .tips-actions-bar {
-      flex-wrap: wrap;
-    }
-  }
-</style>

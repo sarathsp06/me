@@ -147,21 +147,6 @@
   });
 </script>
 
-<div class="chart-container" {id}>
-  <canvas bind:this={canvas}></canvas>
+<div class="relative w-full max-w-[580px] h-[280px] mx-auto my-6" {id}>
+  <canvas bind:this={canvas} class="!w-full !h-full"></canvas>
 </div>
-
-<style>
-  .chart-container {
-    position: relative;
-    width: 100%;
-    max-width: 580px;
-    height: 280px;
-    margin: 1.5rem auto;
-  }
-
-  .chart-container canvas {
-    width: 100% !important;
-    height: 100% !important;
-  }
-</style>

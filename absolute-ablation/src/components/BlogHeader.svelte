@@ -16,86 +16,18 @@
   });
 </script>
 
-<header class="blog-header" class:scrolled>
-  <div class="header-inner">
-    <a href="/" class="back-link">
+<header class={`sticky top-0 z-40 border-b transition-all duration-300 ease-in-out ${scrolled ? 'border-paper-border bg-[rgba(250,248,245,0.92)] backdrop-blur-[12px] shadow-[0_1px_3px_rgba(0,0,0,0.04)]' : 'border-transparent bg-[rgba(250,248,245,0.5)] backdrop-blur-0'}`}>
+  <div class="max-w-3xl mx-auto px-6 py-3.5 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2 font-body text-[0.9rem] text-paper-muted no-underline transition-colors duration-200 ease-in-out hover:text-paper-accent">
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
       </svg>
       <span>Home</span>
     </a>
-    <nav class="header-nav">
-      <a href="/blog" class="nav-link" class:active={activePage === 'blog'}>Blog</a>
-      <a href="/travel" class="nav-link" class:active={activePage === 'travel'}>Travel</a>
+    <nav class="flex gap-1 bg-paper-surface rounded-md p-[0.2rem] border border-paper-border">
+      <a href="/blog" class={`px-4 py-1.5 font-body text-[0.85rem] font-medium no-underline rounded transition-all duration-200 ease-in-out hover:text-paper-ink ${activePage === 'blog' ? 'bg-paper-bg text-paper-ink shadow-[0_1px_2px_rgba(0,0,0,0.06)]' : 'text-paper-muted'}`}>Blog</a>
+      <a href="/travel" class={`px-4 py-1.5 font-body text-[0.85rem] font-medium no-underline rounded transition-all duration-200 ease-in-out hover:text-paper-ink ${activePage === 'travel' ? 'bg-paper-bg text-paper-ink shadow-[0_1px_2px_rgba(0,0,0,0.06)]' : 'text-paper-muted'}`}>Travel</a>
     </nav>
-    <div class="header-spacer"></div>
+    <div class="w-16"></div>
   </div>
 </header>
-
-<style>
-  .blog-header {
-    position: sticky;
-    top: 0;
-    z-index: 40;
-    border-bottom: 1px solid transparent;
-    transition: all 0.3s ease;
-    background: rgba(250, 248, 245, 0.5);
-    backdrop-filter: blur(0px);
-  }
-  .blog-header.scrolled {
-    border-bottom-color: var(--color-paper-border);
-    background: rgba(250, 248, 245, 0.92);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  }
-  .header-inner {
-    max-width: 48rem;
-    margin: 0 auto;
-    padding: 0.875rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .back-link {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: 'Crimson Pro', Georgia, serif;
-    font-size: 0.9rem;
-    color: var(--color-paper-muted);
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  .back-link:hover {
-    color: var(--color-paper-accent);
-  }
-  .header-nav {
-    display: flex;
-    gap: 0.25rem;
-    background: var(--color-paper-surface);
-    border-radius: 6px;
-    padding: 0.2rem;
-    border: 1px solid var(--color-paper-border);
-  }
-  .nav-link {
-    padding: 0.4rem 1rem;
-    font-family: 'Crimson Pro', Georgia, serif;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--color-paper-muted);
-    text-decoration: none;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-  }
-  .nav-link:hover {
-    color: var(--color-paper-ink);
-  }
-  .nav-link.active {
-    background: var(--color-paper-bg);
-    color: var(--color-paper-ink);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
-  }
-  .header-spacer {
-    width: 4rem;
-  }
-</style>

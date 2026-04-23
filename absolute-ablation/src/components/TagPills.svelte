@@ -17,14 +17,13 @@
   {#each tags as tag}
     <button
       onclick={() => selectTag(tag)}
-      class="tag-pill"
-      class:active={selectedTag === tag}
+      class={`inline-flex items-center px-3 py-1 font-body text-[0.7rem] font-semibold uppercase tracking-[0.05em] border cursor-pointer transition-all duration-200 ease-in-out hover:border-paper-accent hover:-translate-y-px ${selectedTag === tag ? 'bg-paper-accent text-white border-paper-accent' : 'bg-paper-surface text-paper-accent border-paper-border'}`}
     >
       {tag}
     </button>
   {/each}
   {#if readingTime}
-    <span class="reading-time">
+    <span class="inline-flex items-center font-body text-[0.8rem] text-paper-muted">
       <svg class="inline-block w-3.5 h-3.5 mr-1 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="10" stroke-width="2"/>
         <path d="M12 6v6l4 2" stroke-width="2" stroke-linecap="round"/>
@@ -33,37 +32,3 @@
     </span>
   {/if}
 </div>
-
-<style>
-  .tag-pill {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.25rem 0.75rem;
-    font-family: 'Crimson Pro', Georgia, serif;
-    font-size: 0.7rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    background: var(--color-paper-surface);
-    color: var(--color-paper-accent);
-    border: 1px solid var(--color-paper-border);
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  .tag-pill:hover {
-    border-color: var(--color-paper-accent);
-    transform: translateY(-1px);
-  }
-  .tag-pill.active {
-    background: var(--color-paper-accent);
-    color: white;
-    border-color: var(--color-paper-accent);
-  }
-  .reading-time {
-    display: inline-flex;
-    align-items: center;
-    font-family: 'Crimson Pro', Georgia, serif;
-    font-size: 0.8rem;
-    color: var(--color-paper-muted);
-  }
-</style>

@@ -20,39 +20,11 @@
   let colors = $derived(colorMap[color] ?? colorMap.blue);
 </script>
 
-<h2 class="section-heading">
-  <span class="section-icon" style="background-color: {colors.bg}; color: {colors.text};">
+<h2 class="flex items-center gap-3 text-2xl font-bold text-slate-900 mt-10 mb-4 leading-[1.3]">
+  <span class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 text-[0.85rem]" style="background-color: {colors.bg}; color: {colors.text};">
     <i class="fas {icon}"></i>
   </span>
-  <span class="section-text">
+  <span class="flex-1">
     {@render children()}
   </span>
 </h2>
-
-<style>
-  .section-heading {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #0f172a;
-    margin: 2.5rem 0 1rem;
-    line-height: 1.3;
-  }
-
-  .section-icon {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    font-size: 0.85rem;
-  }
-
-  .section-text {
-    flex: 1;
-  }
-</style>

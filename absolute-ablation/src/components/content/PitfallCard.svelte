@@ -7,65 +7,14 @@
   let { title, children }: Props = $props();
 </script>
 
-<div class="pitfall-card">
-  <div class="pitfall-header">
-    <span class="pitfall-icon">
+<div class="bg-gradient-to-br from-red-50 to-white border border-red-100 rounded-xl px-6 py-5 my-4 transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(239,68,68,0.08)]">
+  <div class="flex items-center gap-2.5 mb-2">
+    <span class="w-7 h-7 rounded-full bg-red-200 text-red-600 flex items-center justify-center shrink-0 text-xs font-bold">
       <i class="fas fa-xmark"></i>
     </span>
-    <h3 class="pitfall-title">{title}</h3>
+    <h3 class="text-base font-bold text-red-900 m-0">{title}</h3>
   </div>
-  <div class="pitfall-body">
+  <div class="text-[0.925rem] leading-relaxed text-slate-500 pl-[2.4rem]">
     {@render children()}
   </div>
 </div>
-
-<style>
-  .pitfall-card {
-    background: linear-gradient(135deg, #fff5f5, white);
-    border: 1px solid #fee2e2;
-    border-radius: 0.75rem;
-    padding: 1.25rem 1.5rem;
-    margin: 1rem 0;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .pitfall-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(239, 68, 68, 0.08);
-  }
-
-  .pitfall-header {
-    display: flex;
-    align-items: center;
-    gap: 0.65rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .pitfall-icon {
-    width: 1.75rem;
-    height: 1.75rem;
-    border-radius: 50%;
-    background-color: #fecaca;
-    color: #dc2626;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    font-size: 0.75rem;
-    font-weight: 700;
-  }
-
-  .pitfall-title {
-    font-size: 1rem;
-    font-weight: 700;
-    color: #991b1b;
-    margin: 0;
-  }
-
-  .pitfall-body {
-    font-size: 0.925rem;
-    line-height: 1.6;
-    color: #475569;
-    padding-left: 2.4rem;
-  }
-</style>

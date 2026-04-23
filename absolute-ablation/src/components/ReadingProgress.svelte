@@ -14,28 +14,6 @@
   });
 </script>
 
-<div class="progress-container" class:visible>
-  <div class="progress-bar" style="width: {progress}%"></div>
+<div class="fixed top-0 left-0 right-0 h-0.5 z-100 transition-opacity duration-300 ease-in-out bg-paper-border {visible ? 'opacity-100' : 'opacity-0'}">
+  <div class="h-full bg-paper-accent transition-[width] duration-100 ease-out" style="width: {progress}%"></div>
 </div>
-
-<style>
-  .progress-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    z-index: 100;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    background: var(--color-paper-border);
-  }
-  .progress-container.visible {
-    opacity: 1;
-  }
-  .progress-bar {
-    height: 100%;
-    background: var(--color-paper-accent);
-    transition: width 0.1s ease-out;
-  }
-</style>

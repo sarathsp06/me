@@ -20,53 +20,13 @@
   let fillColor = $derived(colorMap[color] ?? color);
 </script>
 
-<div class="metric-bar-row">
-  <span class="metric-label">{label}</span>
-  <div class="metric-bar">
+<div class="flex items-center gap-2">
+  <span class="text-xs font-semibold text-slate-500 w-10 shrink-0 uppercase">{label}</span>
+  <div class="flex-1 h-2 bg-slate-100 rounded overflow-hidden">
     <div
-      class="metric-bar-fill"
+      class="h-full rounded transition-[width] duration-600 ease-in-out"
       style="width: {percentage}%; background-color: {fillColor};"
     ></div>
   </div>
-  <span class="metric-value">{value}</span>
+  <span class="text-[0.8rem] font-semibold text-slate-700 w-10 text-right shrink-0">{value}</span>
 </div>
-
-<style>
-  .metric-bar-row {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .metric-label {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #64748b;
-    width: 2.5rem;
-    flex-shrink: 0;
-    text-transform: uppercase;
-  }
-
-  .metric-bar {
-    flex: 1;
-    height: 8px;
-    background-color: #f1f5f9;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-
-  .metric-bar-fill {
-    height: 100%;
-    border-radius: 4px;
-    transition: width 0.6s ease;
-  }
-
-  .metric-value {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #334155;
-    width: 2.5rem;
-    text-align: right;
-    flex-shrink: 0;
-  }
-</style>

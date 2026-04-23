@@ -7,49 +7,12 @@
   let { caption, children }: Props = $props();
 </script>
 
-<div class="formula-box">
-  <div class="formula-overlay"></div>
-  <div class="formula-content">
+<div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-8 text-center my-8 relative overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.1)_0%,transparent_70%)] pointer-events-none"></div>
+  <div class="relative text-white font-mono text-[1.15rem] leading-[1.8] z-[1]">
     {@render children()}
   </div>
   {#if caption}
-    <div class="formula-caption">{caption}</div>
+    <div class="relative text-slate-400 text-[0.85rem] mt-4 italic z-[1]">{caption}</div>
   {/if}
 </div>
-
-<style>
-  .formula-box {
-    background: linear-gradient(135deg, #1e293b, #0f172a);
-    border-radius: 0.75rem;
-    padding: 2rem;
-    text-align: center;
-    margin: 2rem 0;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .formula-overlay {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
-    pointer-events: none;
-  }
-
-  .formula-content {
-    position: relative;
-    color: white;
-    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
-    font-size: 1.15rem;
-    line-height: 1.8;
-    z-index: 1;
-  }
-
-  .formula-caption {
-    position: relative;
-    color: #94a3b8;
-    font-size: 0.85rem;
-    margin-top: 1rem;
-    font-style: italic;
-    z-index: 1;
-  }
-</style>

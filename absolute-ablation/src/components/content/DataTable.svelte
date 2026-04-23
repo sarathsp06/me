@@ -8,20 +8,20 @@
   let { headers, rows, highlightRow }: Props = $props();
 </script>
 
-<div class="table-wrapper">
-  <table class="data-table">
+<div class="overflow-x-auto my-6 rounded-xl border border-gray-200">
+  <table class="w-full border-separate border-spacing-0 text-[0.9rem]">
     <thead>
-      <tr>
+      <tr class="bg-gradient-to-br from-slate-800 to-slate-700">
         {#each headers as header}
-          <th>{header}</th>
+          <th class="py-3.5 px-4 text-left font-semibold text-[0.8rem] uppercase tracking-wide text-slate-300 whitespace-nowrap">{header}</th>
         {/each}
       </tr>
     </thead>
     <tbody>
       {#each rows as row, i}
-        <tr class:highlight={highlightRow === i}>
+        <tr class="transition-colors duration-150 hover:bg-white" class:bg-blue-50={highlightRow === i} class:text-[#1e3a5f]={highlightRow === i}>
           {#each row as cell, j}
-            <td class:bold-cell={highlightRow === i && j === row.length - 1}>
+            <td class="py-3 px-4 border-t border-slate-100 whitespace-nowrap" class:text-[#1e3a5f]={highlightRow === i} class:text-slate-700={highlightRow !== i} class:font-bold={highlightRow === i && j === row.length - 1}>
               {cell}
             </td>
           {/each}
@@ -30,62 +30,3 @@
     </tbody>
   </table>
 </div>
-
-<style>
-  .table-wrapper {
-    overflow-x: auto;
-    margin: 1.5rem 0;
-    border-radius: 0.75rem;
-    border: 1px solid #e5e7eb;
-  }
-
-  .data-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    font-size: 0.9rem;
-  }
-
-  .data-table thead tr {
-    background: linear-gradient(135deg, #1e293b, #334155);
-  }
-
-  .data-table th {
-    padding: 0.85rem 1rem;
-    text-align: left;
-    font-weight: 600;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #cbd5e1;
-    white-space: nowrap;
-  }
-
-  .data-table td {
-    padding: 0.75rem 1rem;
-    border-top: 1px solid #f1f5f9;
-    color: #334155;
-    white-space: nowrap;
-  }
-
-  .data-table tbody tr {
-    transition: background-color 0.15s ease;
-  }
-
-  .data-table tbody tr:hover {
-    background-color: #f8fafc;
-  }
-
-  .data-table tbody tr.highlight {
-    background-color: #eff6ff;
-    color: #1e3a5f;
-  }
-
-  .data-table tbody tr.highlight td {
-    color: #1e3a5f;
-  }
-
-  .bold-cell {
-    font-weight: 700;
-  }
-</style>

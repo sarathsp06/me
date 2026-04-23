@@ -6,13 +6,6 @@
   let { children }: Props = $props();
 </script>
 
-<div class="step-list">
+<div class="ml-5 relative">
   {@render children()}
 </div>
-
-<style>
-  .step-list {
-    margin-left: 1.25rem;
-    position: relative;
-  }
-</style>
