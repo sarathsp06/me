@@ -2,9 +2,9 @@
 
 3 adults (1 senior) + 2 children (5 and 1). One car (Mazda CX-30, 430L boot). Max 4–5h per driving leg. No stroller — baby carrier only. Scenic villages over cities. Senior-friendly.
 
-**Preference hierarchy:** Caves > Mountains (cable car/cog railway) > Lakes (boats, promenades) > Cities
+**Preference hierarchy:** Waterfalls > Mountains (cable car/cog railway) > Caves > Lakes (boats, promenades) > Cities
 
-**Base:** 5 nights at Bad Ischl as hub for the Salzkammergut.
+**Base:** 4 nights at Bad Ischl as hub for the Salzkammergut.
 
 **Transit stop:** Würzburg (1 night outbound, 1 night return).
 
@@ -15,21 +15,21 @@
 | Day | Date (2026) | Route | Drive | Overnight |
 |-----|-------------|-------|-------|-----------|
 | 1 | Sat 23 May | Rotterdam → Würzburg | 4.5h | Würzburg |
-| 2 | Sun 24 May | Würzburg → Bad Ischl | 4h | Bad Ischl |
-| 3 | Mon 25 May | Bad Ischl — settling day *(Whit Monday)* | — | Bad Ischl |
-| 4 | Tue 26 May | Schafberg cog railway | 20min each way | Bad Ischl |
-| 5 | Wed 27 May | Hallstatt village | 15min each way | Bad Ischl |
-| 6 | Thu 28 May | **Dachstein Krippenstein (caves + mountain) — FLAGSHIP** | 25min each way | Bad Ischl |
+| 2 | Sun 24 May | Würzburg → Krimml (via Munich/Inntal) | 4h15 | Krimml |
+| 3 | Mon 25 May | **Krimml Waterfalls — FLAGSHIP** then → Bad Ischl *(Whit Monday)* | 2h15 | Bad Ischl |
+| 4 | Tue 26 May | Settling day + first shop run | — | Bad Ischl |
+| 5 | Wed 27 May | Waterfalls & Lakes (Waldbachstrub + Altausseer See) | 20-25min each way | Bad Ischl |
+| 6 | Thu 28 May | Dachstein Krippenstein (Five Fingers + Mammut Cave) | 25min each way | Bad Ischl |
 | 7 | Fri 29 May | Bad Ischl → Würzburg | 4h | Würzburg |
 | 8 | Sat 30 May | Würzburg → Rotterdam | 4.5h | Home |
 
-**Weather-based day swapping:** Days 4–6 (Schafberg, Hallstatt, Dachstein) can be reordered to chase the best weather. Clear days → Schafberg and Dachstein Five Fingers. Grey/rainy days → Mammut Cave, Hallstatt village.
+**Weather-based day swapping:** Days 5–6 (Waterfalls & Lakes, Dachstein) can be reordered to chase the best weather. Day 3 (Krimml) is fixed (transit day). Clear days → Dachstein Five Fingers + Waldbachstrub/Altausseer See. Grey/rainy days → Mammut Cave (waterfalls work in rain too). Krimml waterfalls work in any weather (better in rain).
 
 ---
 
 ## Supply Strategy
 
-Day 2 (Sunday) and Day 3 (Whit Monday) both have shops closed. **Order nappies, baby supplies, and essentials online before the trip and pack them.** First Austrian shop run: Tuesday (Day 4) at Spar/Billa in Bad Ischl. Petrol station shops remain open for emergencies.
+Day 2 (Sunday) and Day 3 (Whit Monday) both have shops closed. **Order nappies, baby supplies, and essentials online before the trip and pack them.** First Austrian shop run: Tuesday (Day 4) at Spar/Billa in Bad Ischl. Petrol station shops remain open for emergencies. Stock up on any remaining supplies in Würzburg on Saturday (Day 1) before shops close (~8 PM).
 
 Bad Ischl has everything: Spar (Grazer Straße), Billa (Salzburger Straße), Hofer/Aldi (Salzburger Straße), pharmacy, bakeries — all within 5-10min drive.
 
@@ -57,139 +57,146 @@ Depart Rotterdam morning. Drive south via A3/A67/A3. Arrive Würzburg by early a
 
 ---
 
-### Day 2 — Sun 24 May: Würzburg → Bad Ischl (4h)
+### Day 2 — Sun 24 May: Würzburg → Krimml (4h15)
 
-Depart after breakfast, ~9 AM. Drive via A3/A9/A8/A1. Arrive Bad Ischl ~1 PM.
+Depart after breakfast, ~9 AM. Drive south via A3/A9/A8 to Munich, then Inntal motorway (A93/A12). Two route options from the Inn valley to Krimml:
 
-> **⚠️ Sunday** — shops closed in Germany and Austria. Tomorrow (Whit Monday) is also closed. Essentials should already be packed from home. Petrol station shops remain open for emergencies.
+- **Gerlos Pass (B165):** Scenic alpine road. Separate toll ~€10 per vehicle (not covered by vignette). Shorter.
+- **Toll-free via Kitzbühel:** Exit Inntal at Wörgl → B170 to St. Johann in Tirol → B164 to Kitzbühel → B161 to Mittersill → B168 to Krimml. Adds ~20-30min but avoids the Gerlos toll.
 
-**Rest stop:** Raststätte near Nuremberg (~1.5h in) or near Munich (~2.5h in) — playground, baby-change.
+Arrive Krimml late afternoon (~1:30-2 PM).
 
-**Austrian motorway vignette:** Required for Austrian motorways. Buy the **10-day digital vignette** online at [asfinag.at](https://www.asfinag.at/) before departure (~€12.80 for 2026). Active from the moment you cross into Austria.
+> **⚠️ Sunday** — shops closed in Germany and Austria. Essentials must already be packed from home. Petrol station shops open for emergencies.
 
-**Anchor:** Arrive, check in, explore Bad Ischl.
+**Austrian motorway vignette:** Required from the border onwards. Buy the **10-day digital vignette** online at [asfinag.at](https://www.asfinag.at/) before departure (~€12.80 for 2026).
+
+**Rest stop:** Raststätte near Munich (~2.5h in) — playground, baby-change.
+
+**Anchor:** Arrive Krimml, check in, evening walk to falls entrance.
 **Low-energy fallback:** Check in and rest only.
+
+**In Krimml (evening):**
+- Check into Ferienwohnung or Gasthaus in Krimml village (book in advance — shoulder season, ~€80-140/night).
+- **Evening walk to the falls entrance area** — free views of the lower falls from the village approach. The sound alone is impressive.
+- Explore the small village (~900 residents). Dinner at a local Gasthaus.
+- Early night — tomorrow morning is the flagship waterfall visit.
+
+---
+
+### Day 3 — Mon 25 May: Krimml Waterfalls — FLAGSHIP DAY then → Bad Ischl *(Whit Monday)*
+
+> **⚠️ Whit Monday (Pfingstmontag)** — public holiday in Germany AND Austria. All shops closed. Tourist attractions operate normally. Tour buses don't arrive at Krimml until ~10 AM — you'll be there first.
+
+**Core theme:** Waterfalls. This is the #1 priority day of the trip. Krimml is Europe's highest waterfall (380m in three stages).
+
+**Anchor:** Krimml Waterfalls trail — first and second viewpoints.
+**Skippable:** Upper trail beyond 2nd viewpoint (steep for senior).
+**Low-energy fallback:** First viewpoint only (15min walk, barrier-free) — still the most impressive single drop (140m).
+
+**Plan:**
+- **Walk to the falls at 08:00** from the village (5min walk to trail entrance). Before crowds.
+- **Kürsingerplatz (first viewpoint, 1,070m):** 15min from car park. **Barrier-free, paved, senior-friendly.** The most dramatic single drop — 140m of thundering water. Mist spray reaches the platform. **Senior + baby stay here.**
+- **Riemann Kanzel (2nd viewpoint, 1,110m):** 30min from entrance, moderate incline. One adult + 5-year-old continue up. Beautiful views of the middle cascade.
+- **Regen Kanzel (3rd viewpoint, 1,150m):** 45min from entrance, steeper with steps. Optional — only if energy allows.
+- Above the 3rd viewpoint gets too steep for this group. The full trail is 4.15km with 431m elevation — not practical with senior + baby.
+- **Return to village by ~10:00-10:30.** Total visit: 1.5-2.5h.
+
+**Cost:** Adults €9, children 6-15 €4.50, under 6 free. Parking ~€6/day.
+
+**After the falls:**
+- Quick coffee/snack in Krimml village.
+- Depart Krimml ~10:30-11:00 AM.
+- **Drive Krimml → Bad Ischl: 2h15** via B168 to Zell am See → Bischofshofen → B145 to Bad Ischl.
+- Arrive Bad Ischl ~1:15 PM. Check in.
 
 **In Bad Ischl (afternoon):**
 - **Konditorei Zauner** — famous imperial café on Pfarrgasse. Coffee and Ischler Törtchen (local pastry). The kids won't care about the history but will like the cakes.
 - **Esplanade / Kurpark** — flat riverside walk along the Traun. Playground in the park area.
 - **Kaiserpark** — 15min flat walk from centre. Green space where the kids can run.
+- Settle in. Early dinner. Rest.
+
+> **Tip:** Waterfalls are more spectacular in rain — higher water volume, dramatic mist. If the weather is grey, Krimml actually benefits. Don't worry about rain on this day.
+
+> **Tip:** The first viewpoint (Kürsingerplatz) is genuinely the highlight. The 140m unbroken drop with mist spray is the most dramatic moment. Going higher adds volume but not necessarily more drama. If the senior can only do one stop, this is the right one.
 
 ---
 
-### Day 3 — Mon 25 May: Bad Ischl — Settling Day *(Whit Monday)*
+### Day 4 — Tue 26 May: Settling Day + First Shop Run
 
-> **⚠️ Whit Monday (Pfingstmontag)** — public holiday in Germany AND Austria. All shops closed. Tourist attractions (cable cars, boats) operate normally on public holidays.
+> **🛒 First Austrian shops open today** (Tuesday). Hit Spar or Billa in Bad Ischl for nappies, groceries, and any supplies you need for the coming days.
 
-**No driving. No tickets. No time pressure.** Let the family decompress after two travel days.
+**No major driving. No tickets. No time pressure.** Let the family decompress after three travel days (including the Krimml waterfall morning).
 
-**Anchor:** Kaiserpark + Katrin cable car OR Wolfgangsee.
+**Anchor:** Shop run + Katrin cable car OR Wolfgangsee OR Waldbachstrub waterfall.
 **Skippable:** Everything — if the kids are tired, stay at the accommodation.
-**Low-energy fallback:** Kurpark playground + café only.
+**Low-energy fallback:** Kurpark playground + café + shop run only.
 
 **Option A — Katrin Cable Car (in Bad Ischl):**
 - Cable car from Bad Ischl town up to Mt. Katrin (1,544m).
 - Gentle alpine meadows at the top. Easy walks with panoramic views.
 - Warm layers needed (5-12°C at summit).
-- Good "taster" mountain experience before the bigger Schafberg day.
+- Good mountain experience with easy alpine walks.
 
 **Option B — Wolfgangsee (15min drive):**
 - Drive to Strobl or St. Wolfgang. Lakeside promenade, flat walks, boat ride.
 - Wolfgangsee boats connect St. Wolfgang, St. Gilgen, and Strobl.
 - Swimmable in late May (~17-19°C) if warm enough.
 
-**Option C — Just Bad Ischl:**
+**Option C — Waldbachstrub Waterfall (bonus waterfall, 15min drive):**
+- Drive towards Hallstatt/Obertraun. Short, easy 30min walk to a scenic waterfall in a forest gorge.
+- Free. Flat, shaded trail. Senior-friendly.
+- A second waterfall experience to complement Krimml — smaller but charming.
+
+**Option D — Just Bad Ischl:**
 - Kaiservilla grounds (15min walk from centre, flat through Kaiserpark).
 - Playground at Kurpark / Sisipark along the river.
 - Wander the town, find a good dinner spot for the coming days.
 
-> **Tip:** Don't push for a big activity today. You have three packed days ahead. The 1-year-old and the senior will thank you for a slow day.
+> **Tip:** Don't push for a big activity today. You have two active days ahead (Waterfalls & Lakes + Dachstein). The 1-year-old and the senior will thank you for a slow day.
 
 ---
 
-### Day 4 — Tue 26 May: Schafberg Cog Railway
+### Day 5 — Wed 27 May: Waterfalls & Lakes Day (Free — No Tickets Needed)
 
-> **🛒 First Austrian shops open today** (Tuesday). If you need a supply run, hit Spar or Billa in Bad Ischl before heading to Schafberg, or on the way back in the afternoon.
+**Core theme:** Waterfalls + alpine lake. A relaxed, free day with no bookings, no queues, no time pressure.
 
-**Drive:** Bad Ischl → St. Wolfgang Talstation: **20 min** via B158 through Strobl.
+**Anchor:** Waldbachstrub Waterfall (morning) + Altausseer See (afternoon).
+**Skippable:** Altausseer See if energy is low — the waterfall alone is a satisfying half-day.
+**Low-energy fallback:** Waldbachstrub only (1.5h total including drive), then back to Bad Ischl for the afternoon.
+**Weather swap:** This day works in any weather. Waterfalls are better in rain. The lake is prettier in sunshine but the flat walk is fine in drizzle.
 
-**Core theme:** Mountains + lake panorama.
+**Morning — Waldbachstrub Waterfall (20min drive from Bad Ischl):**
+- Drive towards Obertraun via B145. The trailhead is signposted from the road.
+- **Flat, shaded 40-minute walk** through a forest gorge to the falls.
+- Free. No tickets. No opening hours.
+- **Senior-friendly:** Flat, well-maintained trail. No steps.
+- **Baby in carrier:** Easy — flat, shaded, short.
+- **5-year-old:** Will love the gorge and the waterfall at the end.
+- A smaller, more intimate waterfall than Krimml — charming rather than dramatic.
+- Allow 1.5-2h total (drive + walk + time at the falls + return).
 
-**Anchor:** Schafberg cog railway + summit views.
-**Skippable:** Extended summit time — one train up, one back is the core experience.
-**Low-energy fallback:** Exit at **Schafbergalm** (middle station, 1,364m) instead of the summit. Flatter alpine meadows, easier terrain for the senior. Still beautiful views.
-**Weather swap:** If clouded/rainy, swap with Hallstatt (Day 5). Schafberg needs clear skies.
+**Afternoon — Altausseer See (25min drive from Bad Ischl):**
+- Drive north via B145 then signposted to Altaussee.
+- **Crystal-clear alpine lake** surrounded by mountains. One of the Salzkammergut's most beautiful.
+- **Flat 5km lakeside loop** — well-maintained path, no elevation. 1.5-2h at a gentle pace.
+- Free. No tickets.
+- **Senior-friendly:** Flat the entire way. Benches along the route.
+- **Baby in carrier:** Easy — flat, scenic, shaded sections.
+- **5-year-old:** Can run ahead on the path. Lake edge for stone-throwing.
+- Optional: stop at a Gasthaus in Altaussee village for lunch/coffee.
+- The Dachstein massif as a backdrop — bring the camera.
 
-**Plan:**
-- **Book the first or second departure** (usually 09:00–09:15). Be at the Talstation by 08:30.
-- **Book online in advance** at [schafbergbahn.at](https://www.schafbergbahn.at/) — you reserve a specific departure time.
-- ~35min up, ~25min down. Steam and diesel trains.
-- **No strollers allowed** on the SchafbergBahn. Baby carrier only. Strollers can be stored at the Talstation.
+**Cost:** €0. Both attractions are free. Only cost is fuel (~€5-8 for the day).
 
-**At the summit (1,732m):**
-- Summit path involves **50m elevation gain on steep, uneven terrain** from the station to the top.
-- **Senior assessment:** Manageable if reasonably mobile, but take it slow. The path is short (~10-15min up).
-- **5-year-old:** Fine.
-- **Baby in carrier:** Fine.
-- **Alternative:** Stay at the Bergstation restaurant terrace — still excellent views without the climb.
-- **Temperature:** 5-12°C, windy. Warm fleece + windproof jacket for everyone. Hat for the baby.
-- **Views:** Panoramic over 7 lakes (Wolfgangsee, Mondsee, Attersee, and more).
-
-**After descending:**
-- Optional: walk the **St. Wolfgang lakeside promenade** and see the White Horse Inn.
-- Find lunch in St. Wolfgang village before driving back to Bad Ischl.
-
-**Cost:** Adults ~€42 return, children 6–14 ~€25. Under 6 free.
-
-> **Tip:** The Schafbergalm (middle station) is a genuine alternative, not a consolation prize. Alpine meadows, mountain hut, views — and flat terrain. If the senior has knee concerns, exit here. You can take the next train from Alm to summit with the 5-year-old while the senior waits at the hut.
+> **Tip:** This is the day that earns its place by being the opposite of everything else on the trip. No queues, no tickets, no time slots, no cable cars. Just walking, water, and mountains. The senior and the 1-year-old will have their best day.
 
 ---
 
-### Day 5 — Wed 27 May: Hallstatt Day Trip
-
-**Drive:** Bad Ischl → Hallstatt P1 parking: **15 min** via B145 south.
-
-**Core theme:** Iconic lakeside village + underground attraction.
-
-Austria's #1 tourist attraction. UNESCO World Heritage village wedged between mountains and lake.
-
-**Anchor:** Village walk + lake.
-**Skippable:** Salt mine (see note below — may be closed for renovation).
-**Low-energy fallback:** Lakefront promenade only. Skip upper village (steep stairs).
-
-> **⚠️ Hallstatt Salt Mine (Salzwelten) may be CLOSED.** Under renovation until "summer 2026" — unclear if that means late May. Check [salzwelten.at](https://www.salzwelten.at/) closer to the date. If closed, a **free shuttle to Altaussee salt mine** is offered as an alternative. The village itself is still worth the visit.
-
-**Plan:**
-- **Arrive before 09:00** — Hallstatt gets extremely crowded from 10:00 when day-trip buses arrive. Morning light on the lake is best for photos.
-- **Parking:** P1 tunnel garage (~350 spaces, €9-12/day). Connects directly to the lakefront via tunnel. If full (unlikely before 10 AM on a weekday), park in Obertraun and take the ferry across.
-- **Lakefront promenade** — flat, scenic, the classic Hallstatt photos. This is the senior-friendly zone.
-- **Upper village / Marktplatz** — steep, narrow lanes with stairs. Charming but demanding. The senior can stay at the lakefront while others explore uphill.
-- **Beinhaus (Bone House)** — ~100 steep steps to reach. Skip with the senior.
-
-**If salt mine IS open (split plan):**
-- **Minimum age: 4 years.** Saanvi (1) cannot enter.
-- One adult + Ishani (5) + optionally senior → salt mine tour (underground slides, mine train)
-- One adult stays at the panoramic terrace/Skywalk with baby
-- Reached via funicular from village
-
-**If salt mine IS closed:**
-- Focus on village + lakefront + boat crossing
-- Consider afternoon drive to **Obertraun** and walk along the Hallstättersee shore (quieter, less crowded)
-- Or afternoon at Altaussee salt mine (shuttle from Hallstatt or 30min drive from Bad Ischl)
-
-**Leave by early afternoon** — the crowds peak at lunchtime and the village becomes uncomfortably dense.
-
-**Cost:** Village is free. Salt mine (if open): adults ~€38, children ~€19. Funicular: ~€10 return.
-
-> **Tip:** Hallstatt is spectacular but small. 2-3 hours is enough for the village. Don't plan a full day here — you'll be done by lunch. Use the afternoon for rest or a short walk somewhere quiet (Nussensee, 5min from Bad Ischl).
-
----
-
-### Day 6 — Thu 28 May: Dachstein Krippenstein — FLAGSHIP DAY
+### Day 6 — Thu 28 May: Dachstein Krippenstein (Five Fingers + Mammut Cave)
 
 **Drive:** Bad Ischl → Obertraun cable car base station: **25 min** via B145.
 
-**Core theme:** Caves + mountain + viewpoint. This is the #1 priority day of the trip.
+**Core theme:** Caves + mountain + viewpoint.
 
 **Anchor:** Mammut Cave + Five Fingers viewpoint.
 **Skippable:** Ice cave (see recommendation below), Mammut Cave if energy is low.
@@ -197,7 +204,7 @@ Austria's #1 tourist attraction. UNESCO World Heritage village wedged between mo
 
 **Parking:** Free, large lot at the cable car station. Never fills in late May.
 
-**Recommended plan (caves > mountains priority):**
+**Recommended plan:**
 
 1. **Cable car to Krippenstein summit (2,108m):**
    - Modern gondola, easy boarding. No issues for senior or children.
@@ -288,8 +295,7 @@ Trip complete. Unpack, do laundry, collapse. Full weekend to recover.
 
 | Factor | Bad Ischl | St. Wolfgang |
 |--------|-----------|-------------|
-| **To Schafberg** | 20min drive | Walk (0min) |
-| **To Hallstatt** | **15min** | 50min |
+| **To Waldbachstrub / Altausseer See** | 20-25min drive | 40-50min |
 | **To Dachstein** | **25min** | 60min |
 | **To Wolfgangsee** | 15min | On the lake |
 | **Supermarkets** | Spar, Billa, Hofer — all in town | Tourist shops only |
@@ -299,7 +305,7 @@ Trip complete. Unpack, do laundry, collapse. Full weekend to recover.
 | **Parking** | Easy, cheap | Tight in village |
 | **Vibe** | Real town with services | Charming lakeside village |
 
-Bad Ischl is **25-35 min from every day trip destination**. St. Wolfgang saves time only on Schafberg day (walk vs 20min drive) but costs 30 min extra each way on Dachstein (the flagship day) and 25 min extra on Hallstatt day. Over the trip, Bad Ischl saves ~2h of total driving.
+Bad Ischl is **20-25 min from every day trip destination** (Waldbachstrub, Altausseer See, Dachstein). Krimml is handled on the transit in (overnight in Krimml village), not from the Bad Ischl base.
 
 ### Bad Ischl highlights
 
@@ -311,9 +317,9 @@ Bad Ischl is **25-35 min from every day trip destination**. St. Wolfgang saves t
 
 ### Backup bases (only if Bad Ischl unavailable)
 
-- **Strobl** — quieter end of Wolfgangsee, cheaper, 10min to Schafberg, 25min to Hallstatt
+- **Strobl** — quieter end of Wolfgangsee, cheaper, 25min to Dachstein
 - **St. Gilgen** — other side of Wolfgangsee, slightly bigger
-- **St. Wolfgang** — the original plan. Walk to Schafberg but further from everything else.
+- **St. Wolfgang** — the original plan. Charming but further from Dachstein.
 
 ---
 
@@ -322,7 +328,7 @@ Bad Ischl is **25-35 min from every day trip destination**. St. Wolfgang saves t
 | Item | Switzerland | Austria |
 |------|-------------|---------|
 | Motorway vignette | CHF 40 (~€42) | **€12.80** (10-day) |
-| Mountain railway (return) | CHF 72 (Rigi) | **~€42** (Schafberg) |
+| Mountain railway (return) | CHF 72 (Rigi) | **Free** (Waldbachstrub + Altausseer See) |
 | Summit cable car + cave | CHF 111 (Pilatus) | **~€50** (Dachstein combo) |
 | Eating out (main course) | CHF 25–40 | **€12–20** |
 | Supermarket groceries | Very expensive | Moderate (20–30% above Germany) |
@@ -334,18 +340,19 @@ Bad Ischl is **25-35 min from every day trip destination**. St. Wolfgang saves t
 
 | Category | Estimate | Notes |
 |----------|----------|-------|
-| Accommodation (7 nights) | €700–€1,200 | Würzburg ~€100–130/night × 2, Bad Ischl ~€90–150/night × 5 |
-| Fuel (~1,700km) | €170–€230 | Fill up in Germany before Austria (cheaper) |
+| Accommodation (7 nights) | €700–€1,200 | Würzburg ~€100–130/night × 2, Krimml ~€80–140/night × 1, Bad Ischl ~€90–150/night × 4 |
+| Fuel (~1,800km) | €180–€240 | Slightly more km via Krimml. Fill up in Germany before Austria (cheaper) |
 | Austrian motorway vignette | ~€13 | 10-day digital vignette |
-| Schafberg cog railway | ~€85 | 2 adults + senior. Under 6 free |
+| Gerlos Pass toll | ~€10 | Gerlos Alpenstraße (B165). Or take toll-free Kitzbühel route (+20-30min) |
+| Krimml Waterfalls entry | ~€25 | 3 adults × €9. Under 6 free. Parking ~€6 |
+| Waldbachstrub + Altausseer See | €0 | Free — no tickets needed |
 | Dachstein cable car + Mammut Cave | ~€130 | 3 adults + 1 child combo |
-| Hallstatt salt mine + funicular | ~€100 | If open. 3 adults + 1 child (min age 4) |
 | Wolfgangsee boats / Katrin cable car | ~€40–60 | Optional — settling day activities |
 | Food & groceries | €400–€650 | Self-catering at Bad Ischl. Stock up at Spar/Billa |
-| Parking & misc | €30–€60 | Hallstatt P1 (~€10), Würzburg, misc |
-| **Total** | **€1,700–€2,500** | |
+| Parking & misc | €30–€60 | Würzburg, misc |
+| **Total** | **€1,500–€2,400** | |
 
-Significantly cheaper than the original 11-day plan (saved ~€600–€1,200 by dropping 3 nights + Koblenz/Rothenburg/Salzburg/Regensburg/Königswinter).
+Significantly cheaper than the original 11-day plan. Hallstatt dropped (salt mine likely closed, village replaceable). Schafberg replaced with free Waterfalls & Lakes day (saves ~€85). Krimml overnight adds ~€80-140 but Bad Ischl drops one night — roughly budget-neutral.
 
 ---
 
@@ -355,7 +362,7 @@ Significantly cheaper than the original 11-day plan (saved ~€600–€1,200 by
 |--------|------|-----|------------|
 | Würzburg / Franconia | 20°C | 9°C | Warm, occasional showers |
 | Bad Ischl / Salzkammergut valleys | 20°C | 9°C | Warm lakeside, fresh mornings |
-| Schafberg summit (1,732m) | 5–12°C | 2°C | Cool, windy — warm layers essential |
+| Altausseer See (712m) | 18°C | 8°C | Warm lakeside, fresh mornings |
 | Dachstein summit (2,108m) | 3–8°C | -2°C | Cold. Mammut Cave: +3°C. Ice Cave: -2°C |
 | Hallstatt | 19°C | 8°C | Warm village level, lake moderates temperature |
 
@@ -400,25 +407,26 @@ Late May in the Salzkammergut is **late spring, not winter**. No winter gear nee
 These rules apply to any future AI agent working on this trip:
 
 1. **Respect the priority hierarchy at all times:**
-   - Caves > Mountains > Lakes > Cities
+   - Waterfalls > Mountains > Caves > Lakes > Cities
    - Max 4–5h driving per leg (except if user explicitly overrides)
    - Avoid steep, long hikes; prefer cable car/cog rail + short scenic walks
 
 2. **Weather handling:**
-   - Days 4–6 can be reordered to chase best weather
-   - Clear days → Schafberg + Dachstein Five Fingers
-   - Grey/rainy days → Mammut Cave, Hallstatt village
-   - Day 6 (Dachstein) must be preserved — caves work in any weather
+   - Days 5–6 (Waterfalls & Lakes, Dachstein) can be reordered to chase best weather
+   - Day 3 (Krimml) is fixed — transit day, cannot be moved
+   - Clear days → Dachstein Five Fingers + Altausseer See
+   - Grey/rainy days → Mammut Cave + Waldbachstrub (waterfalls work in rain)
+   - Day 3 (Krimml) is the non-negotiable anchor of the trip
 
 3. **No stroller. Baby carrier only.**
-   - Where there are many stairs (Dachstein caves, Hallstatt upper village), flag to user
-   - Schafberg: strollers NOT allowed on the train. Carrier is the only option.
+   - Where there are many stairs (Dachstein caves), flag to user
    - Baby carrier must be in the cabin, not the boot
 
 4. **Supply strategy:**
    - Order nappies and essentials online before the trip
    - Day 2 (Sunday) and Day 3 (Whit Monday) have shops closed
    - First Austrian shop run: Tuesday (Day 4) at Spar/Billa in Bad Ischl
+   - Stock up in Würzburg on Saturday (Day 1) before shops close (~8 PM)
    - Petrol station shops open for emergencies
 
 5. **Budget awareness:**
@@ -438,6 +446,11 @@ These rules apply to any future AI agent working on this trip:
    - Default recommendation is Mammut Cave (+3°C, fewer stairs, warmer for baby)
    - Only suggest ice cave if user explicitly asks and confirms senior fitness + baby warmth
 
+9. **Krimml is the flagship:**
+   - Krimml Waterfalls (Day 3) is the #1 priority of the trip
+   - First viewpoint (Kürsingerplatz) is barrier-free — always doable
+   - Upper trail is optional based on senior's energy
+
 ---
 
 ## Regional Notes
@@ -452,7 +465,8 @@ These rules apply to any future AI agent working on this trip:
 - **Tipping:** 5–10% at restaurants in both countries. Round up at cafés.
 - **Currency:** EUR throughout. Cards widely accepted. Some parking meters and mountain huts are cash-only.
 - **Emergency number:** 112 (EU-wide). Austria also: 144 (ambulance), 133 (police).
-- **Hallstatt salt mine:** May be closed for renovation until summer 2026. Check [salzwelten.at](https://www.salzwelten.at/) before booking. Alternative: Altaussee salt mine (free shuttle or 30min drive from Bad Ischl).
+- **Hallstatt salt mine:** Dropped from this itinerary. If you want to add it back as a half-day, it's 15min from Bad Ischl.
+- **Gerlos Alpenstraße (B165):** Separate toll ~€10 per vehicle, not covered by the motorway vignette. Toll-free alternative via Kitzbühel/Mittersill adds ~20-30min.
 
 ---
 
@@ -464,7 +478,7 @@ These rules apply to any future AI agent working on this trip:
 - [ ] Green card / car insurance proof for cross-border driving
 - [ ] Car seats — compliant for both Germany and Austria
 - [ ] Austrian motorway vignette — buy 10-day digital vignette at [asfinag.at](https://www.asfinag.at/) (~€12.80)
-- [ ] Booking confirmations — all accommodation, Schafberg, Dachstein combo tickets
+- [ ] Booking confirmations — all accommodation (Würzburg, Krimml, Bad Ischl), Dachstein combo tickets
 - [ ] Offline Google Maps — download Germany + Austria regions
 - [ ] Cash — EUR (some parking, mountain huts are cash-only)
 - [ ] Emergency contacts list — embassy, insurance hotline, 112/144/133
@@ -472,24 +486,9 @@ These rules apply to any future AI agent working on this trip:
 
 ---
 
-## Pre-Trip Timeline
-
-| When | What |
-|------|------|
-| **Now (6+ months out)** | Book accommodation at Bad Ischl (5 nights: Sat 24 May – Thu 29 May) + Würzburg (2 nights: Sat 23 May + Fri 29 May). Same Würzburg hotel both times is simplest |
-| **4 months out (Jan 2026)** | Book Schafberg cog railway (limited capacity). Book Dachstein combo tickets (cable car + Mammut Cave) |
-| **3 months out (Feb 2026)** | Buy Austrian motorway vignette online. Check Hallstatt salt mine status (renovation) |
-| **2 months out (Mar 2026)** | Check passport validity. Buy travel insurance. Get green card from car insurer |
-| **1 month out (Apr 2026)** | Order nappies + baby supplies online. Download offline maps. Check late May weather forecasts |
-| **1 week out** | Print/download all confirmations. Pack soft bags. Car check (tyres, oil, first aid kit, hi-vis vest, warning triangle) |
-| **Day before** | Load car. Prep snack bag + baby bag for cabin access. Download kids' shows for offline. Set GPS routes |
-
----
-
 ## Open Questions
 
-- [ ] **Bad Ischl accommodation:** Book family apartment or Gasthaus with kitchen (for self-catering). 5 nights Sun 24 May – Fri 29 May checkout.
+- [ ] **Bad Ischl accommodation:** Book family apartment or Gasthaus with kitchen (for self-catering). 4 nights Mon 25 May – Fri 29 May checkout.
+- [ ] **Krimml accommodation:** Book Ferienwohnung or Gasthaus in Krimml village. 1 night Sun 24 May.
 - [ ] **Würzburg accommodation:** Book family room. 2 nights (Sat 23 May + Fri 29 May). Same hotel both nights is simplest.
-- [ ] **Hallstatt salt mine:** Check if reopened by late May 2026. If closed, plan Altaussee as alternative.
-- [ ] **Schafberg summit vs Alm:** Decide on the day based on senior's energy. Book summit tickets — you can always exit at Alm.
-- [ ] **Dachstein: Mammut Cave or Ice Cave?** Default: Mammut Cave. Only ice cave if senior is fit + baby warmth is sorted.
+- [ ] **Gerlos Pass vs Kitzbühel route:** Gerlos (€10 toll, scenic alpine pass) or toll-free via Kitzbühel/Mittersill (+20-30min)?
