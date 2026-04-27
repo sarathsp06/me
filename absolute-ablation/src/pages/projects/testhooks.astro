@@ -1,0 +1,463 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const features = [
+  { icon: 'fa-globe', title: 'Localhost Friendly', desc: 'Browser mode forwards via fetch() — reach localhost, Docker, anything your machine can see. No CLI, no daemon.', color: '#16a34a' },
+  { icon: 'fa-shield-halved', title: 'Privacy-first Mode', desc: 'Browser mode: zero server storage. Payloads never touch disk. GDPR-friendly, ideal for sensitive data.', color: '#8B5CF6' },
+  { icon: 'fa-bolt', title: 'Real-time Streaming', desc: 'WebSocket-powered live view. See every request the instant it arrives — headers, body, timing.', color: '#00ADD8' },
+  { icon: 'fa-code', title: 'Script Transforms', desc: 'JavaScript, Lua, or Jsonnet scripts transform payloads before forwarding. Runs in WASM — sandboxed and fast.', color: '#F97316' },
+  { icon: 'fa-paper-plane', title: 'Smart Forwarding', desc: 'Forward to any URL with sync or async mode. Sync mode captures the response for your handler scripts.', color: '#3b82f6' },
+  { icon: 'fa-eye', title: 'Full Inspection', desc: 'Headers, query params, body with JSON/XML syntax highlighting. Copy as cURL, replay, export as JSON/CSV.', color: '#336791' },
+];
+
+const pipelineSteps = [
+  { label: 'Capture', desc: 'Receive any HTTP request', color: '#3b82f6' },
+  { label: 'Store', desc: 'Persist to PostgreSQL', color: '#8B5CF6' },
+  { label: 'Transform', desc: 'JS/Lua/Jsonnet scripts', color: '#F97316' },
+  { label: 'Forward', desc: 'Relay to your services', color: '#16a34a' },
+  { label: 'Respond', desc: 'Custom HTTP response', color: '#14b8a6' },
+];
+
+const techStack = [
+  { name: 'Go', color: '#00ADD8' },
+  { name: 'Svelte 5', color: '#FF3E00' },
+  { name: 'WebSocket', color: '#8B5CF6' },
+  { name: 'WASM', color: '#F97316' },
+  { name: 'Postgres', color: '#336791' },
+];
+
+const comparisonRows = [
+  { label: 'Setup', tunnel: 'Install CLI, authenticate, run daemon', testhooks: 'Open a browser tab' },
+  { label: 'Inspect payloads', tunnel: 'Separate logging or dashboard', testhooks: 'Built-in live view with syntax highlighting' },
+  { label: 'Transform before delivery', tunnel: 'Not possible', testhooks: 'JS, Lua, or Jsonnet in sandboxed WASM' },
+  { label: 'Custom responses', tunnel: 'Whatever your local server returns', testhooks: 'Script-defined — test error handling without changing your app' },
+  { label: 'Data privacy', tunnel: 'Traffic routes through third-party servers', testhooks: 'Payloads never stored — browser-only, zero disk' },
+];
+---
+
+<Layout title="Testhooks - Self-hostable Webhook Inspector" description="Capture, inspect, transform, and forward webhooks in real time. A lightweight webhook.site replacement you own.">
+  <div class="min-h-screen text-gray-200" style="background-color: hsl(220, 25%, 6%); font-family: 'Inter', system-ui, sans-serif;">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-xl" style="border-color: hsl(220, 20%, 15%); background: hsla(220, 25%, 6%, 0.8);">
+      <div class="max-w-[1400px] mx-auto px-6 flex items-center justify-between h-16">
+        <a href="/projects/testhooks" class="flex items-center gap-2">
+          <svg class="w-6 h-6" viewBox="-55 20 170 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 8 38 L 48 38 C 80 38, 105 50, 105 78 C 105 108, 82 120, 60 120 C 40 120, 26 108, 26 92 C 26 78, 36 70, 48 70 C 58 70, 64 78, 64 86 C 64 92, 60 96, 54 96" stroke="#00ADD8" stroke-width="7" stroke-linecap="round" fill="none"/>
+            <path d="M 58 88 L 54 96 L 48 90" stroke="#00ADD8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span style="font-family: 'Fira Code', monospace;" class="text-lg"><span class="font-normal" style="color: hsl(220, 10%, 55%);">TEST</span><span class="font-bold text-white">HOOKS</span></span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#features" class="text-sm hover:text-cyan-400 transition-colors" style="color: hsl(220, 10%, 55%);">Features</a>
+          <a href="#how-it-works" class="text-sm hover:text-cyan-400 transition-colors" style="color: hsl(220, 10%, 55%);">How It Works</a>
+          <a href="#modes" class="text-sm hover:text-cyan-400 transition-colors" style="color: hsl(220, 10%, 55%);">Modes</a>
+          <a href="#vs-ngrok" class="text-sm hover:text-cyan-400 transition-colors" style="color: hsl(220, 10%, 55%);">vs ngrok</a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <a href="/" class="hidden md:inline-flex items-center gap-2 px-4 py-2 text-sm rounded-lg border transition-all hover:bg-white/5" style="border-color: hsl(220, 20%, 15%);">
+            <i class="fas fa-arrow-left text-xs"></i> Home
+          </a>
+          <a href="https://github.com/sarathsp06/testhooks" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 text-sm rounded-lg border transition-all hover:bg-white/5" style="border-color: hsl(220, 20%, 15%);">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
+      <div class="absolute inset-0" style="background: linear-gradient(135deg, hsla(187, 100%, 42%, 0.08), hsla(263, 90%, 51%, 0.05));"></div>
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full blur-[140px]" style="background: hsla(187, 100%, 42%, 0.07);"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full blur-[100px]" style="background: hsla(263, 90%, 51%, 0.04);"></div>
+
+      <div class="max-w-[1200px] mx-auto px-6 relative z-10">
+        <div class="flex flex-col items-center text-center gap-6">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm" style="background: hsla(187, 100%, 42%, 0.1); border: 1px solid hsla(187, 100%, 42%, 0.2);">
+            <i class="fas fa-bolt text-cyan-400"></i>
+            <span class="text-cyan-400 font-medium">Self-hostable Webhook Inspector</span>
+          </div>
+
+          <!-- Hook logomark -->
+          <div class="relative my-2">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 rounded-full blur-3xl pointer-events-none" style="background: hsla(187, 100%, 42%, 0.15);"></div>
+            <svg class="w-32 h-32 md:w-36 md:h-36 relative" viewBox="-55 20 170 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="heroHookGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00ADD8"/>
+                  <stop offset="100%" stop-color="#0086A8"/>
+                </linearGradient>
+                <style>
+                  @keyframes heroFlowDot1 { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
+                  @keyframes heroFlowDot2 { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+                  @keyframes heroFlowDot3 { 0%,100% { opacity: 0.5; } 33% { opacity: 1; } 66% { opacity: 0.3; } }
+                  .hero-dot1 { animation: heroFlowDot1 2s ease-in-out infinite; }
+                  .hero-dot2 { animation: heroFlowDot2 2s ease-in-out infinite; }
+                  .hero-dot3 { animation: heroFlowDot3 2s ease-in-out infinite; }
+                </style>
+              </defs>
+              <path d="M 8 38 L 48 38 C 80 38, 105 50, 105 78 C 105 108, 82 120, 60 120 C 40 120, 26 108, 26 92 C 26 78, 36 70, 48 70 C 58 70, 64 78, 64 86 C 64 92, 60 96, 54 96" stroke="url(#heroHookGrad)" stroke-width="7" stroke-linecap="round" fill="none"/>
+              <path d="M 58 88 L 54 96 L 48 90" stroke="url(#heroHookGrad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <circle cx="-18" cy="38" r="3.5" fill="#F97316" class="hero-dot1"/>
+              <circle cx="-34" cy="38" r="2.8" fill="#F97316" class="hero-dot2" opacity="0.6"/>
+              <circle cx="-48" cy="38" r="2" fill="#F97316" class="hero-dot3" opacity="0.3"/>
+              <line x1="2" y1="30" x2="2" y2="46" stroke="#00ADD8" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+              <path d="M 76 120 Q 88 130, 78 142" stroke="#F97316" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5" class="hero-dot1"/>
+              <path d="M 82 116 Q 98 130, 84 148" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.3" class="hero-dot2"/>
+            </svg>
+          </div>
+
+          <!-- Wordmark -->
+          <h1 style="font-family: 'Fira Code', monospace;" class="tracking-wider leading-none">
+            <span class="text-4xl md:text-5xl lg:text-6xl font-normal" style="color: hsl(220, 10%, 55%);">TEST</span><span class="text-4xl md:text-5xl lg:text-6xl font-bold text-white">HOOKS</span>
+          </h1>
+
+          <!-- Tagline -->
+          <p class="text-lg md:text-xl leading-relaxed max-w-2xl" style="color: hsl(220, 10%, 55%);">
+            Capture, inspect, transform, and forward webhooks in real time.
+          </p>
+          <p class="text-sm max-w-xl -mt-3" style="color: hsl(220, 10%, 45%);">
+            A lightweight <a href="https://webhook.site" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 hover:text-cyan-400 transition-colors">webhook.site</a> replacement you own. Browser mode replaces ngrok — zero setup.
+          </p>
+
+          <!-- CTA buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 mt-2">
+            <a href="https://github.com/sarathsp06/testhooks#quick-start" target="_blank" class="inline-flex items-center justify-center gap-2 px-7 py-3 text-base font-medium rounded-xl bg-cyan-500 text-gray-900 hover:bg-cyan-400 transition-all shadow-lg" style="box-shadow: 0 10px 25px -5px hsla(187, 100%, 42%, 0.3);">
+              Get Started <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="https://github.com/sarathsp06/testhooks" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-7 py-3 text-base font-medium rounded-xl border transition-all hover:bg-white/5" style="border-color: hsl(220, 20%, 15%);">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+
+          <!-- Architecture flow card -->
+          <div class="mt-6 w-full max-w-2xl">
+            <div class="rounded-xl border px-5 py-4 shadow-sm" style="border-color: hsl(220, 20%, 15%); background: hsl(220, 25%, 9%);">
+              <div class="flex items-center gap-1.5 mb-3">
+                <div class="w-2.5 h-2.5 rounded-full" style="background: hsl(0, 70%, 50%, 0.6);"></div>
+                <div class="w-2.5 h-2.5 rounded-full" style="background: hsl(45, 70%, 50%, 0.6);"></div>
+                <div class="w-2.5 h-2.5 rounded-full" style="background: hsl(120, 70%, 50%, 0.6);"></div>
+                <span class="ml-2 text-[10px] uppercase tracking-wider" style="font-family: 'Fira Code', monospace; color: hsl(220, 10%, 40%);">request flow</span>
+              </div>
+              <div class="flex items-center justify-center gap-1.5 md:gap-2 text-xs md:text-sm flex-wrap" style="font-family: 'Fira Code', monospace;">
+                <span style="color: hsl(220, 10%, 55%);">webhook</span>
+                <span style="color: hsl(220, 10%, 30%);">--&gt;</span>
+                <span class="font-semibold" style="color: #00ADD8;">/h/:slug</span>
+                <span style="color: hsl(220, 10%, 30%);">--&gt;</span>
+                <span class="font-semibold" style="color: #8B5CF6;">WS</span>
+                <span style="color: hsl(220, 10%, 30%);">--&gt;</span>
+                <span class="font-semibold text-white">browser</span>
+                <span style="color: hsl(220, 10%, 30%);">--&gt;</span>
+                <span class="font-semibold" style="color: #F97316;">localhost</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tech stack pills -->
+          <div class="flex flex-wrap justify-center gap-2 mt-2">
+            {techStack.map(tech => (
+              <span class="px-3 py-1.5 text-[11px] font-semibold rounded-full border" style={`font-family: 'Fira Code', monospace; color: ${tech.color}; background-color: ${tech.color}0D; border-color: ${tech.color}30;`}>
+                {tech.name}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pipeline / How It Works -->
+    <section id="how-it-works" class="py-24" style="background: hsl(220, 25%, 8%);">
+      <div class="max-w-[1200px] mx-auto px-6">
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm mb-6" style="background: hsla(187, 100%, 42%, 0.1); border: 1px solid hsla(187, 100%, 42%, 0.2);">
+            <span class="text-cyan-400 font-medium">How It Works</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4" style="font-family: 'Fira Code', monospace;">The <span class="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pipeline</span></h2>
+          <p class="text-lg max-w-3xl mx-auto" style="color: hsl(220, 10%, 55%);">Every webhook flows through a composable pipeline. Enable only what you need.</p>
+        </div>
+
+        <!-- Pipeline steps -->
+        <div class="relative max-w-4xl mx-auto">
+          <div class="hidden md:block absolute left-0 right-0 h-0.5 opacity-20" style="top: 36px; background: linear-gradient(to right, #3b82f6, #8B5CF6, #F97316, #16a34a, #14b8a6);"></div>
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-3">
+            {pipelineSteps.map((step, i) => (
+              <div class="flex flex-col items-center text-center">
+                <div class="relative w-[72px] h-[72px] rounded-2xl flex items-center justify-center mb-4 border" style={`background: ${step.color}0D; border-color: ${step.color}30;`}>
+                  {step.label === 'Capture' && <i class="fas fa-satellite-dish text-lg" style={`color: ${step.color};`}></i>}
+                  {step.label === 'Store' && <i class="fas fa-database text-lg" style={`color: ${step.color};`}></i>}
+                  {step.label === 'Transform' && <i class="fas fa-code text-lg" style={`color: ${step.color};`}></i>}
+                  {step.label === 'Forward' && <i class="fas fa-paper-plane text-lg" style={`color: ${step.color};`}></i>}
+                  {step.label === 'Respond' && <i class="fas fa-reply text-lg" style={`color: ${step.color};`}></i>}
+                  {i < pipelineSteps.length - 1 && <div class="md:hidden absolute -bottom-5 left-1/2 -translate-x-1/2"><i class="fas fa-arrow-down text-xs" style="color: hsl(220, 10%, 40%);"></i></div>}
+                </div>
+                <h3 class="text-sm font-semibold mb-1 text-white" style="font-family: 'Fira Code', monospace;">{step.label}</h3>
+                <p class="text-xs leading-relaxed" style="color: hsl(220, 10%, 55%);">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- Example pipeline card -->
+          <div class="mt-12 p-6 rounded-xl border" style="border-color: hsl(220, 20%, 15%); background: hsl(220, 25%, 9%);">
+            <div class="flex items-center gap-2 mb-4">
+              <i class="fas fa-terminal text-sm" style="color: hsl(220, 10%, 55%);"></i>
+              <span class="text-xs font-medium uppercase tracking-wider" style="font-family: 'Fira Code', monospace; color: hsl(220, 10%, 55%);">Example Pipeline</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+              <div class="p-4 rounded-lg border" style="background: hsl(220, 25%, 12%); border-color: hsl(220, 20%, 15%);">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xs font-bold" style="font-family: 'Fira Code', monospace; color: #3b82f6;">1. CAPTURE</span>
+                </div>
+                <code class="text-xs block" style="font-family: 'Fira Code', monospace; color: hsl(220, 10%, 55%);">
+                  POST /h/abc123<br/>{"\"event\": \"order.created\""}
+                </code>
+              </div>
+              <div class="p-4 rounded-lg border" style="background: hsl(220, 25%, 12%); border-color: hsl(220, 20%, 15%);">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xs font-bold" style="font-family: 'Fira Code', monospace; color: #F97316;">2. TRANSFORM</span>
+                </div>
+                <code class="text-xs block" style="font-family: 'Fira Code', monospace; color: hsl(220, 10%, 55%);">
+                  function transform(req) {"{"}<br/>&nbsp;&nbsp;req.body.ts = Date.now();<br/>&nbsp;&nbsp;return req;<br/>{"}"}
+                </code>
+              </div>
+              <div class="p-4 rounded-lg border" style="background: hsl(220, 25%, 12%); border-color: hsl(220, 20%, 15%);">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xs font-bold" style="font-family: 'Fira Code', monospace; color: #16a34a;">3. FORWARD</span>
+                </div>
+                <code class="text-xs block" style="font-family: 'Fira Code', monospace; color: hsl(220, 10%, 55%);">
+                  POST https://api.yourapp.com<br/>{"\"event\": \"order.created\","}<br/>{" \"ts\": 1711234567890"}
+                </code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section id="features" class="py-24">
+      <div class="max-w-[1400px] mx-auto px-6">
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm mb-6" style="background: hsla(187, 100%, 42%, 0.1); border: 1px solid hsla(187, 100%, 42%, 0.2);">
+            <span class="text-cyan-400 font-medium">Core Features</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4" style="font-family: 'Fira Code', monospace;">Everything You Need for <span class="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Webhook Development</span></h2>
+          <p class="text-lg max-w-3xl mx-auto" style="color: hsl(220, 10%, 55%);">From live inspection to programmable transforms — one tool for the full webhook lifecycle.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {features.map(feature => (
+            <div class="feature-card p-8 rounded-xl border transition-all duration-300" style={`background: hsl(220, 25%, 9%); border-color: hsl(220, 20%, 15%);`}>
+              <div class="w-12 h-12 flex items-center justify-center rounded-xl mb-6" style={`background: ${feature.color}0D;`}>
+                <i class={`fas ${feature.icon} text-lg`} style={`color: ${feature.color};`}></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-3" style="font-family: 'Fira Code', monospace;">{feature.title}</h3>
+              <p class="leading-relaxed" style="color: hsl(220, 10%, 55%); font-size: 0.9375rem;">{feature.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Two Modes -->
+    <section id="modes" class="py-24" style="background: hsl(220, 25%, 8%);">
+      <div class="max-w-[1200px] mx-auto px-6">
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm mb-6" style="background: hsla(187, 100%, 42%, 0.1); border: 1px solid hsla(187, 100%, 42%, 0.2);">
+            <span class="text-cyan-400 font-medium">Two Modes</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4" style="font-family: 'Fira Code', monospace;">Choose Your <span class="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Trade-off</span></h2>
+          <p class="text-lg max-w-3xl mx-auto" style="color: hsl(220, 10%, 55%);">Server mode for production reliability, Browser mode for privacy and local testing.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <!-- Server Mode -->
+          <div class="relative p-8 rounded-xl border-2 overflow-hidden" style="border-color: hsla(187, 100%, 42%, 0.3); background: hsla(187, 100%, 42%, 0.03);">
+            <div class="absolute top-4 right-4 text-[10px] px-2 py-1 rounded font-medium" style="background: hsla(187, 100%, 42%, 0.1); color: #00ADD8;">DEFAULT</div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 flex items-center justify-center rounded-lg" style="background: hsla(187, 100%, 42%, 0.15);">
+                <i class="fas fa-server text-cyan-400"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-white" style="font-family: 'Fira Code', monospace;">Server Mode</h3>
+            </div>
+            <p style="color: hsl(220, 10%, 55%); font-size: 0.9375rem;" class="mb-5 leading-relaxed">
+              Requests are stored in PostgreSQL. Transforms and forwarding run server-side, always-on even without a browser. Ideal for production webhooks.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              {['Persistent storage', 'Always-on', 'Server-side WASM', 'Retry with backoff'].map(tag => (
+                <span class="px-2.5 py-1 text-xs rounded" style="font-family: 'Fira Code', monospace; background: hsla(187, 100%, 42%, 0.1); color: #00ADD8;">{tag}</span>
+              ))}
+            </div>
+          </div>
+
+          <!-- Browser Mode -->
+          <div class="relative p-8 rounded-xl border-2 overflow-hidden" style="border-color: hsla(263, 90%, 51%, 0.3); background: hsla(263, 90%, 51%, 0.03);">
+            <div class="absolute top-4 right-4 text-[10px] px-2 py-1 rounded font-medium" style="background: hsla(263, 90%, 51%, 0.1); color: #8B5CF6;">TUNNEL KILLER</div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 flex items-center justify-center rounded-lg" style="background: hsla(263, 90%, 51%, 0.15);">
+                <i class="fas fa-desktop" style="color: #8B5CF6;"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-white" style="font-family: 'Fira Code', monospace;">Browser Mode</h3>
+            </div>
+            <p style="color: hsl(220, 10%, 55%); font-size: 0.9375rem;" class="mb-5 leading-relaxed">
+              Your tunnel replacement for local webhook testing. Webhooks hit Testhooks, stream to your browser via WebSocket, and <code class="px-1 rounded" style="color: #8B5CF6; background: hsla(263, 90%, 51%, 0.1);">fetch()</code> delivers them to localhost. No CLI, no daemon, no port forwarding. Zero server storage.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              {['Replaces ngrok', 'Reach localhost', 'Zero storage', 'No CLI needed'].map(tag => (
+                <span class="px-2.5 py-1 text-xs rounded" style="font-family: 'Fira Code', monospace; background: hsla(263, 90%, 51%, 0.1); color: #8B5CF6;">{tag}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Replace ngrok Section -->
+    <section id="vs-ngrok" class="py-24">
+      <div class="max-w-[1200px] mx-auto px-6">
+        <div class="text-center mb-14">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm mb-6" style="background: hsla(263, 90%, 51%, 0.1); border: 1px solid hsla(263, 90%, 51%, 0.2);">
+            <i class="fas fa-link-slash" style="color: #8B5CF6;"></i>
+            <span style="color: #8B5CF6;" class="font-medium">No CLI, No Daemon</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4" style="font-family: 'Fira Code', monospace;">
+            Replace <span class="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">ngrok</span> for Webhook Testing
+          </h2>
+          <p class="text-lg max-w-3xl mx-auto" style="color: hsl(220, 10%, 55%);">
+            Browser mode turns Testhooks into a webhook tunnel — without installing anything.
+          </p>
+        </div>
+
+        <!-- Flow diagram -->
+        <div class="max-w-5xl mx-auto mb-14">
+          <div class="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-0">
+            <!-- Step 1 -->
+            <div class="flex flex-col items-center text-center md:flex-1">
+              <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-3 border" style="background: hsla(25, 95%, 53%, 0.1); border-color: hsla(25, 95%, 53%, 0.3);">
+                <i class="fas fa-globe text-xl" style="color: #F97316;"></i>
+              </div>
+              <h4 class="text-sm font-semibold text-white mb-1" style="font-family: 'Fira Code', monospace;">Stripe / GitHub / Slack</h4>
+              <p class="text-[11px] leading-relaxed" style="color: hsl(220, 10%, 55%);">Sends webhook to<br/>your Testhooks URL</p>
+            </div>
+            <div class="hidden md:flex items-center justify-center md:w-16 shrink-0">
+              <div class="flex items-center gap-1 w-full">
+                <div class="h-0.5 flex-1" style="background: linear-gradient(to right, hsla(25, 95%, 53%, 0.4), hsla(263, 90%, 51%, 0.4));"></div>
+                <i class="fas fa-arrow-right text-xs" style="color: hsl(220, 10%, 40%);"></i>
+              </div>
+            </div>
+            <div class="md:hidden"><i class="fas fa-arrow-down text-xs" style="color: hsl(220, 10%, 40%);"></i></div>
+
+            <!-- Step 2 -->
+            <div class="flex flex-col items-center text-center md:flex-1">
+              <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-3 border" style="background: hsla(263, 90%, 51%, 0.1); border-color: hsla(263, 90%, 51%, 0.3);">
+                <i class="fas fa-laptop text-xl" style="color: #8B5CF6;"></i>
+              </div>
+              <h4 class="text-sm font-semibold text-white mb-1" style="font-family: 'Fira Code', monospace;">Your Browser</h4>
+              <p class="text-[11px] leading-relaxed" style="color: hsl(220, 10%, 55%);">Receives via WebSocket,<br/>inspects, transforms, forwards</p>
+            </div>
+            <div class="hidden md:flex items-center justify-center md:w-16 shrink-0">
+              <div class="flex items-center gap-1 w-full">
+                <div class="h-0.5 flex-1" style="background: linear-gradient(to right, hsla(263, 90%, 51%, 0.4), hsla(142, 76%, 36%, 0.4));"></div>
+                <i class="fas fa-arrow-right text-xs" style="color: hsl(220, 10%, 40%);"></i>
+              </div>
+            </div>
+            <div class="md:hidden"><i class="fas fa-arrow-down text-xs" style="color: hsl(220, 10%, 40%);"></i></div>
+
+            <!-- Step 3 -->
+            <div class="flex flex-col items-center text-center md:flex-1">
+              <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-3 border" style="background: hsla(142, 76%, 36%, 0.1); border-color: hsla(142, 76%, 36%, 0.3);">
+                <i class="fas fa-terminal text-xl" style="color: #16a34a;"></i>
+              </div>
+              <h4 class="text-sm font-semibold text-white mb-1" style="font-family: 'Fira Code', monospace;">localhost:3000</h4>
+              <p class="text-[11px] leading-relaxed" style="color: hsl(220, 10%, 55%);">Your app receives<br/>the webhook via fetch()</p>
+            </div>
+          </div>
+
+          <!-- Annotation -->
+          <div class="hidden md:flex justify-between max-w-3xl mx-auto mt-6 px-8">
+            <span class="text-[10px]" style="font-family: 'Fira Code', monospace; color: hsla(25, 95%, 53%, 0.5);">POST /h/abc123</span>
+            <span class="text-[10px]" style="font-family: 'Fira Code', monospace; color: hsla(263, 90%, 51%, 0.5);">WebSocket push</span>
+            <span class="text-[10px]" style="font-family: 'Fira Code', monospace; color: hsla(142, 76%, 36%, 0.5);">fetch("http://localhost:3000")</span>
+          </div>
+        </div>
+
+        <!-- Comparison table -->
+        <div class="max-w-4xl mx-auto">
+          <div class="rounded-xl border overflow-hidden" style="border-color: hsl(220, 20%, 15%);">
+            <div class="grid grid-cols-3 border-b" style="background: hsl(220, 25%, 9%); border-color: hsl(220, 20%, 15%);">
+              <div class="px-5 py-3"></div>
+              <div class="px-5 py-3 text-center border-l" style="border-color: hsl(220, 20%, 15%);">
+                <span class="text-xs font-semibold uppercase tracking-wider" style="font-family: 'Fira Code', monospace; color: hsl(220, 10%, 55%);">ngrok / localtunnel</span>
+              </div>
+              <div class="px-5 py-3 text-center border-l" style="border-color: hsla(263, 90%, 51%, 0.3); background: hsla(263, 90%, 51%, 0.05);">
+                <span class="text-xs font-semibold uppercase tracking-wider" style="font-family: 'Fira Code', monospace; color: #8B5CF6;">Testhooks Browser Mode</span>
+              </div>
+            </div>
+            {comparisonRows.map(row => (
+              <div class="grid grid-cols-3 border-b last:border-b-0" style="border-color: hsl(220, 20%, 15%);">
+                <div class="px-5 py-3 flex items-center">
+                  <span class="text-xs font-semibold text-white">{row.label}</span>
+                </div>
+                <div class="px-5 py-3 border-l flex items-center" style="border-color: hsl(220, 20%, 15%);">
+                  <span class="text-xs" style="color: hsl(220, 10%, 55%);">{row.tunnel}</span>
+                </div>
+                <div class="px-5 py-3 border-l flex items-center gap-2" style="border-color: hsla(263, 90%, 51%, 0.3); background: hsla(263, 90%, 51%, 0.03);">
+                  <i class="fas fa-circle-check text-xs shrink-0" style="color: #16a34a;"></i>
+                  <span class="text-xs text-white">{row.testhooks}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p class="text-center text-sm mt-8" style="color: hsl(220, 10%, 55%);">
+            Works with any webhook provider — Stripe, GitHub, Slack, Shopify, Twilio, Linear, and more.
+            <br/><span class="text-xs">Just point their webhook URL at your Testhooks endpoint.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-24" style="background: linear-gradient(to bottom, transparent, hsla(187, 100%, 42%, 0.05));">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6" style="font-family: 'Fira Code', monospace;">Ready to <span class="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Own Your Webhooks</span>?</h2>
+        <p class="text-lg mb-8" style="color: hsl(220, 10%, 55%);">Open source, self-hostable, no sign-up required. One binary, one database — and browser mode reaches localhost too.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://github.com/sarathsp06/testhooks#quick-start" target="_blank" class="inline-flex items-center gap-2 px-7 py-3 text-base font-medium rounded-xl bg-cyan-500 text-gray-900 hover:bg-cyan-400 transition-all shadow-lg" style="box-shadow: 0 10px 25px -5px hsla(187, 100%, 42%, 0.3);">
+            Get Started <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="https://github.com/sarathsp06/testhooks" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-7 py-3 text-base font-medium rounded-xl border transition-all hover:bg-white/5" style="border-color: hsl(220, 20%, 15%);">
+            <i class="fas fa-star"></i> Star on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t" style="border-color: hsl(220, 20%, 15%);">
+      <div class="max-w-[1400px] mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5" viewBox="-55 20 170 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 8 38 L 48 38 C 80 38, 105 50, 105 78 C 105 108, 82 120, 60 120 C 40 120, 26 108, 26 92 C 26 78, 36 70, 48 70 C 58 70, 64 78, 64 86 C 64 92, 60 96, 54 96" stroke="#00ADD8" stroke-width="7" stroke-linecap="round" fill="none"/>
+              <path d="M 58 88 L 54 96 L 48 90" stroke="#00ADD8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+            <span style="font-family: 'Fira Code', monospace;" class="text-sm"><span class="font-normal" style="color: hsl(220, 10%, 55%);">TEST</span><span class="font-bold text-white">HOOKS</span></span>
+          </div>
+          <p class="text-sm" style="color: hsl(220, 10%, 55%);">Self-hostable webhook inspector. Open source.</p>
+          <div class="flex items-center gap-6">
+            <a href="https://github.com/sarathsp06/testhooks" target="_blank" class="text-sm hover:text-cyan-400 transition-colors" style="color: hsl(220, 10%, 55%);">GitHub</a>
+            <a href="https://testhooks.sarathsadasivan.com/" target="_blank" class="text-sm hover:text-cyan-400 transition-colors" style="color: hsl(220, 10%, 55%);">Live App</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <style>
+    .feature-card:hover {
+      border-color: hsla(187, 100%, 42%, 0.5) !important;
+      box-shadow: 0 0 80px -20px hsla(187, 100%, 42%, 0.4);
+      transform: translateY(-4px);
+    }
+  </style>
+</Layout>

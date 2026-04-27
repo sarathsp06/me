@@ -42,6 +42,7 @@ import Layout from '../layouts/Layout.astro';
             <nav class="mb-12 flex flex-wrap gap-4 text-xs md:text-sm">
               <a href="/travel" class="text-yellow-400 hover:text-yellow-300 font-bold transition-colors">cd ./travel/</a>
               <a href="/blog" class="text-yellow-400 hover:text-yellow-300 font-bold transition-colors">cd ./blogs/</a>
+              <a href="/projects" class="text-yellow-400 hover:text-yellow-300 font-bold transition-colors">cd ./projects/</a>
               <a href="#tools-section" class="text-green-400 hover:text-green-300 font-bold transition-colors">cd ./bin/</a>
               <a href="#experience-section" class="text-slate-400 hover:text-slate-300 font-bold transition-colors">cd ./experience/</a>
               <a href="https://www.linkedin.com/in/sarathsp/" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors">linkedin</a>
@@ -140,15 +141,16 @@ import Layout from '../layouts/Layout.astro';
             </header>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <a href="https://github.com/sarathsp06/sparrow" target="_blank" class="tool-card block border border-white/10 p-5 rounded transition-all">
+              <a href="/projects/sparrow" class="tool-card block border border-white/10 p-5 rounded transition-all">
                 <div class="flex items-center gap-3 mb-3">
                   <i class="fa-brands fa-golang text-2xl text-blue-400"></i>
                   <span class="text-white font-bold text-lg">sparrow*</span>
                 </div>
-                <p class="text-slate-400 text-sm mb-4">A high-performance monitoring and testing tool built in Go. Lightweight and developer-friendly.</p>
+                <p class="text-slate-400 text-sm mb-4">Event-driven webhook delivery system with guaranteed delivery, intelligent retries, and full observability.</p>
                 <div class="flex gap-3">
                   <span class="text-[10px] px-2 py-0.5 bg-green-500/10 text-green-400 rounded">Go</span>
-                  <span class="text-[10px] px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded">Monitoring</span>
+                  <span class="text-[10px] px-2 py-0.5 bg-blue-500/10 text-blue-400 rounded">Webhooks</span>
+                  <span class="text-[10px] px-2 py-0.5 bg-purple-500/10 text-purple-400 rounded">gRPC</span>
                 </div>
               </a>
 
@@ -164,7 +166,7 @@ import Layout from '../layouts/Layout.astro';
                 </div>
               </a>
 
-              <a href="https://testhooks.sarathsadasivan.com/" target="_blank" class="tool-card block border border-white/10 p-5 rounded transition-all">
+              <a href="/projects/testhooks" class="tool-card block border border-white/10 p-5 rounded transition-all">
                 <div class="flex items-center gap-3 mb-3">
                   <i class="fa-solid fa-satellite-dish text-xl text-emerald-400"></i>
                   <span class="text-white font-bold text-lg">testhooks*</span>
