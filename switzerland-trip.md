@@ -1,10 +1,10 @@
-# Rotterdam to Switzerland: 8-Day Family Road Trip (May 2026)
+# Rotterdam to Switzerland: 7-Day Family Road Trip (May 2026)
 
 3 adults (1 senior) + 2 children (5 and 1). One car (Mazda CX-30, 430L boot). Max ~4h per driving leg. Stroller for flat promenades + baby carrier for trails/caves. Scenic villages over cities. Senior-friendly.
 
 **Preference hierarchy:** Waterfalls > Mountains (cable car/cog railway) > Caves > Lakes (boats, promenades) > Cities
 
-**Base:** 5 nights at Lake Lucerne (Vitznau or Weggis) as hub.
+**Base:** 4 nights at Lake Lucerne (Vitznau or Weggis) as hub.
 
 **Transit stops:** Black Forest/Triberg (1 night outbound), Königswinter (1 night return).
 
@@ -16,14 +16,13 @@
 |-----|-------------|-------|-------|-----------|
 | 1 | Sat 23 May | Rotterdam → Triberg (Black Forest) | ~5h | Triberg area |
 | 2 | Sun 24 May | Triberg Waterfalls → Rhine Falls → Lake Lucerne | ~3h total | Lake Lucerne |
-| 3 | Mon 26 May | Settling day — village + lake | — | Lake Lucerne |
-| 4 | Tue 27 May | Mount Rigi | — | Lake Lucerne |
-| 5 | Wed 28 May | Lauterbrunnen Valley — Trümmelbach + Staubbach Falls | 1h15 each way | Lake Lucerne |
-| 6 | Thu 29 May | Mount Pilatus (golden round trip) — FLAGSHIP | — | Lake Lucerne |
-| 7 | Fri 30 May | Lake Lucerne → Königswinter | ~4h | Königswinter |
-| 8 | Sat 31 May | Königswinter → Rotterdam | ~2.5h | Home |
+| 3 | Mon 26 May | Mount Rigi + village stroll | — | Lake Lucerne |
+| 4 | Tue 27 May | Lauterbrunnen Valley — Trümmelbach + Staubbach Falls | 1h15 each way | Lake Lucerne |
+| 5 | Wed 28 May | Mount Pilatus (golden round trip) — FLAGSHIP | — | Lake Lucerne |
+| 6 | Thu 29 May | Lake Lucerne → Königswinter | ~4h | Königswinter |
+| 7 | Fri 30 May | Königswinter → Rotterdam | ~2.5h | Home |
 
-**Weather-based day swapping:** Days 4–6 (Rigi, Lauterbrunnen, Pilatus) can be reordered to chase the best weather. Clear days → Rigi and Pilatus (need views). Overcast days → Lauterbrunnen Valley (waterfalls work in any weather — Trümmelbach is inside a mountain). Day 2 (Triberg + Rhine Falls) is fixed (transit day).
+**Weather-based day swapping:** Days 3–5 (Rigi, Lauterbrunnen, Pilatus) can be reordered to chase the best weather. Clear days → Rigi and Pilatus (need views). Overcast days → Lauterbrunnen Valley (waterfalls work in any weather — Trümmelbach is inside a mountain). Day 2 (Triberg + Rhine Falls) is fixed (transit day).
 
 ---
 
@@ -71,9 +70,9 @@ Depart Rotterdam morning (~8 AM). Drive south via A3/A61/A5/B33 into the Black F
 
 **Core theme:** Waterfalls. Two waterfall experiences in one day — Germany's highest (Triberg, morning revisit) and Europe's largest by volume (Rhine Falls, midday).
 
-**Morning option — Triberg Waterfalls revisit (if not done fully on Day 2):**
+**Morning option — Triberg Waterfalls revisit (if not done fully on Day 1):**
 - If you only did the lower falls yesterday, use the morning for the upper trail.
-- If satisfied from Day 2, depart directly for Rhine Falls.
+- If satisfied from Day 1, depart directly for Rhine Falls.
 - Depart Triberg by ~9:00-9:30 AM.
 
 **Rhine Falls (Rheinfall) — midday stop:**
@@ -97,54 +96,30 @@ Depart Rotterdam morning (~8 AM). Drive south via A3/A61/A5/B33 into the Black F
 - Arrive Lake Lucerne ~2:30-3:00 PM.
 - Check in. Settle.
 
-**Total driving Day 3:** ~3h (1.5h + 1.5h with Rhine Falls stop in between).
+**Total driving Day 2:** ~3h (1.5h + 1.5h with Rhine Falls stop in between).
 
 > **Tip:** Late May is peak snowmelt — Rhine Falls will be at maximum power. The spray and roar are incredible. The 5-year-old might be scared or thrilled — either way, it's unforgettable.
 
 ---
 
-### Day 3 — Tue 26 May: Settling Day — Village + Lake
+### Day 3 — Mon 26 May: Mount Rigi + Village Stroll
 
-**No driving. No tickets. No time pressure.** Let the family decompress after three travel days.
+**No driving.** Everything by cable car/cogwheel + boat. Combine the mountain with a gentle lakeside settle-in.
 
-**Anchor:** Lakeside promenade + boat hop between villages.
-**Skippable:** Everything — if kids are tired, stay at the accommodation.
-**Low-energy fallback:** Playground + café only.
+**Core theme:** Mountains + lake panorama + getting oriented at your base.
+**Anchor:** Rigi summit (1,798m) via cogwheel/cable car (morning). Village promenade + boat hop (afternoon).
+**Skippable:** Extended summit walks — the terrace views are the core experience. Afternoon village walk if tired after Rigi.
+**Low-energy fallback:** Cable car to Rigi Kaltbad (1,453m) — restaurant, spa views, alpine flowers. Don't go to the summit. Then rest at accommodation.
+**Weather swap:** If clouded/rainy, swap with Lauterbrunnen Valley (Day 4) — waterfalls work in any weather. Rigi needs clear skies for the views.
 
-**Option A — Village stroll + boat:**
-- Walk the flat lakeside promenade (Weggis or Vitznau). Stroller-friendly. Benches, cafés, views.
-- Boat hop between Vitznau and Weggis (~10min, step-free boarding). The kids will enjoy the boat.
-- Find a playground — both villages have lakeside ones.
-
-**Option B — Swim:**
-- Lake Lucerne in late May: ~16-18°C. Too cold for the baby, maybe OK for the 5-year-old for a quick dip.
-- Lido/beach areas in Weggis.
-
-**Option C — Just explore:**
-- Walk the village, find dinner spots for the week, check the boat schedule for Rigi/Pilatus days.
-
-> **Tip:** Don't push for a big activity today. You have three packed days ahead (Rigi, Lauterbrunnen waterfalls, Pilatus). The 1-year-old and the senior will thank you for a slow day.
-
----
-
-### Day 4 — Wed 27 May: Mount Rigi
-
-**No driving.** Everything by cable car/cogwheel + boat.
-
-**Core theme:** Mountains + lake panorama.
-
-**Anchor:** Rigi summit (1,798m) via cogwheel/cable car.
-**Skippable:** Extended summit walks — the terrace views are the core experience.
-**Low-energy fallback:** Cable car to Rigi Kaltbad (1,453m) — restaurant, spa views, alpine flowers. Don't go to the summit.
-**Weather swap:** If clouded/rainy, swap with Lauterbrunnen Valley (Day 6) — waterfalls work in any weather. Rigi needs clear skies for the views.
-
-**Plan (from Vitznau):**
+**Morning — Mount Rigi:**
 - **Cogwheel railway from Vitznau** to Rigi Kulm summit (1,798m). Europe's oldest mountain railway. ~30min up.
 - Stroller fits on the cogwheel train (unfolded). Baby carrier works too.
 - **At the summit:** Flat, fenced terrace with restaurant. Panoramic views over Lake Lucerne, Lake Zug, and the Alps. Mountain playground for kids.
 - **Temperature:** ~12°C, windy. Warm layers for everyone.
 - **Senior assessment:** Terrace is flat and easy. Short walks near the summit are gentle. No steep terrain needed.
 - **Descend:** Same way back, or cable car to Weggis (Rigi Kaltbad → Weggis cable car) for variety.
+- **Aim to be back by early afternoon.**
 
 **Alternative (from Weggis):**
 - Cable car from Weggis to Rigi Kaltbad (1,453m), then change to cogwheel to summit.
@@ -152,11 +127,18 @@ Depart Rotterdam morning (~8 AM). Drive south via A3/A61/A5/B33 into the Black F
 
 **Cost:** Adults ~CHF 72 return, children 6-15 ~CHF 36. Under 6 free. Check family tickets at [rigi.ch](https://www.rigi.ch/en).
 
-> **Tip:** If you're based in Vitznau, the cogwheel from Vitznau is the most scenic and nostalgic route. First train avoids crowds. The 5-year-old will love the cogwheel train itself as much as the summit.
+**Afternoon — Village settle-in:**
+- Walk the flat lakeside promenade (Weggis or Vitznau). Stroller-friendly. Benches, cafés, views.
+- Boat hop between Vitznau and Weggis (~10min, step-free boarding). The kids will enjoy the boat.
+- Find a playground — both villages have lakeside ones.
+- Scout dinner spots and check the boat schedule for Pilatus day.
+- If energy allows, quick swim at Weggis lido (lake ~16-18°C in late May — too cold for baby, maybe OK for the 5-year-old).
+
+> **Tip:** Don't push hard in the afternoon. You have two packed days ahead (Lauterbrunnen waterfalls, Pilatus). The 1-year-old and the senior will benefit from a gentle afternoon after the mountain.
 
 ---
 
-### Day 5 — Thu 28 May: Lauterbrunnen Valley — Trümmelbach Falls + Staubbach Falls
+### Day 4 — Tue 27 May: Lauterbrunnen Valley — Trümmelbach Falls + Staubbach Falls
 
 **Drive:** Lake Lucerne → Lauterbrunnen: **~1h15** via A8 over the Brünig Pass through Interlaken.
 
@@ -207,7 +189,7 @@ Depart Rotterdam morning (~8 AM). Drive south via A3/A61/A5/B33 into the Black F
 
 ---
 
-### Day 6 — Fri 29 May: Mount Pilatus (Golden Round Trip) — FLAGSHIP DAY
+### Day 5 — Wed 28 May: Mount Pilatus (Golden Round Trip) — FLAGSHIP DAY
 
 **No driving.** The entire day is boat + cable car + cogwheel.
 
@@ -216,7 +198,7 @@ Depart Rotterdam morning (~8 AM). Drive south via A3/A61/A5/B33 into the Black F
 **Anchor:** Pilatus golden round trip — boat + cogwheel + gondola loop.
 **Skippable:** Nothing — this is the flagship. Do the full loop if weather allows.
 **Low-energy fallback:** Cable car up from Kriens only (skip the boat + cogwheel loop). Still reaches the summit.
-**Weather swap:** Pilatus needs clear skies. If bad weather, swap with Lauterbrunnen (Day 6) — waterfalls work in any weather.
+**Weather swap:** Pilatus needs clear skies. If bad weather, swap with Lauterbrunnen (Day 4) — waterfalls work in any weather.
 
 **Plan:**
 1. **Lake steamer from Vitznau/Weggis to Alpnachstad** (~90min boat ride). Stroller on deck. Scenic ride across the full length of the lake.
@@ -229,13 +211,13 @@ Depart Rotterdam morning (~8 AM). Drive south via A3/A61/A5/B33 into the Black F
 
 **Senior assessment:** The summit terrace is flat and easy. The cogwheel railway is seated. Gondolas have seating. The only difficult part is boarding/exiting the cogwheel carriages — narrow and steep steps. Manageable for a reasonably mobile senior.
 
-> **Note:** The cogwheel railway (Alpnachstad side) typically opens late April/early May. By 29 May it should be fully running. Confirm on the [Pilatus website](https://www.pilatus.ch/en). If closed, do the Kriens gondola up + down instead (runs year-round).
+> **Note:** The cogwheel railway (Alpnachstad side) typically opens late April/early May. By 28 May it should be fully running. Confirm on the [Pilatus website](https://www.pilatus.ch/en). If closed, do the Kriens gondola up + down instead (runs year-round).
 
 > **Tip:** Start early — the first steamer departure gives you the most time at the summit and avoids afternoon crowds on the descent. Book the golden round trip ticket in advance.
 
 ---
 
-### Day 7 — Sat 30 May: Lake Lucerne → Königswinter (~4h)
+### Day 6 — Thu 29 May: Lake Lucerne → Königswinter (~4h)
 
 Depart after breakfast, ~9 AM. Drive north through Switzerland back into Germany via Basel, then up the Rhine corridor on the A5/A3. Arrive Königswinter early afternoon.
 
@@ -254,7 +236,7 @@ Depart after breakfast, ~9 AM. Drive north through Switzerland back into Germany
 
 ---
 
-### Day 8 — Sat 31 May: Königswinter → Rotterdam (~2.5h)
+### Day 7 — Fri 30 May: Königswinter → Rotterdam (~2.5h)
 
 Depart after breakfast, ~9 AM. Shortest leg. Home by lunchtime.
 
@@ -309,8 +291,8 @@ Both are excellent. **Vitznau** edges it for families with young kids: quieter (
 
 | Category | Estimate | Notes |
 |----------|----------|-------|
-| Accommodation (7 nights) | €1,100–€1,900 | Triberg ~€80-130/night, Lake Lucerne ~€150-250/night × 5, Königswinter ~€90-130/night |
-| Fuel (~1,800km) | €180–€250 | Fill up in Germany — Swiss fuel is ~15% more |
+| Accommodation (6 nights) | €920–€1,630 | Triberg ~€80-130/night, Lake Lucerne ~€150-250/night × 4, Königswinter ~€90-130/night |
+| Fuel (~1,600km) | €160–€220 | Fill up in Germany — Swiss fuel is ~15% more |
 | Swiss motorway vignette | CHF 40 (~€42) | Required for Swiss motorways. Valid calendar year |
 | Triberg Waterfalls | ~€27 | 3 adults × €9. Under 6 free |
 | Rhine Falls | ~CHF 15–50 | South side CHF 5/adult. North side free. Boat rides CHF 10-20 optional |
@@ -321,9 +303,9 @@ Both are excellent. **Vitznau** edges it for families with young kids: quieter (
 | Harder Kulm funicular (optional) | ~CHF 64 | 2 adults × CHF 32. Under 6 free. Optional add-on in Interlaken |
 | Lake Lucerne boats | ~CHF 50–100 | Day pass may save money |
 | Drachenfels cogwheel (Königswinter) | ~€15–30 | Adults ~€14 return, kids discounted |
-| Food & groceries | €500–€800 | Self-catering where possible. Stock up in Germany before Switzerland |
+| Food & groceries | €430–€700 | Self-catering where possible. Stock up in Germany before Switzerland |
 | Parking & tolls | €50–€100 | Mostly free at villages. Lucerne city parking is expensive (take the boat) |
-| **Total** | **€2,300–€3,800** | |
+| **Total** | **€2,050–€3,400** | |
 
 The biggest variable is accommodation. Self-catering apartments save a lot on food in Switzerland. Stock up on baby supplies at DM/Rossmann in Germany before crossing the border.
 
@@ -388,11 +370,11 @@ These rules apply to any future AI agent working on this trip:
    - Avoid steep, long hikes; prefer cable car/cog rail + short scenic walks
 
 2. **Weather handling:**
-   - Days 4–6 (Rigi, Lauterbrunnen, Pilatus) can be reordered to chase best weather
+   - Days 3–5 (Rigi, Lauterbrunnen, Pilatus) can be reordered to chase best weather
    - Day 2 (Triberg + Rhine Falls) is fixed — transit day, cannot be moved
    - Clear days → Rigi + Pilatus (need views)
    - Overcast/rainy days → Lauterbrunnen Valley (Trümmelbach is inside a mountain, Staubbach is better in rain)
-   - Day 6 (Pilatus golden round trip) is the flagship — give it the best weather day
+   - Day 5 (Pilatus golden round trip) is the flagship — give it the best weather day
 
 3. **Stroller + baby carrier strategy:**
    - Stroller for flat promenades, villages, boats, cable cars, cogwheel trains
@@ -404,7 +386,7 @@ These rules apply to any future AI agent working on this trip:
    - Stock up at motorway DM/Rossmann on Day 1, or in Triberg Saturday evening
    - Sunday (Day 2) has shops closed — plan ahead
    - First shop run in Switzerland: Monday (Day 3) at village shop or Lucerne
-   - Re-stock in Germany on Day 7 (Königswinter/Bonn area)
+   - Re-stock in Germany on Day 6 (Königswinter/Bonn area)
 
 5. **Budget awareness:**
    - Switzerland is significantly more expensive than Austria
@@ -422,7 +404,7 @@ These rules apply to any future AI agent working on this trip:
    - Kid naps in car or on boats — schedule around this
 
 8. **Pilatus is the flagship:**
-   - Mount Pilatus golden round trip (Day 6) is the #1 priority mountain day
+   - Mount Pilatus golden round trip (Day 5) is the #1 priority mountain day
    - Give it the best weather day
    - Full loop (boat + cogwheel + gondola) is the ideal — don't simplify unless weather forces it
 
@@ -446,8 +428,8 @@ These rules apply to any future AI agent working on this trip:
 
 ## Open Questions
 
-- [ ] **Lake Lucerne accommodation:** Book family apartment in Vitznau or Weggis with kitchen (for self-catering). 5 nights Sun 24 May – Fri 30 May checkout.
+- [ ] **Lake Lucerne accommodation:** Book family apartment in Vitznau or Weggis with kitchen (for self-catering). 4 nights Sun 24 May – Thu 29 May checkout.
 - [ ] **Triberg accommodation:** Book Gasthaus or hotel near Triberg. 1 night Sat 23 May.
-- [ ] **Königswinter accommodation:** Book family room. 1 night Fri 30 May.
+- [ ] **Königswinter accommodation:** Book family room. 1 night Thu 29 May.
 - [ ] **Pilatus cogwheel opening:** Confirm 2026 opening date (typically late April/early May). Backup: Kriens gondola year-round.
 - [ ] **Rigi: Vitznau cogwheel or Weggis cable car?** Depends on base village. If Vitznau, cogwheel from doorstep. If Weggis, cable car from doorstep.
