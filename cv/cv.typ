@@ -4,18 +4,10 @@
 // ==========================================================================
 
 // ---------------------------------------------------------------------------
-// Colors
-// ---------------------------------------------------------------------------
-#let primary-blue = rgb("#2980b3")
-#let dark-gray    = rgb("#404040")
-#let light-gray   = rgb("#808080")
-#let tech-gray    = rgb("#5a6577")
-
-// ---------------------------------------------------------------------------
 // Page setup
 // ---------------------------------------------------------------------------
 #set page(paper: "a4", margin: (x: 0.5in, top: 0.35in, bottom: 0.35in))
-#set text(font: "Inter", size: 8.5pt, fill: dark-gray)
+#set text(font: "Fira Code", size: 8pt, fill: black)
 #set par(justify: true, leading: 0.5em)
 #set list(marker: [•], indent: 4pt, body-indent: 5pt, spacing: 2pt)
 
@@ -23,45 +15,45 @@
 // Helpers
 // ---------------------------------------------------------------------------
 #let section-title(title) = {
-  v(4pt)
-  text(size: 10pt, weight: "bold", fill: primary-blue)[#title]
+  v(5pt)
+  text(size: 9.5pt, weight: "bold")[#title]
   v(1pt)
-  line(length: 100%, stroke: 0.75pt + primary-blue)
+  line(length: 100%, stroke: 0.75pt + black)
   v(2pt)
 }
 
 #let role-header(title, dates, company) = {
   grid(
     columns: (1fr, auto),
-    text(weight: "bold", size: 8.5pt, fill: dark-gray)[#title],
-    text(size: 8pt, style: "italic", fill: light-gray)[#dates],
+    text(weight: "bold", size: 8pt)[#title],
+    text(size: 7.5pt, fill: luma(100))[#dates],
   )
-  text(style: "italic", size: 8.5pt, fill: primary-blue)[#company]
+  text(size: 8pt, fill: luma(80))[#company]
   v(1pt)
 }
 
 #let tech-stack(..items) = {
-  text(size: 7.5pt, fill: tech-gray, style: "italic")[#items.pos().join("  ·  ")]
+  text(size: 7pt, fill: luma(100))[#items.pos().join("  ·  ")]
 }
 
 // ---------------------------------------------------------------------------
 // Header
 // ---------------------------------------------------------------------------
 #align(center)[
-  #text(size: 18pt, weight: "bold", fill: dark-gray)[Sarath Sadasivan Pillai]
+  #text(size: 16pt, weight: "bold")[Sarath Sadasivan Pillai]
   #v(2pt)
-  #text(size: 9.5pt, fill: primary-blue, weight: "medium")[Backend Systems Engineer · Engineering Leader]
-  #v(3pt)
-  #text(size: 8pt, fill: light-gray)[
-    Specializing in *Go*, *Distributed Systems*, *Linux*, *PostgreSQL*
+  #text(size: 8.5pt, fill: luma(60))[Backend Systems Engineer · Engineering Leader]
+  #v(2pt)
+  #text(size: 7.5pt, fill: luma(80))[
+    Specializing in *Go* · *Distributed Systems* · *Linux* · *PostgreSQL*
   ]
   #v(3pt)
-  #text(size: 8pt)[
-    #link("mailto:sarath.sp06@gmail.com")[sarath.sp06\@gmail.com] #h(8pt) | #h(8pt)
-    +31 6 57358212 #h(8pt) | #h(8pt)
-    Rotterdam, Netherlands #h(8pt) | #h(8pt)
-    #link("https://sarathsadasivan.com")[sarathsadasivan.com] #h(8pt) | #h(8pt)
-    #link("https://github.com/sarathsp06")[github.com/sarathsp06] #h(8pt) | #h(8pt)
+  #text(size: 7pt, fill: luma(100))[
+    #link("mailto:sarath.sp06@gmail.com")[sarath.sp06\@gmail.com] #h(6pt) | #h(6pt)
+    +31 6 57358212 #h(6pt) | #h(6pt)
+    Rotterdam, NL #h(6pt) | #h(6pt)
+    #link("https://sarathsadasivan.com")[sarathsadasivan.com] #h(6pt) | #h(6pt)
+    #link("https://github.com/sarathsp06")[github.com/sarathsp06] #h(6pt) | #h(6pt)
     #link("https://linkedin.com/in/sarathsp")[linkedin.com/in/sarathsp]
   ]
 ]
@@ -69,28 +61,28 @@
 #v(1pt)
 
 // ---------------------------------------------------------------------------
-// Professional Summary
+// Profile
 // ---------------------------------------------------------------------------
 #section-title("Profile")
 
-I build *reliable, scalable backend systems*. 11+ years deep in *Go, distributed systems, and infrastructure*. Currently Director of Engineering at WellSync and co-founding a product company — I enjoy the overlap of *engineering depth* and *product thinking*.
+I build reliable, scalable backend systems. 11+ years deep in Go, distributed systems, and infrastructure. Currently Director of Engineering at WellSync and co-founding a product company — I enjoy the overlap of engineering depth and product thinking.
 
 // ---------------------------------------------------------------------------
 // Technical Skills
 // ---------------------------------------------------------------------------
-#section-title("Technical Skills")
+#section-title("Skills")
 
-#text(size: 8pt)[
+#text(size: 7.5pt)[
   *Languages:* Go, Python, JavaScript #h(1fr)
   *Infrastructure:* Kubernetes, Azure, GCP, AWS, Kafka, Redis \
   *Data:* PostgreSQL, MySQL, Aerospike, Elastic Search #h(1fr)
-  *Practices:* Distributed Systems, REST/gRPC, Observability, Technical Leadership
+  *Practices:* Distributed Systems, REST/gRPC, Observability, Leadership
 ]
 
 // ---------------------------------------------------------------------------
 // Professional Experience
 // ---------------------------------------------------------------------------
-#section-title("Professional Experience")
+#section-title("Experience")
 
 #role-header("Director of Engineering", "Aug 2024 – Present", "WellSync")
 - Lead *technical architecture* and development of scalable *healthcare technology* solutions
@@ -102,15 +94,15 @@ I build *reliable, scalable backend systems*. 11+ years deep in *Go, distributed
 
 #role-header("Co-Founder & CTO", "Dec 2022 – Present", "Message+")
 - Co-founded *AI-powered customer support platform* for WhatsApp and Instagram at scale
-- Architected *scalable messaging infrastructure* handling personalized support for enterprises and startups
-- Built *analytics system* tracking response times, resolution rates, and customer satisfaction
+- Architected *scalable messaging infrastructure* handling personalized support for enterprises
+- Built *analytics system* tracking response times, resolution rates, and satisfaction
 #tech-stack("Go", "PostgreSQL", "gRPC", "REST", "NewRelic", "Azure")
 
 #v(3pt)
 
 #role-header("Senior Software Engineer", "Nov 2020 – Sep 2024", "Shell")
-- Built *data-driven systems* for environmental impact compliance, monitoring, and sustainability goals
-- Delivered *scalable backend services* for environmental data processing across cross-functional teams
+- Built *data-driven systems* for environmental impact compliance, monitoring, and sustainability
+- Delivered *scalable backend services* for environmental data processing across teams
 #tech-stack("Go", "K8s", "PostgreSQL", "gRPC", "Kafka", "NewRelic", "Azure")
 
 #v(3pt)
@@ -142,5 +134,5 @@ I build *reliable, scalable backend systems*. 11+ years deep in *Go, distributed
 #grid(
   columns: (1fr, auto),
   [*B.Tech in Computer Science & Engineering* — TKM College of Engineering, Kollam],
-  text(style: "italic", size: 8.5pt, fill: light-gray)[2009 – 2013],
+  text(size: 7.5pt, fill: luma(100))[2009 – 2013],
 )
