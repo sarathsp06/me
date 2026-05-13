@@ -17,6 +17,7 @@ import DataTable from '../../components/content/DataTable.svelte';
 import ChartContainer from '../../components/content/ChartContainer.svelte';
 import TravelTips from '../../components/content/TravelTips.svelte';
 import TripPackingChecklist from '../../components/content/TripPackingChecklist.svelte';
+import RouteMap from '../../components/content/RouteMap.svelte';
 
 We're taking our family — three adults, a five-year-old, and a one-year-old — on a road trip from Rotterdam to Switzerland in May 2026. Seven days, four stops, one loop through the Black Forest, Rhine Falls, and Lake Lucerne. Waterfalls first, mountains second — that's the priority. I've spent weeks planning this route to keep every driving leg under five hours, avoid steep hikes, and build in enough flexibility that nobody melts down (adults included). This post is the full plan — day-by-day itinerary, costs, packing lists, and everything I wish someone had written down before I started researching.
 
@@ -32,7 +33,31 @@ We're taking our family — three adults, a five-year-old, and a one-year-old �
   "Stroller for flat paths + baby carrier for trails/caves. Senior-friendly. Cable cars, cog railways, boats."
 ]} />
 
+<Callout type="warning" title="Who this itinerary is NOT for" icon="fa-ban">
+  <p class="text-sm text-gray-600 mb-2">This trip is optimised for <strong>families with young children + a senior</strong> — comfort, scenery, and minimal walking. It's probably not for you if:</p>
+  <ul class="text-sm text-gray-600 space-y-1 mb-0">
+    <li><strong>Hardcore hikers</strong> — no multi-hour trails. We take cable cars and cogwheel railways to the views.</li>
+    <li><strong>City explorers / nightlife seekers</strong> — we skip Zürich, Bern, and Basel entirely. Lucerne city is a boat ride away but not the focus.</li>
+    <li><strong>Minimal driving</strong> — there's a 5-hour leg on Day 1 and a 4-hour return on Day 6. Train-only travellers should plan differently.</li>
+    <li><strong>Budget backpackers</strong> — Switzerland is expensive. Four nights at Lake Lucerne plus mountain railways add up fast.</li>
+  </ul>
+</Callout>
+
 <SectionHeading icon="fa-route" color="blue">The Route</SectionHeading>
+
+<RouteMap
+  client:load
+  stops={[
+    { name: "Rotterdam", lat: 51.9225, lng: 4.4792, day: "Day 1 — Start" },
+    { name: "Triberg im Schwarzwald", lat: 48.1306, lng: 8.2331, day: "Day 1 — Triberg Waterfalls" },
+    { name: "Rhine Falls (Schaffhausen)", lat: 47.6779, lng: 8.6150, day: "Day 2 — Europe's largest waterfall" },
+    { name: "Lake Lucerne (Vitznau)", lat: 47.0078, lng: 8.4848, day: "Days 2–5 — Main base" },
+    { name: "Lauterbrunnen Valley", lat: 46.5936, lng: 7.9091, day: "Day 4 — Trümmelbach + Staubbach Falls" },
+    { name: "Königswinter", lat: 50.6733, lng: 7.1842, day: "Day 6 — Drachenfels cogwheel" },
+    { name: "Rotterdam", lat: 51.9225, lng: 4.4792, day: "Day 7 — Home" }
+  ]}
+  height={380}
+/>
 
 <div class="prose-content">
 
@@ -45,11 +70,11 @@ Our route heads south from Rotterdam through Germany — straight to Triberg for
   rows={[
     ["1", "Sat 23 May", "Rotterdam → Triberg (Black Forest)", "~5h", "★ Triberg Waterfalls — Germany's highest (163m)"],
     ["2", "Sun 24 May", "Triberg → Rhine Falls → Lake Lucerne", "~3h total", "★ Rhine Falls — Europe's largest by volume"],
-    ["3", "Mon 26 May", "Mount Rigi + village stroll", "—", "Cable car / cogwheel to summit (1,798m) + lakeside settle-in"],
-    ["4", "Tue 27 May", "★ Lauterbrunnen Valley day trip", "~2.5h total", "★ Trümmelbach Falls (inside a mountain) + Staubbach Falls (297m)"],
-    ["5", "Wed 28 May", "★ Mount Pilatus (golden round trip) — FLAGSHIP", "—", "Boat + cogwheel + gondola loop"],
-    ["6", "Thu 29 May", "Lake Lucerne → Königswinter", "~4h", "Rhine-side town, Drachenfels cogwheel"],
-    ["7", "Fri 30 May", "Königswinter → Rotterdam", "~2.5h", "Home by lunchtime"]
+    ["3", "Mon 25 May", "Mount Rigi + village stroll", "—", "Cable car / cogwheel to summit (1,798m) + lakeside settle-in"],
+    ["4", "Tue 26 May", "★ Lauterbrunnen Valley day trip", "~2.5h total", "★ Trümmelbach Falls (inside a mountain) + Staubbach Falls (297m)"],
+    ["5", "Wed 27 May", "★ Mount Pilatus (golden round trip) — FLAGSHIP", "—", "Boat + cogwheel + gondola loop"],
+    ["6", "Thu 28 May", "Lake Lucerne → Königswinter", "~4h", "Rhine-side town, Drachenfels cogwheel"],
+    ["7", "Fri 29 May", "Königswinter → Rotterdam", "~2.5h", "Home by lunchtime"]
   ]}
   highlightRow={2}
 />
@@ -73,7 +98,7 @@ Our route heads south from Rotterdam through Germany — straight to Triberg for
     <p class="text-sm text-gray-600 leading-relaxed"><strong>~5h drive</strong> south via A3/A61/A5/B33 into the Black Forest. The longest leg of the trip — plan two rest stops. Arrive Triberg by early-mid afternoon. <strong>Triberg Waterfalls</strong> — Germany's highest at 163m over 7 stages — the Gutach river cascading through dense Black Forest. Three marked trails (45-90min). Tame <strong>squirrels</strong> along the paths — the 5-year-old will love them (bring nuts). The lower falls near the main entrance are the most impressive. <strong>Stroller note:</strong> main trails are NOT stroller-accessible (natural paths, steps). Use baby carrier for the full trail. There IS a flat accessible path from the <strong>Asklepios Klinik entrance</strong> to the first viewing platform — works for stroller and senior. Check into a Gasthaus in Triberg. Try authentic Schwarzwälder Kirschtorte — you're at the source.</p>
     <div class="mt-2 p-3 bg-amber-50 border border-amber-200 rounded-lg">
       <p class="text-xs font-semibold text-amber-700 mb-1"><i class="fas fa-shopping-cart"></i> Saturday — stock up!</p>
-      <p class="text-xs text-amber-600 mb-0">Shops are open Saturday. <strong>Stock up at a motorway DM/Rossmann en route or in Triberg before ~8 PM.</strong> Tomorrow (Sunday) shops are closed. Buy nappies, baby food, medicine — Swiss prices are 40–60% higher.</p>
+      <p class="text-xs text-amber-600 mb-0">Last chance before Sunday closures. See the supply strategy note above.</p>
     </div>
     <div class="mt-2 p-3 bg-amber-50 border border-amber-200 rounded-lg">
       <p class="text-xs font-semibold text-amber-700 mb-1"><i class="fas fa-gas-pump"></i> Recommended rest stops</p>
@@ -89,11 +114,11 @@ Our route heads south from Rotterdam through Germany — straight to Triberg for
     <p class="text-sm text-gray-600 leading-relaxed mt-2">Then drive <strong>~1h30 to Lake Lucerne (Weggis/Vitznau)</strong> via A4/A3 through Zürich. <strong>Swiss motorway vignette required</strong> (CHF 40, buy e-vignette at <a href="https://www.e-vignette.ch/en" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">e-vignette.ch</a>). Arrive ~2:30-3 PM. Check in, settle.</p>
     <div class="mt-2 p-3 bg-amber-50 border border-amber-200 rounded-lg">
       <p class="text-xs font-semibold text-amber-700 mb-1"><i class="fas fa-water"></i> Rhine Falls — peak power</p>
-      <p class="text-xs text-amber-600 mb-0">Late May is snowmelt season — Rhine Falls will be at maximum volume. The spray and roar are incredible. Start on the <strong>north side (free, flat, stroller-accessible)</strong>. The south side's Belvedere deck is accessible by panoramic lift. Skip the lower south-side stairs with the senior.</p>
+      <p class="text-xs text-amber-600 mb-0">Late May is snowmelt season — Rhine Falls will be at maximum volume. Start on the <strong>north side (free, flat, stroller-accessible)</strong>. South side's Belvedere deck is reachable by panoramic lift.</p>
     </div>
     <div class="mt-2 p-3 bg-rose-50 border border-rose-200 rounded-lg">
       <p class="text-xs font-semibold text-rose-700 mb-1"><i class="fas fa-exclamation-triangle"></i> Sunday — shops closed</p>
-      <p class="text-xs text-rose-600 mb-0">Shops closed on Sundays in Germany and Switzerland. Tourist attractions operate normally. Essentials should already be packed from yesterday.</p>
+      <p class="text-xs text-rose-600 mb-0">Shops closed on Sundays in both Germany and Switzerland. Tourist attractions operate normally.</p>
     </div>
   </StepItem>
 </StepList>
@@ -103,12 +128,12 @@ Our route heads south from Rotterdam through Germany — straight to Triberg for
 </div>
 
 <StepList>
-  <StepItem number={3} title="Mount Rigi + Village Stroll — Mon 26 May">
+  <StepItem number={3} title="Mount Rigi + Village Stroll — Mon 25 May">
     <p class="text-sm text-gray-600 leading-relaxed"><strong>No driving. Morning: Mount Rigi.</strong> The cogwheel railway from Vitznau and cable car from Weggis both accommodate strollers. Gentle summit paths, viewpoints, and a mountain playground at the top. ~12°C at the summit — bring layers. Flat summit terrace with restaurant. The views from Rigi across the lake are extraordinary on a clear day. Aim to be back by early afternoon.</p>
     <p class="text-sm text-gray-600 leading-relaxed mt-2"><strong>Afternoon: settle in.</strong> Walk the flat lakeside promenade (Weggis or Vitznau). Stroller-friendly. Boat hop between Vitznau and Weggis (~10min, step-free boarding). Find a playground. Scout dinner spots and check the boat schedule for Pilatus day. A gentle afternoon to save energy for Lauterbrunnen and Pilatus ahead.</p>
     <div class="mt-2 p-3 bg-blue-50 border border-blue-200 rounded-lg">
       <p class="text-xs font-semibold text-blue-700 mb-1"><i class="fas fa-cloud-rain"></i> Weather swap</p>
-      <p class="text-xs text-blue-600 mb-0">Rigi needs clear skies for the views. If clouded or rainy, swap with Lauterbrunnen Valley (Day 4) — Trümmelbach Falls is underground, weather-proof.</p>
+      <p class="text-xs text-blue-600 mb-0">Rigi needs clear skies. If clouded, swap with Lauterbrunnen (Trümmelbach is underground).</p>
     </div>
     <div class="mt-2 p-3 bg-amber-50 border border-amber-200 rounded-lg">
       <p class="text-xs font-semibold text-amber-700 mb-1"><i class="fas fa-ticket-alt"></i> Cost</p>
@@ -122,7 +147,7 @@ Our route heads south from Rotterdam through Germany — straight to Triberg for
 </div>
 
 <StepList>
-  <StepItem number={4} title="★ Lauterbrunnen Valley Day Trip — Tue 27 May">
+  <StepItem number={4} title="★ Lauterbrunnen Valley Day Trip — Tue 26 May">
     <p class="text-sm text-gray-600 leading-relaxed"><strong>~1h15 drive each way</strong> via the Brünig Pass (toll-free, scenic). The Lauterbrunnen Valley is one of the deepest glacial valleys in the Alps — 72 waterfalls pour off vertical cliffs. Two headline stops:</p>
     <p class="text-sm text-gray-600 leading-relaxed mt-2"><strong>Trümmelbach Falls</strong> — 10 glacier-fed waterfalls INSIDE a mountain, carved by snowmelt from the Eiger, Mönch, and Jungfrau. Accessed by tunnel lift (senior-friendly). The power is staggering — 20,000 litres per second in late May. Baby carrier only (no stroller — walkways are narrow and wet). CHF 15/adult, under 6 free. Allow 1–1.5h.</p>
     <p class="text-sm text-gray-600 leading-relaxed mt-2"><strong>Staubbach Falls</strong> — 297m free-falling waterfall visible from the village. Completely free. Flat walk from parking to the viewpoint. One of the most photographed waterfalls in Switzerland.</p>
@@ -143,15 +168,15 @@ Our route heads south from Rotterdam through Germany — straight to Triberg for
 </div>
 
 <StepList>
-  <StepItem number={5} title="Mount Pilatus — Golden Round Trip — Wed 28 May">
+  <StepItem number={5} title="Mount Pilatus — Golden Round Trip — Wed 27 May">
     <p class="text-sm text-gray-600 leading-relaxed"><strong>No driving.</strong> The "golden round trip" — a circular route combining boat, cable car, and the world's steepest cogwheel railway. This is the marquee day of the trip. Lake steamer to Alpnachstad (~90 min), cogwheel railway to Pilatus Kulm summit (2,132m), panoramic Alpine views. Flat, fenced summit terrace with restaurant. Descend by gondola and aerial cableway to Kriens, then bus/taxi back to the Lucerne boat pier for the steamer home.</p>
-    <p class="text-sm text-gray-600 leading-relaxed mt-2"><strong>Note:</strong> The cogwheel railway (Alpnachstad side) typically opens late April/early May — by 28 May it should be fully running. Confirm on the <a href="https://www.pilatus.ch/en" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">Pilatus website</a>. Strollers fit on boats and gondolas; fold for the cogwheel carriages.</p>
+    <p class="text-sm text-gray-600 leading-relaxed mt-2"><strong>Note:</strong> The cogwheel railway (Alpnachstad side) typically opens late April/early May — by 27 May it should be fully running. Confirm on the <a href="https://www.pilatus.ch/en" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">Pilatus website</a>. Strollers fit on boats and gondolas; fold for the cogwheel carriages.</p>
     <div class="mt-2 p-3 bg-blue-50 border border-blue-200 rounded-lg">
       <p class="text-xs font-semibold text-blue-700 mb-1"><i class="fas fa-cloud-rain"></i> If weather is bad</p>
-      <p class="text-xs text-blue-600 mb-0">Skip Pilatus and swap with the Lauterbrunnen Valley day trip (Day 4) — Trümmelbach Falls is underground and weather-proof.</p>
+      <p class="text-xs text-blue-600 mb-0">Pilatus needs clear skies. If bad weather, swap with Lauterbrunnen (underground waterfalls).</p>
     </div>
   </StepItem>
-  <StepItem number={6} title="Lake Lucerne → Königswinter (Rhine) — Thu 29 May">
+  <StepItem number={6} title="Lake Lucerne → Königswinter (Rhine) — Thu 28 May">
     <p class="text-sm text-gray-600 leading-relaxed"><strong>~4h drive.</strong> The longest leg. North through Switzerland back into Germany via Basel, then up the Rhine corridor on the A5/A3. <strong>Königswinter</strong> is a small Rhine-side town opposite Bonn, nestled under Drachenfels hill. Flat river promenade, easy parking. The <strong>Drachenfels cogwheel railway</strong> (Germany's oldest) is a nice bookend to the trip — a short ride to a castle ruin with Rhine valley views before the final drive home.</p>
     <div class="mt-2 p-3 bg-rose-50 border border-rose-200 rounded-lg">
       <p class="text-xs font-semibold text-rose-700 mb-1"><i class="fas fa-shopping-bag"></i> Re-stock in Germany</p>
@@ -162,7 +187,7 @@ Our route heads south from Rotterdam through Germany — straight to Triberg for
       <p class="text-xs text-amber-600 mb-0">Raststätte Wutachtal (A81, ~1.5h in) and Raststätte Montabaur (A3, ~3h in) — both have playgrounds and baby-change.</p>
     </div>
   </StepItem>
-  <StepItem number={7} title="Königswinter → Rotterdam — Fri 30 May">
+  <StepItem number={7} title="Königswinter → Rotterdam — Fri 29 May">
     <p class="text-sm text-gray-600 leading-relaxed"><strong>~2.5h drive.</strong> Shortest leg. Home by lunchtime.</p>
     <div class="mt-2 p-3 bg-amber-50 border border-amber-200 rounded-lg">
       <p class="text-xs font-semibold text-amber-700 mb-1"><i class="fas fa-gas-pump"></i> Recommended rest stop</p>
@@ -225,6 +250,15 @@ Both are excellent. It comes down to priorities.
 
 <Callout type="insight" title="Our pick" icon="fa-lightbulb">
   <p class="text-sm text-gray-600"><strong>Vitznau</strong> edges it for families with young kids. The cogwheel railway is a highlight, the village is quieter (better for naps), and the flat station-to-boat connection makes day trips seamless. Weggis is better if you want more dinner options. Both villages are a 10-minute boat ride apart.</p>
+</Callout>
+
+<Callout type="info" title="Accommodation picks — Weggis & Vitznau" icon="fa-bed">
+  <p class="text-sm text-gray-600 mb-2">All three tiers work for families. Book early — late May is peak season.</p>
+  <ul class="text-sm text-gray-600 space-y-1 mb-0">
+    <li><strong>Luxury:</strong> Park Hotel Vitznau or Hotel & Spa & Restaurant Rigi Vitznau — lakefront, pool, family suites. ~CHF 350–500/night.</li>
+    <li><strong>Family apartment:</strong> Search Airbnb/Booking.com for "Vitznau apartment 2-bedroom with kitchen" or "Weggis family apartment" — self-catering saves a lot on Swiss food costs. ~CHF 150–250/night.</li>
+    <li><strong>Budget:</strong> Gasthaus or B&B in Weggis (more options than Vitznau). Hotel Rössli Weggis or similar. ~CHF 120–170/night.</li>
+  </ul>
 </Callout>
 
 <SectionHeading icon="fa-wheelchair" color="indigo">Accessibility & Family Notes</SectionHeading>

@@ -16,11 +16,11 @@
 |-----|-------------|-------|-------|-----------|
 | 1 | Sat 23 May | Rotterdam → Triberg (Black Forest) | ~5h | Triberg area |
 | 2 | Sun 24 May | Triberg Waterfalls → Rhine Falls → Lake Lucerne | ~3h total | Lake Lucerne |
-| 3 | Mon 26 May | Mount Rigi + village stroll | — | Lake Lucerne |
-| 4 | Tue 27 May | Lauterbrunnen Valley — Trümmelbach + Staubbach Falls | 1h15 each way | Lake Lucerne |
-| 5 | Wed 28 May | Mount Pilatus (golden round trip) — FLAGSHIP | — | Lake Lucerne |
-| 6 | Thu 29 May | Lake Lucerne → Königswinter | ~4h | Königswinter |
-| 7 | Fri 30 May | Königswinter → Rotterdam | ~2.5h | Home |
+| 3 | Mon 25 May | Mount Rigi + village stroll | — | Lake Lucerne |
+| 4 | Tue 26 May | Lauterbrunnen Valley — Trümmelbach + Staubbach Falls | 1h15 each way | Lake Lucerne |
+| 5 | Wed 27 May | Mount Pilatus (golden round trip) — FLAGSHIP | — | Lake Lucerne |
+| 6 | Thu 28 May | Lake Lucerne → Königswinter | ~4h | Königswinter |
+| 7 | Fri 29 May | Königswinter → Rotterdam | ~2.5h | Home |
 
 **Weather-based day swapping:** Days 3–5 (Rigi, Lauterbrunnen, Pilatus) can be reordered to chase the best weather. Clear days → Rigi and Pilatus (need views). Overcast days → Lauterbrunnen Valley (waterfalls work in any weather — Trümmelbach is inside a mountain). Day 2 (Triberg + Rhine Falls) is fixed (transit day).
 
@@ -102,7 +102,7 @@ Depart Rotterdam morning (~8 AM). Drive south via A3/A61/A5/B33 into the Black F
 
 ---
 
-### Day 3 — Mon 26 May: Mount Rigi + Village Stroll
+### Day 3 — Mon 25 May: Mount Rigi + Village Stroll
 
 **No driving.** Everything by cable car/cogwheel + boat. Combine the mountain with a gentle lakeside settle-in.
 
@@ -138,7 +138,7 @@ Depart Rotterdam morning (~8 AM). Drive south via A3/A61/A5/B33 into the Black F
 
 ---
 
-### Day 4 — Tue 27 May: Lauterbrunnen Valley — Trümmelbach Falls + Staubbach Falls
+### Day 4 — Tue 26 May: Lauterbrunnen Valley — Trümmelbach Falls + Staubbach Falls
 
 **Drive:** Lake Lucerne → Lauterbrunnen: **~1h15** via A8 over the Brünig Pass through Interlaken.
 
@@ -189,7 +189,7 @@ Depart Rotterdam morning (~8 AM). Drive south via A3/A61/A5/B33 into the Black F
 
 ---
 
-### Day 5 — Wed 28 May: Mount Pilatus (Golden Round Trip) — FLAGSHIP DAY
+### Day 5 — Wed 27 May: Mount Pilatus (Golden Round Trip) — FLAGSHIP DAY
 
 **No driving.** The entire day is boat + cable car + cogwheel.
 
@@ -211,13 +211,13 @@ Depart Rotterdam morning (~8 AM). Drive south via A3/A61/A5/B33 into the Black F
 
 **Senior assessment:** The summit terrace is flat and easy. The cogwheel railway is seated. Gondolas have seating. The only difficult part is boarding/exiting the cogwheel carriages — narrow and steep steps. Manageable for a reasonably mobile senior.
 
-> **Note:** The cogwheel railway (Alpnachstad side) typically opens late April/early May. By 28 May it should be fully running. Confirm on the [Pilatus website](https://www.pilatus.ch/en). If closed, do the Kriens gondola up + down instead (runs year-round).
+> **Note:** The cogwheel railway (Alpnachstad side) typically opens late April/early May. By 27 May it should be fully running. Confirm on the [Pilatus website](https://www.pilatus.ch/en). If closed, do the Kriens gondola up + down instead (runs year-round).
 
 > **Tip:** Start early — the first steamer departure gives you the most time at the summit and avoids afternoon crowds on the descent. Book the golden round trip ticket in advance.
 
 ---
 
-### Day 6 — Thu 29 May: Lake Lucerne → Königswinter (~4h)
+### Day 6 — Thu 28 May: Lake Lucerne → Königswinter (~4h)
 
 Depart after breakfast, ~9 AM. Drive north through Switzerland back into Germany via Basel, then up the Rhine corridor on the A5/A3. Arrive Königswinter early afternoon.
 
@@ -236,7 +236,7 @@ Depart after breakfast, ~9 AM. Drive north through Switzerland back into Germany
 
 ---
 
-### Day 7 — Fri 30 May: Königswinter → Rotterdam (~2.5h)
+### Day 7 — Fri 29 May: Königswinter → Rotterdam (~2.5h)
 
 Depart after breakfast, ~9 AM. Shortest leg. Home by lunchtime.
 
@@ -428,8 +428,8 @@ These rules apply to any future AI agent working on this trip:
 
 ## Open Questions
 
-- [ ] **Lake Lucerne accommodation:** Book family apartment in Vitznau or Weggis with kitchen (for self-catering). 4 nights Sun 24 May – Thu 29 May checkout.
+- [ ] **Lake Lucerne accommodation:** Book family apartment in Vitznau or Weggis with kitchen (for self-catering). 4 nights Sun 24 May – Thu 28 May checkout.
 - [ ] **Triberg accommodation:** Book Gasthaus or hotel near Triberg. 1 night Sat 23 May.
-- [ ] **Königswinter accommodation:** Book family room. 1 night Thu 29 May.
+- [ ] **Königswinter accommodation:** Book family room. 1 night Thu 28 May.
 - [ ] **Pilatus cogwheel opening:** Confirm 2026 opening date (typically late April/early May). Backup: Kriens gondola year-round.
 - [ ] **Rigi: Vitznau cogwheel or Weggis cable car?** Depends on base village. If Vitznau, cogwheel from doorstep. If Weggis, cable car from doorstep.
