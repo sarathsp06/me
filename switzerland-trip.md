@@ -4,7 +4,7 @@
 
 **Preference hierarchy:** Waterfalls > Mountains (cable car/cog railway) > Caves > Lakes (boats, promenades) > Cities
 
-**Base:** 4 nights at Lake Lucerne (Vitznau or Weggis) as hub.
+**Base:** 4 nights at Diemtigen (Bernese Oberland) — quiet alpine valley, budget-friendly, close to Lauterbrunnen and Niesen/Niederhorn.
 
 **Transit stops:** Black Forest/Triberg (1 night outbound), Königswinter (1 night return).
 
@@ -15,14 +15,14 @@
 | Day | Date (2026) | Route | Drive | Overnight |
 |-----|-------------|-------|-------|-----------|
 | 1 | Sat 23 May | Rotterdam → Triberg (Black Forest) | ~5h | Triberg area |
-| 2 | Sun 24 May | Triberg Waterfalls → Rhine Falls → Lake Lucerne | ~3h total | Lake Lucerne |
-| 3 | Mon 25 May | Mount Rigi + village stroll | — | Lake Lucerne |
-| 4 | Tue 26 May | Lauterbrunnen Valley — Trümmelbach + Staubbach Falls | 1h15 each way | Lake Lucerne |
-| 5 | Wed 27 May | Mount Pilatus (golden round trip) — FLAGSHIP | — | Lake Lucerne |
-| 6 | Thu 28 May | Lake Lucerne → Königswinter | ~4h | Königswinter |
+| 2 | Sun 24 May | Triberg Waterfalls → Rhine Falls → Diemtigen | ~3.5-4h total | Diemtigen |
+| 3 | Mon 25 May | Niesen or Niederhorn (mountain day) | 20-35min to cable car | Diemtigen |
+| 4 | Tue 26 May | Lauterbrunnen Valley — Trümmelbach + Staubbach Falls | ~45min each way | Diemtigen |
+| 5 | Wed 27 May | Relax — Lake Thun / Spiez / Diemtigtal valley | ~20min to lake | Diemtigen |
+| 6 | Thu 28 May | Diemtigen → Königswinter | ~3.5h | Königswinter |
 | 7 | Fri 29 May | Königswinter → Rotterdam | ~2.5h | Home |
 
-**Weather-based day swapping:** Days 3–5 (Rigi, Lauterbrunnen, Pilatus) can be reordered to chase the best weather. Clear days → Rigi and Pilatus (need views). Overcast days → Lauterbrunnen Valley (waterfalls work in any weather — Trümmelbach is inside a mountain). Day 2 (Triberg + Rhine Falls) is fixed (transit day).
+**Weather-based day swapping:** Days 3 and 5 (mountain day and relax day) can be swapped to chase the best weather. Clear days → Niesen or Niederhorn (need views). Overcast days → relax at the lake or Lauterbrunnen Valley (waterfalls work in any weather — Trümmelbach is inside a mountain). Day 2 (Triberg + Rhine Falls) is fixed (transit day).
 
 ---
 
@@ -30,7 +30,7 @@
 
 Day 1 (Saturday) is a long drive — stock up at a motorway service station en route (DM/Rossmann at Raststätte near the A5/Black Forest area) or in Triberg Saturday evening before shops close (~8 PM). Day 2 (Sunday) has German shops closed. **Critical: buy nappies, baby food, and medicine at DM/Rossmann in Germany — Swiss prices are 40–60% higher.** Petrol station shops are open for emergencies on Sunday.
 
-Lake Lucerne villages (Weggis, Vitznau) have small shops but limited and expensive. Lucerne city has Coop and Migros.
+Diemtigen is a small village with limited shops. Stock up at Coop/Migros in Spiez or Thun (both ~20min drive).
 
 ---
 
@@ -64,7 +64,7 @@ Depart Rotterdam morning (~8 AM). Drive south via A3/A61/A5/B33 into the Black F
 
 ---
 
-### Day 2 — Sun 24 May: Triberg Waterfalls (morning) → Rhine Falls → Lake Lucerne
+### Day 2 — Sun 24 May: Triberg Waterfalls (morning) → Rhine Falls → Diemtigen
 
 > **⚠️ Whit Monday (Pfingstmontag)** — public holiday in Germany AND Switzerland. All shops closed. Tourist attractions operate normally.
 
@@ -91,63 +91,72 @@ Depart Rotterdam morning (~8 AM). Drive south via A3/A61/A5/B33 into the Black F
 
 **After Rhine Falls:**
 - Depart ~1:00 PM.
-- **Drive Rhine Falls → Lake Lucerne (Weggis/Vitznau): ~1h30** via A4/A3 through Zürich area.
-- **Swiss motorway vignette required** from the border onwards. Buy the digital e-vignette online at [e-vignette.ch](https://www.e-vignette.ch/en) before departure (CHF 40, valid calendar year 2026).
-- Arrive Lake Lucerne ~2:30-3:00 PM.
-- Check in. Settle.
+- **Drive Rhine Falls → Diemtigen: ~2h15** via A1 through Bern area, then south to the Simmental.
+- Arrive Diemtigen ~3:00-3:30 PM.
+- Check in. Settle. Explore the valley if energy allows.
 
-**Total driving Day 2:** ~3h (1.5h + 1.5h with Rhine Falls stop in between).
+**Total driving Day 2:** ~3.5-4h (1.5h + 2.15h with Rhine Falls stop in between).
 
 > **Tip:** Late May is peak snowmelt — Rhine Falls will be at maximum power. The spray and roar are incredible. The 5-year-old might be scared or thrilled — either way, it's unforgettable.
 
 ---
 
-### Day 3 — Mon 25 May: Mount Rigi + Village Stroll
+### Day 3 — Mon 25 May: Niesen or Niederhorn (Mountain Day)
 
-**No driving.** Everything by cable car/cogwheel + boat. Combine the mountain with a gentle lakeside settle-in.
+**Core theme:** Mountains — a panoramic mountain experience without breaking the bank.
+**Weather swap:** If clouded/rainy, swap with the relax day (Day 5). Mountains need clear skies for the views.
 
-**Core theme:** Mountains + lake panorama + getting oriented at your base.
-**Anchor:** Rigi summit (1,798m) via cogwheel/cable car (morning). Village promenade + boat hop (afternoon).
-**Skippable:** Extended summit walks — the terrace views are the core experience. Afternoon village walk if tired after Rigi.
-**Low-energy fallback:** Cable car to Rigi Kaltbad (1,453m) — restaurant, spa views, alpine flowers. Don't go to the summit. Then rest at accommodation.
-**Weather swap:** If clouded/rainy, swap with Lauterbrunnen Valley (Day 4) — waterfalls work in any weather. Rigi needs clear skies for the views.
+#### Option A: Niesen ("The Swiss Pyramid")
 
-**Morning — Mount Rigi:**
-- **Cogwheel railway from Vitznau** to Rigi Kulm summit (1,798m). Europe's oldest mountain railway. ~30min up.
-- Stroller fits on the cogwheel train (unfolded). Baby carrier works too.
-- **At the summit:** Flat, fenced terrace with restaurant. Panoramic views over Lake Lucerne, Lake Zug, and the Alps. Mountain playground for kids.
-- **Temperature:** ~12°C, windy. Warm layers for everyone.
-- **Senior assessment:** Terrace is flat and easy. Short walks near the summit are gentle. No steep terrain needed.
-- **Descend:** Same way back, or cable car to Weggis (Rigi Kaltbad → Weggis cable car) for variety.
-- **Aim to be back by early afternoon.**
+- **Drive Diemtigen → Mülenen funicular station: ~20min.**
+- **Funicular to the summit (2,362m).** The Niesen funicular is steep and dramatic — the ride itself is part of the experience.
+- **At the summit:** Flat terrace with restaurant. **360° panorama** — Lake Thun below, the entire Jungfrau massif (Eiger, Mönch, Jungfrau) face-on, and on clear days views to the Jura and Black Forest.
+- **Stroller:** Fits on the funicular. Summit terrace is flat.
+- **Senior-friendly:** Funicular does all the work. Summit is flat with benches.
+- **Temperature:** ~8-10°C at summit. Bring warm layers + windproof jacket.
+- **Allow 2-3h** total (including funicular rides and summit time).
 
-**Alternative (from Weggis):**
-- Cable car from Weggis to Rigi Kaltbad (1,453m), then change to cogwheel to summit.
-- Stroller fits in cable car.
+**Cost:** Adults ~CHF 56 return. Children 6-15 ~CHF 28. Under 6 free.
 
-**Cost:** Adults ~CHF 72 return, children 6-15 ~CHF 36. Under 6 free. Check family tickets at [rigi.ch](https://www.rigi.ch/en).
+#### Option B: Niederhorn
 
-**Afternoon — Village settle-in:**
-- Walk the flat lakeside promenade (Weggis or Vitznau). Stroller-friendly. Benches, cafés, views.
-- Boat hop between Vitznau and Weggis (~10min, step-free boarding). The kids will enjoy the boat.
-- Find a playground — both villages have lakeside ones.
-- Scout dinner spots and check the boat schedule for Pilatus day.
-- If energy allows, quick swim at Weggis lido (lake ~16-18°C in late May — too cold for baby, maybe OK for the 5-year-old).
+- **Drive Diemtigen → Beatenberg cable car station: ~35min** (via Interlaken or over the hill).
+- **Cable car to Niederhorn summit (1,963m).** Two-stage cable car.
+- **At the summit:** Panoramic views over Lake Thun and Lake Brienz. Eiger/Mönch/Jungfrau visible. **Marmot colony** near the summit — the 5-year-old will love watching them.
+- **Easy ridge walks** from the summit — gentle, family-friendly.
+- **Stroller:** Fits in cable car. Summit area has some paths suitable.
+- **Senior-friendly:** Cable car does the work. Summit paths are gentle.
+- **Temperature:** ~12°C at summit. Layers needed but less cold than Niesen.
 
-> **Tip:** Don't push hard in the afternoon. You have two packed days ahead (Lauterbrunnen waterfalls, Pilatus). The 1-year-old and the senior will benefit from a gentle afternoon after the mountain.
+**Cost:** Adults ~CHF 44 return. Children 6-15 ~CHF 22. Under 6 free.
+
+#### Comparison
+
+| Factor | Niesen | Niederhorn |
+|--------|--------|------------|
+| Drive from Diemtigen | ~20min | ~35min |
+| Summit altitude | 2,362m | 1,963m |
+| Cost (adult return) | ~CHF 56 | ~CHF 44 |
+| Highlight | Iconic 360° panorama, dramatic funicular | Marmots, ridge walks, two-lake views |
+| Kid appeal | The steep funicular ride | Marmots! |
+| Crowds | Moderate | Quieter |
+
+**Recommendation:** Niesen for the bigger "wow" and proximity to Diemtigen. Niederhorn if the 5-year-old seeing marmots up close is the priority.
+
+**Afternoon:** Return to Diemtigen by early afternoon. Rest. Explore the Diemtigtal valley floor (flat walks, small waterfalls in the valley). Or drive to Spiez (~20min) for a lakeside promenade + playground + ice cream.
 
 ---
 
 ### Day 4 — Tue 26 May: Lauterbrunnen Valley — Trümmelbach Falls + Staubbach Falls
 
-**Drive:** Lake Lucerne → Lauterbrunnen: **~1h15** via A8 over the Brünig Pass through Interlaken.
+**Drive:** Diemtigen → Lauterbrunnen: **~45min** via Spiez and Interlaken.
 
 **Core theme:** Waterfalls — the best waterfall day of the trip. Lauterbrunnen is the "Valley of 72 Waterfalls" and inspired Tolkien's Rivendell. Two world-class waterfalls in one valley.
 
 **Anchor:** Trümmelbach Falls (morning) + Staubbach Falls (midday). This is a once-in-a-lifetime photography day.
 **Skippable:** Interlaken town walk (afternoon, if tired).
 **Low-energy fallback:** Staubbach Falls only (visible from the village, zero effort) + Lauterbrunnen village café.
-**Weather swap:** This day works in ANY weather. Trümmelbach is inside a mountain. Staubbach is more dramatic in rain. If the forecast gives you one bad day, use it here.
+**Weather swap:** This day works in ANY weather. Trümmelbach is inside a mountain. Staubbach is more dramatic in rain.
 
 **Morning — Trümmelbach Falls:**
 - **10 glacier-fed waterfalls INSIDE a mountain.** The only underground waterfalls in Europe accessible by lift. The Trümmelbach drains the glaciers of the Eiger, Mönch, and Jungfrau — up to 20,000 litres per second thundering through spiral rock galleries.
@@ -158,7 +167,7 @@ Depart Rotterdam morning (~8 AM). Drive south via A3/A61/A5/B33 into the Black F
 - **Baby in carrier:** Fine. Bring waterproof jacket/cover — you WILL get wet from spray. Ear protection optional (it's loud).
 - **Temperature:** Cool inside (~8-10°C), wet. Waterproof jacket essential for everyone.
 - **Allow 1-1.5h** for the visit.
-- **20min drive from Interlaken, 10min from Lauterbrunnen village.**
+- **10min drive from Lauterbrunnen village.**
 
 **Cost:** Adults CHF 15, children 6-15 CHF 7, under 6 free. Your group: ~CHF 45 total.
 
@@ -179,47 +188,45 @@ Depart Rotterdam morning (~8 AM). Drive south via A3/A61/A5/B33 into the Black F
 - **Harder Kulm funicular** — if energy allows, ride up for the famous terrace view over both lakes with the Eiger/Mönch/Jungfrau behind. ~CHF 32/adult return, under 6 free. 10min ride. The viewpoint is the most photographed in the Bernese Oberland.
 - **Skip if tired** — the waterfalls are the priority. Interlaken is a bonus.
 
-**Drive back:** Lauterbrunnen → Lake Lucerne: **~1h15** via Interlaken/Brünig Pass. Arrive ~5-6 PM.
+**Drive back:** Lauterbrunnen → Diemtigen: **~45min** via Interlaken/Spiez. Arrive ~5-6 PM.
 
-**Total driving:** ~2.5h (1h15 each way). The Brünig Pass road is scenic — alpine meadows and mountain views the whole way.
+**Total driving:** ~1.5h (45min each way). Much shorter than the original Lake Lucerne plan.
 
 > **Tip:** Trümmelbach Falls is genuinely unique — there is nothing else like it in Europe. 10 waterfalls inside a mountain, accessed by a tunnel lift. The sound alone is overwhelming. This is the day that will stick in everyone's memory. Bring a waterproof phone case for photos.
 
-> **Tip:** The Brünig Pass (A8) is toll-free (no vignette needed for this section). Scenic drive through the Bernese Oberland.
+---
+
+### Day 5 — Wed 27 May: Relax Day — Lake Thun / Spiez / Diemtigtal
+
+**Core theme:** Rest and gentle exploration. No major attractions. Recharge after two packed days.
+
+**No fixed plan — pick based on energy:**
+
+**Option A — Lake Thun / Spiez (~20min drive):**
+- Walk the Spiez lakeside promenade. Flat, stroller-friendly. Views of the castle and Lake Thun with the Alps behind.
+- Visit Spiez Castle (small, scenic, easy grounds).
+- Playground at the lake.
+- Boat ride on Lake Thun (step-free boarding, stroller-friendly).
+- Ice cream and café time.
+
+**Option B — Diemtigtal valley (no driving):**
+- The Diemtigtal is a designated Swiss landscape park. Flat valley-floor walks along the stream.
+- Small waterfalls in the valley (Grimmialp area).
+- Farmland scenery, quiet, no crowds.
+- Ideal for the 1-year-old in the stroller and the senior who needs a low-key day.
+
+**Option C — Thun town (~25min drive):**
+- Thun has a castle, a medieval old town, and a riverside promenade.
+- More shops and restaurants than Spiez.
+- Good for restocking supplies at Coop/Migros.
+
+**Weather swap:** If Day 3 (mountain day) was clouded out, today becomes the mountain day instead. Niesen/Niederhorn need clear skies.
 
 ---
 
-### Day 5 — Wed 27 May: Mount Pilatus (Golden Round Trip) — FLAGSHIP DAY
+### Day 6 — Thu 28 May: Diemtigen → Königswinter (~3.5h)
 
-**No driving.** The entire day is boat + cable car + cogwheel.
-
-**Core theme:** Mountains. This is the marquee day of the trip.
-
-**Anchor:** Pilatus golden round trip — boat + cogwheel + gondola loop.
-**Skippable:** Nothing — this is the flagship. Do the full loop if weather allows.
-**Low-energy fallback:** Cable car up from Kriens only (skip the boat + cogwheel loop). Still reaches the summit.
-**Weather swap:** Pilatus needs clear skies. If bad weather, swap with Lauterbrunnen (Day 4) — waterfalls work in any weather.
-
-**Plan:**
-1. **Lake steamer from Vitznau/Weggis to Alpnachstad** (~90min boat ride). Stroller on deck. Scenic ride across the full length of the lake.
-2. **Cogwheel railway from Alpnachstad to Pilatus Kulm** (2,132m). World's steepest cogwheel railway (48% gradient). ~30min. Fold stroller for boarding.
-3. **At the summit:** Flat, fenced terrace with restaurant and hotel. Panoramic Alpine views — on clear days you see from the Jura to the Bernese Oberland. ~3-8°C, windy. Warm layers essential. Baby needs warm onesie + hat.
-4. **Descend by gondola + aerial cableway to Kriens.** Stroller fits in gondola.
-5. **Bus/taxi from Kriens to Lucerne boat pier** (~15min), then steamer back to Vitznau/Weggis.
-
-**Cost:** Adults ~CHF 111 for the full golden round trip. Children under 6 free. Ages 6-15 ~50% off. Family tickets available. Book at [pilatus.ch](https://www.pilatus.ch/en).
-
-**Senior assessment:** The summit terrace is flat and easy. The cogwheel railway is seated. Gondolas have seating. The only difficult part is boarding/exiting the cogwheel carriages — narrow and steep steps. Manageable for a reasonably mobile senior.
-
-> **Note:** The cogwheel railway (Alpnachstad side) typically opens late April/early May. By 27 May it should be fully running. Confirm on the [Pilatus website](https://www.pilatus.ch/en). If closed, do the Kriens gondola up + down instead (runs year-round).
-
-> **Tip:** Start early — the first steamer departure gives you the most time at the summit and avoids afternoon crowds on the descent. Book the golden round trip ticket in advance.
-
----
-
-### Day 6 — Thu 28 May: Lake Lucerne → Königswinter (~4h)
-
-Depart after breakfast, ~9 AM. Drive north through Switzerland back into Germany via Basel, then up the Rhine corridor on the A5/A3. Arrive Königswinter early afternoon.
+Depart after breakfast, ~9 AM. Drive north through Switzerland back into Germany via Bern/Basel, then up the Rhine corridor on the A5/A3. Arrive Königswinter early afternoon.
 
 **Anchor:** Drachenfels cogwheel railway + Rhine promenade.
 **Skippable:** Drachenfels walk up (the cogwheel is the point).
@@ -250,40 +257,39 @@ Trip complete. Full afternoon + evening to recover. Unpack, laundry, collapse.
 
 ---
 
-## Lake Lucerne: The Main Base
+## Diemtigen: The Main Base
 
-### Why Vitznau over Weggis
+### Why Diemtigen
 
-| Factor | Vitznau | Weggis |
-|--------|---------|--------|
-| **Rigi access** | Cogwheel railway (Europe's oldest) — starts here | Cable car to Rigi Kaltbad |
-| **Vibe** | Quieter, nap-friendly | More restaurants, livelier |
-| **Promenade** | Smaller but flat + stroller-friendly | Longer lakeside walk |
-| **Boat connection** | 2min walk from cogwheel station | Similar |
-| **Accommodation** | ~€150-250/night | ~€150-250/night |
-| **Parking** | Easy | Easy |
+| Factor | Detail |
+|--------|--------|
+| **Location** | Diemtigtal valley, south of Thun, Bernese Oberland |
+| **Vibe** | Quiet alpine valley — farmland, forests, streams. No tourist crowds |
+| **Cost** | ~€70-120/night (chalets, holiday apartments, agritourism) |
+| **To Lauterbrunnen** | ~45min drive |
+| **To Niesen (Mülenen)** | ~20min drive |
+| **To Niederhorn (Beatenberg)** | ~35min drive |
+| **To Spiez / Lake Thun** | ~20min drive |
+| **To Interlaken** | ~35min drive |
+| **To Thun** | ~25min drive |
+| **Shops** | Minimal in Diemtigen. Spiez or Thun for Coop/Migros |
+| **Family-friendly** | Flat valley walks, quiet for naps, space to run |
+| **Senior-friendly** | Flat valley floor, no hills needed |
+| **Parking** | Easy, free |
 
-Both are excellent. **Vitznau** edges it for families with young kids: quieter (better for naps), the cogwheel railway is a highlight, and the flat station-to-boat connection makes day trips seamless. Weggis is better for dinner options. They're a 10-minute boat ride apart.
+### Why not Lake Lucerne (the original plan)
 
-### Lake Lucerne highlights
+The original plan used Vitznau/Weggis on Lake Lucerne as a 4-night base. Changing to Diemtigen saves:
 
-- **Lake steamers** — connect all villages + Lucerne city. Step-free boarding. Stroller stays on deck.
-- **Flat promenades** — both villages have lakeside walks.
-- **Playgrounds** — both villages.
-- **Boat + mountain combos** — Vitznau → Rigi by cogwheel. Alpnachstad → Pilatus by cogwheel.
+| Saved item | Amount |
+|------------|--------|
+| Accommodation (4 nights: €150-250 → €70-120) | ~€200-500 |
+| Mount Rigi (dropped) | ~CHF 140-220 |
+| Mount Pilatus golden round trip (dropped) | ~CHF 220-340 |
+| Lake Lucerne boat passes | ~CHF 50-100 |
+| **Total savings** | **~€600-1,100** |
 
----
-
-## Switzerland vs Austria: Cost Comparison
-
-| Item | Switzerland | Austria |
-|------|-------------|---------|
-| Motorway vignette | CHF 40 (~€42) | €12.80 (10-day) |
-| Mountain railway (return) | CHF 72 (Rigi) | Free (Waldbachstrub + Altausseer See) |
-| Summit cable car / golden round trip | CHF 111 (Pilatus) | ~€50 (Dachstein combo) |
-| Eating out (main course) | CHF 25–40 | €12–20 |
-| Supermarket groceries | Very expensive | Moderate (20–30% above Germany) |
-| Accommodation | €150–250/night | €90–150/night (Bad Ischl) |
+In exchange, you get Niesen or Niederhorn (CHF 44-56/adult) — still a proper mountain summit experience, just at a fraction of the cost. And Lauterbrunnen is closer from Diemtigen (45min vs 1h15 from Lake Lucerne).
 
 ---
 
@@ -291,23 +297,24 @@ Both are excellent. **Vitznau** edges it for families with young kids: quieter (
 
 | Category | Estimate | Notes |
 |----------|----------|-------|
-| Accommodation (6 nights) | €920–€1,630 | Triberg ~€80-130/night, Lake Lucerne ~€150-250/night × 4, Königswinter ~€90-130/night |
-| Fuel (~1,600km) | €160–€220 | Fill up in Germany — Swiss fuel is ~15% more |
+| Accommodation (6 nights) | €620–€1,050 | Triberg ~€80-130/night, Diemtigen ~€70-120/night × 4, Königswinter ~€90-130/night |
+| Fuel (~1,400km) | €140–€200 | Fill up in Germany — Swiss fuel is ~15% more |
 | Swiss motorway vignette | CHF 40 (~€42) | Required for Swiss motorways. Valid calendar year |
 | Triberg Waterfalls | ~€27 | 3 adults × €9. Under 6 free |
 | Rhine Falls | ~CHF 15–50 | South side CHF 5/adult. North side free. Boat rides CHF 10-20 optional |
-| Mount Rigi (cogwheel/cable car) | ~CHF 140–220 | Adults ~CHF 72 return × 2-3. Under 6 free. Family tickets available |
-| Mount Pilatus golden round trip | ~CHF 220–340 | Adults ~CHF 111 × 2-3. Under 6 free. Family discount |
+| Niesen or Niederhorn | ~CHF 110–170 | Adults ~CHF 44-56 return × 2-3. Under 6 free |
 | Trümmelbach Falls | ~CHF 45 | 3 adults × CHF 15. Under 6 free |
 | Staubbach Falls | Free | Visible from village. Trail to base is free |
 | Harder Kulm funicular (optional) | ~CHF 64 | 2 adults × CHF 32. Under 6 free. Optional add-on in Interlaken |
-| Lake Lucerne boats | ~CHF 50–100 | Day pass may save money |
+| Lake Thun boat (optional) | ~CHF 30-60 | Short cruise from Spiez |
 | Drachenfels cogwheel (Königswinter) | ~€15–30 | Adults ~€14 return, kids discounted |
-| Food & groceries | €430–€700 | Self-catering where possible. Stock up in Germany before Switzerland |
-| Parking & tolls | €50–€100 | Mostly free at villages. Lucerne city parking is expensive (take the boat) |
-| **Total** | **€2,050–€3,400** | |
+| Food & groceries | €400–€650 | Self-catering where possible. Stock up in Germany before Switzerland |
+| Parking & tolls | €30–€60 | Mostly free at Diemtigen and villages |
+| **Total** | **€1,450–€2,400** | |
 
-The biggest variable is accommodation. Self-catering apartments save a lot on food in Switzerland. Stock up on baby supplies at DM/Rossmann in Germany before crossing the border.
+**Savings vs original plan: ~€600-1,000.**
+
+The biggest variable is accommodation. Self-catering apartments with a kitchen save a lot on food in Switzerland. Stock up on baby supplies at DM/Rossmann in Germany before crossing the border.
 
 ---
 
@@ -317,9 +324,9 @@ The biggest variable is accommodation. Self-catering apartments save a lot on fo
 |--------|------|-----|------------|
 | Triberg / Black Forest | 18°C | 8°C | Pleasant, occasional showers |
 | Rhine Falls / Schaffhausen | 20°C | 9°C | Warm. Late May = peak snowmelt = maximum water volume |
-| Lake Lucerne | 21°C | 10°C | Warm lakeside, fresh mornings |
-| Rigi summit (1,798m) | 12°C | 5°C | Cool, windy — bring layers |
-| Pilatus summit (2,132m) | 8°C | 3°C | Cold — warm layers needed |
+| Diemtigen / Simmental | 19°C | 8°C | Pleasant valley, fresh mornings |
+| Niesen summit (2,362m) | 6°C | 1°C | Cold — warm layers + windproof essential |
+| Niederhorn summit (1,963m) | 10°C | 4°C | Cool, windy — bring layers |
 | Lauterbrunnen Valley (795m) | 19°C | 8°C | Warm valley, fresh. Trümmelbach inside: ~8-10°C, wet |
 | Königswinter / Rhine | 20°C | 10°C | Warm, chance of showers |
 
@@ -334,8 +341,8 @@ Late May is late spring, not winter. Mountain summits need layers, not winter ge
 | Thermal base layers | No |
 | **Fleece / warm mid-layer** | **Yes — 1 per person, for mountains + Trümmelbach** |
 | **Windproof / rain jacket** | **Yes — essential. Waterproof for Trümmelbach (you WILL get wet)** |
-| **Light gloves + hat** | **Yes — for Pilatus summit** |
-| **Baby warm onesie + hat** | **Yes — for Pilatus + Trümmelbach** |
+| **Light gloves + hat** | **Yes — for Niesen summit** |
+| **Baby warm onesie + hat** | **Yes — for Niesen/Niederhorn + Trümmelbach** |
 | Sunscreen + sunhat | Yes — sun at altitude is strong |
 
 ---
@@ -343,7 +350,7 @@ Late May is late spring, not winter. Mountain summits need layers, not winter ge
 ## Packing — Mazda CX-30 Constraints
 
 **Boot space:** 430L with rear seats up (all 5 seated).
-**Stroller:** Compact folding stroller for flat promenades + villages. Fold for cogwheel carriages. Leave in car for cave/trail days.
+**Stroller:** Compact folding stroller for flat promenades + villages. Fold for funicular carriages. Leave in car for cave/trail days.
 **Baby carrier:** For Triberg waterfalls trail, Trümmelbach Falls, and anywhere the stroller doesn't go.
 
 **Packing rules:**
@@ -367,17 +374,17 @@ These rules apply to any future AI agent working on this trip:
 1. **Respect the priority hierarchy at all times:**
    - Waterfalls > Mountains > Caves > Lakes > Cities
    - Max ~4h driving per leg
-   - Avoid steep, long hikes; prefer cable car/cog rail + short scenic walks
+   - Avoid steep, long hikes; prefer cable car/cog rail/funicular + short scenic walks
 
 2. **Weather handling:**
-   - Days 3–5 (Rigi, Lauterbrunnen, Pilatus) can be reordered to chase best weather
+   - Days 3 and 5 (mountain day and relax day) can be swapped to chase best weather
+   - Day 4 (Lauterbrunnen) works in any weather — Trümmelbach is inside a mountain, Staubbach is better in rain
    - Day 2 (Triberg + Rhine Falls) is fixed — transit day, cannot be moved
-   - Clear days → Rigi + Pilatus (need views)
-   - Overcast/rainy days → Lauterbrunnen Valley (Trümmelbach is inside a mountain, Staubbach is better in rain)
-   - Day 5 (Pilatus golden round trip) is the flagship — give it the best weather day
+   - Clear days → Niesen or Niederhorn (need views)
+   - Overcast/rainy days → relax day (Lake Thun, Diemtigtal) or move Lauterbrunnen earlier
 
 3. **Stroller + baby carrier strategy:**
-   - Stroller for flat promenades, villages, boats, cable cars, cogwheel trains
+   - Stroller for flat promenades, villages, boats, cable cars, funiculars
    - Baby carrier for Triberg waterfall trails, Trümmelbach Falls, anywhere with stairs/uneven terrain
    - Both must be accessible (stroller in boot, carrier in cabin)
 
@@ -385,28 +392,28 @@ These rules apply to any future AI agent working on this trip:
    - Stock up in Germany before Switzerland (40-60% cheaper)
    - Stock up at motorway DM/Rossmann on Day 1, or in Triberg Saturday evening
    - Sunday (Day 2) has shops closed — plan ahead
-   - First shop run in Switzerland: Monday (Day 3) at village shop or Lucerne
+   - First shop run in Switzerland: Monday (Day 3) at Spiez or Thun Coop/Migros
    - Re-stock in Germany on Day 6 (Königswinter/Bonn area)
 
 5. **Budget awareness:**
-   - Switzerland is significantly more expensive than Austria
+   - Diemtigen is significantly cheaper than Lake Lucerne villages
    - Self-catering saves a lot on food
-   - Lake Lucerne village accommodation is cheaper than Lucerne city
-   - Don't drive into Lucerne city — take the boat (avoids expensive parking)
+   - Niesen/Niederhorn are a fraction of the cost of Pilatus/Rigi
+   - Don't drive into Interlaken for parking — it's expensive. Use village parking.
 
 6. **Don't change the base unless asked:**
-   - Use **Vitznau** (or Weggis) as the primary base
-   - Only suggest alternatives if both are unavailable or too expensive
+   - Use **Diemtigen** as the primary base
+   - Only suggest alternatives if unavailable or too expensive
 
 7. **One major attraction per day:**
    - Avoid overloading days
    - Senior needs rest between activities
    - Kid naps in car or on boats — schedule around this
 
-8. **Pilatus is the flagship:**
-   - Mount Pilatus golden round trip (Day 5) is the #1 priority mountain day
-   - Give it the best weather day
-   - Full loop (boat + cogwheel + gondola) is the ideal — don't simplify unless weather forces it
+8. **Mountain day is flexible:**
+   - Niesen (closer, bigger wow) or Niederhorn (marmots, cheaper) — both valid
+   - Give the mountain day the best weather day
+   - If both days (Mon + Wed) have good weather, consider doing both mountains (one each day)
 
 ---
 
@@ -418,7 +425,7 @@ These rules apply to any future AI agent working on this trip:
 - [ ] Green card / car insurance proof for cross-border driving
 - [ ] Car seats — compliant for Germany and Switzerland
 - [ ] Swiss motorway vignette — buy e-vignette online at [e-vignette.ch](https://www.e-vignette.ch/en) (CHF 40)
-- [ ] Booking confirmations — all accommodation, Rigi, Pilatus golden round trip
+- [ ] Booking confirmations — all accommodation, Niesen/Niederhorn
 - [ ] Offline Google Maps — download Germany + Switzerland regions
 - [ ] Cash — EUR + CHF (some parking, mountain facilities are cash-only)
 - [ ] Emergency contacts list — embassy, insurance hotline, 112
@@ -428,8 +435,8 @@ These rules apply to any future AI agent working on this trip:
 
 ## Open Questions
 
-- [ ] **Lake Lucerne accommodation:** Book family apartment in Vitznau or Weggis with kitchen (for self-catering). 4 nights Sun 24 May – Thu 28 May checkout.
+- [ ] **Diemtigen accommodation:** Book family apartment/chalet with kitchen (for self-catering). 4 nights Sun 24 May – Thu 28 May checkout.
 - [ ] **Triberg accommodation:** Book Gasthaus or hotel near Triberg. 1 night Sat 23 May.
 - [ ] **Königswinter accommodation:** Book family room. 1 night Thu 28 May.
-- [ ] **Pilatus cogwheel opening:** Confirm 2026 opening date (typically late April/early May). Backup: Kriens gondola year-round.
-- [ ] **Rigi: Vitznau cogwheel or Weggis cable car?** Depends on base village. If Vitznau, cogwheel from doorstep. If Weggis, cable car from doorstep.
+- [ ] **Niesen vs Niederhorn:** Final decision on mountain day. Can decide based on weather forecast closer to date.
+- [ ] **Niesen funicular opening:** Confirm 2026 season opening (typically mid-May). Should be running by 25 May.
