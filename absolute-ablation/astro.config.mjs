@@ -8,6 +8,9 @@ import { viteHashedImages } from './plugins/vite-hashed-images.mjs';
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
+  redirects: {
+    '/projects/sparrow': 'https://sarathsp06.github.io/sparrow/',
+  },
   integrations: [svelte(), mdx()],
   vite: {
     plugins: [tailwindcss(), viteHashedImages()]
