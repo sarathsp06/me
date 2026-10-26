@@ -140,10 +140,10 @@ Earlier I drove Exotel's platform-wide migration from PHP/Ruby/Java to Go and le
 #section("Independent Projects")
 
 #text(weight: "semibold")[Sparrow] #h(3pt) #text(size: 8pt, fill: faint)[Go, PostgreSQL, gRPC, SvelteKit] \
-Event-driven webhook delivery with at-least-once guarantees, backoff retries, `Retry-After` handling, idempotency keys, and full observability. In production at WellSync.
+Event-driven webhook delivery with at-least-once guarantees, backoff retries, `Retry-After` handling, idempotency keys, and full observability. In production at WellSync. #link("https://sarathsp06.github.io/sparrow/")[sarathsp06.github.io/sparrow]
 
 #text(weight: "semibold")[TestHooks] #h(3pt) #text(size: 8pt, fill: faint)[Go, Svelte · open source] \
-A self-hostable webhook.site replacement: capture, inspect, transform, and forward webhooks in real time from a single binary.
+A self-hostable webhook.site replacement: capture, inspect, transform, and forward webhooks in real time from a single binary. #link("https://testhooks.vercel.app/")[testhooks.vercel.app]
 
 #text(weight: "semibold")[JanusFS] #h(3pt) #text(size: 8pt, fill: faint)[Go, FUSE, Linux · open source] \
 Secret-masking filesystem for AI agents: secrets read as `****` with byte length preserved, kernel-enforced on Linux. #link("https://github.com/sarathsp06/janusfs")[github.com/sarathsp06/janusfs]
