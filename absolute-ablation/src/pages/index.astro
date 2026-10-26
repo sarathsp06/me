@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="sarath@unix:~" description="Sarath Sadasivan Pillai - Backend Systems Engineer & Engineering Leader">
+<Layout title="sarath@unix:~" description="Sarath Sadasivan Pillai - Engineering Director, Tech Lead & Distributed Systems Engineer">
   <div class="font-mono bg-[#0a0a0c] text-gray-300 leading-relaxed min-h-screen">
     <!-- Scanline effect -->
     <div class="fixed w-full h-[100px] z-50 pointer-events-none opacity-10"
@@ -31,11 +31,14 @@ import Layout from '../layouts/Layout.astro';
                 Sarath Sadasivan Pillai<span class="cursor"></span>
               </h1>
               <div class="text-slate-400 max-w-2xl text-sm md:text-base leading-relaxed mb-4">
-                <span class="text-blue-400">Backend Systems Engineer</span> · <span class="text-blue-400">Engineering Leader</span><br />
-                Based in Rotterdam, NL. Specializing in <span class="text-green-400 font-semibold">Go, Distributed Systems, Linux, PostgreSQL</span>.
+                <span class="text-blue-400">Engineering Director</span> · <span class="text-blue-400">Tech Lead</span> · <span class="text-blue-400">Distributed Systems</span><br />
+                Based in Rotterdam, NL (hybrid / EU remote). Specializing in <span class="text-green-400 font-semibold">Go, Distributed Systems, API Design, Observability</span>.
               </div>
+              <p class="text-slate-500 text-sm max-w-2xl leading-relaxed mb-3">
+                Engineering leader and hands-on tech lead with 12+ years designing and running distributed backend systems in Go. Today I am Director of Engineering at WellSync, a medtech company, where I lead the team and its technical direction on services that handle sensitive health data, and co-founder and CTO of Message+.
+              </p>
               <p class="text-slate-500 text-sm max-w-2xl leading-relaxed">
-                I build reliable, scalable backend systems. Currently Director of Engineering at WellSync and co-founding a product company -- I enjoy the overlap of engineering depth and product thinking.
+                Earlier I drove Exotel's platform-wide migration from PHP/Ruby/Java to Go and led its API team on a 99.999% SLA platform, then built real-time voice infrastructure at MessageBird, a live-streaming backend at Onefootball, and compliance-critical data systems at Shell. I work at staff level: shaping architecture across teams, setting engineering standards, mentoring engineers, and turning reliability goals into decisions that business, legal, and regulatory stakeholders can follow.
               </p>
             </header>
 
@@ -51,8 +54,39 @@ import Layout from '../layouts/Layout.astro';
               <a href="https://github.com/sarathsp06/me/raw/master/cv/cv.pdf" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors">cv ↓</a>
             </nav>
 
+            <!-- Skills Section -->
+            <section class="mb-12">
+              <div class="prompt text-sm md:text-base mb-4">cat /proc/skills</div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div class="bg-white/5 p-4 rounded border border-white/5">
+                  <h3 class="text-slate-500 font-bold mb-2 uppercase text-xs tracking-wider">Languages</h3>
+                  <div class="text-green-400 font-medium">Go (primary, ~10 yrs), Python, SQL, JavaScript/Svelte, Java, PHP</div>
+                </div>
+                <div class="bg-white/5 p-4 rounded border border-white/5">
+                  <h3 class="text-slate-500 font-bold mb-2 uppercase text-xs tracking-wider">Systems</h3>
+                  <div class="text-green-400 font-medium">Distributed systems, event-driven architecture, REST &amp; gRPC API design, webhooks, delivery guarantees &amp; retries, high-throughput real-time services</div>
+                </div>
+                <div class="bg-white/5 p-4 rounded border border-white/5">
+                  <h3 class="text-slate-500 font-bold mb-2 uppercase text-xs tracking-wider">Reliability</h3>
+                  <div class="text-green-400 font-medium">Observability, monitoring &amp; logging (Grafana, OpenTelemetry), incident review, SLAs, error budgets</div>
+                </div>
+                <div class="bg-white/5 p-4 rounded border border-white/5">
+                  <h3 class="text-slate-500 font-bold mb-2 uppercase text-xs tracking-wider">Data &amp; Tools</h3>
+                  <div class="text-green-400 font-medium">PostgreSQL, MySQL, Linux, gRPC, SvelteKit, Claude Code (agentic development)</div>
+                </div>
+                <div class="bg-white/5 p-4 rounded border border-white/5">
+                  <h3 class="text-slate-500 font-bold mb-2 uppercase text-xs tracking-wider">Domains</h3>
+                  <div class="text-green-400 font-medium">Cloud communications / CPaaS (voice, SMS, messaging), real-time media, medtech &amp; health data, regulated systems (GDPR, telecom, audit)</div>
+                </div>
+                <div class="bg-white/5 p-4 rounded border border-white/5">
+                  <h3 class="text-slate-500 font-bold mb-2 uppercase text-xs tracking-wider">Leadership</h3>
+                  <div class="text-green-400 font-medium">Technical direction, mentoring, coding standards &amp; review, working with product, business, and legal stakeholders</div>
+                </div>
+              </div>
+            </section>
+
             <!-- Experience Section -->
-            <section id="experience-section" class="mb-12">
+            <section id="experience-section" class="mb-24">
               <div class="prompt text-sm md:text-base mb-4">ls -la ~/experience/</div>
               <div class="space-y-10">
                 <!-- Wellsync -->
@@ -61,10 +95,13 @@ import Layout from '../layouts/Layout.astro';
                     <span class="text-green-400 font-bold underline">Wellsync::Director_of_Engineering</span>
                     <span class="text-slate-500 text-xs">Aug 2024 - Present</span>
                   </div>
+                  <div class="text-slate-500 text-xs mb-2">Medtech · Rotterdam / Barendrecht, NL</div>
                   <div class="cmd-output text-sm leading-relaxed">
-                    &bull; Led the development of new services that unlocked additional revenue streams.<br />
-                    &bull; Enhanced observability across all systems and trained the team to leverage it for efficient technical support.<br />
-                    &bull; Mentored junior engineers and contributed to overall system and infrastructure improvements.
+                    &bull; Lead the engineering team and its technical direction as hands-on tech lead.<br />
+                    &bull; Led development of new revenue-generating services with strong reliability guarantees.<br />
+                    &bull; Improved system observability so production behaviour is easier to detect, investigate, and document.<br />
+                    &bull; Mentored engineers on development and release practices, reducing production problems.<br />
+                    &bull; Brought Sparrow, my own webhook delivery system, into production use.
                   </div>
                 </div>
                 <!-- Message+ -->
@@ -73,10 +110,12 @@ import Layout from '../layouts/Layout.astro';
                     <span class="text-green-400 font-bold underline">Message+::Co-Founder_&amp;_CTO</span>
                     <span class="text-slate-500 text-xs">Dec 2022 - Present</span>
                   </div>
+                  <div class="text-slate-500 text-xs mb-2">Multi-channel customer support · remote, part-time</div>
                   <div class="cmd-output text-sm leading-relaxed">
-                    &bull; Revolutionizing customer support by leveraging AI and messaging channels like WhatsApp and Instagram.<br />
-                    &bull; Helping businesses personalize and streamline support interactions while tracking key metrics.<br />
-                    &bull; Designing scalable infrastructure to meet the evolving needs of modern enterprises and startups.
+                    &bull; Co-founded the company and own its technical direction.<br />
+                    &bull; Sole backend developer: built the Go backend, including the AI-assisted support component.<br />
+                    &bull; Designed scalable enterprise messaging infrastructure; launched on WhatsApp first, then Instagram.<br />
+                    &bull; Work directly with customers on integration, contracts, and compliance expectations.
                   </div>
                 </div>
                 <!-- Shell -->
@@ -85,9 +124,11 @@ import Layout from '../layouts/Layout.astro';
                     <span class="text-green-400 font-bold underline">Shell::Senior_Software_Engineer</span>
                     <span class="text-slate-500 text-xs">Nov 2020 - Aug 2024</span>
                   </div>
+                  <div class="text-slate-500 text-xs mb-2">Rotterdam, NL</div>
                   <div class="cmd-output text-sm leading-relaxed">
-                    &bull; Developed scalable, data-driven systems to support Shell's sustainability goals.<br />
-                    &bull; Collaborated closely with business stakeholders to define product direction and priorities.
+                    &bull; Built and maintained data-driven systems for sustainability and regulatory reporting, where data quality and timeliness were compliance-critical.<br />
+                    &bull; Worked with business stakeholders on product strategy, internal controls, and audit expectations.<br />
+                    &bull; Designed systems to be easy to monitor, explain, and adjust as regulation changed.
                   </div>
                 </div>
                 <!-- MessageBird -->
@@ -96,10 +137,22 @@ import Layout from '../layouts/Layout.astro';
                     <span class="text-green-400 font-bold underline">MessageBird::Senior_Software_Engineer</span>
                     <span class="text-slate-500 text-xs">Jun 2019 - Nov 2020</span>
                   </div>
+                  <div class="text-slate-500 text-xs mb-2">Amsterdam, NL</div>
                   <div class="cmd-output text-sm leading-relaxed">
-                    &bull; Maintained and enhanced services handling core call execution logic within the real-time communications team.<br />
-                    &bull; Established coding and code review standards, improving code quality and team alignment.<br />
-                    &bull; Monitored and improved API availability through observability and performance tuning.
+                    &bull; Built core real-time call-handling logic in Go: call setup, connection, and completion.<br />
+                    &bull; Kept voice services stable against strict service-level and contractual requirements; improved API availability.<br />
+                    &bull; Introduced clearer monitoring and incident review, reducing downtime; established shared coding and review practices.
+                  </div>
+                </div>
+                <!-- Onefootball -->
+                <div>
+                  <div class="flex flex-col md:flex-row justify-between mb-1">
+                    <span class="text-green-400 font-bold underline">Onefootball::Software_Engineer</span>
+                    <span class="text-slate-500 text-xs">Feb 2019 - Jun 2019</span>
+                  </div>
+                  <div class="text-slate-500 text-xs mb-2">Berlin, DE</div>
+                  <div class="cmd-output text-sm leading-relaxed">
+                    &bull; Built the backend for OTT video delivery in the mobile apps, enabling live pay-per-view match streaming under hard latency constraints.
                   </div>
                 </div>
                 <!-- Exotel -->
@@ -108,27 +161,14 @@ import Layout from '../layouts/Layout.astro';
                     <span class="text-green-400 font-bold underline">Exotel::Technical_Lead</span>
                     <span class="text-slate-500 text-xs">May 2014 - Dec 2018</span>
                   </div>
+                  <div class="text-slate-500 text-xs mb-2">Bengaluru, IN</div>
                   <div class="cmd-output text-sm leading-relaxed">
-                    &bull; Played a key role in shaping the engineering culture as an early employee.<br />
-                    &bull; Defined team goals, mentored engineers and interns, and led project delivery.<br />
-                    &bull; Released the company's first mobile app within 3 months of joining.<br />
-                    &bull; Scaled core systems, standardized APIs, and built public SDKs.
+                    &bull; Joined as roughly employee 18; the company scaled to ~200 and became Asia’s largest cloud telephony platform.<br />
+                    &bull; Led the migration of the full platform from PHP/Ruby/Java to Go.<br />
+                    &bull; Owned the usage-based billing system: ran the Java version, then rewrote it in Go.<br />
+                    &bull; Led the API team and guided public API and SDK design on a 99.999% SLA platform.<br />
+                    &bull; Led teams scaling core calling and messaging systems, and delivered Exotel’s first mobile app on a short timeline.
                   </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- Skills Section -->
-            <section class="mb-24">
-              <div class="prompt text-sm md:text-base mb-4">cat /proc/skills</div>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                <div class="bg-white/5 p-4 rounded border border-white/5">
-                  <h3 class="text-slate-500 font-bold mb-2 uppercase text-xs tracking-wider">Languages</h3>
-                  <div class="text-green-400 font-medium">Go, Python, JavaScript, PHP, SQL</div>
-                </div>
-                <div class="bg-white/5 p-4 rounded border border-white/5">
-                  <h3 class="text-slate-500 font-bold mb-2 uppercase text-xs tracking-wider">Engineering</h3>
-                  <div class="text-green-400 font-medium">REST APIs, Distributed Systems, Linux, Technical Leadership, PostgreSQL</div>
                 </div>
               </div>
             </section>
