@@ -6,33 +6,37 @@
 // ---------------------------------------------------------------------------
 // Page setup
 // ---------------------------------------------------------------------------
-#let ink = luma(20)
-#let muted = luma(95)
-#let faint = luma(140)
+#let ink = rgb("#1b1f24")
+#let muted = rgb("#5a6270")
+#let faint = rgb("#8a919c")
+#let accent = rgb("#1f4e79")
+#let rule = rgb("#d5dbe3")
 
 #set page(paper: "a4", margin: (x: 18mm, top: 14mm, bottom: 13mm))
 #let body-font = sys.inputs.at("font", default: "Charter")
 #set text(font: (body-font, "Inter"), size: 9pt, fill: ink, lang: "en", hyphenate: false)
 #set par(justify: false, leading: 0.62em, spacing: 0.9em)
-#set list(marker: text(fill: faint)[–], indent: 0pt, body-indent: 6pt, spacing: 0.55em)
-#show link: it => it
+#set list(marker: text(fill: accent)[–], indent: 0pt, body-indent: 6pt, spacing: 0.55em)
+#show link: it => text(fill: accent, it)
 
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
-#let section(title) = {
-  v(10pt)
-  text(size: 7.5pt, weight: "semibold", tracking: 1.4pt, fill: muted)[#upper(title)]
-  v(-5pt)
-  line(length: 100%, stroke: 0.4pt + luma(200))
-  v(3pt)
-}
+#let section(title) = block(sticky: true, above: 13pt, below: 7pt,
+  grid(
+    columns: (auto, 1fr),
+    column-gutter: 8pt,
+    align: horizon,
+    text(size: 7.5pt, weight: "bold", tracking: 1.5pt, fill: accent)[#upper(title)],
+    line(length: 100%, stroke: 0.5pt + rule),
+  )
+)
 
 #let role(title, company, place, dates) = block(sticky: true, above: 12pt, below: 5pt, {
   grid(
     columns: (1fr, auto),
     align: (left + bottom, right + bottom),
-    [#text(weight: "semibold")[#title]#h(4pt)#text(fill: muted)[· #company]],
+    [#text(size: 9.5pt, weight: "bold")[#company]#h(5pt)#text(fill: muted, style: "italic")[#title]],
     text(size: 8pt, fill: muted)[#dates],
   )
   v(-4pt)
@@ -49,25 +53,31 @@
 // ---------------------------------------------------------------------------
 // Header
 // ---------------------------------------------------------------------------
-#text(size: 20pt, weight: "semibold", tracking: -0.3pt)[Sarath Sadasivan Pillai]
-#v(-6pt)
-#text(size: 10.5pt, fill: muted)[Engineering Director · Tech Lead · Distributed Systems]
-#v(1pt)
-#text(size: 8pt, fill: muted)[
-  Rotterdam, NL (hybrid / EU remote) #sep
-  #link("mailto:sarath.sp06@gmail.com")[sarath.sp06\@gmail.com] #sep
-  +31 6 57358212 \
-  #link("https://sarathsadasivan.com")[sarathsadasivan.com] #sep
-  #link("https://github.com/sarathsp06")[github.com/sarathsp06] #sep
-  #link("https://linkedin.com/in/sarathsp")[linkedin.com/in/sarathsp]
-]
+#grid(
+  columns: (1fr, auto),
+  align: (left + bottom, right + bottom),
+  [
+    #text(size: 22pt, weight: "bold", tracking: -0.4pt)[Sarath Sadasivan Pillai]
+    #v(-8pt)
+    #text(size: 10.5pt, fill: accent)[Technical Lead · Distributed Systems · Go]
+  ],
+  text(size: 8pt, fill: muted)[
+    Rotterdam, NL (hybrid / EU remote) \
+    #link("mailto:sarath.sp06@gmail.com")[sarath.sp06\@gmail.com] #sep +31 6 57358212 \
+    #link("https://sarathsadasivan.com")[sarathsadasivan.com] #sep
+    #link("https://github.com/sarathsp06")[github.com/sarathsp06] \
+    #link("https://linkedin.com/in/sarathsp")[linkedin.com/in/sarathsp]
+  ],
+)
+#v(-2pt)
+#line(length: 100%, stroke: 1.2pt + accent)
 
 // ---------------------------------------------------------------------------
 // Profile
 // ---------------------------------------------------------------------------
 #section("Profile")
 
-Engineering leader and hands-on tech lead with 12+ years designing and running distributed backend systems in Go. Today I am Director of Engineering at WellSync, a medtech company, where I lead the team and its technical direction on services that handle sensitive health data, and co-founder and CTO of Message+.
+Hands-on technical lead with 12+ years designing and running distributed backend systems in Go. Today I am Technical Lead at WellSync, a medtech company, where I lead the team and its technical direction on services that handle sensitive health data, and co-founder and CTO of Message+.
 
 Earlier I drove Exotel's platform-wide migration from PHP/Ruby/Java to Go and led its API team on a 99.999% SLA platform, then built real-time voice infrastructure at MessageBird, a live-streaming backend at Onefootball, and compliance-critical data systems at Shell. I work at staff level: shaping architecture across teams, setting engineering standards, mentoring engineers, and turning reliability goals (delivery guarantees, observability, API design) into decisions that business, legal, and regulatory stakeholders can follow.
 
@@ -80,12 +90,12 @@ Earlier I drove Exotel's platform-wide migration from PHP/Ruby/Java to Go and le
   columns: (22mm, 1fr),
   column-gutter: 8pt,
   row-gutter: 0.75em,
-  text(fill: muted)[Languages], [Go (primary, \~10 years), Python, SQL, JavaScript/Svelte, Java, PHP],
-  text(fill: muted)[Systems], [Distributed systems, event-driven architecture, REST and gRPC API design, webhooks, delivery guarantees and retries, high-throughput real-time services],
-  text(fill: muted)[Reliability], [Observability, monitoring and logging (Grafana, OpenTelemetry), incident review, SLAs, error budgets],
-  text(fill: muted)[Data & tools], [PostgreSQL, MySQL, Linux, gRPC, SvelteKit, Claude Code (agentic development)],
-  text(fill: muted)[Domains], [Cloud communications / CPaaS (voice, SMS, messaging), real-time media, medtech and health data, regulated systems (GDPR, telecom, audit)],
-  text(fill: muted)[Leadership], [Technical direction, mentoring, coding standards and review, working with product, business, and legal stakeholders],
+  text(weight: "semibold", fill: accent)[Languages], [Go (primary, \~10 years), Python, SQL, JavaScript/Svelte, Java, PHP],
+  text(weight: "semibold", fill: accent)[Systems], [Distributed systems, event-driven architecture, REST and gRPC API design, webhooks, delivery guarantees and retries, high-throughput real-time services],
+  text(weight: "semibold", fill: accent)[Reliability], [Observability, monitoring and logging (Grafana, OpenTelemetry), incident review, SLAs, error budgets],
+  text(weight: "semibold", fill: accent)[Data & tools], [PostgreSQL, MySQL, Linux, gRPC, SvelteKit, Claude Code (agentic development)],
+  text(weight: "semibold", fill: accent)[Domains], [Cloud communications / CPaaS (voice, SMS, messaging), real-time media, medtech and health data, regulated systems (GDPR, telecom, audit)],
+  text(weight: "semibold", fill: accent)[Leadership], [Technical direction, mentoring, coding standards and review, working with product, business, and legal stakeholders],
 )
 
 // ---------------------------------------------------------------------------
@@ -93,7 +103,7 @@ Earlier I drove Exotel's platform-wide migration from PHP/Ruby/Java to Go and le
 // ---------------------------------------------------------------------------
 #section("Experience")
 
-#role("Director of Engineering · Tech Lead", "WellSync", "Rotterdam / Barendrecht, NL — medtech", "Aug 2024 – Present")
+#role("Technical Lead", "WellSync", "Rotterdam / Barendrecht, NL — medtech", "Aug 2024 – Present")
 - Led development of new revenue-generating services with strong reliability guarantees.
 - Improved system observability so production behaviour is easier to detect, investigate, and document.
 - Mentored engineers on development and release practices, reducing production problems.
@@ -139,16 +149,16 @@ Earlier I drove Exotel's platform-wide migration from PHP/Ruby/Java to Go and le
 // ---------------------------------------------------------------------------
 #section("Independent Projects")
 
-#text(weight: "semibold")[Sparrow] #h(3pt) #text(size: 8pt, fill: faint)[Go, PostgreSQL, gRPC, SvelteKit] \
+#text(weight: "bold")[Sparrow] #h(3pt) #text(size: 8pt, fill: faint)[Go, PostgreSQL, gRPC, SvelteKit] \
 Event-driven webhook delivery with at-least-once guarantees, backoff retries, `Retry-After` handling, idempotency keys, and full observability. In production at WellSync. #link("https://sarathsp06.github.io/sparrow/")[sarathsp06.github.io/sparrow]
 
-#text(weight: "semibold")[TestHooks] #h(3pt) #text(size: 8pt, fill: faint)[Go, Svelte · open source] \
+#text(weight: "bold")[TestHooks] #h(3pt) #text(size: 8pt, fill: faint)[Go, Svelte · open source] \
 A self-hostable webhook.site replacement: capture, inspect, transform, and forward webhooks in real time from a single binary. #link("https://testhooks.vercel.app/")[testhooks.vercel.app]
 
-#text(weight: "semibold")[JanusFS] #h(3pt) #text(size: 8pt, fill: faint)[Go, FUSE, Linux · open source] \
+#text(weight: "bold")[JanusFS] #h(3pt) #text(size: 8pt, fill: faint)[Go, FUSE, Linux · open source] \
 Secret-masking filesystem for AI agents: secrets read as `****` with byte length preserved, kernel-enforced on Linux. #link("https://github.com/sarathsp06/janusfs")[github.com/sarathsp06/janusfs]
 
-#text(weight: "semibold")[Herdr Web] #h(3pt) #text(size: 8pt, fill: faint)[Go, SvelteKit, WebSocket · open source] \
+#text(weight: "bold")[Herdr Web] #h(3pt) #text(size: 8pt, fill: faint)[Go, SvelteKit, WebSocket · open source] \
 Mobile-first web inbox for the Herdr agent multiplexer, with live terminals and push alerts; one Go binary, with outside contributors. #link("https://github.com/sarathsp06/herdrweb")[github.com/sarathsp06/herdrweb]
 
 // ---------------------------------------------------------------------------
